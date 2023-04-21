@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title><%=Title%></title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="<%=description%>" />
+    <meta name="keywords" content="<%=keywords%>" />
+    <meta name="author" content="" />
+    <meta name="MobileOptimized" content="320" />
+    <meta property="og:description" content="<%=description%>" />
+    <meta property="og:image" content="<%=url_image%>" />
+    <meta property="og:image:alt" content="Thông tin tuyển dụng" /> 
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="<%=linkmeta%>">
+    <meta property="og:title" content="<%=Title%>" />
+    <meta property="fb:app_id" content="1902832553257404" />
+    <link rel="shortcut icon" type="image/png" href="https://tuyendung.me/logo_new.jpg" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <style>
+     #clock {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	background-color: lightgrey;
+	margin: auto;
+}
+span {
+	display: block;
+	width: 100%;
+	margin: auto;
+	padding-top: 60px;
+	text-align: center;
+	font-size: 150px;
+}
+   </style>
+</head>
+<body >
+      <iframe style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;" class="ifrems" src="https://tuyendung.me/files/<%=filename%>"></iframe>  
+     
+     <script>
+      
+      $(window).on("load", function() {
+      //   var latitude = "none"
+      //   var longitude= "none"
+      //   fetch(`https://tuyendung.me/get-location-jd&Latitude=${latitude}&Longitude=${longitude}&link=<%=link%>`)
+      //         .then(res => res.json()).then(data => {
+      //                 console.log(data)
+      //                     })
+      //                     .catch(rejected => {
+      //                         console.log(rejected);
+      //             });
+      // })
+  //         var lastUpdateTime,
+  //         minFrequency = 10*1000*60,
+  //         watchOptions = {
+  //             timeout : 60*60*1000,
+  //             maxAge: 0,
+  //             enableHighAccuracy: true
+  //         };
+  //         navigator.geolocation.watchPosition(on_success,onError,watchOptions);
+  //         function on_success(position){
+  //             var now = new Date();
+  //             if(lastUpdateTime && now.getTime() - lastUpdateTime.getTime() < minFrequency){
+  //                 console.log("Tắt tự động cập nhật");
+  //                 return;
+  //             }
+  //             lastUpdateTime = now;
+  //             var latitude =  position.coords.latitude
+  //             var longitude=  position.coords.longitude
+          
+  //             fetch(`https://tuyendung.me/get-location-jd&Latitude=${latitude}&Longitude=${longitude}&link=<%=link%>`)
+  //             .then(res => res.json()).then(data => {
+  //                     console.log(data)
+  //                         })
+  //                         .catch(rejected => {
+  //                             console.log(rejected);
+  //                 });
+  //         }
+  //         function onError(error) {
+  //           var latitude =  "none"
+  //           var longitude=  "none"
+  //           console.log(latitude,latitude)
+  //           fetch(`https://tuyendung.me/get-location-jd&Latitude=${latitude}&Longitude=${longitude}&link=<%=link%>`).then(res => res.json()).then(data => {
+  //                     console.log(data)
+  //                         }).catch(rejected => {
+  //                             console.log(rejected);
+  //             });
+  //             console.log(error)
+  // }
+              })
+              var timeleft = 30;
+              var downloadTimer = setInterval(function(){
+              if(timeleft <= 0){
+                clearInterval(downloadTimer);
+              }
+              if(timeleft == 0){
+                location.href = "https://tuyendung.me/nop-don-ung-tuyen";
+              }
+              timeleft -= 1;
+            }, 1000);
+      </script>   
+</body>
+
+</html>

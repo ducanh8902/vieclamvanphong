@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="VIỆC LÀM VĂN PHÒNG">
+    <meta name="keywords" content="au theme template">
+    <!-- Title Page-->
+    <title>GALAXYDR ISO 9001:2015</title>
+    <!-- Fontfaces CSS-->
+    <link rel="shortcut icon" type="image/x-icon" href="https://tuyendung.me/galaxydr-logo.jpg">
+    <link rel="apple-touch-icon" href="https://tuyendung.me/galaxydr-logo.jpg">
+    <link href="https://admin.tuyendung.me/Admin/css/font-face.css" rel="stylesheet" media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet"
+        media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet"
+        media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/mdi-font/css/material-design-iconic-font.min.css"
+        rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Bootstrap CSS-->
+    <link href="https://admin.tuyendung.me/Admin/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="https://admin.tuyendung.me/Admin/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css"
+        rel="stylesheet" media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet"
+        media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet"
+        media="all">
+    <link rel="stylesheet" href="https://admin.tuyendung.me/css/flaticon.css">
+    <link href="https://admin.tuyendung.me/Admin/css/theme.css" rel="stylesheet" media="all">
+    <link href="/iso/iso.css" rel="stylesheet" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body style="width: 95%;">
+    <div id="loader-wrapper">
+        <div id="page">
+            <div id="phrase_box">
+                <svg width="100%" height="100%">
+                    <defs>
+                        <style type="text/css">
+                            @font-face {
+                                font-family: "Proxima";
+                                src: url('');
+                            }
+                        </style>
+                        <mask id="mask" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
+                            <linearGradient id="linearGradient" gradientUnits="objectBoundingBox" x2="0" y2="1">
+                                <stop stop-color="white" stop-opacity="0" offset="0%" />
+                                <stop stop-color="white" stop-opacity="1" offset="30%" />
+                                <stop stop-color="white" stop-opacity="1" offset="70%" />
+                                <stop stop-color="white" stop-opacity="0" offset="100%" />
+                            </linearGradient>
+                            <rect width="100%" height="100%" fill="url(#linearGradient)" />
+                        </mask>
+                    </defs>
+                    <g width="100%" height="100%" style="mask: url(#mask);">
+                        <g id="phrases"></g>
+                    </g>
+                </svg>
+            </div>
+            <div id="ighex">
+                <div class="preloader loading">
+                    <span class="slice"></span>
+                    <span class="slice"></span>
+                    <span class="slice"></span>
+                    <span class="slice"></span>
+                    <span class="slice"></span>
+                    <span class="slice"></span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="row">
+        <div style="background-color:#fff ;" class="col-md-12">
+            <div style="background-color:#fff " class="default-tab">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <%List_form.forEach(function(item){%>
+                            <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#<%=item._id.year%>"
+                                role="tab" aria-controls="nav-home" aria-selected="false">
+                                <%=item._id.year%>
+                            </a>
+                            <%})%>
+                    </div>
+                </nav>
+                <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+                    <%List_form.forEach(function(item_year){%>
+                        <% var result=item_year.result%>
+                            <div class="tab-pane fade" id="<%=item_year._id.year%>" role="tabpanel"
+                                aria-labelledby="nav-home-tab">
+
+                                <div class="row">
+                                    <div style="background-color:#fff ;" class="col-md-12">
+                                        <div style="background-color:#fff " class="default-tab">
+                                            <nav>
+                                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                    <%result.forEach(function(item_result){%>
+                                                        <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab"
+                                                            href="#<%=item_result.Center_counseling%><%=item_year._id.year%>"
+                                                            role="tab" aria-controls="nav-home" aria-selected="false">
+                                                            <%=item_result.Center_counseling%>
+                                                        </a>
+                                                        <%})%>
+                                                </div>
+                                            </nav>
+                                            <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+                                                <%result.forEach(function(item_result){%>
+                                                    <div class="tab-pane fade"
+                                                        id="<%=item_result.Center_counseling%><%=item_year._id.year%>"
+                                                        role="tabpanel" aria-labelledby="nav-home-tab">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="default-tab">
+                                                                    <div style="border:none" class="card">
+                                                                        <div style="border-bottom: 2px solid gray;"
+                                                                            class="card-header">
+                                                                            <h4>GALAXYDR-TRAINING-
+                                                                                <%=item_result.Center_counseling%>
+                                                                            </h4>
+                                                                        </div>
+                                                                        <% const
+                                                                            Request_total=item_result.Request_total%>
+                                                                            <%Request_total.forEach(function(item_request_total){%>
+                                                                                <% const
+                                                                                    Requests=item_request_total.Requests%>
+                                                                                    <div style="margin-top: 10px;"
+                                                                                        id="thongtin" class="sideber2">
+                                                                                        <div class="widghet">
+                                                                                            <center
+                                                                                                style="margin-top: 5px;margin-bottom: 5px;">
+                                                                                                <h3>Tháng
+                                                                                                    <%=item_request_total.Month%>
+                                                                                                </h3>
+                                                                                            </center>
+                                                                                            <div class="default-tab">
+                                                                                                <nav>
+                                                                                                    <div class="nav nav-tabs"
+                                                                                                        id="nav-tab"
+                                                                                                        role="tablist">
+                                                                                                        <%Requests.forEach(function(item_request){%>
+                                                                                                            <% var
+                                                                                                                id_date_request=item_request.Date_Request%>
+                                                                                                                <% var
+                                                                                                                    id_date=id_date_request.replaceAll("/","")%>
+                                                                                                                    <a class="nav-item nav-link"
+                                                                                                                        id="nav-home-tab"
+                                                                                                                        data-toggle="tab"
+                                                                                                                        href="#<%=id_date%><%=item_result.Center_counseling%>"
+                                                                                                                        role="tab"
+                                                                                                                        aria-controls="nav-home"
+                                                                                                                        aria-selected="false">
+                                                                                                                        <%=item_request.Date_Request%>
+                                                                                                                    </a>
+                                                                                                                    <%})%>
+                                                                                                    </div>
+                                                                                                </nav>
+                                                                                                <div class="tab-content pl-3 pt-2"
+                                                                                                    id="nav-tabContent">
+                                                                                                    <%Requests.forEach(function(item_request){%>
+                                                                                                        <% var
+                                                                                                            id_date_request=item_request.Date_Request%>
+                                                                                                            <% var
+                                                                                                                id_date=id_date_request.replaceAll("/","")%>
+                                                                                                                <% const
+                                                                                                                    ArrList=item_request.List_Request%>
+                                                                                                                    <div class="tab-pane fade"
+                                                                                                                        id="<%=id_date%><%=item_result.Center_counseling%>"
+                                                                                                                        role="tabpanel"
+                                                                                                                        aria-labelledby="nav-home-tab">
+                                                                                                                        <div class="row">
+                                                                                                                            <div  class="col-lg-12">
+                                                                                                                                    <div class="modal-footer">
+                                                                                                                                        <a target="_blank" href="/iso/print_request_center=<%=item_request.id%>-iduser=<%=user._id%>" class="btn btn-primary">In thông tin</a>
+                                                                                                                                        
+                                                                                                                                    </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div style="right:10px;left: 10px;"
+                                                                                                                            class="row">
+                                                                                                                            <div style="padding-left: 3%;padding-right: 3%;"
+                                                                                                                                class="col-md-12">
+                                                                                                                                <table>
+                                                                                                                                    <tbody>
+                                                                                                                                        <tr>
+                                                                                                                                            <td rowspan="4"
+                                                                                                                                                style="width:103.5pt;border:double windowtext 1.5pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt;">
+                                                                                                                                                <p
+                                                                                                                                                    style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                                                                                                                                                    <img width="93"
+                                                                                                                                                        src="https://galaxydr.com.vn/storage/logo/logo.png"
+                                                                                                                                                        alt="Description: logo">
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                            <td rowspan="4"
+                                                                                                                                                style="width: 46.9095%; border-top: 1.5pt double windowtext; border-left: none; border-bottom: 1.5pt double windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 19pt;">
+                                                                                                                                                <p
+                                                                                                                                                    style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;'>
+                                                                                                                                                    <strong><span
+                                                                                                                                                            style='font-family:"Cambria",serif;'>C&Ocirc;NG
+                                                                                                                                                            TY
+                                                                                                                                                            TNHH
+                                                                                                                                                            DV
+                                                                                                                                                            GALAXY
+                                                                                                                                                            DR&nbsp;</span></strong>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;'>
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-size:13px;font-family:"Cambria",serif;'>TM01,
+                                                                                                                                                        PVL
+                                                                                                                                                        Linh
+                                                                                                                                                        T&acirc;y,
+                                                                                                                                                        Số
+                                                                                                                                                        5,
+                                                                                                                                                        Đường
+                                                                                                                                                        D1,
+                                                                                                                                                        Phường
+                                                                                                                                                        Linh
+                                                                                                                                                        T&acirc;y,
+                                                                                                                                                        Th&agrave;nh
+                                                                                                                                                        phố
+                                                                                                                                                        Thủ
+                                                                                                                                                        Đức,
+                                                                                                                                                        Tp
+                                                                                                                                                        HCM</span>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;'>
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-size:13px;font-family:"Cambria",serif;'>Điện
+                                                                                                                                                        thoại:
+                                                                                                                                                        &nbsp;028
+                                                                                                                                                        73055
+                                                                                                                                                        995</span>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;'>
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-size:13px;font-family:"Cambria",serif;'>Website:</span><span
+                                                                                                                                                        style="font-size:15px;">&nbsp;</span><span
+                                                                                                                                                        style='font-size:13px;font-family:"Cambria",serif;'>www.galaxydr.com.vn</span>
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                            <td
+                                                                                                                                                style="width:86.4pt;border-top:double windowtext 1.5pt;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt;">
+                                                                                                                                                <p
+                                                                                                                                                    style='margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;'>
+                                                                                                                                                    Trang
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                            <td
+                                                                                                                                                style="width: 19.7026%; border-top: 1.5pt double windowtext; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1.5pt double windowtext; padding: 0cm 5.4pt; height: 19pt;">
+                                                                                                                                                <p
+                                                                                                                                                    style='margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;'>
+                                                                                                                                                    1/1
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                        </tr>
+                                                                                                                                        <tr>
+                                                                                                                                            <td
+                                                                                                                                                style="width:86.4pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt;">
+                                                                                                                                                <p
+                                                                                                                                                    style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                                                                                                                                                    <span
+                                                                                                                                                        style="font-size:13px;">Lần
+                                                                                                                                                        ban
+                                                                                                                                                        h&agrave;nh</span>
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                            <td
+                                                                                                                                                style="width: 19.7026%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1.5pt double windowtext; padding: 0cm 5.4pt; height: 19pt;">
+                                                                                                                                                <p
+                                                                                                                                                    style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                                                                                                                                                    <span
+                                                                                                                                                        style="font-size:15px;">01</span>
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                        </tr>
+                                                                                                                                        <tr>
+                                                                                                                                            <td
+                                                                                                                                                style="width:86.4pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt;">
+                                                                                                                                                <p
+                                                                                                                                                    style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                                                                                                                                                    <span
+                                                                                                                                                        style="font-size:13px;">Ng&agrave;y
+                                                                                                                                                        ban
+                                                                                                                                                        h&agrave;nh</span>
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                            <td
+                                                                                                                                                style="width: 19.7026%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1.5pt double windowtext; padding: 0cm 5.4pt; height: 19pt;">
+                                                                                                                                                <p
+                                                                                                                                                    style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                                                                                                                                                    <span
+                                                                                                                                                        style="font-size:15px;">20/01/2021</span>
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                        </tr>
+                                                                                                                                        <tr>
+                                                                                                                                            <td
+                                                                                                                                                style="width:86.4pt;border-top:none;border-left:none;border-bottom:double windowtext 1.5pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt;">
+                                                                                                                                                <p
+                                                                                                                                                    style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                                                                                                                                                    <span
+                                                                                                                                                        style="font-size:13px;">Số
+                                                                                                                                                        hiệu</span>
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                            <td
+                                                                                                                                                style="width: 19.7026%; border-top: none; border-left: none; border-bottom: 1.5pt double windowtext; border-right: 1.5pt double windowtext; padding: 0cm 5.4pt; height: 19pt;">
+                                                                                                                                                <p
+                                                                                                                                                    style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                                                                                                                                                    BM
+                                                                                                                                                    -
+                                                                                                                                                    QT08-02
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                        </tr>
+                                                                                                                                    </tbody>
+                                                                                                                                </table>
+                                                                                                                            </div>
+                                                                                                                            <div style="padding-left: 3%;padding-right: 3%;"
+                                                                                                                                class="col-md-12">
+                                                                                                                                <h3
+                                                                                                                                    style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.0pt;margin-left:0cm;font-size:17px;font-family:"Arial",sans-serif;'>
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                    &nbsp;
+                                                                                                                                </h3>
+                                                                                                                                <h1
+                                                                                                                                    style="margin:0cm;text-align:center;font-size:21px;font-family:VNI-Times;font-weight:normal;text-indent:36.0pt;">
+                                                                                                                                    <strong><span
+                                                                                                                                            style='font-family:"Cambria",serif;'>PHIẾU
+                                                                                                                                            Y&Ecirc;U
+                                                                                                                                            CẦU
+                                                                                                                                            TUYỂN
+                                                                                                                                            DỤNG</span></strong>
+                                                                                                                                </h1>
+                                                                                                                                <p
+                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                                                                                                                    <span
+                                                                                                                                        style='font-family:"Cambria",serif;'>&nbsp;</span>
+                                                                                                                                </p>
+                                                                                                                                <p
+                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;line-height:150%;">
+                                                                                                                                    <span
+                                                                                                                                        style='font-family:"Cambria",serif;'>Số Phiếu Yêu Cầu
+                                                                                                                                        :
+                                                                                                                                        <b>
+                                                                                                                                            <%=item_request.id%>
+                                                                                                                                        </b></span>
+                                                                                                                                </p>
+                                                                                                                                <p
+                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;line-height:150%;">
+                                                                                                                                    <span
+                                                                                                                                        style='font-family:"Cambria",serif;'>Bộ
+                                                                                                                                        phận
+                                                                                                                                        y&ecirc;u
+                                                                                                                                        cầu
+                                                                                                                                        :
+                                                                                                                                        <b>
+                                                                                                                                            <%=item_result.Center_counseling%>
+                                                                                                                                        </b></span>
+                                                                                                                                </p>
+                                                                                                                                <p
+                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;line-height:150%;">
+                                                                                                                                    <span
+                                                                                                                                        style='font-family:"Cambria",serif;'>Ng&agrave;y
+                                                                                                                                        y&ecirc;u
+                                                                                                                                        cầu
+                                                                                                                                        :
+                                                                                                                                        <b>
+                                                                                                                                            <%=item_request.Date_Request%>
+                                                                                                                                        </b>
+                                                                                                                                    </span>
+                                                                                                                                </p>
+                                                                                                                                <p
+                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;line-height:150%;">
+                                                                                                                                    <span
+                                                                                                                                        style='font-family:"Cambria",serif;'>Mục
+                                                                                                                                        đ&iacute;ch
+                                                                                                                                        y&ecirc;u
+                                                                                                                                        cầu
+                                                                                                                                        tuyển
+                                                                                                                                        dụng&nbsp;
+                                                                                                                                        :
+                                                                                                                                        <b>
+                                                                                                                                            <%=item_request.Purpose%>
+                                                                                                                                        </b>
+                                                                                                                                    </span>
+                                                                                                                                </p>
+                                                                                                                                <p
+                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                                                                                                                    <span
+                                                                                                                                        style='font-size:5px;font-family:"Cambria",serif;'>&nbsp;</span>
+                                                                                                                                </p>
+
+                                                                                                                                <table
+                                                                                                                                    style="width:100%;border-collapse:collapse;border:none;">
+                                                                                                                                    <thead>
+                                                                                                                                        <tr>
+                                                                                                                                            <td rowspan="2"
+                                                                                                                                                style="width:32.8pt;border:solid windowtext 1.0pt;background:#E6E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:24.95pt;">
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Cambria",serif;'>TT</span>
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                            <td rowspan="2"
+                                                                                                                                                style="width:144.3pt;border:solid windowtext 1.0pt;border-left:none;background:#E6E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:24.95pt;">
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Cambria",serif;color:black;'>Vị
+                                                                                                                                                        tr&iacute;</span>
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                            <td rowspan="2"
+                                                                                                                                                style="width:77.95pt;border:solid windowtext 1.0pt;border-left:none;background:#E6E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:24.95pt;">
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Cambria",serif;color:black;'>Nh&oacute;m/
+                                                                                                                                                        Ph&ograve;ng
+                                                                                                                                                        ban</span>
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                            <td rowspan="2"
+                                                                                                                                                style="width:177.3pt;border:solid windowtext 1.0pt;border-left:none;background:#E6E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:24.95pt;">
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Cambria",serif;color:black;'>Y&ecirc;u
+                                                                                                                                                        cầu
+                                                                                                                                                        tuyển
+                                                                                                                                                        dụng</span>
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                            <td rowspan="2"
+                                                                                                                                                style="width:99.25pt;border:solid windowtext 1.0pt;border-left:none;background:#E6E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:24.95pt;">
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Cambria",serif;color:black;'>Ng&agrave;y
+                                                                                                                                                        b&agrave;n
+                                                                                                                                                        giao
+                                                                                                                                                        nh&acirc;n
+                                                                                                                                                        sự</span>
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                            <td rowspan="2"
+                                                                                                                                                style="width:63.75pt;border:solid windowtext 1.0pt;border-left:none;background:#E6E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:24.95pt;">
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Cambria",serif;color:black;'>Số
+                                                                                                                                                        lượng</span>
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                            <td rowspan="2"
+                                                                                                                                                style="width:77.95pt;border:solid windowtext 1.0pt;border-left:none;background:#E6E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:24.95pt;">
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Cambria",serif;color:black;'>Ph&ecirc;
+                                                                                                                                                        duyệt</span>
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                            <td rowspan="2"
+                                                                                                                                                style="width:92.15pt;border:solid windowtext 1.0pt;border-left:none;background:#E6E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:24.95pt;">
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Cambria",serif;color:black;'>Ghi
+                                                                                                                                                        ch&uacute;</span>
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                            <td
+                                                                                                                                                style="height:24.95pt;border:none;">
+                                                                                                                                                <br>
+                                                                                                                                            </td>
+                                                                                                                                        </tr>
+                                                                                                                                        <tr>
+                                                                                                                                            <td
+                                                                                                                                                style="height:29.75pt;border:none;">
+                                                                                                                                                <br>
+                                                                                                                                            </td>
+                                                                                                                                        </tr>
+                                                                                                                                    </thead>
+                                                                                                                                    <tbody>
+                                                                                                                                        <%
+                                                                                                                                            ArrList.forEach(function(item_list,index){%>
+                                                                                                                                            <tr>
+                                                                                                                                                <td
+                                                                                                                                                    style="border-top:solid windowtext 1.0pt;border-left:solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:26.35pt;">
+                                                                                                                                                    <p
+                                                                                                                                                        style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                        <span
+                                                                                                                                                            style='font-family:"Cambria",serif;'>
+                                                                                                                                                            <%=index+1%>
+                                                                                                                                                        </span>
+                                                                                                                                                    </p>
+                                                                                                                                                </td>
+
+                                                                                                                                                <td
+                                                                                                                                                    style="display: table-cell;width:144.3pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:26.35pt;">
+                                                                                                                                                    <p
+                                                                                                                                                        style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                                                                                                                                        <span
+                                                                                                                                                            style='font-family:"Cambria",serif;'>
+                                                                                                                                                            <%=item_list.List.Vacancies%>
+                                                                                                                                                        </span>
+                                                                                                                                                    </p>
+                                                                                                                                                </td>
+                                                                                                                                                <td
+                                                                                                                                                    style="width:77.95pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:26.35pt;">
+                                                                                                                                                    <p
+                                                                                                                                                        style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                        <span
+                                                                                                                                                            style='font-family:"Cambria",serif;'>
+                                                                                                                                                            <%=item_list.List.Group_request%>
+                                                                                                                                                        </span>
+                                                                                                                                                    </p>
+                                                                                                                                                </td>
+                                                                                                                                                <td
+                                                                                                                                                    style="display: table-cell;width: 177.3pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 26.35pt;vertical-align: middle;">
+                                                                                                                                                    <p
+                                                                                                                                                        style="margin:0cm;font-size:16px;font-family:VNI-Times;margin-left:6.9pt;text-align:center;">
+                                                                                                                                                        <span
+                                                                                                                                                            style='font-family:"Cambria",serif;'>
+                                                                                                                                                            <%-item_list.List.Recruitment_requirements%>
+                                                                                                                                                        </span>
+                                                                                                                                                    </p>
+                                                                                                                                                </td>
+                                                                                                                                                <td
+                                                                                                                                                    style="display: table-cell;width: 99.25pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 26.35pt;vertical-align: middle;">
+                                                                                                                                                    <p
+                                                                                                                                                        style="margin:0cm;font-size:16px;font-family:VNI-Times;margin-left:6.9pt;text-align:center;">
+                                                                                                                                                        <span
+                                                                                                                                                            style='font-family:"Cambria",serif;'>
+                                                                                                                                                            <%=item_list.List.Training_Day%>
+                                                                                                                                                        </span>
+                                                                                                                                                    </p>
+                                                                                                                                                </td>
+                                                                                                                                                <td
+                                                                                                                                                    style="display: table-cell;width: 63.75pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 26.35pt;vertical-align: middle;">
+                                                                                                                                                    <p
+                                                                                                                                                        style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                        <span
+                                                                                                                                                            style='font-family:"Cambria",serif;'>
+                                                                                                                                                            <%=item_list.List.Headcount%>
+                                                                                                                                                        </span>
+                                                                                                                                                    </p>
+                                                                                                                                                </td>
+                                                                                                                                                <td
+                                                                                                                                                    style="width: 77.95pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 26.35pt;vertical-align: middle;">
+                                                                                                                                                    <p
+                                                                                                                                                        style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                        <span
+                                                                                                                                                            style='font-family:"Cambria",serif;'>
+                                                                                                                                                            <%=item_list.List.Headcount_approve%>
+                                                                                                                                                        </span>
+                                                                                                                                                    </p>
+                                                                                                                                                </td>
+                                                                                                                                                <td
+                                                                                                                                                    style="width: 92.15pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 26.35pt;vertical-align: middle;">
+                                                                                                                                                    <p
+                                                                                                                                                        style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                        <span
+                                                                                                                                                            style='font-family:"Cambria",serif;'>
+                                                                                                                                                            <%=item_list.List.Note_Status%>
+                                                                                                                                                        </span>
+                                                                                                                                                    </p>
+                                                                                                                                                </td>
+                                                                                                                                                <td
+                                                                                                                                                    style="height:26.35pt;border:none;">
+                                                                                                                                                    <br>
+                                                                                                                                                </td>
+                                                                                                                                            </tr>
+                                                                                                                                            <%})%>
+                                                                                                                                    </tbody>
+                                                                                                                                </table>
+                                                                                                                            </div>
+
+                                                                                                                            <div style="padding-left: 3%;padding-right: 3%;"
+                                                                                                                                class="col-md-12">
+                                                                                                                                <p
+                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                                                                                                                    <span
+                                                                                                                                        style='font-family:"Cambria",serif;'>&nbsp;</span>
+                                                                                                                                </p>
+                                                                                                                                <p
+                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                                                                                                                    <span
+                                                                                                                                        style='font-family:"Cambria",serif;'>&nbsp;</span>
+                                                                                                                                </p>
+                                                                                                                            </div>
+
+                                                                                                                            <div style="padding-left: 3%;padding-right: 3%;"
+                                                                                                                                class="col-md-12">
+                                                                                                                                <table
+                                                                                                                                    style="width: 100%;border-collapse:collapse;border:none;">
+                                                                                                                                    <tbody>
+                                                                                                                                        <tr>
+                                                                                                                                            <td
+                                                                                                                                                style="width: 150px;padding: 0cm 5.4pt;height: 119.25pt;vertical-align: top;text-align: center;">
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;text-indent:8.75pt;">
+                                                                                                                                                    <strong><span
+                                                                                                                                                            style='font-family:"Calibria",serif;color:black;'>NGƯỜI
+                                                                                                                                                            Y&Ecirc;U
+                                                                                                                                                            CẦU</span></strong>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Calibria",serif;'>&nbsp;</span>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Calibria",serif;'>&nbsp;</span>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Calibria",serif;'>&nbsp;</span>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Calibria",serif;'>
+                                                                                                                                                        <h6><b>
+                                                                                                                                                                <%=item_request.Confirm.Confirm_Request_Sender%>
+                                                                                                                                                            </b>
+                                                                                                                                                        </h6>
+                                                                                                                                                    </span>
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                            <td
+                                                                                                                                                style="width: 150px;padding: 0cm 5.4pt;height: 119.25pt;vertical-align: top;text-align: center;">
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                    <strong><span
+                                                                                                                                                            style='font-family:"Calibria",serif;color:black;'>QUẢN
+                                                                                                                                                            L&Yacute;
+                                                                                                                                                            BỘ
+                                                                                                                                                            PHẬN</span></strong>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Calibria",serif;'>&nbsp;</span>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Calibria",serif;'>&nbsp;</span>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Calibria",serif;'>&nbsp;</span>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Calibria",serif;'>
+                                                                                                                                                        <h6><b>
+                                                                                                                                                                <%=item_request.Confirm.Confirm_Director_Center%>
+                                                                                                                                                            </b>
+                                                                                                                                                        </h6>
+                                                                                                                                                    </span>
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                            <td
+                                                                                                                                                style="width: 150px;padding: 0cm 5.4pt;height: 119.25pt;vertical-align: top;text-align: center;">
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                    <strong><span
+                                                                                                                                                            style='font-family:"Calibria",serif;color:black;'>P.Tuyển Dụng</span></strong>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Calibria",serif;'>&nbsp;</span>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Calibria",serif;'>&nbsp;</span>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Calibria",serif;'>&nbsp;</span>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Calibria",serif;'>
+                                                                                                                                                        <h6><b>
+                                                                                                                                                                <%=item_request.Confirm.Confirm_Recuitment_Teamleader%>
+                                                                                                                                                            </b>
+                                                                                                                                                        </h6>
+                                                                                                                                                    </span>
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                            <td
+                                                                                                                                                style="width: 150px;padding: 0cm 5.4pt;height: 119.25pt;vertical-align: top;text-align: center">
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                    <strong><span
+                                                                                                                                                            style='font-family:"Calibria",serif;color:black;'>P.HCNS</span></strong>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                    <strong><span
+                                                                                                                                                            style='font-family:"Calibria",serif;color:black;'>&nbsp;</span></strong>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                    <strong><span
+                                                                                                                                                            style='font-family:"Calibria",serif;color:black;'>&nbsp;</span></strong>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;">
+                                                                                                                                                    <strong><span
+                                                                                                                                                            style='font-family:"Calibria",serif;'>&nbsp;</span></strong>
+                                                                                                                                                </p>
+                                                                                                                                                <p
+                                                                                                                                                    style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                                                                                                                                    <span
+                                                                                                                                                        style='font-family:"Calibria",serif;'>
+                                                                                                                                                        <h6><b>
+                                                                                                                                                                <%=item_request.Confirm.Confirm_HR_Director%>
+                                                                                                                                                            </b>
+                                                                                                                                                        </h6>
+                                                                                                                                                    </span>
+                                                                                                                                                </p>
+                                                                                                                                            </td>
+                                                                                                                                        </tr>
+                                                                                                                                    </tbody>
+                                                                                                                                </table>
+                                                                                                                            </div>
+
+                                                                                                                        </div>
+
+                                                                                                                    </div>
+                                                                                                                    <%})%>
+                                                                                                </div>
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <%})%>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <%})%>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%})%>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var checkmarkIdPrefix = "loadingCheckSVG-";
+        var checkmarkCircleIdPrefix = "loadingCheckCircleSVG-";
+        var verticalSpacing = 50;
+
+        function shuffleArray(array) {
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+            return array;
+        }
+        $(document).ready(function () {
+
+            setTimeout(function () {
+                $('body').addClass('loaded');
+
+            }, 2000);
+
+        });
+        function createSVG(tag, properties, opt_children) {
+            var newElement = document.createElementNS("http://www.w3.org/2000/svg", tag);
+            for (prop in properties) {
+                newElement.setAttribute(prop, properties[prop]);
+            }
+            if (opt_children) {
+                opt_children.forEach(function (child) {
+                    newElement.appendChild(child);
+                })
+            }
+            return newElement;
+        }
+
+        function createPhraseSvg(phrase, yOffset) {
+            var text = createSVG("text", {
+                fill: "white",
+                x: 50,
+                y: yOffset,
+                "font-size": 18,
+                "font-family": "Arial"
+            });
+            text.appendChild(document.createTextNode(phrase + "..."));
+            return text;
+        }
+        function createCheckSvg(yOffset, index) {
+            var check = createSVG("polygon", {
+                points: "21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 ",
+                fill: "rgba(255,255,255,1)",
+                id: checkmarkIdPrefix + index
+            });
+            var circle_outline = createSVG("path", {
+                d: "M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z",
+                fill: "white"
+            })
+            var circle = createSVG("circle", {
+                id: checkmarkCircleIdPrefix + index,
+                fill: "rgba(255,255,255,0)",
+                cx: 16,
+                cy: 16,
+                r: 15
+            })
+            var group = createSVG("g", {
+                transform: "translate(10 " + (yOffset - 20) + ") scale(.9)"
+            }, [circle, check, circle_outline]);
+            return group;
+        }
+
+        function addPhrasesToDocument(phrases) {
+            phrases.forEach(function (phrase, index) {
+                var yOffset = 30 + verticalSpacing * index;
+                document.getElementById("phrases").appendChild(createPhraseSvg(phrase, yOffset));
+                document.getElementById("phrases").appendChild(createCheckSvg(yOffset, index));
+            });
+        }
+
+        function easeInOut(t) {
+            var period = 100;
+            return (Math.sin(t / period + 100) + 1) / 2;
+        }
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var phrases = shuffleArray(["Khởi tạo API", "Xác minh danh tính", "Xác minh dữ liệu", "Trích xuất dữ liệu"]);
+            addPhrasesToDocument(phrases);
+            var start_time = new Date().getTime();
+            var upward_moving_group = document.getElementById("phrases");
+            upward_moving_group.currentY = 0;
+            var checks = phrases.map(function (_, i) {
+                return { check: document.getElementById(checkmarkIdPrefix + i), circle: document.getElementById(checkmarkCircleIdPrefix + i) };
+            });
+            function animateLoading() {
+                var now = new Date().getTime();
+                upward_moving_group.setAttribute("transform", "translate(0 " + upward_moving_group.currentY + ")");
+                upward_moving_group.currentY -= 1.35 * easeInOut(now);
+                checks.forEach(function (check, i) {
+                    var color_change_boundary = - i * verticalSpacing + verticalSpacing + 15;
+                    if (upward_moving_group.currentY < color_change_boundary) {
+                        var alpha = Math.max(Math.min(1 - (upward_moving_group.currentY - color_change_boundary + 15) / 30, 1), 0);
+                        check.circle.setAttribute("fill", "rgba(255, 255, 255, " + alpha + ")");
+                        var check_color = [Math.round(255 * (1 - alpha) + 120 * alpha), Math.round(255 * (1 - alpha) + 154 * alpha)];
+                        check.check.setAttribute("fill", "rgba(255, " + check_color[0] + "," + check_color[1] + ", 1)");
+                    }
+                })
+                if (now - start_time < 30000 && upward_moving_group.currentY > -710) {
+                    requestAnimationFrame(animateLoading);
+                }
+            }
+            //animateLoading();
+        });
+
+
+        $(document).ready(function () {
+            $('.delete-confirm').each(function () {
+                var $this = $(this);
+
+                $('button.delete', $this).click(function () {
+                    $(this).addClass('confirm');
+                });
+
+                $('button.no', $this).click(function () {
+                    $('button.delete', $this).removeClass('confirm');
+                });
+            });
+        });
+    </script>
+
+    <script>
+
+        function create_custom_dropdowns() {
+            $('select').each(function (i, select) {
+                if (!$(this).next().hasClass('dropdown-select')) {
+                    $(this).after('<div class="dropdown-select wide ' + ($(this).attr('class') || '') + '" tabindex="0"><span class="current"></span><div class="list"><ul></ul></div></div>');
+                    var dropdown = $(this).next();
+                    var options = $(select).find('option');
+                    var selected = $(this).find('option:selected');
+                    dropdown.find('.current').html(selected.data('display-text') || selected.text());
+                    options.each(function (j, o) {
+                        var display = $(o).data('display-text') || '';
+                        dropdown.find('ul').append('<li class="option ' + ($(o).is(':selected') ? 'selected' : '') + '" data-value="' + $(o).val() + '" data-display-text="' + display + '">' + $(o).text() + '</li>');
+                    });
+                }
+            });
+
+            $('.dropdown-select ul').before('<div class="dd-search"><input id="txtSearchValue" autocomplete="off" onkeyup="filter()" class="dd-searchbox" type="text"/></div>');
+        }
+
+        // Event listeners
+
+        // Open/close
+        $(document).on('click', '.dropdown-select', function (event) {
+            if ($(event.target).hasClass('dd-searchbox')) {
+                return;
+            }
+            $('.dropdown-select').not($(this)).removeClass('open');
+            $(this).toggleClass('open');
+            if ($(this).hasClass('open')) {
+                $(this).find('.option').attr('tabindex', 0);
+                $(this).find('.selected').focus();
+            } else {
+                $(this).find('.option').removeAttr('tabindex');
+                $(this).focus();
+            }
+        });
+
+        // Close when clicking outside
+        $(document).on('click', function (event) {
+            if ($(event.target).closest('.dropdown-select').length === 0) {
+                $('.dropdown-select').removeClass('open');
+                $('.dropdown-select .option').removeAttr('tabindex');
+            }
+            event.stopPropagation();
+        });
+
+        function filter() {
+            var valThis = $('#txtSearchValue').val();
+            $('.dropdown-select ul > li').each(function () {
+                var text = $(this).text();
+                (text.toLowerCase().indexOf(valThis.toLowerCase()) > -1) ? $(this).show() : $(this).hide();
+            });
+        };
+        // Search
+
+        // Option click
+        $(document).on('click', '.dropdown-select .option', function (event) {
+            $(this).closest('.list').find('.selected').removeClass('selected');
+            $(this).addClass('selected');
+            var text = $(this).data('display-text') || $(this).text();
+            $(this).closest('.dropdown-select').find('.current').text(text);
+            $(this).closest('.dropdown-select').prev('select').val($(this).data('value')).trigger('change');
+        });
+
+        // Keyboard events
+        $(document).on('keydown', '.dropdown-select', function (event) {
+            var focused_option = $($(this).find('.list .option:focus')[0] || $(this).find('.list .option.selected')[0]);
+            // Space or Enter
+            //if (event.keyCode == 32 || event.keyCode == 13) {
+            if (event.keyCode == 13) {
+                if ($(this).hasClass('open')) {
+                    focused_option.trigger('click');
+                } else {
+                    $(this).trigger('click');
+                }
+                return false;
+                // Down
+            } else if (event.keyCode == 40) {
+                if (!$(this).hasClass('open')) {
+                    $(this).trigger('click');
+                } else {
+                    focused_option.next().focus();
+                }
+                return false;
+                // Up
+            } else if (event.keyCode == 38) {
+                if (!$(this).hasClass('open')) {
+                    $(this).trigger('click');
+                } else {
+                    var focused_option = $($(this).find('.list .option:focus')[0] || $(this).find('.list .option.selected')[0]);
+                    focused_option.prev().focus();
+                }
+                return false;
+                // Esc
+            } else if (event.keyCode == 27) {
+                if ($(this).hasClass('open')) {
+                    $(this).trigger('click');
+                }
+                return false;
+            }
+        });
+
+        $(document).ready(function () {
+            create_custom_dropdowns();
+        });
+    </script>
+    <!-- Jquery JS-->
+    <script src="https://admin.tuyendung.me/Admin/vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="https://admin.tuyendung.me/Admin/vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="https://admin.tuyendung.me/Admin/vendor/slick/slick.min.js">
+    </script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/wow/wow.min.js"></script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/animsition/animsition.min.js"></script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="https://admin.tuyendung.me/Admin/js/main.js"></script>
+</body>
+
+</html>

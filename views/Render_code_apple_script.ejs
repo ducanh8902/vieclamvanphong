@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Script</title>
+</head>
+<body>
+    <%Arr.slice(-20).forEach(function(item){%>
+        <%const Area_phone = "+84"%>
+        <% const phone_number = item.phone_data%>
+        <% const edit_phone = phone_number.slice(1)%>
+        <% const new_phone = Area_phone+edit_phone%>
+     <p>tell application "Messages"</p>
+     <p>set targetBuddy to "<%=new_phone%>"</p>
+        <p>set targetService to id of 1st account whose service type = iMessage</p>
+            <p>repeat</p>
+                <p> set textMessage to "Tuyển Dụng : Nhân viên Quản Lý Hồ Sơ Pháp Lý <br>
+                    Nhóm ngân hàng: VPBank,TechcomBank, MeritimeBank<br>
+                    Lương cơ bản : 7 Triệu + Thưởng ( 5- 10 Triệu /Tháng )<br>
+                    Thu Nhập : 10 Triệu - 15 Triệu<br>
+                    - Thời gian làm việc : 8:00-17:00 ( Hành Chính)<br>
+                    - Ngày Nghỉ : Ngày 1 tây và Chủ Nhật <br>
+                    - Tham gia đầy đủ BHXH , BHTN , BHYT , và các phúc lợi khác của công ty<br>
+                    - Học việc,thử việc nhận 100% Lương và Thưởng<br>
+                    - Địa chỉ: Số 5 Đường D1 , Lầu 1&2 toà nhà PVL Linh Tây Tower P.Linh Tây TP.Thủ Đức<br>
+                    Liên Hệ<br>
+                    - Xem mô tả công việc: https://bit.ly/3HjstLB<br>
+                    - Liên hệ : 0908.251.298 - 0931.866.698 ĐứcAnh"<br></p>
+                    <p> set theBuddy to participant targetBuddy of account id targetService</p>
+                        <p>  send textMessage to theBuddy</p>
+                            <p>  delay (random number from 20 to 30)</p>
+                                <p> end repeat</p>
+                                    <p> end tell</p>
+       
+    <%})%>
+</body>
+</html>

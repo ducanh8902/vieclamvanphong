@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>OFFICE JOB</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="https://admin.tuyendung.me/images/Office_job/logo_new.jpg">
+	<link rel="stylesheet" href="https://admin.tuyendung.me/vendor/chartist/css/chartist.min.css">
+    <link href="https://admin.tuyendung.me/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="https://admin.tuyendung.me/vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="https://admin.tuyendung.me/css/style.css" rel="stylesheet">
+                <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+    <!-- Preloader Start -->
+   
+    <main style="padding-top: 5px;padding-left: 2%;padding-right: 2%;background-color:#fff" class="main">
+            <div class="container">
+                <div class="row flex-row-reverse">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 float-right">
+                        <div class="content-page">
+                            <div class="box-filters-job mt-15 mb-10">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                    </div>
+                                    <div id="back" class="col-lg-12">
+                                        <a onclick='detail_back_manager()' class="btn btn-small background-urgent btn-pink mr-5" type="button" id="previous"><img style="width: 25%;" src="https://img.icons8.com/fluency/96/000000/circled-left-2.png"/></a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="job_list" class="job-list-list mb-15">
+                                <div class="list-recent-jobs">
+                                    <%result.forEach(function(item_job){%>
+                                        <div class="card-job hover-up wow animate__animated animate__fadeIn">
+                                            <div class="card-job-top">
+                                                <div class="card-job-top--image">
+                                                    <figure><img alt="jobhub" src="image/<%=item_job.body.Image.url%>"
+                                                            alt="Image_Avata" /></figure>
+                                                </div>
+                                                <div class="card-job-top--info">
+                                                    <h6 class="card-job-top--info-heading"><a onclick="getID_Job('<%=item_job._id%>')" href="#job-detail">
+                                                            <%=item_job.head.Title_job%>
+                                                        </a></h6>
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <a href="employers-grid"> <a href="employers-grid"><span
+                                                                        class="card-job-top--company">
+                                                                        <%=item_job.head.Name_company%>
+                                                                    </span></a></a>
+                                                            <span class="card-job-top--location text-sm"><i
+                                                                    class="fi-rr-marker"></i>
+                                                                <%=item_job.head.Area%>
+                                                            </span>
+                                                            <span class="card-job-top--type-job text-sm"><i
+                                                                    class="fi-rr-briefcase"></i>
+                                                                <%=item_job.head.Type_job%>
+                                                            </span>
+                                                            <span class="card-job-top--post-time text-sm"><i
+                                                                    class="fi-rr-clock"></i>
+                                                                <%=item_job.fillter.Date_create%>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-lg-5 text-lg-end">
+                                                            <span class="card-job-top--price">
+                                                                <%=item_job.head.Salary%><span></span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-job-bottom mt-25">
+                                                <div class="row">
+                                                    <div class="col-lg-9 col-sm-8 col-12">
+                                                        <div class="row">
+                                                            <div class="col-lg-12 col-sm-12 col-12">
+                                                                <h6 class="card-job-top--info-heading">Thông Tin</h6>
+                                                                <a href="job-grid"
+                                                                    class="btn btn-small background-urgent btn-pink mr-5">
+                                                                    <%=item_job.head.Rank%>
+                                                                </a>
+                                                                <a href="job-grid"
+                                                                    class="btn btn-small background-6 disc-btn">
+                                                                    <%=item_job.head.Type_job%>
+                                                                </a>
+                                                            </div>
+                                                            <div class="col-lg-12 col-sm-12 col-12">
+                                                                <h6 class="card-job-top--info-heading">Lĩnh Vực</h6>
+                                                                <% const Specialized=item_job.head.Specialized %>
+                                                                    <%Specialized.forEach(function(item_Specialized){%>
+                                                                        <a href="job-grid"
+                                                                            class="btn btn-small background-blue-light mr-5">
+                                                                            <%=item_Specialized.Specialize%>
+                                                                        </a>
+                                                                        <%})%>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-lg-3 col-sm-4 col-12 text-lg-end d-lg-block d-none">
+                                                        <span><img src="assets/imgs/theme/icons/shield-check.svg"
+                                                                alt="jobhub"></span>
+                                                        <span class="ml-5"><img
+                                                                src="assets/imgs/theme/icons/bookmark.svg"
+                                                                alt="jobhub"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <%})%>
+                                </div>
+                                <div class="content-page">
+                                    <div class="paginations">
+                                        <div style="width:50%;border: 1px solid rgba(6, 18, 36, 0.1);
+                                        padding: 15px 15px;
+                                        border-radius: 10px;
+                                        background-color: #ffffff;    --bs-gutter-x: 0;" class="row">
+                                            <div class="col-md-3">
+                                                <ul style="text-align: left;" class="pager">
+                                                    <li><a class="btn btn-small background-urgent btn-pink mr-5"
+                                                            type="button" id="previous">Pre.</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <ul style="text-align: center;" id="list" class="pager">
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <ul style="text-align:right" class="pager">
+                                                    <li><a class="btn btn-small background-blue-light mr-5" type="button"
+                                                            id="next">Next</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+        
+        
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="job_single" class="job-list-list mb-15">
+                               
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+           
+    </main>
+    <script>        
+        $(document).ready(function() {
+            $("#back").hide()
+            $("#job_single").hide()
+            $("#loading").addClass('loading')
+            $("#body").html(`<iframe style="display: block;      
+    background: #000;
+    border: 2px solid gray;   
+    border-radius:15px;     
+    height: 80vh;       
+    width: 100%;;background-color:#fff" src="assets/imgs/theme/favicon.svg"></iframe>`)
+        });
+        $('a[href="#btn_form_job_manager"]').click(function(){
+                $("#body").html(`<iframe style="display: block;      
+    background: #000;
+    border: 2px solid gray;   
+    border-radius:15px;     
+    height: 80vh;       
+    width: 100%;;background-color:#fff" src="/Recruit_Manager"></iframe>`)
+        });
+        function getID_Job(Job_id){
+            $("#job_list").hide()
+            $("#job_single").show()
+            $("#job_single").html(`<iframe <iframe style="display: block;      
+    background: #000;
+    border: 2px solid gray;   
+    border-radius:15px;     
+    height: 80vh;       
+    width: 100%;;background-color:#fff" src="/detail_single_job_idjob=${Job_id}"></iframe>`)
+            $("#back").show()
+        }
+        function detail_back_manager(){
+            $("#job_single").html("")
+            $("#job_single").hide()
+            $("#job_list").show()
+            $("#back").hide()
+        }
+    </script>
+    <style>
+        .pager-prev {
+            background: url(../imgs/theme/icons/page-prev.svg) no-repeat center;
+            height: 40px;
+            width: 40px;
+            margin-right: 15px;
+        }
+
+        .pager-next {
+            background: url(../imgs/theme/icons/page-next.svg) no-repeat center;
+            height: 40px;
+            width: 40px;
+            margin-left: 15px;
+        }
+
+        .pager-prev:hover {
+            background: url(../imgs/theme/icons/page-prev-hover.svg) no-repeat center;
+        }
+
+        .pager-next:hover {
+            background: url(../imgs/theme/icons/page-next-hover.svg) no-repeat center;
+        }
+
+        a:hover {
+            font-weight: bold;
+        }
+
+        a:hover {
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #7856dd;
+        }
+
+        a:hover {
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        var count_element = "<%=sltht%>";
+        var pagesize = "<%=pagesize%>";
+        console.log(count_element)
+        console.log(count_element)
+        var arr_job = [];
+        for (i = 1; i <= count_element; i++) {
+            $("#list").append(`<li><a class="pager-number active" href="/Recruit_Manager?page=${i}&pagesize=${pagesize}">${i}</a></li>`)
+            var newLength = arr_job.push(i);
+        }
+        var pageSize = pagesize;
+        var currentPage = 1;
+        var pagedResults = [];
+        var totalResults = arr_job.length;
+        $(function () {
+            function updateList() {
+                var end = (currentPage * pageSize);
+                var start = (end - pageSize);
+                pagedResults = arr_job.slice(start, end);
+                $('#list').empty();
+                if (currentPage <= 1) {
+                    $('.previous').prop("disabled", true);
+                }
+                else {
+                    $('.previous').prop("disabled", false);
+                }
+                if ((currentPage * pageSize) >= totalResults) {
+                    $('.next').prop("disabled", true);
+                }
+                else { $('.next').prop("disabled", false); }
+                $.each(pagedResults, function (index, obj) {
+                    $('#list').append(`<li ><a  href="/Recruit_Manager?page=${obj}&pagesize=${pagesize}">${obj}</a></li>`);
+                });
+            }
+            updateList();
+            $('#next').click(function () {
+                if ((currentPage * pageSize) <= totalResults) currentPage++;
+                updateList();
+            });
+            $('#previous').click(function () {
+                if (currentPage > 1) currentPage--;
+                updateList();
+            });
+        });
+    </script>
+    <script src="./js/script_profile_page/js.js"></script>
+    <script src="https://admin.tuyendung.me/vendor/raphael/raphael.min.js"></script>
+    <script src="https://admin.tuyendung.me/vendor/morris/morris.min.js"></script>
+    <script src="https://admin.tuyendung.me/js/plugins-init/morris-init.js"></script>
+    <script src="https://admin.tuyendung.me/vendor/global/global.min.js"></script>
+    <script src="https://admin.tuyendung.me/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://admin.tuyendung.me/vendor/chart.js/Chart.bundle.min.js"></script>
+    <script src="https://admin.tuyendung.me/js/plugins-init/chartjs-init.js"></script>
+    <script src="https://admin.tuyendung.me/vendor/peity/jquery.peity.min.js"></script>
+    <script src="https://admin.tuyendung.me/vendor/apexchart/apexchart.js"></script>
+    <script src="https://admin.tuyendung.me/js/dashboard/dashboard-1.js"></script>
+    <script src="https://admin.tuyendung.me/vendor/owl-carousel/owl.carousel.js"></script>
+    <script src="https://admin.tuyendung.me/js/custom.min.js"></script>
+    <script src="https://admin.tuyendung.me/js/deznav-init.js"></script>
+    <script src="https://admin.tuyendung.me/js/demo.js"></script>
+</body>
+
+</html>

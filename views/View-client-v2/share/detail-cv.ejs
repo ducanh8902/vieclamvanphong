@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title><%=result.DetailCV%></title>
+    <link rel="icon" type="image/png" sizes="16x16" href="https://admin.tuyendung.me/images/Office_job/logo_new.jpg">
+    <link href="https://admin.tuyendung.me/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="https://admin.tuyendung.me/css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="https://tuyendung.me/new_office/share_cv_new.png" />
+    <link rel="stylesheet" type="text/css" href="./css_search.css" />
+    <meta property="fb:app_id" content="1902832553257404" />
+    <meta property="og:image" content="https://tuyendung.me/icon_officejob/1.png" />
+    <meta property="og:image:alt" content="image" />
+    <meta property="og:title" content="Ứng Viên:<%=result.DetailCV%>">
+    <meta property="og:description" content="Ứng Tuyển :<%=result.TilteCV%>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tuyendung.me/detail-sharecv-ung-vien-tim-viec=<%=result._id%>" />
+    <script src="jquery.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5973369736597865"
+     crossorigin="anonymous"></script>
+     <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N3Q2KXM');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFDGP1S33Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-TFDGP1S33Z');
+    </script>
+    
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <div id="main-wrapper">
+        <div class="nav-header">
+            <a href="/" class="brand-logo">
+                <img style="width: 100%;" src="https://admin.tuyendung.me/images/Office_job/logo_vlvp_new_2022.png"
+                    alt="">
+            </a>
+        </div>
+        <div class="header">
+            <div class="header-content">
+                <nav class="navbar navbar-expand">
+                    <div class="collapse navbar-collapse justify-content-between">
+                        <div class="header-left">
+                            <div style="width: 100%;" class="input-group search-area right d-lg-inline-flex d-none">
+                            </div>
+                        </div>
+                        <ul class="navbar-nav header-right main-notification">
+                            <li class="nav-item dropdown notification_dropdown">
+                                <a class="nav-link bell dz-theme-mode" href="#">
+                                    <i id="icon-light" class="fa fa-sun-o"></i>
+                                    <i id="icon-dark" class="fa fa-moon-o"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown notification_dropdown">
+                                <a class="nav-link bell dz-fullscreen" href="#">
+                                    <svg id="icon-full" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                                        class="css-i6dzq1">
+                                        <path
+                                            d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"
+                                            style="stroke-dasharray: 37, 57; stroke-dashoffset: 0;"></path>
+                                    </svg>
+                                    <svg id="icon-minimize" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-minimize">
+                                        <path
+                                            d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"
+                                            style="stroke-dasharray: 37, 57; stroke-dashoffset: 0;"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown header-profile">
+                                <a class="nav-link" href="#" role="button" data-toggle="dropdown">
+                                    <img src="https://admin.tuyendung.me/images/Office_job/logo_new.jpg" width="20"
+                                        alt="" />
+                                    <div class="header-info">
+                                        <span>Nhà Tuyển Dụng</span>
+                                        <small>User Nhà Tuyển Dụng</small>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="/profile" class="dropdown-item ai-icon">
+                                        <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary"
+                                            width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>
+                                        <span class="ml-2">Trang Cá Nhân</span>
+
+                                        <a href="/logout" class="dropdown-item ai-icon">
+                                            <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger"
+                                                width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                                <polyline points="16 17 21 12 16 7"></polyline>
+                                                <line x1="21" y1="12" x2="9" y2="12"></line>
+                                            </svg>
+                                            <span class="ml-2">Đăng Xuất </span>
+                                        </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div style="height: 80px;padding: 10px 90px;" class="sub-header">
+                    <div class="d-flex align-items-center flex-wrap mr-auto">
+                       
+                        <h3 class="dashboard_bar"> <strong>Ứng Viên : <%=result.DetailCV%> </strong></h3>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <a  class="btn btn-info" id="newFont" download href="https://tuyendung.me/files/<%=result.FileCV%>">Download</a>
+					</div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 22.5rem;" class="deznav">
+            <div class="deznav-scroll">
+                <div style="display: flex; flex-wrap: wrap;margin-right: 0px; margin-left: 0px;" class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="search">
+                                <form style="    height: 200px;
+                                vertical-align: middle;
+                                padding: 2%;text-align: center;" action="/search-candidate">
+                                
+                                 <br>
+                                    <h3 style="background-image: linear-gradient( to right bottom, #ffa400, #735ce7 );"
+                                        id="newFont">
+                                        Tìm Kiếm Ứng Viên
+                                    </h3>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <select style="margin-top: 10px;" name="search">
+                                                <option value="CSKH">Chăm Sóc Khách Hàng</option>
+                                                <option value="Telesele-Sale">Telesele-Sale</option>
+                                                <option value="Kế Toán">Kế Toán</option>
+                                                <option value="Kiểm Toán">Kiểm Toán</option>
+                                                <option value="Marketing&Media">Marketing & Media</option>
+                                                <option value="Kinh Doanh">Kinh Doanh</option>
+                                                <option value="Bán Hàng">Bán Hàng</option>
+                                                <option value="Design">Design 2D & 3D - Video</option>
+                                                <option value="Ngân Hàng - Tài Chính">Ngân Hàng - Tài Chính
+                                                </option>
+                                                <option value="Nhân Sự">Nhân Sự (HR)</option>
+                                                <option value="Công Nghệ Thông Tin">Công Nghệ Thông Tin</option>
+                                                <option value="Thực Phẩm">Thực Phẩm</option>
+                                                <option value="Xây Dựng">Xây Dựng</option>
+                                                <option value="Giáo Dục">Giáo Dục</option>
+                                                <option value="Sức Khỏe">Sức Khỏe</option>
+                                                <option value="PG|PB|PR">PG | PB | PR</option>
+                                                <option value="Kiểm Soát Chất Lượng">Kiểm Soát Chất Lượng
+                                                </option>
+                                                <option value="Bất Động Sản">Bất Động Sản</option>
+                                                <option value="Luật-Pháp Lý">Luật-Pháp Lý</option>
+                                                <option value="Sản Xuất- Vận Hành">Sản Xuất- Vận Hành Máy
+                                                </option>
+                                                <option value="Quản Lý Kho - Khu Công Nghiệp">Quản Lý Kho - Khu
+                                                    Công
+                                                    Nghiệp</option>
+                                                <option value="Xuất Nhập Khẩu-Ngoại Thương">Xuất Nhập Khẩu-Ngoại
+                                                    Thương
+                                                </option>
+                                                <option value="Dịch Vụ- Bảo Hiểm">Dịch Vụ- Bảo Hiểm</option>
+                                                <option value="Lao Động Phổ Thông">Lao Động Phổ Thông</option>
+                                                <option value="Báo Chí - Khoa Học Xã Hội">Báo Chí - Khoa Học Xã
+                                                    Hội
+                                                </option>
+                                                <option value="Khoa Học Nghiêng Cứu">Khoa Học Nghiêng Cứu
+                                                </option>
+                                                <option value="Kinh Tế">Kinh Tế</option>
+                                                <option value="Event">Sự Kiện- Event</option>
+                                                <option value="Dược Phẩm">Dược Phẩm</option>
+                                                <option value="Du lịch">Du lịch</option>
+                                                <option value="Thương Mại Điện Tử">Thương Mại Điện Tử</option>
+                                                <option value="Thời Trang">Thời Trang</option>
+                                                <option value="Biên Dịch - Phiên Dịch">Biên Dịch - Phiên Dịch
+                                                </option>
+                                                <option value="Research & Development">Research & Development
+                                                </option>
+                                                <option value="Khác">Khác</option>
+                                                <option value="Khác">Khác</option>
+                                            </select>
+                                        </div>
+                                        <div  class="col-lg-12">
+                                            <button style="width: 100%;margin-top: 2%;" type="submit" class="btn btn-primary">Tìm Kiếm <img style="width: 15%;" src="https://img.icons8.com/bubbles/2x/search.png" alt=""></button>
+                                        </div>
+                                    </div>
+                                  
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                     
+                                <div id="newFont"
+                                    style=" color: linear-gradient( to right bottom,#FFA414, #735BA1 );vertical-align: middle;margin-top: 2%;"
+                                    class="chart-title">
+                                   Ứng Viên Khác
+                                </div>
+                                    <%result_radom_s.forEach(function(item_radoms){%>
+                                    <div  class="col-lg-12">
+                                            <div style="    border-bottom: 2px solid gray;
+                                            margin-bottom: 5%;
+                                            margin-top: 2%;
+                                            padding: 3%;" class="card-body user-profile">
+                                                <div class="media-body user-meta-info">
+                                                    <h6 class="fs-20 font-w500 my-1"><a href="./<%=item_radoms.url_short%>" class="text-black user-name"><img style="width:10%" src="https://img.icons8.com/bubbles/2x/name.png" alt=""> <%=item_radoms.DetailCV%></a></h6>
+                                                    <p class="fs-14 mb-3 user-work" ><img style="width:10%" src="https://img.icons8.com/bubbles/512/business.png" alt=""> <%=item_radoms.TilteCV%></p>
+                                                    <p class="fs-14 mb-3 user-work" ><img style="width:10%" src="https://img.icons8.com/fluency/2x/navigation.png" alt=""><%=item_radoms.Area%></p>
+                                                    <a target="_blank" hred style="width: 100%;" href="./<%=item_radoms.url_short%>" class="btn btn-primary btn-xs"><img style="width:15%" src="https://img.icons8.com/bubbles/2x/adobe-acrobat.png" alt=""> Xem CV</a>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <%})%>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="padding-left: 4%;top:2%" class="content-body">
+            <div class="container-fluid">
+                <div style="padding: 10px;margin-top: 2%;" class="container-fluid">
+                    <div class="custom-tab-1">
+                        <div class="row">
+                            <div id="info-mobile" class="col-xl-12">
+                                        <div class="card user-card">
+                                            <div class="card-body pb-0">
+                                                <div class="d-flex mb-3 align-items-center">
+                                                    <div class="dz-media me-3">
+                                                        <%   if(google == "google_adsense"){%>
+                                                            <%var str = result.DetailCV %>
+                                                            <%var matches = str.match(/\b(\w)/g);%>
+                                                            <%var acronym = matches.join('').slice(-2)%>
+                                                            <span class="icon-placeholder bg-primary text-white"><%=acronym%></span>
+                                                        <%}else{%>
+                                                            <%var acronym = "GA"%>
+                                                            <span class="icon-placeholder bg-primary text-white"><%=acronym%></span>
+                                                        <%}%>
+                                                    </div>
+                                                    <div>
+                                                        <h3 class="title"><a href="javascript:void(0);"> <%=result.DetailCV%></a></h3>
+                                                        <span class="text-warning"></span>
+                                                    </div>
+                                                </div>
+                                                <h3 class="fs-12"><img style="width: 3%;" src="https://img.icons8.com/bubbles/2x/employee-card.png" alt=""> <%=result.TilteCV%></h3>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item">
+                                                        <span class="mb-0 title"><img style="width: 3%;" src="https://img.icons8.com/bubbles/512/gmail-new.png" alt=""> Email</span> :
+                                                        <span class="text-black ms-2"><%=result.EmailUngVien%></span>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span class="mb-0 title"><img style="width: 3%;" src="https://img.icons8.com/bubbles/2x/apple-phone.png" alt=""> Phone</span> :
+                                                        <%if(check_render_phone == true){%>
+                                                        <span class="text-black ms-2"><%=result.PhoneUngVien%></span>
+                                                        <%}%>
+                                                        <%if(check_render_phone == false){%>
+                                                            <span class="text-black ms-2"> Liên hệ Admin để kích hoạt</span>
+                                                            <%}%>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span class="mb-0 title"><img style="width: 3%;" src="https://img.icons8.com/bubbles/2x/marker.png" alt=""> Khu vực</span> :
+                                                        <span class="text-black desc-text ms-2"><%=result.Area%></span>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span class="mb-0 title"><img style="width: 3%;" src="https://img.icons8.com/bubbles/2x/calendar.png" alt=""> Ngày</span> :
+                                                        <span class="text-black desc-text ms-2"><%=result.DateUpload%></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                  
+                            </div>
+                                <div class="col-xl-12">
+                                <iframe style="border:1px solid gray;border-radius: 10px;" scrolling="auto" display: block width="100%"
+                                    height="850px" src="https://tuyendung.me/files/<%=result.FileCV%>"></iframe>
+                                </div>
+                                <div class="col-xl-12">
+                                    <h3>Ứng viên đang tìm việc</h3>
+                                </div>
+                                <div class="col-xl-12">
+                                    <div class="row">
+                                        <%result_radom.forEach(function(item_radom){%>
+                                        <div class="col-lg-4">
+                                            <div class="card contact-bx item-content">
+                                                <div class="card-body user-profile">
+                                                    <%   if(google == "google_adsense"){%>
+                                                            <div class="image-bx">
+                                                                <span class="icon-placeholder bgl-success rounded-circle text-success">GA</span>
+                                                                <span class="active"></span>
+                                                            </div>
+                                                        <%}else{%>
+                                                            <%var str_s = item_radom.DetailCV %>
+                                                            <%var matches_s = str_s.match(/\b(\w)/g);%>
+                                                            <%var acronym_s = matches_s.join('').slice(-2)%>
+                                                            <div class="image-bx">
+                                                                <span class="icon-placeholder bgl-success rounded-circle text-success"><%=acronym_s%></span>
+                                                                <span class="active"></span>
+                                                            </div>
+                                                    <%}%>
+                                                   
+                                                    <div class="media-body user-meta-info">
+                                                        <h6 class="fs-20 font-w500 my-1"><a href="app-profile.html" class="text-black user-name" data-name="Angela Moss"><%=item_radom.DetailCV%></a></h6>
+                                                        <p class="fs-14 mb-3 user-work" data-occupation="Redblue Studios"><%=item_radom.TilteCV%></p>
+                                                        <a href="./<%=item_radom.url_short%>" class="btn btn-primary btn-xs"><img style="width:15%" src="https://img.icons8.com/bubbles/2x/pdf-2.png" alt=""> Xem CV</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <%})%>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12">
+                                    <script async
+                                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5973369736597865"
+                                    crossorigin="anonymous"></script>
+                                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5973369736597865"
+                                    data-ad-slot="6007349118" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="copyright">
+            <p>OfficeJob &amp; Developed by <a href="./contact" target="_blank">Lê Đức Anh</a> 2022
+            </p>
+        </div>
+    </div>
+    </div>
+    <style>
+        .btn:hover {
+            background-image: linear-gradient(to right bottom, #FFA4DF, #00ADF8)
+        }
+
+        .chart-wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 5px;
+        }
+
+        .chart-wrap .chart-title {
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .chart-wrap .row {
+            position: relative;
+            height: 26px;
+            margin-bottom: 15px;
+        }
+
+        .chart-wrap .bar-wrap {
+            position: relative;
+            background: #d7dbde;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .chart-wrap .bar-wrap .bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #f37167;
+            transition: all 1s;
+            transform: translateX(-100%);
+        }
+
+        .chart-wrap .bar-wrap .bar.in {
+            transform: translateX(0%);
+        }
+
+        .chart-wrap .row:nth-of-type(1) .bar {
+            transition: 1s 400ms;
+        }
+
+        .chart-wrap .row:nth-of-type(2) .bar {
+            transition: 1s 600ms;
+        }
+
+        .chart-wrap .row:nth-of-type(3) .bar {
+            transition: 1s 800ms;
+        }
+
+        .chart-wrap .row:nth-of-type(4) .bar {
+            transition: 1s 1000ms;
+        }
+
+        .chart-wrap .row:nth-of-type(5) .bar {
+            transition: 1s 1200ms;
+        }
+
+        .chart-wrap .row:nth-of-type(6) .bar {
+            transition: 1s 1400ms;
+        }
+
+        .chart-wrap .row:nth-of-type(7) .bar {
+            transition: 1s 1600ms;
+        }
+
+        .chart-wrap .label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            padding-left: 10px;
+            text-align: left;
+            font-size: 14px;
+            line-height: 26px;
+            text-transform: uppercase;
+            font-weight: bold;
+            z-index: 0;
+        }
+
+        .chart-wrap .number {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30px;
+            padding-right: 10px;
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: bold;
+            text-align: right;
+            z-index: 10;
+        }
+
+        @media screen and (min-width: 800px) {
+            .chart-wrap .row {
+                padding: 0 40px 0 160px;
+            }
+
+            .chart-wrap .label {
+                text-align: left;
+                padding-left: 0;
+            }
+
+            .chart-wrap .number {
+                text-align: left;
+                padding-right: 0;
+            }
+        }
+    </style>
+    <script>
+        (function ($) {
+            function generateBarGraph(wrapper) {
+                // Set Up Values Array
+                var values = [];
+
+                // Get Values and save to Array
+                $(wrapper + ' .bar').each(function (index, el) {
+                    values.push($(this).data('value'));
+                });
+
+                // Get Max Value From Array
+                var max_value = Math.max.apply(Math, values);
+
+                // Set width of bar to percent of max value
+                $(wrapper + ' .bar').each(function (index, el) {
+                    var bar = $(this),
+                        value = bar.data('value'),
+                        percent = Math.ceil((value / max_value) * 100);
+
+                    // Set Width & Add Class
+                    bar.width(percent + '%');
+                    bar.addClass('in');
+                });
+            }
+
+            // Generate the bar graph on window load...
+            $(window).on('load', function (event) {
+                generateBarGraph('#dashboard-stats');
+            });
+        })(jQuery); // Fully reference jQuery after this point.
+    </script>
+    <script src="https://tuyendung.me/js_seacrch.js"></script>
+    <style>
+        #newFont {
+            color: transparent;
+            font-size: 25px;
+            background-image: linear-gradient(to right bottom,
+                    #ffa400,
+                    #00aefd);
+            background-clip: text;
+            -webkit-background-clip: text;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        #SelExample {
+            width: 200px;
+        }
+
+        select {
+            display: none !important;
+        }
+
+        .type_job {
+            display: block !important;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40FFFFFF', endColorstr='#00FFFFFF', GradientType=0);
+            background-color: #fff;
+            border-radius: 6px;
+            border: solid 1px #eee;
+            box-shadow: 0px 2px 5px 0px rgb(155 155 155 / 50%);
+            box-sizing: border-box;
+            cursor: pointer;
+            display: block;
+            float: left;
+            font-size: 14px;
+            font-weight: normal;
+            height: 42px;
+            line-height: 40px;
+            outline: none;
+            padding-left: 18px;
+            padding-right: 30px;
+            position: relative;
+            text-align: left !important;
+            transition: all 0.2s ease-in-out;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            white-space: nowrap;
+            width: auto;
+            display: block !important;
+            width: 100%;
+        }
+
+        .dropdown-select {
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40FFFFFF', endColorstr='#00FFFFFF', GradientType=0);
+            background-color: #fff;
+            border-radius: 6px;
+            border: solid 1px #eee;
+            box-shadow: 0px 2px 5px 0px rgba(155, 155, 155, 0.5);
+            box-sizing: border-box;
+            cursor: pointer;
+            display: block;
+            float: left;
+            font-size: 14px;
+            font-weight: normal;
+            height: 42px;
+            line-height: 40px;
+            outline: none;
+            padding-left: 18px;
+            padding-right: 30px;
+            position: relative;
+            text-align: left !important;
+            transition: all 0.2s ease-in-out;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            white-space: nowrap;
+            width: auto;
+
+        }
+
+        .dropdown-select:focus {
+            background-color: #fff;
+        }
+
+        .dropdown-select:hover {
+            background-color: #fff;
+        }
+
+        .dropdown-select:active,
+        .dropdown-select.open {
+            background-color: #fff !important;
+            border-color: #bbb;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) inset;
+        }
+
+        .dropdown-select:after {
+            height: 0;
+            width: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid #777;
+            -webkit-transform: origin(50% 20%);
+            transform: origin(50% 20%);
+            transition: all 0.125s ease-in-out;
+            content: '';
+            display: block;
+            margin-top: -2px;
+            pointer-events: none;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+        }
+
+        .dropdown-select.open:after {
+            -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+        }
+
+        .dropdown-select.open .list {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .dropdown-select.open .option {
+            cursor: pointer;
+        }
+
+        .dropdown-select.wide {
+            width: 100%;
+        }
+
+        .dropdown-select.wide .list {
+            left: 0 !important;
+            right: 0 !important;
+        }
+
+        .dropdown-select .list {
+            box-sizing: border-box;
+            transition: all 0.15s cubic-bezier(0.25, 0, 0.25, 1.75), opacity 0.1s linear;
+            -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+            -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.09);
+            background-color: #fff;
+            border-radius: 6px;
+            padding: 3px 0;
+            opacity: 0;
+            overflow: hidden;
+            pointer-events: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 999;
+            max-height: 450px;
+            overflow: auto;
+            border: 1px solid #ddd;
+        }
+
+        .dropdown-select .list:hover .option:not(:hover) {
+            background-color: transparent !important;
+        }
+
+        .dropdown-select .dd-search {
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0.5rem;
+        }
+
+        .dropdown-select .dd-searchbox {
+            width: 90%;
+            height: 50px;
+            padding: 0.5rem;
+            border: 1px solid #999;
+            border-color: #999;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .dropdown-select .dd-searchbox:focus {
+            border-color: #12CBC4;
+        }
+
+        .dropdown-select .list ul {
+            padding: 0;
+        }
+
+        .dropdown-select .option {
+            cursor: default;
+            font-weight: 400;
+            line-height: 40px;
+            outline: none;
+            padding-left: 18px;
+            padding-right: 29px;
+            text-align: left;
+            transition: all 0.2s;
+            list-style: none;
+        }
+
+        .dropdown-select .option:hover,
+        .dropdown-select .option:focus {
+            background-color: #f6f6f6 !important;
+        }
+
+        .dropdown-select .option.selected {
+            font-weight: 600;
+            color: #12cbc4;
+        }
+
+        .dropdown-select .option.selected:focus {
+            background: #f6f6f6;
+        }
+
+        .dropdown-select a {
+            color: #aaa;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .dropdown-select a:hover {
+            color: #666;
+        }
+    </style>
+    <script src="https://admin.tuyendung.me/vendor/global/global.min.js"></script>
+    <script src="https://admin.tuyendung.me/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://admin.tuyendung.me/vendor/peity/jquery.peity.min.js"></script>
+    <script src="https://admin.tuyendung.me/js/dashboard/dashboard-1.js"></script>
+    <script src="https://admin.tuyendung.me/vendor/owl-carousel/owl.carousel.js"></script>
+    <script src="https://admin.tuyendung.me/js/custom.min.js"></script>
+    <script src="https://admin.tuyendung.me/js/deznav-init.js"></script>
+    <script src="https://admin.tuyendung.me/js/demo.js"></script>
+    <script>
+       
+        jQuery(document).ready(function () {
+            var google = '<%=google%>'
+            if(google == "google_adsense"){
+                setTimeout(async function  () {
+                    const response = await fetch(`https://tuyendung.me/radom/share_cv`)
+                    const data = await response.json();
+                    window.open(data.short,"_self")
+            }, 15000)
+            }
+            if(google == ""){
+                setTimeout(async function  () {
+                    location.reload();
+                }, 30000)
+            }
+            setTimeout(function () {
+                dezSettingsOptions.version = 'dark';
+                new dezSettings(dezSettingsOptions);
+            }, 100)
+        });
+    </script>
+</body>
+
+</html>

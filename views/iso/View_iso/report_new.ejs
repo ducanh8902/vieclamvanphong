@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="margin-top: 10px;font-size: 20px;height:100%;" id="thongtin" class="sideber2">
+      <style type="text/css">
+    @page { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
+    body { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
+        html { font-family:Times New Roman,Calibri, Arial, Helvetica, sans-serif; font-size:11pt; background-color:white }
+        a.comment-indicator:hover + div.comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em }
+        a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em }
+        div.comment { display:none }
+        table { border-collapse:collapse; page-break-after:always }
+        .gridlines td { border:1px dotted black }
+        .gridlines th { border:1px dotted black }
+        .b { text-align:center }
+        .e { text-align:center }
+        .f { text-align:right }
+        .inlineStr { text-align:left }
+        .n { text-align:right }
+        .s { text-align:left }
+        td.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
+        th.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
+        td.style1 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style1 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style2 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style2 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style3 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style3 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style4 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style4 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style5 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style5 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style6 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style6 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style7 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:#FFFF00 }
+        th.style7 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:#FFFF00 }
+        td.style8 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:12pt; background-color:white }
+        th.style8 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:12pt; background-color:white }
+        td.style9 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:12pt; background-color:white }
+        th.style9 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:12pt; background-color:white }
+        td.style10 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style10 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style11 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style11 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style12 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:12pt; background-color:white }
+        th.style12 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:12pt; background-color:white }
+        td.style13 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style13 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style14 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style14 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style15 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:#FFFF00 }
+        th.style15 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:#FFFF00 }
+        table.sheet0 col.col0 { width:500px }
+        table.sheet0 col.col1 { width:100px }
+        table.sheet0 col.col2 { width:200px }
+        table.sheet0 col.col3 { width:300px }
+        table.sheet0 col.col4 { width:400px }
+        table.sheet0 col.col5 { width:500px }
+        table.sheet0 col.col6 { width:570px }
+        table.sheet0 col.col7 { width:71.84444362pt }
+        table.sheet0 col.col8 { width:57.61111045pt }
+        table.sheet0 col.col9 { width:77.94444355pt }
+        table.sheet0 tr { height:16.363636363636pt }
+        table.sheet0 tr.row0 { height:18pt }
+        table.sheet0 tr.row1 { height:18pt }
+        table.sheet0 tr.row2 { height:18pt }
+        table.sheet0 tr.row3 { height:16pt }
+        table.sheet0 tr.row4 { height:16pt }
+        table.sheet0 tr.row7 { height:16pt }
+        table.sheet0 tr.row8 { height:16pt }
+        table.sheet0 tr.row9 { height:16pt }
+        table.sheet0 tr.row10 { height:16pt }
+        table.sheet0 tr.row11 { height:16pt }
+        table.sheet0 tr.row12 { height:16pt }
+        table.sheet0 tr.row13 { height:16pt }
+        table.sheet0 tr.row14 { height:16pt }
+      </style>
+      <div id='DivIdToPrint' class="widghet">
+          <table style="width: 95%; margin-left: calc(2%); border-collapse: collapse; border: none; margin-right: calc(3%);">
+              <tbody>
+                  <tr>
+                      <td rowspan="4"
+                          style="width:103.5pt;border:double windowtext 1.5pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt;">
+                          <p
+                              style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <img width="93"
+                                  src="https://galaxydr.com.vn/storage/logo/logo.png"
+                                  alt="Description: logo"></p>
+                      </td>
+                      <td rowspan="4"
+                          style="width: 46.9095%; border-top: 1.5pt double windowtext; border-left: none; border-bottom: 1.5pt double windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 19pt;">
+                          <p
+                              style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <strong><span style='font-family:"Cambria",serif;'>C&Ocirc;NG TY TNHH DV GALAXY
+                                      DR&nbsp;</span></strong></p>
+                          <p
+                              style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <span style='font-size:13px;font-family:"Cambria",serif;'>TM01, PVL Linh T&acirc;y,
+                                  Số 5, Đường D1, Phường Linh T&acirc;y, Th&agrave;nh phố Thủ Đức, TPHCM</span>
+                          </p>
+                          <p
+                              style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <span style='font-size:13px;font-family:"Cambria",serif;'>Điện thoại: &nbsp;028
+                                  73055 995</span></p>
+                          <p
+                              style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <span style='font-size:13px;font-family:"Cambria",serif;'>Website:</span><span
+                                  style="font-size:15px;">&nbsp;</span><span
+                                  style='font-size:13px;font-family:"Cambria",serif;'>www.galaxydr.com.vn</span>
+                          </p>
+                      </td>
+                      <td
+                          style="width:86.4pt;border-top:double windowtext 1.5pt;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt;">
+                          <p
+                              style='margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;'>
+                              Trang</p>
+                      </td>
+                      <td
+                          style="width: 19.7026%; border-top: 1.5pt double windowtext; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1.5pt double windowtext; padding: 0cm 5.4pt; height: 19pt;">
+                          <p
+                              style='margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;'>
+                              1/2</p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td
+                          style="width:86.4pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt;">
+                          <p
+                              style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <span style="font-size:13px;">Lần ban h&agrave;nh</span></p>
+                      </td>
+                      <td
+                          style="width: 19.7026%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1.5pt double windowtext; padding: 0cm 5.4pt; height: 19pt;">
+                          <p
+                              style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <span style="font-size:15px;">01</span></p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td
+                          style="width:86.4pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt;">
+                          <p
+                              style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <span style="font-size:13px;">Ng&agrave;y ban h&agrave;nh</span></p>
+                      </td>
+                      <td
+                          style="width: 19.7026%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1.5pt double windowtext; padding: 0cm 5.4pt; height: 19pt;">
+                          <p
+                              style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <span style="font-size:15px;">20/01/2021</span></p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td
+                          style="width:86.4pt;border-top:none;border-left:none;border-bottom:double windowtext 1.5pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt;">
+                          <p
+                              style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <span style="font-size:13px;">Số hiệu</span></p>
+                      </td>
+                      <td
+                          style="width: 19.7026%; border-top: none; border-left: none; border-bottom: 1.5pt double windowtext; border-right: 1.5pt double windowtext; padding: 0cm 5.4pt; height: 19pt;">
+                          <p
+                              style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                              BM - QT08-02</p>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+          <div id='DivIdToPrint' class="widghet">
+          <p style="margin:0cm;font-size:16px;font-family:VNI-Times;">&nbsp;</p>
+          <h1 style="margin:0cm;text-align:center;font-size:21px;font-family:VNI-Times;font-weight:normal;text-indent:36.0pt;"><strong><span style='font-size:24px;font-family:"Cambria",serif;'>B&Aacute;O C&Aacute;O T&Igrave;NH H&Igrave;NH TUYỂN DỤNG</span></strong></h1>
+<p style="margin:0cm;font-size:16px;font-family:VNI-Times;">&nbsp;</p>
+<p style="margin:0cm;font-size:16px;font-family:VNI-Times;line-height:150%;"><span style='font-size:19px;line-height:150%;font-family:"Times New Roman",serif;'>Số</span><span style='font-size:19px;line-height:150%;font-family:"Times New Roman",serif;'>&nbsp;phiếu y&ecirc;u cầu tuyển dụng:</span><span style='font-size:19px;line-height:150%;font-family:"Times New Roman",serif;'><%=report.Info_head._id_custom%> &nbsp; &nbsp; &nbsp;</span></p>
+<p style="margin:0cm;font-size:16px;font-family:VNI-Times;line-height:150%;"><span style='font-size:19px;line-height:150%;font-family:"Times New Roman",serif;'>Ng&agrave;y b&aacute;o c&aacute;o&nbsp;&nbsp;: <%=report.Report.Date_report%></span></p>
+<div style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+    <table style="border: none;width:772.25pt;border-collapse:collapse;">
+        
+        <tbody>
+            <tr>
+                <td rowspan="2" style="width:73.45pt;border:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:16.1pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;"><strong><span style='font-size:19px;font-family:"Times New Roman",serif;color:black;'>Ng&agrave;y Y&ecirc;u Cầu</span></strong></p>
+                </td>
+                <td rowspan="2" style="width:60.25pt;border:solid windowtext 1.0pt;border-left:none;padding:.75pt 5.4pt 0cm 5.4pt;height:16.1pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;"><strong><span style='font-size:19px;font-family:"Times New Roman",serif;color:black;'>Nhóm</span></strong></p>
+                </td>
+                <td rowspan="2" style="width:87.6pt;border:solid windowtext 1.0pt;border-left:none;padding:.75pt 5.4pt 0cm 5.4pt;height:16.1pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;"><strong><span style='font-size:19px;font-family:"Times New Roman",serif;color:black;'>Kế hoạch đ&agrave;o tạo</span></strong></p>
+                </td>
+                <td rowspan="2" style="width:86.05pt;border:solid windowtext 1.0pt;border-left:none;padding:.75pt 5.4pt 0cm 5.4pt;height:16.1pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;"><strong><span style='font-size:19px;font-family:"Times New Roman",serif;color:black;'>Số lượng y&ecirc;u cầu</span></strong></p>
+                </td>
+                <td rowspan="2" style="width:67.3pt;border:solid windowtext 1.0pt;border-left:none;padding:.75pt 5.4pt 0cm 5.4pt;height:16.1pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;"><strong><span style='font-size:19px;font-family:"Times New Roman",serif;color:black;'>Ng&agrave;y đ&agrave;o tạo</span></strong></p>
+                </td>
+                <td rowspan="2" style="width:90.7pt;border:solid windowtext 1.0pt;border-left:none;padding:.75pt 5.4pt 0cm 5.4pt;height:16.1pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;"><strong><span style='font-size:19px;font-family:"Times New Roman",serif;color:black;'>Số lượng b&agrave;n giao</span></strong></p>
+                </td>
+                <td rowspan="2" style="width:75.1pt;border:solid windowtext 1.0pt;border-left:none;padding:.75pt 5.4pt 0cm 5.4pt;height:16.1pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;"><strong><span style='font-size:19px;font-family:"Times New Roman",serif;color:black;'>% Ho&agrave;n th&agrave;nh</span></strong></p>
+                </td>
+                <td rowspan="2" style="width:93.15pt;border:solid windowtext 1.0pt;border-left:none;padding:.75pt 5.4pt 0cm 5.4pt;height:16.1pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;"><strong><span style='font-size:19px;font-family:"Times New Roman",serif;color:black;'>Dư/Thiếu Nh&acirc;n sự</span></strong></p>
+                </td>
+                <td rowspan="2" style="width:129.85pt;border:solid windowtext 1.0pt;border-left:none;padding:.75pt 5.4pt 0cm 5.4pt;height:16.1pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;"><strong><span style='font-size:19px;font-family:"Times New Roman",serif;color:black;'>Ghi Ch&uacute;</span></strong></p>
+                </td>
+                <td style="border:none;padding:0cm 0cm 0cm 0cm;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;">&nbsp;</p>
+                </td>
+                <td style="height:16.1pt;border:none;"><br></td>
+            </tr>
+            <tr>
+                <td style="width: 8.7pt;padding: 0.75pt 5.4pt 0cm;height: 13.35pt;vertical-align: bottom;"><br></td>
+                <td style="height:13.35pt;border:none;"><br></td>
+            </tr>
+            <tr>
+              
+                <td rowspan="5" style="width:73.45pt;border:solid windowtext 1.0pt;border-top:none;padding:  .75pt 5.4pt 0cm 5.4pt;height:13.35pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;"><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="5" style="width:60.25pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:13.35pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;"><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="5" style="width:87.6pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:13.35pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;"><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="5" style="width:86.05pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:13.35pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;"><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="5" style="width:67.3pt;border-top:none;border-left:  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:13.35pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;"><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="5" style="width:90.7pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:13.35pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;"><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="5" style="width:75.1pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:13.35pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;"><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="5" style="width:93.15pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:13.35pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;"><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="5" style="width:129.85pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:13.35pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;"><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+                </td>
+                <td style="width:8.7pt;padding:.75pt 5.4pt 0cm 5.4pt;height:13.35pt;"><br></td>
+                <td style="height:13.35pt;border:none;"><br></td>
+            </tr>
+            <tr>
+                <td style="width: 8.7pt;padding: 0.75pt 5.4pt 0cm;height: 13.35pt;vertical-align: bottom;"><br></td>
+                <td style="height:13.35pt;border:none;"><br></td>
+            </tr>
+            <tr>
+                <td style="width: 8.7pt;padding: 0.75pt 5.4pt 0cm;height: 13.35pt;vertical-align: bottom;"><br></td>
+                <td style="height:13.35pt;border:none;"><br></td>
+            </tr>
+            <tr>
+                <td style="width: 8.7pt;padding: 0.75pt 5.4pt 0cm;height: 13.35pt;vertical-align: bottom;"><br></td>
+                <td style="height:13.35pt;border:none;"><br></td>
+            </tr>
+            <tr>
+                <td style="width: 8.7pt;padding: 0.75pt 5.4pt 0cm;height: 13.35pt;vertical-align: bottom;"><br></td>
+                <td style="height:13.35pt;border:none;"><br></td>
+            </tr>
+            <tr>
+                <td colspan="3" rowspan="2" style="width:221.4pt;border:solid windowtext 1.0pt;border-top:none;padding:.75pt 5.4pt 0cm 5.4pt;height:30.9pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;"><span style='font-size:19px;font-family:"Times New Roman",serif;color:black;'>Kế hoạc bổ sung nh&acirc;n sự</span></p>
+                </td>
+                <td rowspan="2" style="width:86.05pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:30.9pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;"><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="2" style="width:67.3pt;border-top:none;border-left:  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:30.9pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;"><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="2" style="width:90.7pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:30.9pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;"><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="2" style="width:75.1pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:30.9pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;"><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="2" style="width:93.15pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:30.9pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;"><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="2" style="width:129.85pt;border-top:none;border-left:  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:30.9pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;"><span style='font-size:19px;font-family:"Times New Roman",serif;color:black;'>Kế hoach bổ sung nếu thiếu</span></p>
+                </td>
+                <td style="width:8.7pt;padding:.75pt 5.4pt 0cm 5.4pt;height:30.9pt;"><br></td>
+                <td style="height:30.9pt;border:none;"><br></td>
+            </tr>
+            <tr>
+                <td style="width: 8.7pt;padding: 0.75pt 5.4pt 0cm;height: 14.2pt;vertical-align: bottom;"><br></td>
+                <td style="height:14.2pt;border:none;"><br></td>
+            </tr>
+            <tr>
+                <td colspan="3" rowspan="3" style="width:221.4pt;border:solid windowtext 1.0pt;border-top:none;padding:.75pt 5.4pt 0cm 5.4pt;height:13.35pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;"><span style='font-size:19px;font-family:"Times New Roman",serif;color:black;'>Total</span></p>
+                </td>
+                <td rowspan="3" style="width:86.05pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:13.35pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;"><span style='font-size:19px;font-family:"Times New Roman",serif;color:black;'>0</span></p>
+                </td>
+                <td rowspan="3" style="width:67.3pt;border-top:none;border-left:  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:13.35pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;"><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+                </td>
+                <td rowspan="3" style="width:90.7pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:13.35pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;"><span style='font-size:19px;font-family:"Times New Roman",serif;color:black;'>0</span></p>
+                </td>
+                <td rowspan="3" style="width:75.1pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#63BE7B;padding:.75pt 5.4pt 0cm 5.4pt;height:13.35pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;"><span style='font-size:19px;font-family:"Times New Roman",serif;color:black;'>0%</span></p>
+                </td>
+                <td rowspan="3" style="width:93.15pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:13.35pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:center;"><span style='font-size:19px;font-family:"Times New Roman",serif;color:black;'>0</span></p>
+                </td>
+                <td rowspan="3" style="width:129.85pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:.75pt 5.4pt 0cm 5.4pt;height:13.35pt;">
+                    <p style="margin:0cm;font-size:16px;font-family:VNI-Times;"><span style='font-size:13px;font-family:"Times New Roman",serif;color:black;'>&nbsp;</span></p>
+                </td>
+                <td style="width:8.7pt;padding:.75pt 5.4pt 0cm 5.4pt;height:13.35pt;"><br></td>
+                <td style="height:13.35pt;border:none;"><br></td>
+            </tr>
+            <tr>
+                <td style="width: 8.7pt;padding: 0.75pt 5.4pt 0cm;height: 13.35pt;vertical-align: bottom;"><br></td>
+                <td style="height:13.35pt;border:none;"><br></td>
+            </tr>
+            <tr>
+                <td style="width: 8.7pt;padding: 0.75pt 5.4pt 0cm;height: 14.2pt;vertical-align: bottom;"><br></td>
+                <td style="height:14.2pt;border:none;"><br></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p style="margin:0cm;font-size:16px;font-family:VNI-Times;"><span style='font-size:5px;font-family:"Cambria",serif;'>&nbsp;</span></p>
+<p style="margin:0cm;font-size:16px;font-family:VNI-Times;line-height:200%;"><span style='font-size:19px;line-height:200%;font-family:"Times New Roman",serif;'>Kết</span><span style='font-size:19px;line-height:200%;font-family:"Times New Roman",serif;'>&nbsp;quả c&ocirc;ng việc&nbsp;</span><span style='font-size:19px;line-height:200%;font-family:"Times New Roman",serif;'> : <%=report.Report.final_report%></span></p>
+<p style="margin:0cm;font-size:16px;font-family:VNI-Times;line-height:200%;"><span style='font-size:19px;line-height:200%;font-family:"Times New Roman",serif;'>G</span><span style='font-size:19px;line-height:200%;font-family:"Times New Roman",serif;'>iả</span><span style='font-size:19px;line-height:200%;font-family:"Times New Roman",serif;'>i</span><span style='font-size:19px;line-height:200%;font-family:"Times New Roman",serif;'>&nbsp;ph&aacute;p điều chỉnh nh&acirc;n sự (Dư/Thiếu)</span><span style='font-size:19px;line-height:200%;font-family:"Times New Roman",serif;'> : <%=report.Report.solution%></span></p>
+<p style="margin:0cm;font-size:16px;font-family:VNI-Times;line-height:200%;"><span style='font-size:19px;line-height:200%;font-family:"Times New Roman",serif;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Bộ phận y&ecirc;u cầu</span><span style='font-size:19px;line-height:200%;font-family:"Times New Roman",serif;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.&nbsp;</span><span style='font-size:19px;line-height:200%;font-family:"Times New Roman",serif;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Bộ phận tuyển dụng</span></p>
+<p style="margin:0cm;font-size:16px;font-family:VNI-Times;line-height:200%;"><em><span style='font-size:19px;line-height:200%;font-family:"Times New Roman",serif;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></em><em><span style='font-size:19px;line-height:200%;font-family:"Times New Roman",serif;'>(K&yacute; v&agrave; ghi r&otilde; họ t&ecirc;n) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;.&nbsp;</span></em><em><span style='font-size:19px;line-height:200%;font-family:"Times New Roman",serif;'>&nbsp; &nbsp; &nbsp; &nbsp;</span></em><em><span style='font-size:19px;line-height:200%;font-family:"Times New Roman",serif;'>(K&yacute; v&agrave; ghi r&otilde; họ t&ecirc;n</span></em><em><span style='font-size:15px;line-height:200%;font-family:"Calibria",serif;'>)</span></em></p>
+      </div>
+    </div>
+    </div>
+  </body>
+
+</html>

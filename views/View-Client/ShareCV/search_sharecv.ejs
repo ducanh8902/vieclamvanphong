@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<%- include ../partials/header.ejs%>
+
+    <body>
+        <link rel="stylesheet" type="text/css" href="css/style_II.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive2.css" />
+        <link rel="stylesheet" type="text/css" href="css_search.css" />
+      
+        
+        <%- include ../partials/header-top-none-profile%>
+        <div class="jp_listing_sidebar_main_wrapper">
+            <section class="candidates-area section4">
+                <div class="container">
+                    <div class="row">
+         
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="container">
+                                <div class="recruiters-details">
+                                    <div style="height: 250px;background-image: linear-gradient( to right bottom, #ffa400, #00aefd );""  class="items2">
+                          <div  class="row">
+                               <div  class="col-md-12">
+                                <center>
+                                    <div class="search">
+                                        <form style="padding-right: 15%;
+                    padding-left: 15%;" action="/search-candidate">
+                      <div style="justify-content: center;align-items: center;display: flex;background-color: aliceblue;font-size: 13px;height: 60px;
+                      box-shadow: 3px 5px #888888;
+                      text-align: center;
+                      margin-bottom: 10px;
+                      border: 1px;
+                      border-radius: 10px;" class="col-md-12">
+                                             
+
+                                                  <h3 style="background-image: linear-gradient( to right bottom, #ffa400, #735ce7 );"
+                                                      id="newFont">
+                                                      Tìm Kiếm Ứng Viên
+                                                  </h3>
+                                          </div>
+                                            <select style="margin-top: 10px;" name="search">
+                                                <option value="Tư Vấn-CSKH-Telesele-Sale">Tư
+                                                    Vấn-CSKH-Telesele-Sale</option>
+                                                <option value="Kế Toán">Kế Toán</option>
+                                                <option value="Marketing & Media">Marketing & Media
+                                                </option>
+                                                <option value="Nhân Sự">Nhân Sự (HR)</option>
+                                                <option value="Thực Phẩm">Thực Phẩm</option>
+                                                <option value="Kinh Doanh">Kinh Doanh</option>
+                                                <option value="Bán Hàng">Bán Hàng</option>
+                                                <option value="Bất Động Sản">Bất Động Sản</option>
+                                                <option value="Luật-Pháp Lý">Luật-Pháp Lý</option>
+                                                <option value="Sản Xuất- Vận Hành">Sản Xuất- Vận
+                                                    Hành</option>
+                                                <option value="Xuất Nhập Khẩu-Ngoại Thương">Xuất
+                                                    Nhập Khẩu-Ngoại Thương</option>
+                                                <option value="Công Nghệ Thông Tin">Công Nghệ Thông
+                                                    Tin</option>
+                                                <option value="Lao Động Phổ Thông">Lao Động Phổ
+                                                    Thông</option>
+                                                <option value="Dịch Vụ- Bảo Hiểm">Dịch Vụ- Bảo Hiểm
+                                                </option>
+                                                <option value="Ngân Hàng - Tài Chính">Ngân Hàng -
+                                                    Tài Chính</option>
+                                                <option value="Khác">Khác</option>
+                                            </select>
+                                            <button type="submit" class="btn1">Tìm Kiếm</button>
+                                            <style>
+                                                .btn1:hover {
+                                                    background-image: linear-gradient(to right bottom, #FFA4DF, #00ADF8)
+                                                }
+                                            </style>
+                                        </form>
+                                    </div>
+                                </center>
+                              </div>
+                          </div>
+                          </div>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="container">
+                            <div class="recruiters-details">
+                                <div style="background-image: linear-gradient( to right bottom, #ffa400, #00aefd );padding: 15px 15px;"  class="items2">
+             <div  class="row">
+                 <%if(result =="nodata"){%>
+                    <div style="text-align: center;"  class="col-md-12">
+                        <div style="background: #fff;height: 100px; align-items: center;">
+                            <p style="margin-top: 25px;height: 50px;" id="newFont">Không Tìm Thấy Ứng Viên</p>
+                        </div>
+                        
+            </div>
+                    <%}else{%>
+                            <%result.forEach(function(item){%>
+                                
+                                <div  class="col-md-4">
+                                    <div style="overflow-y: hidden;height: 430px;" class="card" data-state="#about">
+                                        <div class="card-header">
+                                            <div class="card-cover"
+                                                style="background-color: yellowgreen;;background-image: url('https://img.icons8.com/bubbles/10000/000000/user-male.png')">
+                                            </div>
+                                            <h1   class="card-fullname">
+                                                <%=item.DetailCV%>
+                                            </h1>
+                                        </div>
+
+                                        <div class="card-main">
+                                            <div class="card-section is-active" s id="about">
+                                                <div class="row">
+                                                    <div style="width: 100%;text-align: left;" class="sideber2">
+                                                        <div class="widghet">
+                                                            <div style="
+                                                            justify-content: center;
+    align-items: center;
+    display: flex;
+                                                            background-color: aliceblue;
+                                                            font-size: 13px;
+                                                            height: 80px;
+                                                            box-shadow: 3px 5px #888888;
+                                                            text-align: center;
+                                                            margin-bottom: 10px;
+                                                            border: 1px;
+                                                            border-radius: 10px;" class="col-md-12">
+                                                                                    <%if(item.TilteCV){%>
+
+                                                                                        <h3 style="background-image: linear-gradient( to right bottom, #ffa400, #735ce7 );"
+                                                                                            id="newFont">
+                                                                                            <%=item.TilteCV%>
+                                                                                        </h3>
+
+
+                                                                                        <%}else{%>
+                                                                                            <img style="width: 10%;"
+                                                                                                src="https://img.icons8.com/clouds/100/000000/add-bookmark.png" />
+                                                                                            <strong>Ứng viên đang cập
+                                                                                                nhật ...</strong>
+
+                                                                                            <%}%>
+                                                                                </div>
+                                                                                <div style="font-size: 10px;"
+                                                                                    class="col-md-12">
+                                                                                    <%if(!item.TypeCV){%>
+                                                                                        <img style="width: 10%;"
+                                                                                            src="https://img.icons8.com/dusk/64/000000/sorting-answers.png" />
+                                                                                        Chuyên ngành:
+                                                                                        <strong>Khác</strong>
+                                                                                        <%}else{%>
+                                                                                            <img style="width: 10%;"
+                                                                                                src="https://img.icons8.com/dusk/64/000000/sorting-answers.png" />
+                                                                                            Chuyên ngành: <strong>
+                                                                                                <%=item.TypeCV%>
+                                                                                            </strong>
+                                                                                            <%}%>
+                                                                                </div>
+                                                        
+                                                            <div style="font-size: 12px;" class="col-md-12">
+                                                                <img style="width: 10%;"
+                                                                    src="https://img.icons8.com/bubbles/100/000000/map.png" />Địa
+                                                                chỉ: <strong>
+                                                                    <%=item.Area%>
+                                                                </strong>
+                                                            </div>
+                                                            <div style="font-size: 12px;" class="col-md-12">
+                                                                <img style="width: 10%;"
+                                                                    src="https://img.icons8.com/dusk/64/000000/date-to.png" />
+                                                                Ngày: <strong>
+                                                                    <%=item.DateUpload%>
+                                                                </strong>
+                                                            </div>
+                                                            <center>
+                                                                <button class="contact-me" type="button"
+                                                                    data-toggle="modal"
+                                                                    data-target="#largeModal<%=item._id%>">
+                                                                    Xem thông tin ứng viên
+                                                                </button>
+
+                                                            </center>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                </br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </br>
+                                </div>
+                                <%})%>
+                <%}%>
+                            </div>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5973369736597865"
+     crossorigin="anonymous"></script>
+<!-- Share-CV -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5973369736597865"
+     data-ad-slot="6007349118"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+                                      
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="container">
+        <div class="recruiters-details">
+            <div id="infoCPN" class="items2">
+                <div class="right-con">
+                    <img style="width: 120px;height: 120px;border-radius: 10px;"
+                        src="/images/Leducanh.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <a style="text-align: center;" href="https://www.galaxydr.com.vn">
+                        <h3><b style="font-size: 25px;font-weight:900" id="newFont">Chia Sẻ Hồ Sơ Ứng Viên Tìm Việc</b></h3>
+                    </a>
+                    <ul class="tlist">
+                        <li><img style="width:30px;height: 30px;"
+                                src="https://img.icons8.com/color/100/000000/domain--v1.png" /><a
+                                href="https://tuyendung.me/share-cv"><b>https://tuyendung.me</b></a>
+                        </li>
+                        <li><img style="width:30px;height: 30px;"
+                                src="https://img.icons8.com/office/100/000000/conference-call.png" /><b>Hơn
+                                500 hồ sơ Ứng Viên</b>
+                        </li>
+                        <li><img style="width:30px;height: 30px;"
+                                src="https://img.icons8.com/plasticine/100/000000/new-job.png" /><b>Đa dạng lĩnh vực tuyển dụng</b></li>
+                    </ul>
+                    <ul class="blist">
+                        <li><img style="width:50px;height: 50px;"
+                                src="https://img.icons8.com/bubbles/100/000000/iphone-x.png" /><b>Lê
+                                Đức
+                                Anh : 0938.344.798 - 093.18.666.98 (Admin)
+                            </b></li>
+                        <li><img style="width:50px;height: 50px;"
+                                src="https://img.icons8.com/bubbles/100/000000/email--v1.png" />
+                            <b>Email : anh.le@galaxydr.com.vn</b>
+                        </li>
+                        <li><img style="width:50px;height: 50px;"
+                                src="https://img.icons8.com/bubbles/100/000000/order-delivered.png" /><b>Địa
+                                chỉ : Số 5 Đường D1 ,Tầng 1&2
+                                Toà nhà PVL Linh Tây Tower Phường Linh Tây , Thành Phố
+                                Thủ Đức</b></li>
+                        <li><img style="width:50px;height: 50px;"
+                                src="https://img.icons8.com/bubbles/100/000000/facebook.png" /><a
+                                href="https://www.facebook.com/vieclamvanphongTPHCM"><b>Fanpage :
+                                    https://www.facebook.com/vieclamvanphongTPHCM</b></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>         
+
+                    </div>
+
+                </div>
+            </section>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5973369736597865"
+     crossorigin="anonymous"></script>
+<!-- Share-CV -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5973369736597865"
+     data-ad-slot="6007349118"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<%if(result !="nodata"){%>
+            <%result.forEach(function(item){%>
+                <div class="modal fade" id="largeModal<%=item._id%>" tabindex="-1" role="dialog"
+                    aria-labelledby="largeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" >Thông tin ứng viên :<b id="newFont"> <%=item.DetailCV%></b>
+                                </h3>
+
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5973369736597865"
+     crossorigin="anonymous"></script>
+<!-- ShareCV-header -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5973369736597865"
+     data-ad-slot="8095408091"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                            </div>
+                            <div class="modal-body">
+                                <center>
+                                    <iframe style="border:1px solid gray" scrolling="auto" display: block width="90%"
+                                        height="550px" src="https://tuyendung.me/files/<%=item.FileCV%>"></iframe>
+
+                                </center>
+
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5973369736597865"
+     crossorigin="anonymous"></script>
+<!-- Share-CV -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5973369736597865"
+     data-ad-slot="6007349118"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                            </div>
+                            <div class="modal-footer">
+                                <h3 style="text-align: left;" class="modal-title">Ủng hộ chúng tôi bằng lượt click quảng cáo</h3>
+                                <h6 style="text-align: left;" class="modal-title">Hãy chia sẽ kho thông tin này đến với các nhà tuyển dụng khác.Xin Cám Ơn</h6>
+                                </br>
+                                <a style="border: 1px solid gray; border-radius: 10px;" class="btn btn-secondary" 
+                                    href="files/<%=item.FileCV%>" id="newFont" download="<%=item.TilteCV%>">Dowload</a>
+                                <button type="button"
+                                    class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <%})%>
+                <%}%>
+        </div>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5973369736597865"
+     crossorigin="anonymous"></script>
+<!-- Detail-share-cv-2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5973369736597865"
+     data-ad-slot="5770472247"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                    <script src="https://code.jquery.com/jquery-3.6.0.js"
+                        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+                        crossorigin="anonymous"></script>
+
+                    <script src="js_seacrch.js"></script>
+                    <%- include ../partials/menu.ejs%>
+                        <%- include ../partials/footer.ejs%>
+                         
+    </body>
+</html>

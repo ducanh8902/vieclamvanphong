@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <%- include ../partials/header.ejs%>
+
+<body>
+    <style>
+        .screen {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #F5F5F5;
+  box-shadow: 2px 8px 32px rgba(0, 0, 0, 0.50);
+}
+
+.clouds {
+  position: relative;
+  bottom: -155px;
+  width: 243px;
+  height: 172px;
+  opacity: 0;
+  animation: clouds 1s .8s ease-in forwards;
+}
+
+.plane {
+  position: relative;
+  width: 139px;
+  height: 139px;
+  opacity: 0;
+  animation: plane-start .8s .8s ease-out, plane-loop 1.6s 1.6s linear infinite;
+
+}
+
+.message {
+  margin-top: 72px;
+  font-family: Rubik, sans-serif;
+  font-size: 16px;
+  color: #292929;
+  letter-spacing: 1px;
+  animation: message .3s 1.6s ease-in-out backwards;
+}
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet"
+    type="text/css" />
+<script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
+<script src="jquery.js"></script>
+        <div class="jp_first_sidebar_main_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div style="margin-bottom: 10px;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="jp_hiring_slider_main_wrapper">
+                                    <div class="jp_hiring_heading_wrapper">
+                                        <h2 id="newFont">Email Marketing</h2>
+                                    </div>
+                                    <div class="jp_hiring_slider_main_wrapper">
+                                        <div class="jp_hiring_heading_wrapper">
+                                          <form action="/Send-Email-Marketing" method="post" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <labe  style="height: 50%;" for="datachoose">Chọn Data</label>
+                                                        
+                                                        <select class="form-control" id="datachoose" name="choose_data">
+                                                        <%EmailMKT.forEach(function(item,index){%>
+                                                            <option value="<%=item._id%>">Tệp đối tượng <%=item.DataTemplateEmailMarketing.DataMarketing%> - <%=index+1%></option>
+                                                        <%})%>
+                                                        </select>
+                                                        <small id="emailHelp" class="form-text text-muted">Chọn đối tượng khách hàng.</small>
+                                                      </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label style="height: 50%;" for="subject">Subject</label>
+                                                        <input type="text" class="form-control" id="subject" name="subject"aria-describedby="emailHelp" placeholder="Thông tin tuyển dụng cty XYZ">
+                                                        <small id="emailHelp" class="form-text text-muted">Tiêu đề của thư</small>
+                                                      </div>
+                                                </div>
+                                                <!-- <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label style="height: 50%;" for="Email_user">Email</label>
+                                                                <input type="email" class="form-control" id="Email_user" name="email_user"aria-describedby="emailHelp" placeholder="abc@xyz.com">
+                                                                <small id="emailHelp" class="form-text text-muted">Chúng tôi sẽ không bao giờ chia sẻ email của bạn với bất kỳ ai khác.</small>
+                                                              </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label style="height: 50%;" for="MaUngDung">Mã Ứng Dụng</label>
+                                                                <input type="password" class="form-control" id="MaUngDung" name="password_applicant" aria-describedby="emailHelp">
+                                                                <small id="emailHelp" class="form-text text-muted">Mã ứng dụng được cấp bới Google</small>
+                                                              </div>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label style="height: 50%;" for="BodyEmail">File đính kèm</label>
+                                                        <div style="margin-top:25px"
+                                                        class="input-group">
+                                                        <span
+                                                            class="input-group-btn">
+                                                            <div
+                                                                class="btn btn-default browse-button">
+                                                                <span
+                                                                    class="browse-button-text">
+                                                                    <i
+                                                                        class="fa fa-folder-open"></i>Chọn
+                                                                    File</span>
+                                                                <input
+                                                                    style="position: absolute;
+                                                              top: 0;
+                                                              right: 0;
+                                                              margin: 0;
+                                                              padding: 0;
+                                                              font-size: 20px;
+                                                              cursor: pointer;
+                                                              opacity: 0;
+                                                              filter: alpha(opacity=0);"
+                                                                    type="file"
+                                                                    name="fileEmailAttach"  accept=".pdf"/>
+                                                            </div>
+                                                            <button
+                                                                type="button"
+                                                                class="btn btn-default clear-button"
+                                                                style="display:none;">
+                                                                <span
+                                                                    class="fa fa-times"></span>
+                                                                Xoá
+                                                            </button>
+                                                        </span>
+
+
+                                                        <input type="text"
+                                                            class="form-control filename"
+                                                            disabled="disabled"
+                                                            accept="pdf"
+                                                            placeholder="Vui lòng đính kèm file định dạng PDF.">
+
+                                                    </div>
+                                                      </div>
+                                                </div>
+                                                <script>
+                                                    // Show filename, show clear button and change browse 
+                                              //button text when a valid extension file is selected
+                                              $(".browse-button input:file").change(function (){
+                                              $("input[name='fileEmailAttach']").each(function() {
+                                              var fileName = $(this).val().split('/').pop().split('\\').pop();
+                                              $(".filename").val(fileName);
+                                              $(".browse-button-text").html('<i class="fa fa-refresh"></i>Chọn File');
+                                              $(".clear-button").show();
+                                              });
+                                              });
+                                              
+                                              //actions happening when the button is clicked
+                                              $('.clear-button').click(function(){
+                                              $('.filename').val("");
+                                              $('.clear-button').hide();
+                                              $('.browse-button input:file').val("");
+                                              $(".browse-button-text").html('<i class="fa fa-folder-open"></i> Tìm Kiếm'); 
+                                              }); 
+                                              </script>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label style="height: 50%;" for="BodyEmail">Nội Dung Email</label>
+                                                        <textarea class="form-control" name="BodyEmail" id="BodyEmail" rows="3"></textarea>
+                                                      </div>
+                                                </div>
+                                              
+                                                <script>
+                                                    new FroalaEditor('#BodyEmail', {
+                                                        height:500,
+                                                        imageUploadURL: 'image_upload',
+                                                        imageUploadParams: {
+                                                            id: 'my_editor'
+                                                        }
+
+                                                    })
+                                                </script>
+                                                
+                                            </div>
+                                            <div style="text-align: center;" class="col-md-12" id="imageloading"></div>
+                                            <button id="btnSubmitSpam" class="contact-me">Submit</button>
+                                          </form>
+                                          <script>
+                                               $("#btnSubmitSpam").click(function(){
+                    $("#imageloading").html(`<img style="width:150px;height:150px;border-radius:15px" src="https://assets.materialup.com/uploads/5a7f5512-1dd4-40c0-82bc-f56a740fd86c/preview.gif">`)
+                })
+                                          </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="jp_hiring_slider_main_wrapper">
+                                    <div class="jp_hiring_heading_wrapper">
+                                        <h2 id="newFont">Nhân Viên Tìm Việc</h2>
+                                    </div>
+                                    <div class="jp_hiring_slider_wrapper">
+                                        <div class="owl-carousel owl-theme">
+                                            <%newArrShareCv.forEach(function(item){%>
+                                                <div class="item">
+                                                    <div class="jp_hiring_content_main_wrapper">
+                                                        <div class="jp_hiring_content_wrapper2">
+                                                            <%if(item.avatashare==0){%>
+                                                                <img style="width: 60px;height: 60px;border-radius: 50%;background-color: white;background-size: cover;background-image: url(loading.gif)"
+                                                                    src="https://img.icons8.com/bubbles/100/000000/user.png"
+                                                                    alt="logo_company" />
+
+                                                                <%}%>
+                                                                    <%if(item.avatashare==1){%>
+                                                                        <img style="width: 60px;height: 60px;border-radius: 50%;background: white;background-size: cover;background-image: url(loading.gif)"
+                                                                            src="https://img.icons8.com/bubbles/100/000000/administrator-male.png"
+                                                                            alt="logo_company" />
+
+                                                                        <%}%>
+                                                                            <%if(item.avatashare==2){%>
+                                                                                <img style="width: 60px;height: 60px;border-radius: 50%;background: white;background-size: cover;background-image: url(loading.gif)"
+                                                                                    src="https://img.icons8.com/bubbles/100/000000/brown-long-hair-lady-with-red-glasses.png"
+                                                                                    alt="logo_company" />
+
+                                                                                <%}%><br>
+                                                                                    <h4 style="font-size:25px;height: 150px;" id="newFont">
+                                                                                        <%=item.name%>
+                                                                                    </h4>
+                                                                                    <ul>
+                                                                                        <li style="margin-top: 10px;"><a><%=item.type%></a></li>
+                                                                                        <li ><button style="margin-top: 10px;width: 100%;" data-toggle="modal"
+                                                                                            data-target="#ReviewShareCV" onclick="getFileShare('<%=item.file%>')" class="contact-me">Xem Hồ Sơ</button>
+                                                                                         </li>
+                                                                                    </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <%})%>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+
+                    </div>
+                  
+                </div>
+                <div  class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="jp_first_right_sidebar_main_wrapper">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="jp_add_resume_wrapper">
+                                    <div class="jp_add_resume_img_overlay"></div>
+                                    <div class="jp_add_resume_cont">
+                                        <img style="width: 120px;height: 120px;;border-radius: 10px;background-size: cover" sty
+                                            src="https://img.icons8.com/bubbles/10000/000000/gmail-new.png" alt="logo" />
+                                        <h4 >Email Marketing</h4>
+                                        <ul>
+                                            <li><button style="margin-top: 10px;
+                                                border: none;" class="btnLoginForm" type="button"
+                                                    data-toggle="modal" data-target="#More_detail_infomation"><img
+                                                        class="icon_image"
+                                                        src="https://img.icons8.com/bubbles/1000/000000/book-reading.png"/>Hướng Dẫn Sử Dụng </button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="More_detail_infomation" tabHome="-1" role="dialog"  aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    
+                                    <video   style="border-radius: 10px;border: 1px solid black;" width="100%"
+                                        height="100%" poster="https://callio.vn/wp-content/uploads/2021/04/email-marketing-l%C3%A0-g%C3%AC.jpg" controls>
+                                        <source
+                                            src="https://cloud.tuyendung.me/files/1b5f6936e250003c3491f6eef1ba0a7c.mp4"
+                                            type="video/mp4">
+                                        <source
+                                            src="https://cloud.tuyendung.me/files1b5f6936e250003c3491f6eef1ba0a7c.ogg"
+                                            type="video/ogg">
+                                        Hướng Dẫn Sử Dụng
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+        <div id="ReviewShareCV" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body text-center" id="bodyShareCV">
+                        
+                    </div>
+                   
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary"
+                            data-dismiss="modal">Đóng</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <script>
+            function getFileShare(filename){
+                $("#bodyShareCV").html(`<iframe style="background-size: contain;background-image: url(loading2.gif)" width="100%" height="700" src="https://vieclamvp.com/files/${filename}"></iframe>`)
+            }
+        </script>
+         <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-body text-center">
+                  <div class="wrapper">
+                    <div class="screen">
+                    <img src="https://img.icons8.com/bubbles/300/000000/gmail.png"/>
+                      <p id="newFont" class="message">Gửi Mail Thành Công</p>
+                      <div class="modal-footer">
+                      <button type="button" class="btn btn-primary"
+                      data-dismiss="modal">Đóng</button>
+                     
+                    </div>
+                    </div>
+                  </div>
+               
+                </div>
+              </div>
+          
+            </div>
+          </div>
+        <div class="jp_main_footer_img_wrapper">
+    <div class="jp_newsletter_img_overlay_wrapper"></div>
+    <div class="jp_footer_main_wrapper">
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="jp_footer_logo_wrapper">
+                        <div class="jp_footer_logo">
+                            <a href="/"><img src="favicon.png" style="width: 150px;height: 150px;"
+                                    alt="footer_logo" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="jp_footer_three_sec_main_wrapper">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="jp_footer_first_cont_wrapper">
+                            <div class="jp_footer_first_cont">
+                                <h2 id="newFont">Việc Làm Văn Phòng</h2>
+                                <p>Việc làm văn phòng thực hiện sứ mệnh kết nối nhà tuyển dụng và người tìm việc
+                                    , nhằm tạo ra công đồng chia sẻ tìm việc làm</p>
+
+                                <video style="border-radius: 10px;border: 1px solid black;" width="100%"
+                                    height="100%" poster="/images/jobs/1.jpg" controls>
+                                    <source
+                                        src="https://cloud.tuyendung.me/files/1f1c4c38c444937cd25a62a3785748fe.mp4"
+                                        type="video/mp4">
+                                    <source
+                                        src="https://cloud.tuyendung.me/files/1f1c4c38c444937cd25a62a3785748fe.ogg"
+                                        type="video/ogg">
+                                    GalaxyDR Workshop clip 2.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="jp_footer_candidate_wrapper jp_footer_candidate_wrapper2">
+                            <div class="jp_footer_candidate">
+                                <h2 id="newFont">Việc Làm Văn Phòng</h2>
+                                <ul>
+                                    <!-- <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Add a
+                                            Resume</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>
+                                            candidate Dashboard</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Past
+                                            Applications</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Job
+                                            Alerts</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>
+                                            Bookmarks</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> My
+                                            Account</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Your
+                                            Jobs</a></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="jp_footer_candidate_wrapper jp_footer_candidate_wrapper4">
+                            <div class="jp_footer_candidate" id="FormFacebook">
+                                <iframe style="width: 100%;height: 100%;"
+                                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FvieclamvanphongTPHCM%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=501327393833764"
+                                    width="500px" height="500px" style="border:none;overflow:hidden"
+                                    scrolling="no" frameborder="0" allowfullscreen="true"
+                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="jp_bottom_footer_Wrapper">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="jp_bottom_footer_left_cont">
+                                    <p id="newFont" style="font-size: 15px;">Đức Anh: 0933.412.867 |Email :anh.le@galaxydr.com.vn </p>
+                                </div>
+                                <div class="jp_bottom_top_scrollbar_wrapper">
+                                    <a href="javascript:" id="return-to-top"><i class="fa fa-angle-up"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="jp_bottom_footer_right_cont">
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/vieclamvanphongTPHCM/"><img style="width: 50px;height: 50px;" src="https://img.icons8.com/bubbles/1000/000000/facebook.png"/></a></li>
+                                        <li><a
+                                                href="https://www.linkedin.com/in/l%C3%AA-%C4%91%E1%BB%A9c-anh-6994b1198/"><img style="width: 50px;height: 50px;" src="https://img.icons8.com/bubbles/1000/000000/linkedin.png"/></a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery_min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.menu-aim.js"></script>
+<script src="js/jquery.countTo.js"></script>
+<script src="js/jquery.inview.min.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/custom.js"></script>
+<script src="jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css.map"></script>
+
+</body>
+
+</html>

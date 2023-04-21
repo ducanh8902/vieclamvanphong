@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Cá Nhân</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./logo/logo_new.jpg" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./Admin/images/Office_job/logo_new.jpg">
+	
+    <link href="./Admin/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="./Admin/vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="./Admin/css/style.css" rel="stylesheet">
+</head>
+<body style="overflow: hidden;">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	
+		<div id="main-wrapper">
+			<div class="nav-header">
+                <a href="/" class="brand-logo">
+                    <img style="width: 100%;" src="./logo/logo_vlvp_new_2022.png" alt="">
+                </a>
+            </div>
+            <div class="header">
+                <div class="header-content">
+                    <nav class="navbar navbar-expand">
+                        <div class="collapse navbar-collapse justify-content-between">
+                            <div class="header-left">
+                                <div style="width: 100%;" class="input-group search-area right d-lg-inline-flex d-none">
+                                </div>
+                            </div>
+                            <ul class="navbar-nav header-right main-notification">
+                                <li class="nav-item dropdown notification_dropdown">
+                                    <a class="nav-link bell dz-theme-mode" href="#">
+                                        <i id="icon-light" class="fa fa-sun-o"></i>
+                                        <i id="icon-dark" class="fa fa-moon-o"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown notification_dropdown">
+                                    <a class="nav-link bell dz-fullscreen" href="#">
+                                        <svg id="icon-full" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                            stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                                            class="css-i6dzq1">
+                                            <path
+                                                d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"
+                                                style="stroke-dasharray: 37, 57; stroke-dashoffset: 0;"></path>
+                                        </svg>
+                                        <svg id="icon-minimize" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-minimize">
+                                            <path
+                                                d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"
+                                                style="stroke-dasharray: 37, 57; stroke-dashoffset: 0;"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown header-profile">
+                                    <a class="nav-link" href="#" role="button" data-toggle="dropdown">
+                                        <img src="./Admin/images/Office_job/logo_new.jpg" width="20"
+                                            alt="" />
+                                        <div class="header-info">
+                                            <span>Nhà Tuyển Dụng</span>
+                                            <small>User Nhà Tuyển Dụng</small>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        
+                                            <a href="/logout" class="dropdown-item ai-icon">
+                                                <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger"
+                                                    width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                                    <polyline points="16 17 21 12 16 7"></polyline>
+                                                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                                                </svg>
+                                                <span class="ml-2">Đăng Xuất </span>
+                                            </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div style="height: 80px;" class="sub-header">
+                        <div class="d-flex align-items-center flex-wrap mr-auto">
+                            <h3 class="dashboard_bar"> Office Job Hỗ Trợ Tuyển Dụng
+                            </h3>
+                            <!-- <button data-toggle="modal" data-target=".bd-example-modal-lg-share_cv" class="btn btn-info">+Share CV</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="deznav">
+                <div class="deznav-scroll">
+                    <ul class="metismenu" id="menu">
+                        <li class="nav-label">Tiện ích</li>
+                        <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-144-layout"></i>
+                            <span class="nav-text">Tin Tuyển Dụng</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a  href="#btn_form_job_manager"><img style="width: 20%;"
+                                src="https://img.icons8.com/bubbles/100/000000/filled-message.png" /> Quản Lý Tin Đăng</a></li>
+                            <li><a href="#btn__create_form_job"><img style="width: 20%;"
+                                src="https://img.icons8.com/bubbles/100/000000/book-and-pencil.png" />Tạo Tin Tuyển Dụng</a></li>
+                        </ul>
+                        <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-061-puzzle"></i>
+                            <span class="nav-text">Rút Gọn Link</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="#btn__create_form_job"><img style="width: 20%;"
+                                src="https://img.icons8.com/plasticine/100/000000/qr-code.png" />Rút gọn link</a></li>
+                            <li><a  href="#btn_form_job_manager"><img style="width: 20%;"
+                                src="https://img.icons8.com/plasticine/100/000000/combo-chart.png" /> Tổng Quan Lưu Lượng</a></li>
+                            
+                        </ul>
+                    </li>
+                    <%if(user != ""){%>
+                    <li class="nav-label">Tài khoản</li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <i class="flaticon-154-bookmark"></i>
+                            <span class="nav-text">Thông tin</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <input hidden type="text" id="_id_user_login" value="<%=user._id%>">
+                            <li><a  href="#edit_info"><img style="width: 20%;"
+                                src="https://img.icons8.com/plasticine/100/000000/contract-job.png">Thông tin tài khoản</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <%}%>
+                    <li class="nav-label">Tuyển Dụng</li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <i class="flaticon-154-bookmark"></i>
+                            <span class="nav-text">Ứng Viên</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a  href="#btn_share_cv"><img style="width: 20%;"
+                                src="https://img.icons8.com/stickers/100/000000/new-job.png">Xem Ứng Viên Mới</a>
+                            </li>
+                            <li><a  href="#btn_share_cv"><img style="width: 20%;"
+                                src="https://img.icons8.com/plasticine/100/000000/reminders.png">Quản Lý Ứng Viên</a>
+                            </li>
+                        </ul>
+                    </li>       
+                    <li class="nav-label"> Sáng Tạo Nội Dung </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <i class="flaticon-154-bookmark"></i>
+                            <span class="nav-text">Thiết kế</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a  href="#btn_eidt_image"><img style="width: 20%;"
+                                src="https://img.icons8.com/plasticine/100/000000/edit-image.png"> Hình Ảnh PixLR</a>
+                            </li>
+                            <li><a  href="#btn_eidt_video"><img style="width: 20%;"
+                                src="https://img.icons8.com/plasticine/100/000000/filmmaker-pro.png"> Video</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-label">Cộng Đồng</li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <i class="flaticon-144-layout"></i>
+                        <span class="nav-text">Hội Nhóm</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a  href="#btn_form_job_manager"><img style="width: 20%;"
+                            src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/200/000000/external-portfolio-job-search-flaticons-lineal-color-flat-icons-2.png" /> Nhóm Zalo</a></li>
+                        <li><a  href="#btn_form_job_manager"><img style="width: 20%;"
+                        src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/200/000000/external-portfolio-job-search-flaticons-lineal-color-flat-icons-2.png" /> Nhóm Facebook</a></li>
+                        <li><a href="#btn__create_form_job"><img style="width: 20%;"
+                        src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-newspaper-job-search-flaticons-lineal-color-flat-icons-3.png" /> Nhóm Telegram</a></li>
+                       
+                    </ul>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <i class="flaticon-144-layout"></i>
+                        <span class="nav-text">Mạng Xã Hội</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a  href="#btn_form_job_manager"><img style="width: 20%;"
+                            src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/200/000000/external-portfolio-job-search-flaticons-lineal-color-flat-icons-2.png" /> Review Doanh Nghiệp</a></li>
+                        <li><a  href="#btn_form_job_manager"><img style="width: 20%;"
+                        src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/200/000000/external-portfolio-job-search-flaticons-lineal-color-flat-icons-2.png" /> Cộng Đồng Tuyển Dụng</a></li>
+                        <li><a href="#btn__create_form_job"><img style="width: 20%;"
+                        src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-newspaper-job-search-flaticons-lineal-color-flat-icons-3.png" /> Tài liệu</a></li>
+                        <li><a href="#btn__create_form_job"><img style="width: 20%;"
+                        src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-newspaper-job-search-flaticons-lineal-color-flat-icons-3.png" /> Chia sẻ kinh nghiệm</a></li>
+                    </ul>
+                </li>
+                    </ul>
+                </div>
+            </div>
+            
+							<div id="body" class="content-body">
+								<div class="container-fluid">
+                                    
+								</div>
+							</div>
+		</div>
+        <style>
+            #body{
+                padding: 2%;
+            }
+            .section__content{
+    margin-top: 25px;
+}
+.section__content--p30 {
+padding: 0 5px;
+}.main-content {
+padding-top: 50px;
+min-height: 200vh;
+}
+        </style>
+	    <script src="./OfficeJob/version_v2/js/profile.js"></script>
+		<script src="./Admin/vendor/raphael/raphael.min.js"></script>
+		<script src="./Admin/vendor/morris/morris.min.js"></script>
+		<script src="./Admin/js/plugins-init/morris-init.js"></script>
+		<script src="./Admin/vendor/global/global.min.js"></script>
+        <script src="./Admin/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+        <script src="./Admin/vendor/chart.js/Chart.bundle.min.js"></script>
+        <script src="./Admin/js/plugins-init/chartjs-init.js"></script>
+        <script src="./Admin/vendor/peity/jquery.peity.min.js"></script>
+        <script src="./Admin/vendor/apexchart/apexchart.js"></script>
+        <script src="./Admin/js/dashboard/dashboard-1.js"></script>
+        <script src="./Admin/vendor/owl-carousel/owl.carousel.js"></script>
+        <script src="./Admin/js/custom.min.js"></script>
+</body>
+</html>
+<!-- end document-->

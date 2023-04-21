@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<%- include ../partials/header.ejs%>
+
+  <body>
+    
+    <link rel="stylesheet" type="text/css" href="css/ungvien.css" />
+    <link rel="stylesheet" type="text/css" href="css/style_II.css" />
+    <%- include ../partials/header-top-none-profile.ejs%>
+      <div class="jp_listing_sidebar_main_wrapper">
+        <section class="candidates-area section4">
+          <div class="container">
+            <div class="row">
+
+              <div style="margin: 20px;" class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div style="margin-top: 10px;" class="col-md-4">
+                      <a href="/export-excel-UVUT" class="btn btn-primary btn-block" name="submit">Xuất File Ứng
+                        viên</a>
+                    </div>
+                    <div style="margin-top: 10px;" class="col-md-8">
+                      <input id="search" type="text" class="form-control" placeholder="Tìm Kiếm...">
+                    </div>
+                  </div>
+                  </br>
+                </div>
+                <div style="margin-top: 10px;" class="col-md-12">
+                  <div id="tabledata" class="sideber2">
+                    <div class="widghet">
+                      <div style="height: 380px;" class="table-responsive table-data">
+                        <table class="table">
+                          <thead>
+                            <tr style="text-align: center;">
+                              <th>Họ Và Tên</th>
+                              <th>SĐT</th>
+                              <th>Email</th>
+                              <th>File CV</th>
+                              <th>Thông tin ứng viên</th>
+                            </tr>
+                          </thead>
+                          <%dataInterviewSeach.forEach(function(item,index){%>
+                            <tbody id="table">
+                              <tr style="text-align: left;">
+                                <td>
+                                  <%=item.NameUT%>
+                                    <div id="showcoppy<%=item._id%>"></div>
+                                </td>
+                                <td>
+                                  <%=item.PhoneUT%>
+                                </td>
+                                <td>
+                                  <%=item.EmailUT%>
+                                </td>
+                                <td>
+                                  <button  data-toggle="modal"
+                                  data-target="#ReviewShareCV" onclick="getFileShare('<%=item.fileAttach.url%>')" class="btn btn-primary">Xem CV</button>
+                                </td>
+                                <td>
+                                  <div class="row">
+                                    <div class="col-sm-10">
+                                      <input readonly type="text" id="myInput<%=item._id%>"
+                                        value="http://tuyendung.me/thong-tin-ung-vien-ung-tuyen=<%=item._id%>"
+                                        class="inputcopylink" />
+
+                                    </div>
+                                    <div class="col-sm-2">
+                                      <button title="Copy" id="btncopy" class="btn btn-primary"
+                                        onclick="myFunction('<%=item._id%>')">Copy</button>
+                                    </div>
+                                  </div>
+                                </td>
+
+                              </tr>
+
+                            </tbody>
+                            <%})%>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                </br>
+
+              </div>
+              <div class="row">
+                <%result.forEach(function(item){%>
+                  <div style="margin-top: 10px;" id="items2" class="col-lg-4">
+                    <div class="card"  data-state="#about">
+                      <style>
+
+.card[data-state="#about"] {
+    height: 670px;
+}
+                      </style>
+                      <div class="card-header">
+                        <%if(item.Avata=="https://img.icons8.com/bubbles/10000/000000/brown-curly-hair-lady-with-red-glasses.png"
+                          ){%>
+                          <div class="card-cover"
+                            style="background-image: url('https://img.icons8.com/bubbles/10000/000000/brown-curly-hair-lady-with-red-glasses.png')">
+                          </div>
+
+                          <img class="card-avatar"
+                            src="https://img.icons8.com/bubbles/10000/000000/brown-curly-hair-lady-with-red-glasses.png" />
+
+                          <%}else{%>
+                            <%if(item.Avata=="https://img.icons8.com/bubbles/10000/000000/user-male.png" || !item.Avata){%>
+                              <div class="card-cover"
+                                style="background-image: url('https://img.icons8.com/bubbles/10000/000000/user-male.png')">
+                              </div>
+
+                              <img class="card-avatar"
+                                src="https://img.icons8.com/bubbles/10000/000000/user-male.png" />
+                              <%}else{%>
+                                <div class="card-cover" style="background-image: url('image/<%=item.Avata%>')"></div>
+                                <img style="background-size: cover;background-image: url(loading.gif)"
+                                  class="card-avatar" src="image/<%=item.Avata%>" />
+                                <%}%>
+                                  <%}%>
+
+                                    <h1 class="card-fullname"><a href="/thong-tin-ung-vien-ung-tuyen=<%=item._id%>">
+                                        <%=item.NameUT%>
+                                      </a></h1>
+
+
+                      </div>
+                      <ul id="tab-list" class="tab-list<%=item._id%>">
+                        <li class="in"><a href="javascript:;"><span>Thông tin</span></a></li>
+                        <li><a href="javascript:;"><span>Phỏng Vấn</span></a></li>
+                        <li><a href="javascript:;"><span>Thanh Toán</span></a></li>
+                      </ul>
+                      <div class="tab-items">
+                        <div class="tab-item in">
+                          <div class="card-main">
+                            <div class="card-section is-active" id="about">
+                              <div class="card-content">
+                                <div class="card-subtitle">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <div class="row">
+                                        <div class="col-sm-6">
+                                          Thông tin ứng viên
+                                        </div>
+                                        <div class="col-sm-6">
+                                          <div style="float: right;margin-right: -50px;"
+                                            class="account-item clearfix js-item-menu">
+
+                                            <div class="image">
+                                              <img style="width: 50%;"
+                                                src="https://img.icons8.com/bubbles/100/000000/services.png" />
+                                            </div>
+                                            <div id="account-dropdown" class="account-dropdown js-dropdown">
+
+                                              <div class="account-dropdown__body">
+
+                                                <div class="account-dropdown__item">
+
+                                                  <a href="/deleteApply-Admin&idpost=<%=item._id%>"><img
+                                                      style="width: 20%;"
+                                                      src="https://img.icons8.com/bubbles/100/000000/cancel.png" />Xoá</a>
+
+                                                </div>
+                                              </div>
+
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="sideber2">
+                                  <div class="widghet">
+                                    <div class="row">
+                                      <div style="font-size: 13px;" class="col-md-12">
+                                        <img style="width: 11%;"
+                                          src="https://img.icons8.com/clouds/100/000000/company.png" />Ứng Tuyển
+                                        :<strong>
+                                          <%=item.vitriungtuyen%>
+                                        </strong>
+                                      </div>
+                                      <div style="font-size: 12px;" class="col-md-12">
+                                        <img style="width: 10%;"
+                                          src="https://img.icons8.com/bubbles/100/000000/email.png" /><strong>Email
+                                          :</strong> <strong>
+                                          <%=item.EmailUT%>
+                                        </strong>
+                                      </div>
+                                      <div style="font-size: 12px;" class="col-md-12">
+                                        <img style="width: 10%;"
+                                          src="https://img.icons8.com/clouds/100/000000/apple-phone.png" /> <strong>Điện
+                                          Thoại :</strong><strong>
+                                          <%=item.PhoneUT%>
+                                        </strong>
+                                      </div>
+                                      <div style="font-size: 12px;" class="col-md-12">
+                                        <img style="width: 10%;"
+                                          src="https://img.icons8.com/bubbles/100/000000/calendar.png" /><strong>Năm
+                                          sinh :</strong><strong>
+                                          <%=item.Ngaysinh%>
+                                        </strong>
+                                      </div>
+                                      <div style="font-size: 12px;" class="col-md-12">
+                                        <img style="width: 10%;"
+                                          src="https://img.icons8.com/bubbles/100/000000/map-marker.png" /><strong>Địa
+                                          chỉ :</strong><strong>
+                                          <%=item.DCLL%>
+                                        </strong>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                </div>
+                                <%if(item.fileAttach.url){%>
+                                  <button style="margin-top: -20px;" class="contact-me" type="button"
+                                    data-toggle="modal" data-target="#showCV<%=item._id%>">Xem File CV</button>
+                                  <%}%>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-item">
+                          <%if(item.Interview.ResultInterview){%>
+                            <div class="contact-me">
+                              <p> <img style="width: 10%;"
+                                  src="https://img.icons8.com/bubbles/100/000000/test-passed.png" />Kết quả : <b>
+                                  <%=item.Interview.ResultInterview%>
+                                </b></p></br>
+                              <%if(item.Interview.ResultInterview !="Fail" ){%>
+                                <p> <img style="width: 10%;"
+                                    src="https://img.icons8.com/bubbles/100/000000/training.png" />Training : <b>
+                                    <%=item.Interview.TrainingDay%>
+                                  </b></p><br>
+                                <p> <img style="width: 10%;"
+                                    src="https://img.icons8.com/plasticine/100/000000/home-office.png" />Bộ Phận : <b>
+                                    <%=item.Interview.Bophan%>
+                                  </b></p>
+                                <%}%>
+                            </div>
+                            <%}else{%>
+                              <button class="contact-me">Chờ kết quả</button>
+                              <%}%>
+                        </div>
+                        <div class="tab-item">
+                          <div class="timeline">
+                            <div class="line">
+                              <div class="line-content">
+                                <div class="content">
+                                  <h1>
+                                    <%=item.BonusGTNS.Step1.Title%>
+                                  </h1>
+                                  <p>
+                                    <%=item.BonusGTNS.Step1.Message%>
+                                  </p>
+                                </div>
+                             
+                                  <div class="content">
+                                    <h1><%=item.BonusGTNS.Step2.Title%></h1>
+                                    <h6><%=item.BonusGTNS.Step2.Message%></h6>
+                                    <p>Kết Quả : <%=item.Interview.ResultInterview%></p>
+                                    <p>Bonus: <%=item.BonusGTNS.Step2.FeeApplicant%> vnđ</p>
+                                    <p>Bộ Phận: <%=item.Interview.Bophan%> </p>
+                                    <p>Nhóm: <%=item.Interview.Nhom%></p>
+                                    <p>Ngày Học Việc : <%=item.Interview.TrainingDay%></p>
+                                    <p>Ngày Bắt Đầu: <%=item.BonusGTNS.Step2.StartDay%></p>
+                                    <p>Ngày Hoàn Thành: <%=item.BonusGTNS.Step2.DateCheckBonus%></p>
+                                  </div>
+                               
+                                  <%if(item.BonusGTNS.Step3.Status){%>
+                                      <div class="content">
+                                        <h1><%=item.BonusGTNS.Step3.Title%></h1>
+                                        <h6><%=item.BonusGTNS.Step3.Message%></h6>
+                                        <p>Tình trạng : <%=item.BonusGTNS.Step3.Status%></p>
+                                        <p>Ngày Kiểm Tra: <%=item.BonusGTNS.Step3.DateCheckingLan1%></p>
+                                      </div>
+                                 <%}%>
+                                 <%if(item.BonusGTNS.Step4.Status){%>
+                                          <div class="content">
+                                            <h1><%=item.BonusGTNS.Step4.Title%></h1>
+                                            <h6><%=item.BonusGTNS.Step4.Message%></h6>
+                                            <p>Tình trạng: <%=item.BonusGTNS.Step4.Status%></p>
+                                            <p>Ngày Kiểm Tra: <%=item.BonusGTNS.Step4.DateCheckingLan2%></p>
+                                          </div>
+                                          <%}%>
+                                          <%if(item.BonusGTNS.Step5.Status){%> 
+                                              <div class="content">
+                                                <h1><%=item.BonusGTNS.Step5.Title%></h1>
+                                                <h6><%=item.BonusGTNS.Step5.Message%></h6>
+                                                <p>Tình trạng : <%=item.BonusGTNS.Step5.Status%></p>
+                                                <p>Ngày kiểm tra: <%=item.BonusGTNS.Step5.DateChecking%></p>
+                                                <p>Bonus: <%=item.BonusGTNS.Step2.FeeApplicant%> vnđ</p>
+                                                <p>Chi phí sẽ được thanh toán vào kỳ lương trong tháng.</p>
+                                              </div>
+                                              <%}%>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <%})%>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="pager_wrapper gc_blog_pagination">
+                  <ul class="pagination">
+                    <li><a style="width: 60px;" type="button" id="previous">.Prew</a></li>
+                  </ul>
+                  <ul style="text-align: center;" id="list" class="pagination">
+                  </ul>
+                  <ul class="pagination">
+                    <li><a style="width: 60px;" type="button" id="next">Next</a></li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="ReviewShareCV" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body text-center" id="bodyShareCV">
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary"
+                        data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        function getFileShare(filename){
+            $("#bodyShareCV").html(`<iframe style="background-size: contain;background-image: url(loading2.gif)" width="100%" height="700" src="https://tuyendung.me/files/${filename}"></iframe>`)
+        }
+    </script>
+      <%result.forEach(function(item){%>
+        <script>
+          $(document).on('click', '.tab-list<%=item._id%> li a', function () {
+            var $this = $(this),
+              $tabList = $this.parents('ul'),
+              _idx = $this.closest('li').index();
+
+            $tabList.children().eq(_idx).addClass('in').siblings().removeClass('in');
+            $tabList.next().children().eq(_idx).addClass('in').siblings().removeClass('in');
+          });
+        </script>
+
+        <script>
+          $(document).ready(function () {
+            var url = window.location.href;
+            var id = url.substring(url.lastIndexOf('/') + 1);
+            $("#links<%=item._id%>").val(id)
+            $("#linksplus<%=item._id%>").val(id)
+          })
+        </script>
+        <%})%>
+
+          <%result.forEach(function(item){%>
+            <div class="modal fade" id="largeModal<%=item._id%>" tabindex="-1" role="dialog"
+              aria-labelledby="largeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="largeModalLabel">Cập nhật kết quả phỏng vấn : <b>
+                        <%=item.NameUT%>
+                      </b></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div style="padding: 50px;" class="modal-body">
+                    <form action="/Update-InterView&id=<%=item._id%>" method="POST">
+                      <input hidden readonly type="text" id="links<%=item._id%>" value="" name="link"
+                        aria-required="true" aria-invalid="false" />
+
+                      <div class="form-group">
+                        <label for="cc-paymentt" class="control-label mb-1">Người phỏng vấn</label>
+                        <select class="form-control" name="NameInterviewer">
+                          <option value="<%=user.local.NTD.NameUser%>">
+                            <%=user.local.NTD.NameUser%>
+                          </option>
+                          <option value="Khác">Khác</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="cc-payment" class="control-label mb-1">Kết Quả Phỏng Vấn</label>
+                        <select class="form-control" name="ResultInterview">
+                          <option value="Pass">Đạt</option>
+                          <option value="Fail">Không Đạt</option>
+                          <option value="Pending">Phản hồi sau</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="cc-payment" class="control-label mb-1">Ngày Nhận Việc</label>
+                        <input type="date" name="TrainingDay" type="text" class="form-control" aria-required="true"
+                          aria-invalid="false">
+                      </div>
+                      <script>
+
+                      </script>
+                      <div class="form-group">
+                        <label for="cc-payment" class="control-label mb-1">Ghi chú</label>
+                        <textarea class="notes" name="CommentInterview" type="text" class="form-control"
+                          aria-required="true" aria-invalid="false" placeholder="Ghi chú"></textarea>
+                      </div>
+                      <div>
+                        <button type="submit" class="btn btn-lg btn-info btn-block">
+
+                          <span id="payment-button-amount">Cập nhật kết quả phỏng vấn</span> <i
+                            class="fa fa-check-circle" aria-hidden="true"></i>
+
+                        </button>
+                      </div>
+
+                    </form>
+                    <div style="margin-top: 20px;" class="sideber2">
+                      <div class="widghet">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <p class="card-desc">
+                            <h6>Nợ xấu</h6>
+                            <%=item.Noxau%>
+                              </p>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <h6>Học Vấn</h6>
+                                <textarea style="border: 1px solid black;border-radius: 10px;height:100px"
+                                  autocomplete="off" rows="4" cols="6" class="form-control" id="myTextArea"
+                                  name="introduction"><%-item.hoctap%></textarea>
+                              </div>
+                              <div class="col-md-6">
+                                <h6>Kinh nghiệm</h6>
+                                <textarea style="border: 1px solid black;border-radius: 10px;height:100px"
+                                  autocomplete="off" rows="4" cols="6" class="form-control" id="myTextArea"
+                                  name="introduction"><%-item.Kinhnghiem%></textarea>
+                              </div>
+                            </div>
+
+                          </div>
+
+
+                        </div>
+                        <script>
+                          $('#inforInter').toString().replace(/<br\s?\/?>/g, '\n');
+                          $('#myTextArea').toString().replace(/<br\s?\/?>/g, '\n');
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="Excelexport" class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                  </div>
+
+
+                </div>
+              </div>
+
+            </div>
+            <div class="modal fade" id="showCV<%=item._id%>" tabindex="-1" role="dialog"
+              aria-labelledby="largeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="largeModalLabel">CV Đính kèm</b></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div style="padding: 50px;" class="modal-body">
+
+                    <iframe width="100%" height="450" src="files/<%=item.fileAttach.url%>"></iframe>
+
+                  </div>
+                  <div id="Excelexport" class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                  </div>
+
+
+                </div>
+              </div>
+
+            </div>
+            <%})%>
+              <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <!--         <h4 class="modal-title">Modal Header</h4> -->
+                    </div>
+                    <div class="modal-body text-center">
+                      <div class="wrapper">
+                        <div class="screen">
+                          <svg class="clouds" viewBox="0 0 243 172">
+                            <defs>
+                              <linearGradient id="a" x1="0%" y1="21.631%" y2="78.369%">
+                                <stop offset="0%" stop-color="#FCCF31" />
+                                <stop offset="100%" stop-color="#F55555" />
+                              </linearGradient>
+                              <linearGradient id="b" x1="0%" y1="21.875%" y2="78.125%">
+                                <stop offset="0%" stop-color="#FCCF31" />
+                                <stop offset="100%" stop-color="#F55555" />
+                              </linearGradient>
+                              <linearGradient id="c" x1="0%" y1="22.565%" y2="77.435%">
+                                <stop offset="0%" stop-color="#FCCF31" />
+                                <stop offset="100%" stop-color="#F55555" />
+                              </linearGradient>
+                            </defs>
+                            <g fill="none">
+                              <path fill="url(#a)"
+                                d="M222.088 121.3384a28.8588 28.8588 0 0 0-4.1438-7.771c-2.3029-3.0704-5.1734-5.622-8.413-7.5423-3.2394-1.9202-6.8508-3.2057-10.642-3.7437-3.65-.5156-7.457-.335-11.2353.6443-3.7782.9794-7.1973 2.674-10.1416 4.9036-3.0566 2.31-5.5968 5.1936-7.5085 8.4476a29.0671 29.0671 0 0 0-3.7237 10.69c-.5132 3.6664-.3335 7.4906.6414 11.2859.882 3.4312 2.3446 6.5692 4.2594 9.3271a28.7704 28.7704 0 0 0 7.2325 7.2265c4.7405 3.2927 10.4592 5.1614 16.4602 5.1936h28.8822c2.6012 0 5.09-.5187 7.3609-1.4659 2.3574-.9795 4.4742-2.4164 6.248-4.198a19.3854 19.3854 0 0 0 4.1791-6.2761c.9398-2.2778 1.4562-4.778 1.4562-7.3908 0-2.6129-.5164-5.113-1.4593-7.394-.975-2.3681-2.4055-4.4945-4.1792-6.2762-1.7737-1.7817-3.8906-3.2153-6.248-4.198-2.2676-.944-4.7565-1.4628-7.3576-1.4628l-1.6678.0002z" />
+                              <path fill="url(#b)"
+                                d="M106.4963 29.0076a43.2273 43.2273 0 0 0-6.2427-11.6565c-3.4693-4.6055-7.7937-8.433-12.674-11.3134A43.5245 43.5245 0 0 0 71.5475.422c-5.4987-.7732-11.234-.5025-16.926.9665-5.6919 1.4691-10.8427 4.0111-15.2783 7.3555-4.6048 3.465-8.4316 7.7903-11.3115 12.6713-2.8798 4.881-4.8076 10.3276-5.6097 16.035-.7732 5.4996-.5025 11.236.9663 16.929 1.3287 5.1467 3.532 9.8538 6.4167 13.9906a43.2499 43.2499 0 0 0 10.8958 10.8397c7.1414 4.939 15.7567 7.742 24.797 7.7904h43.511c3.9186 0 7.668-.778 11.089-2.1988 3.5515-1.4692 6.7405-3.6246 9.4125-6.2971a29.0696 29.0696 0 0 0 6.296-9.4142C137.222 65.6732 138 61.923 138 58.0037s-.7779-7.6695-2.1985-11.091c-1.4689-3.552-3.6239-6.7417-6.296-9.4142a29.0639 29.0639 0 0 0-9.4124-6.297c-3.4161-1.416-7.1657-2.1941-11.0843-2.1941l-2.5125.0002z"
+                                transform="matrix(-1 0 0 1 160 0)" />
+                              <path fill="url(#c)"
+                                d="M39.3345 145.3368c-.6995-1.9642-1.6892-3.7617-2.906-5.3593-1.6151-2.1175-3.6282-3.8772-5.9-5.2016a20.4283 20.4283 0 0 0-7.4633-2.5819c-2.5597-.3555-5.2296-.231-7.8793.4444s-5.0475 1.8442-7.1124 3.3818a20.1076 20.1076 0 0 0-5.2656 5.826c-1.3406 2.244-2.238 4.7482-2.6115 7.3723-.3599 2.5286-.2339 5.166.4499 7.7834.6185 2.3664 1.6442 4.5305 2.987 6.4325 1.3879 1.9642 3.1108 3.6462 5.0722 4.9838 3.3245 2.2708 7.335 3.5596 11.5435 3.5818h20.255c1.8243 0 3.5697-.3577 5.1622-1.011a13.5058 13.5058 0 0 0 4.3817-2.8952c1.244-1.2287 2.2448-2.6952 2.9309-4.3283.659-1.5709 1.0212-3.2952 1.0212-5.0971 0-1.802-.3621-3.5262-1.0234-5.0994-.6838-1.633-1.687-3.0996-2.9309-4.3283a13.5419 13.5419 0 0 0-4.3817-2.8952c-1.5902-.651-3.3357-1.0088-5.1599-1.0088l-1.1696.0001z"
+                                transform="matrix(-1 0 0 1 54 0)" />
+                            </g>
+                          </svg>
+                          <svg class="plane" viewBox="0 0 139 139">
+                            <defs>
+                              <linearGradient id="a" x1="147.152%" x2="0%" y1="-47.397%" y2="100%">
+                                <stop offset="0%" stop-color="#FCCF31" />
+                                <stop offset="100%" stop-color="#F55555" />
+                              </linearGradient>
+                            </defs>
+                            <path fill="#FFF" stroke="url(#a)" stroke-width="2"
+                              d="M171.1455 37.3577l-131.69 71.251a2.7136 2.7136 0 0 0-1.4535 2.5092 2.7138 2.7138 0 0 0 1.6436 2.3892l22.4823 8.4671a5.2937 5.2937 0 0 1 2.9597 2.7138l17.4183 35.9715c.3259 1.5876 3.2583 2.0083 3.299.3935l-2.7152-29.7026c.157-2.2004.997-4.297 2.403-5.9975L153.795 58.471a1.6162 1.6162 0 0 1 1.4798-.4207c.526.1172.9531.4993 1.1277 1.0088a1.5462 1.5462 0 0 1-.2724 1.488l-58.8803 71.9973a13.1443 13.1443 0 0 0-2.308 5.9297l-3.5298 25.659c.2986 2.239 2.05 3.0938 3.462 1.0855l12.6802-14.926c.8703-1.1836 2.525-1.4602 3.7334-.624l32.6917 23.8136a2.635 2.635 0 0 0 2.5231.3387 2.6328 2.6328 0 0 0 1.6313-1.9534l26.8131-131.6197a2.713 2.713 0 0 0-1.004-2.6831 2.7164 2.7164 0 0 0-2.8516-.2886l.0543.0815z"
+                              transform="translate(-37 -36)" />
+                          </svg>
+                          <p class="message">Đã cập nhật thành công</p>
+
+                          <button type="button" class="button" data-dismiss="modal">Đóng</button>
+                        </div>
+                      </div>
+                     
+                    </div>
+                    <div class="modal-footer">
+                      <!--         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+    
+              <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+
+              <%- include ../partials/menu.ejs%>
+                <%- include ../partials/footer.ejs%>
+
+                  <script>
+                    var rows = jQuery('.card');
+                    jQuery('#search-btn').click(function () {
+                      var val = jQuery.trim(jQuery('#search').val()).replace(/ +/g, ' ').toLowerCase();
+                      rows.each(function () {
+                        var itemtxt = jQuery(this).text().replace(/\s+/g, ' ').toLowerCase();
+                        if (itemtxt.indexOf(val) > -1) {
+                          jQuery(this).show();
+                        } else {
+                          jQuery(this).hide();
+                        }
+                      });
+                    });
+                    var cars = "<%=sltht%>";
+                    var pagesize = "<%=pagesize%>";
+                    var animals = [];
+                    for (i = 1; i <= cars; i++) {
+                      $("#itemss").append(`<li><a  class="active" href="/candidates?page=${i}&pagesize=${pagesize}">${i}</a></li>`)
+                      var newLength = animals.push(i);
+                    }
+                    var pageSize = pagesize;
+                    var currentPage = 1;
+                    var pagedResults = [];
+                    var totalResults = animals.length;
+                    $(function () {
+                      function updateList() {
+                        var end = (currentPage * pageSize);
+                        var start = (end - pageSize);
+                        pagedResults = animals.slice(start, end);
+                        $('#list').empty();
+                        if (currentPage <= 1) {
+                          $('.previous').prop("disabled", true);
+                        }
+                        else {
+                          $('.previous').prop("disabled", false);
+                        }
+                        if ((currentPage * pageSize) >= totalResults) {
+                          $('.next').prop("disabled", true);
+                        }
+                        else { $('.next').prop("disabled", false); }
+                        $.each(pagedResults, function (index, obj) {
+                          $('#list').append(`<li ><a href="/candidates?page=${obj}&pagesize=${pagesize}">${obj}</a></li>`);
+                        });
+                      }
+                      updateList();
+                      $('#next').click(function () {
+                        if ((currentPage * pageSize) <= totalResults) currentPage++;
+                        updateList();
+                      });
+                      $('#previous').click(function () {
+                        if (currentPage > 1) currentPage--;
+                        updateList();
+                      });
+                    });
+                  </script>
+                  <script>
+                    $("#tabledata").hide()
+                    $("#search").on("keyup", function () {
+                      var value = $(this).val().toLowerCase();
+                      $("#table tr").filter(function () {
+                        $("#tabledata").show()
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > 1)
+                      });
+                      if ($("#search").val() == "") {
+                        $("#tabledata").hide()
+                      }
+
+                    });
+                    function myFunction(data) {
+                      const idcoppy = "myInput" + data
+                      const idshow = "#showcoppy" + data
+                      const copydone2 = "#copydone2" + data
+                      var textBox = document.getElementById(idcoppy);
+                      textBox.select();
+                      document.execCommand("copy");
+
+                    }
+                    function myFunction2(data) {
+                      const idcoppy = "myInput2" + data
+                      const idshow = "#showcoppy2" + data
+                      const copydone = "#copydone" + data
+                      var textBox = document.getElementById(idcoppy);
+                      textBox.select();
+                      document.execCommand("copy");
+
+                    }
+                  </script>
+                  <script>
+                    (function ($) {
+                      // USE STRICT
+                      "use strict";
+
+                      // Dropdown 
+                      try {
+                        var menu = $('.js-item-menu');
+                        var sub_menu_is_showed = -1;
+
+                        for (var i = 0; i < menu.length; i++) {
+                          $(menu[i]).on('click', function (e) {
+                            e.preventDefault();
+                            $('.js-right-sidebar').removeClass("show-sidebar");
+                            if (jQuery.inArray(this, menu) == sub_menu_is_showed) {
+                              $(this).toggleClass('show-dropdown');
+                              sub_menu_is_showed = -1;
+                            }
+                            else {
+                              for (var i = 0; i < menu.length; i++) {
+                                $(menu[i]).removeClass("show-dropdown");
+                              }
+                              $(this).toggleClass('show-dropdown');
+                              sub_menu_is_showed = jQuery.inArray(this, menu);
+                            }
+                          });
+                        }
+                        $(".js-item-menu, .js-dropdown").click(function (event) {
+                          event.stopPropagation();
+                        });
+
+                        $("body,html").on("click", function () {
+                          for (var i = 0; i < menu.length; i++) {
+                            menu[i].classList.remove("show-dropdown");
+                          }
+                          sub_menu_is_showed = -1;
+                        });
+
+                      } catch (error) {
+                        console.log(error);
+                      }
+
+                      var wW = $(window).width();
+                      // Right Sidebar
+                      var right_sidebar = $('.js-right-sidebar');
+                      var sidebar_btn = $('.js-sidebar-btn');
+
+                      sidebar_btn.on('click', function (e) {
+                        e.preventDefault();
+                        for (var i = 0; i < menu.length; i++) {
+                          menu[i].classList.remove("show-dropdown");
+                        }
+                        sub_menu_is_showed = -1;
+                        right_sidebar.toggleClass("show-sidebar");
+                      });
+
+                      $(".js-right-sidebar, .js-sidebar-btn").click(function (event) {
+                        event.stopPropagation();
+                      });
+
+                      $("body,html").on("click", function () {
+                        right_sidebar.removeClass("show-sidebar");
+
+                      });
+
+
+                      // Sublist Sidebar
+                      try {
+                        var arrow = $('.js-arrow');
+                        arrow.each(function () {
+                          var that = $(this);
+                          that.on('click', function (e) {
+                            e.preventDefault();
+                            that.find(".arrow").toggleClass("up");
+                            that.toggleClass("open");
+                            that.parent().find('.js-sub-list').slideToggle("250");
+                          });
+                        });
+
+                      } catch (error) {
+                        console.log(error);
+                      }
+
+
+                      try {
+                        // Hamburger Menu
+                        $('.hamburger').on('click', function () {
+                          $(this).toggleClass('is-active');
+                          $('.navbar-mobile').slideToggle('500');
+                        });
+                        $('.navbar-mobile__list li.has-dropdown > a').on('click', function () {
+                          var dropdown = $(this).siblings('ul.navbar-mobile__dropdown');
+                          $(this).toggleClass('active');
+                          $(dropdown).slideToggle('500');
+                          return false;
+                        });
+                      } catch (error) {
+                        console.log(error);
+                      }
+                    })(jQuery);
+
+                  </script>
+  </body>
+
+</html>

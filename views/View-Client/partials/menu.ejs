@@ -1,0 +1,211 @@
+<div class="modal fade" id="exampleModalCenter" tabHome="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm pd-0">
+                            <ul class="navtab">
+                                <li>
+                                    <a class="prev-step active"  href="javascript:void(0)">Đăng nhập</a>
+                                </li>
+                                <li>
+                                    <a class="next-step" href="javascript:void(0)">Đăng ký</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="login">
+                                    <div class="logins">
+                                        <form action="/login" method="post">
+                                            <fieldset>
+                                                <label>Email</label>
+                                                <input type="email" placeholder="Địa chỉ Email"name="email">
+                                                <span style="padding-left: 0px;"><img class="icon_image" src="https://img.icons8.com/bubbles/100/000000/name.png"/></span>
+                                            </fieldset>
+                                            <fieldset>
+                                                <label>Password</label>
+                                                <input type="password" name="password" placeholder="Mật khẩu">
+                                                <span style="padding-left: 0px;"><img class="icon_image" src="https://img.icons8.com/bubbles/100/000000/key-security.png"/></span>
+                                            </fieldset>
+                                           <a href="/forget">Quên mật khẩu?</a>
+                                            <button class="btnLoginForm">Đăng nhập</button>
+                                           
+                                        </form>
+                                        <!-- <div class="login_ac">
+                                            <h4>FaceBook</h4>
+                                            <div class="row">
+                                                <div class="col-sm">
+                                                    <a href="/auth/facebook"><span><i class="fa fa-facebook"></i></span>FACEBOOK</a>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                        <div class="havean"><p>Chưa có tài khoản? <a class="p-step" href="javascript:void(0)">Đăng ký</a> </p></div>
+                                    </div>
+                                </div>
+                                <div id="register" class="lighting">
+                                    <div class="registers">
+                                        <form action="/signup" method="post">
+                                           
+                                            <fieldset>
+                                                <label>Email</label>
+                                                <input type="text"  placeholder="Email của bạn" name="email">
+                                                <span style="padding-left: 0px;"><img class="icon_image" src="https://img.icons8.com/bubbles/100/000000/name.png"/></span>
+                                            </fieldset>
+                                            <fieldset>
+                                                <label>Mật khẩu</label>
+                                                <input type="password" name="password" placeholder="Mật khẩu">
+                                                <span style="padding-left: 0px;"><img class="icon_image" src="https://img.icons8.com/bubbles/100/000000/key-security.png"/></span>
+                                            </fieldset>
+                                            <fieldset>
+                                                <label>Loại tài khoản</label>
+                                                <select name="typee">
+                                                    <option value="0">Người tìm việc</option>
+                                                    <option value="1">Nhà tuyển dụng</option>
+                                                </select>
+                                            </fieldset>
+                                            <button class="btnLoginForm">Đăng ký</button>
+                                        </form>
+                                       
+                                        <div class="havean"><p>Đã có tài khoản?<a class="n-step" href="javascript:void(0)">Đăng nhập</a></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="More_detail_infomation" tabHome="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <iframe width="100%" height="650" src="https://vieclamvp.com/files/f6862e195b20eb9c69f5132efa0a9ff7.pdf"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-profile" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="cards">
+                <main>
+                    <%if(user || user != "" ){ %>
+                        <%if(user.local.Type == "1"){%>
+                            <div  style="margin-bottom: 20px;border-radius: 15px;width: 100px;height: 100px; background-size: cover;background-image: url(loading.gif)">
+                            <img  src="image/<%=user.local.NTD.ImageLogo%>" alt="">
+                            </div>
+                            <h2><%=user.local.NTD.NameCompany%></h2>
+                            <%}%>
+                    <p><%=user.local.email%></p>
+                    <div class="actions">
+                        <div style="width:420px;margin-left: 0px;" class="row">
+                            <div class="col-md-6"><a style="text-align: center;" class="btn1" href="/profile">Trang cá nhân</a></div>
+                   
+                            <div class="col-md-6"><a style="text-align: center;" class="btn1" href="/edit-profile&id=<%=user._id%>">Cài đặt</a></div>
+                        </div>
+                    </div>
+                    <%}%>
+                </main>
+            </div>
+        </div>
+       <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+
+    </div>
+      </div>
+      
+    </div>
+  </div>
+  <style>
+ .cards {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 10px;
+   
+    border-radius: 20px;
+    background: #191a1d;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+ .cards header {
+	 display: flex;
+	 justify-content: space-between;
+	 padding: 30px 20px 20px;
+	 height: 130px;
+	 background: linear-gradient(to left, #000 9, #000 9), url("https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+	 background-size: cover;
+}
+ .cards header span.mdi {
+	 color: #fff;
+	 cursor: pointer;
+}
+ .cards main {
+    width: 100%;
+	 display: flex;
+	 align-items: center;
+	 flex-direction: column;
+	 padding: 30px;
+}
+ .cards main img {
+	 height: 100px;
+	 width: 100px;
+	 border-radius: 15px;
+	 object-fit: cover;
+	 margin-bottom: 14px;
+}
+ .cards main h2 {
+	 font-size: 20px;
+	 font-weight: 600;
+	 color: #fff;
+	 margin-bottom: 6px;
+}
+ .cards main p {
+	 font-size: 14px;
+	 color: rgba(255, 255, 255, 0.555);
+}
+ .cards main .actions {
+	 margin-top: 14px;
+	 display: flex;
+}
+ .cards main .actions button {
+	 font-family: inherit;
+	 border-radius: 40px;
+	 cursor: pointer;
+	 border: none;
+}
+ .cards main .actions button.main {
+	 width: 110px;
+	 height: 32px;
+	 background: #5458f7;
+	 color: #fff;
+	 font-weight: 600;
+	 font-size: 14px;
+	 margin-right: 10px;
+}
+ .cards main .actions button.main:hover {
+	 background-color: #6c70f8;
+}
+ .cards main .actions button.secondary {
+	 width: 50px;
+	 height: 32px;
+	 background: #9597a1;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+ .cards main .actions button.secondary:hover {
+	 background-color: #a3a4ad;
+}
+ 
+  </style>

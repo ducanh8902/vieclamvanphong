@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Share CV -OfficeJob </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://admin.tuyendung.me/images/Office_job/logo_new.jpg">
+    <link href="https://admin.tuyendung.me/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="https://admin.tuyendung.me/css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="https://tuyendung.me/new_office/share_cv_new.png" />
+    <link rel="stylesheet" type="text/css" href="./css_search.css" />
+    <meta property="fb:app_id" content="1902832553257404" />
+    <meta property="og:image" content="https://tuyendung.me/icon_officejob/1.png" />
+    <meta property="og:image:alt" content="Chia sẻ ứng viên tìm việc" />
+    <meta property="og:description" content="Liên Hệ: 093.18.666.98 Đức Anh">
+    <meta property="og:url" content="https://tuyendung.me/share-cv">
+    <meta property="og:title" content="Danh Sách Ứng Viên Tìm Việc" />
+    <meta property="og:type" content="website" />
+    <script src="jquery.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5973369736597865"
+        crossorigin="anonymous"></script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-N3Q2KXM');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFDGP1S33Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-TFDGP1S33Z');
+    </script>
+</head>
+
+<body>
+    <input hidden readonly id="value_title" value="0">
+    <input hidden readonly id="value_area" value="0">
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+
+    <div id="main-wrapper">
+        <div style="padding: 2%;" class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="search">
+                        <form style="
+                        vertical-align: middle;
+                        padding: 2%;text-align: center;" action="/search-candidate">
+                            <img style="width:25%" src="./logo_vlvp_new_2022.png" alt="">
+                            <br>
+                            <h3 style="background-image: linear-gradient( to right bottom, #ffa400, #735ce7 );"
+                                id="newFont">Tìm Kiếm Ứng Viên
+                            </h3>
+                            <div class="row">
+                                <div class="col-xl-5">
+                                    <div id="row_type" class="row">
+                                        <div id="col_3_sreach" class="col-lg-3">
+                                            <span style="    height: 100%;
+                                            line-height: 2.5;
+                                            border-radius: 5px;
+                                            font-size: .75rem;
+                                            font-weight: 500;
+                                            padding: 4px 10px;
+                                            border: 1px solid transparent;"
+                                                class="badge badge-pill badge-warning">Lĩnh Vực
+                                            </span>
+                                        </div>
+                                        <div id="col_9_sreach" class="col-lg-9">
+                                            <select style="margin-top: 10px;"
+                                                onchange="getval_title(this);" name="search">
+                                                <option value="0">Tất cả</option>
+                                                <option value="CSKH">Chăm Sóc Khách Hàng</option>
+                                                <option value="Telesele-Sale">Telesele-Sale</option>
+                                                <option value="Kế Toán">Kế Toán</option>
+                                                <option value="Kiểm Toán">Kiểm Toán</option>
+                                                <option value="Marketing&Media">Marketing & Media
+                                                </option>
+                                                <option value="Kinh Doanh">Kinh Doanh</option>
+                                                <option value="Bán Hàng">Bán Hàng</option>
+                                                <option value="Design">Design 2D & 3D - Video</option>
+                                                <option value="Ngân Hàng - Tài Chính">Ngân Hàng - Tài
+                                                    Chính
+                                                </option>
+                                                <option value="Nhân Sự">Nhân Sự (HR)</option>
+                                                <option value="Công Nghệ Thông Tin">Công Nghệ Thông Tin
+                                                </option>
+                                                <option value="Thực Phẩm">Thực Phẩm</option>
+                                                <option value="Xây Dựng">Xây Dựng</option>
+                                                <option value="Giáo Dục">Giáo Dục</option>
+                                                <option value="Sức Khỏe">Sức Khỏe</option>
+                                                <option value="PG|PB|PR">PG | PB | PR</option>
+                                                <option value="Kiểm Soát Chất Lượng">Kiểm Soát Chất
+                                                    Lượng
+                                                </option>
+                                                <option value="Bất Động Sản">Bất Động Sản</option>
+                                                <option value="Luật-Pháp Lý">Luật-Pháp Lý</option>
+                                                <option value="Sản Xuất- Vận Hành">Sản Xuất- Vận Hành
+                                                    Máy
+                                                </option>
+                                                <option value="Quản Lý Kho - Khu Công Nghiệp">Quản Lý
+                                                    Kho - Khu
+                                                    Công
+                                                    Nghiệp</option>
+                                                <option value="Xuất Nhập Khẩu-Ngoại Thương">Xuất Nhập
+                                                    Khẩu-Ngoại
+                                                    Thương
+                                                </option>
+                                                <option value="Dịch Vụ- Bảo Hiểm">Dịch Vụ- Bảo Hiểm
+                                                </option>
+                                                <option value="Lao Động Phổ Thông">Lao Động Phổ Thông
+                                                </option>
+                                                <option value="Báo Chí - Khoa Học Xã Hội">Báo Chí - Khoa
+                                                    Học Xã
+                                                    Hội
+                                                </option>
+                                                <option value="Khoa Học Nghiêng Cứu">Khoa Học Nghiêng
+                                                    Cứu
+                                                </option>
+                                                <option value="Kinh Tế">Kinh Tế</option>
+                                                <option value="Event">Sự Kiện- Event</option>
+                                                <option value="Dược Phẩm">Dược Phẩm</option>
+                                                <option value="Du lịch">Du lịch</option>
+                                                <option value="Thương Mại Điện Tử">Thương Mại Điện Tử
+                                                </option>
+                                                <option value="Thời Trang">Thời Trang</option>
+                                                <option value="Biên Dịch - Phiên Dịch">Biên Dịch - Phiên
+                                                    Dịch
+                                                </option>
+                                                <option value="Research & Development">Research &
+                                                    Development
+                                                </option>
+                                                <option value="Khác">Khác</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-5">
+                                    <div id="row_area" class="row">
+                                        <div id="col_3_sreach" class=" col-lg-3">
+                                            <span style="    height: 100%;
+                                            line-height: 2.5;
+                                            border-radius: 5px;
+                                            font-size: .75rem;
+                                            font-weight: 500;
+                                            padding: 4px 10px;
+                                            border: 1px solid transparent;"
+                                                class="badge badge-pill badge-warning">Khu Vực</span>
+                                        </div>
+                                        <div id="col_9_sreach" class="col-lg-9">
+                                            <select class="select_location"
+                                                onchange="getval_area(this);" name="Area">
+                                                <option value="0">Tất cả</option>
+                                                <option value="Tp.Hà Nội">Tp.Hà Nội
+                                                <option value="TP.HCM">TP HCM
+                                                <option value="Bình Dương">Bình Dương
+                                                <option value="Tp.Cần Thơ">Tp.Cần Thơ
+                                                <option value="Tp.Đà Nẵng">Tp.Đà Nẵng
+                                                <option value="Tp.Hải Phòng">Tp.Hải Phòng
+                                                <option value="An Giang">An Giang
+                                                <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu
+                                                <option value="Bắc Giang">Bắc Giang
+                                                <option value="Bắc Kạn">Bắc Kạn
+                                                <option value="Bạc Liêu">Bạc Liêu
+                                                <option value="Bắc Ninh">Bắc Ninh
+                                                <option value="Bến Tre">Bến Tre
+                                                <option value="Bình Định">Bình Định
+                                                <option value="Bình Phước">Bình Phước
+                                                <option value="Bình Thuận">Bình Thuận
+                                                <option value="Bình Thuận">Bình Thuận
+                                                <option value="Cà Mau">Cà Mau
+                                                <option value="Cao Bằng">Cao Bằng
+                                                <option value="Đắk Lắk">Đắk Lắk
+                                                <option value="Đắk Nông">Đắk Nông
+                                                <option value="Điện Biên">Điện Biên
+                                                <option value="Đồng Nai">Đồng Nai
+                                                <option value="Đồng Tháp">Đồng Tháp
+                                                <option value="Đồng Tháp">Đồng Tháp
+                                                <option value="Gia Lai">Gia Lai
+                                                <option value="Hà Giang">Hà Giang
+                                                <option value="Hà Nam">Hà Nam
+                                                <option value="Hà Tĩnh">Hà Tĩnh
+                                                <option value="Hải Dương">Hải Dương
+                                                <option value="Hậu Giang">Hậu Giang
+                                                <option value="Hòa Bình">Hòa Bình
+                                                <option value="Hưng Yên">Hưng Yên
+                                                <option value="Khánh Hòa">Khánh Hòa
+                                                <option value="Kiên Giang">Kiên Giang
+                                                <option value="Kon Tum">Kon Tum
+                                                <option value="Lai Châu">Lai Châu
+                                                <option value="Lâm Đồng">Lâm Đồng
+                                                <option value="Lạng Sơn">Lạng Sơn
+                                                <option value="Lào Cai">Lào Cai
+                                                <option value="Long An">Long An
+                                                <option value="Nam Định">Nam Định
+                                                <option value="Nghệ An">Nghệ An
+                                                <option value="Ninh Bình">Ninh Bình
+                                                <option value="Ninh Thuận">Ninh Thuận
+                                                <option value="Phú Thọ">Phú Thọ
+                                                <option value="Quảng Bình">Quảng Bình
+                                                <option value="Quảng Bình">Quảng Bình
+                                                <option value="Quảng Ngãi">Quảng Ngãi
+                                                <option value="Quảng Ninh">Quảng Ninh
+                                                <option value="Quảng Trị">Quảng Trị
+                                                <option value="Sóc Trăng">Sóc Trăng
+                                                <option value="Sơn La">Sơn La
+                                                <option value="Tây Ninh">Tây Ninh
+                                                <option value="Thái Bình">Thái Bình
+                                                <option value="Thái Nguyên">Thái Nguyên
+                                                <option value="Thanh Hóa">Thanh Hóa
+                                                <option value="Thừa Thiên Huế">Thừa Thiên Huế
+                                                <option value="Tiền Giang">Tiền Giang
+                                                <option value="Trà Vinh">Trà Vinh
+                                                <option value="Tuyên Quang">Tuyên Quang
+                                                <option value="Vĩnh Long">Vĩnh Long
+                                                <option value="Vĩnh Phúc">Vĩnh Phúc
+                                                <option value="Yên Bái">Yên Bái
+                                                <option value="Phú Yên">Phú Yên
+                                                <option value="Khác">Khác</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2">
+                                    <button style="width: 100%;" type="button" id="tim_kiem"
+                                        class="btn btn-primary">
+                                        Tìm Kiếm 
+                                    </button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                <div  class="col-xl-12">
+                    <div id="render_data"  class="row">
+                <%result.forEach(function(element){%>
+                    <%var str=element.DetailCV %>
+                        <%var matches=str.match(/\b(\w)/g);%>
+                            <%var acronym=matches.join('').slice(-2)%>
+                                <div id="item_<%=element._id%>" class="col-xl-4 col-xxl-4 col-sm-6">
+                                    <div class="card user-card">
+                                        <div class="card-body pb-0">
+                                            <div style="text-align: center;">
+                                                <h3 style="    line-height: 60px;
+                                                                            border-radius: 15px;
+                                                                            font-size: 18px;
+                                                                            height: 60px;
+                                                                            background-image: linear-gradient( to right bottom,#FFA414, #735BA1 );
+                                                                            vertical-align: middle;"
+                                                    class="title"><a style="color:#fff;"
+                                                        href="./<%=element.url_short%>">
+                                                        <%=element.TilteCV%>
+                                                    </a></h3>
+                                            </div>
+                                            <div class="d-flex mb-3 align-items-center">
+                                                <div class="dz-media mr-3">
+                                                    <span
+                                                        class="icon-placeholder bg-primary text-white">
+                                                        <%=acronym%>
+                                                    </span>
+                                                </div>
+                                                <a href="./<%=element.url_short%>">
+                                                    <div>
+                                                        <h4 class="text-primary">
+                                                            <%=element.DetailCV%>
+                                                        </h4>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div style="text-align: center;">
+                                                <h6 class="title">
+                                                    Lĩnh Vực : <%=element.TypeCV%>
+                                                </h6>
+                                            </div>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">
+                                                    <span class="mb-0 title"><img style="width: 10%;"
+                                                            src="https://img.icons8.com/bubbles/2x/apple-phone.png"
+                                                            alt="">Điện Thoại</span> :
+                                                    <%if(check_render_phone==true){%>
+                                                        <span class="text-black desc-text ml-2">
+                                                            <%=element.PhoneUngVien%>
+                                                        </span>
+                                                        <%}%>
+                                                            <%if(check_render_phone==false){%>
+                                                                <span class="text-black desc-text ml-2">
+                                                                    Liên hệ Admin 0908.25.12.98
+                                                                </span>
+                                                                <%}%>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="mb-0 title"><img style="width: 10%;"
+                                                            src="https://img.icons8.com/bubbles/512/gmail-new.png"
+                                                            alt="">Email</span> :
+                                                    <span class="text-black desc-text ml-2">
+                                                        <%=element.EmailUngVien%>
+                                                    </span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="mb-0 title"><img style="width: 10%;"
+                                                            src="https://img.icons8.com/bubbles/2x/marker.png"
+                                                            alt=""> Khu
+                                                        vực</span> :
+                                                    <span class="text-black desc-text ml-2">
+                                                        <%=element.Area%>
+                                                    </span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="mb-0 title"><img style="width: 10%;"
+                                                            src="https://img.icons8.com/bubbles/2x/calendar.png"
+                                                            alt="">
+                                                        Ngày</span> :
+                                                    <span class="text-black desc-text ml-2">
+                                                        <%=element.DateUpload%>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="row">
+                                                <div style="width:100%;padding-right: 5px; padding-left: 5px;"
+                                                    class="col-xl-12">
+                                                    <button
+                                                        onclick="window.open('./<%=element.url_short%>','_blank')"
+                                                        style="width:100%;background-color: var(--primary) !important;border-color: var(--primary) !important;"
+                                                        class="btn btn-success"><i
+                                                            class="fa fa-file-pdf-o"
+                                                            aria-hidden="true"></i> Xem CV Ứng
+                                                        Viên</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <%})%>
+                            </div>
+                 </div>
+                <div id="pagination" class="col-xl-12">
+                                    <nav class="mt-5">
+                                        <%const count_page=sltht-1%>
+                                            <%const end_count_page=sltht-1%>
+                                                <% const i_curent=page_start - 1 %>
+                                                    <% const i_curent_end=page_start + 1 %>
+                                                        <ul class="pagination pagination-gutter pagination-primary no-bg">
+                                                            <li id="start_link" class="page-item page-indicator"><a class="page-link"
+                                                                    href="<%=fullUrl%>">Trang Đầu</a></li>
+                                                            <%if(page_start==1){%>
+                                                                <li id="dbclisk" class="page-item page-indicator"><a
+                                                                        class="page-link" href="<%=fullUrl%>"><i
+                                                                            class="la la-angle-left"></i></a></li>
+                                                                <%}else{%>
+                                                                    <li class="page-item page-indicator"><a class="page-link"
+                                                                            href="<%=fullUrl%>?page=<%=i_curent%>&pagesize=20"><i
+                                                                                class="la la-angle-left"></i></a></li>
+                                                                    <%}%>
+                                                                        <%for(let i=page_start-2 ; i>= page_start-2 && i <  page_start && i>0;i++){%>
+                                                                                <%if( i==page_start){%>
+                                                                                    <li class="page-item active"><a
+                                                                                            target="_blank" class="page-link"
+                                                                                            href="<%=fullUrl%>?page=<%=i%>&pagesize=20">
+                                                                                            <%=i%>
+                                                                                        </a></li>
+                                                                                    <%}else{%>
+                                                                                        <li class="page-item "><a
+                                                                                                target="_blank"
+                                                                                                class="page-link"
+                                                                                                href="<%=fullUrl%>?page=<%=i%>&pagesize=20">
+                                                                                                <%=i%>
+                                                                                            </a></li>
+                                                                                        <%}%>
+                                                                                            <%}%>
+                                                                                                <%for(let i=page_start ; i
+                                                                                                    <=2+page_start && i
+                                                                                                    <=count_page;i++){%>
+                                                                                                    <%if( i==page_start){%>
+                                                                                                        <li
+                                                                                                            class="page-item active">
+                                                                                                            <a target="_blank"
+                                                                                                                class="page-link"
+                                                                                                                href="<%=fullUrl%>?page=<%=i%>&pagesize=20">
+                                                                                                                <%=i%>
+                                                                                                            </a>
+                                                                                                        </li>
+                                                                                                        <%}else{%>
+                                                                                                            <li
+                                                                                                                class="page-item ">
+                                                                                                                <a target="_blank"
+                                                                                                                    class="page-link"
+                                                                                                                    href="<%=fullUrl%>?page=<%=i%>&pagesize=20">
+                                                                                                                    <%=i%>
+                                                                                                                </a>
+                                                                                                            </li>
+                                                                                                            <%}%>
+                                                                                                                <%}%>
+                                                                                                                    <%if(count_page==page_start){%>
+                                                                                                                        <li
+                                                                                                                            class="page-item page-indicator">
+                                                                                                                            <a class="page-link"
+                                                                                                                                href="<%=fullUrl%>?page=<%=count_page%>&pagesize=20"><i
+                                                                                                                                    class="la la-angle-right"></i></a>
+                                                                                                                        </li>
+                                                                                                                        <%}else{%>
+                                                                                                                            <li
+                                                                                                                                class="page-item page-indicator">
+                                                                                                                                <a class="page-link"
+                                                                                                                                    href="<%=fullUrl%>?page=<%=i_curent_end%>&pagesize=20"><i
+                                                                                                                                        class="la la-angle-right"></i></a>
+                                                                                                                            </li>
+                                                                                                                            <%}%>
+                                                                                                                                <li id="end_link"
+                                                                                                                                    class="page-item page-indicator">
+                                                                                                                                    <a class="page-link"
+                                                                                                                                        href="<%=fullUrl%>?page=<%=end_count_page%>&pagesize=20">Trang
+                                                                                                                                        Cuối</a>
+                                                                                                                                </li>
+                                                        </ul>
+                                    </nav>
+                </div>    
+        </div>
+    </div>
+    </div>
+    <style>
+        @media only screen and (max-width: 600px) {
+        
+            #end_link{
+                display: none
+            }
+            #start_link{
+                display: none
+            }
+            #col_3_sreach{
+                width: 20%;
+            }
+            #col_9_sreach{
+                width: 80%;
+            }
+            #tim_kiem{
+                margin-top: 2%;
+            }
+            #row_area{
+                margin-top: 1%;
+            }
+            #row_type{
+                margin-top: 1%;
+            }
+        }
+        .btn:hover {
+            background-image: linear-gradient(to right bottom, #FFA4DF, #00ADF8)
+        }
+
+        .chart-wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 5px;
+        }
+
+        .chart-wrap .chart-title {
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .chart-wrap .row {
+            position: relative;
+            height: 26px;
+            margin-bottom: 15px;
+        }
+
+        .chart-wrap .bar-wrap {
+            position: relative;
+            background: #d7dbde;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .chart-wrap .bar-wrap .bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #f37167;
+            transition: all 1s;
+            transform: translateX(-100%);
+        }
+
+        .chart-wrap .bar-wrap .bar.in {
+            transform: translateX(0%);
+        }
+
+        .chart-wrap .row:nth-of-type(1) .bar {
+            transition: 1s 400ms;
+        }
+
+        .chart-wrap .row:nth-of-type(2) .bar {
+            transition: 1s 600ms;
+        }
+
+        .chart-wrap .row:nth-of-type(3) .bar {
+            transition: 1s 800ms;
+        }
+
+        .chart-wrap .row:nth-of-type(4) .bar {
+            transition: 1s 1000ms;
+        }
+
+        .chart-wrap .row:nth-of-type(5) .bar {
+            transition: 1s 1200ms;
+        }
+
+        .chart-wrap .row:nth-of-type(6) .bar {
+            transition: 1s 1400ms;
+        }
+
+        .chart-wrap .row:nth-of-type(7) .bar {
+            transition: 1s 1600ms;
+        }
+
+        .chart-wrap .label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            padding-left: 10px;
+            text-align: left;
+            font-size: 14px;
+            line-height: 26px;
+            text-transform: uppercase;
+            font-weight: bold;
+            z-index: 0;
+        }
+
+        .chart-wrap .number {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30px;
+            padding-right: 10px;
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: bold;
+            text-align: right;
+            z-index: 10;
+        }
+
+        @media screen and (min-width: 800px) {
+            .chart-wrap .row {
+                padding: 0 40px 0 160px;
+            }
+
+            .chart-wrap .label {
+                text-align: left;
+                padding-left: 0;
+            }
+
+            .chart-wrap .number {
+                text-align: left;
+                padding-right: 0;
+            }
+        }
+    </style>
+    <script>
+        (function ($) {
+            function generateBarGraph(wrapper) {
+                // Set Up Values Array
+                var values = [];
+
+                // Get Values and save to Array
+                $(wrapper + ' .bar').each(function (index, el) {
+                    values.push($(this).data('value'));
+                });
+
+                // Get Max Value From Array
+                var max_value = Math.max.apply(Math, values);
+
+                // Set width of bar to percent of max value
+                $(wrapper + ' .bar').each(function (index, el) {
+                    var bar = $(this),
+                        value = bar.data('value'),
+                        percent = Math.ceil((value / max_value) * 100);
+
+                    // Set Width & Add Class
+                    bar.width(percent + '%');
+                    bar.addClass('in');
+                });
+            }
+
+            // Generate the bar graph on window load...
+            $(window).on('load', function (event) {
+                generateBarGraph('#dashboard-stats');
+            });
+        })(jQuery); // Fully reference jQuery after this point.
+    </script>
+    <script src="https://tuyendung.me/js_seacrch.js"></script>
+    <style>
+        #newFont {
+            color: transparent;
+            font-size: 25px;
+            background-image: linear-gradient(to right bottom,
+                    #ffa400,
+                    #00aefd);
+            background-clip: text;
+            -webkit-background-clip: text;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        #SelExample {
+            width: 200px;
+        }
+
+        select {
+            display: none !important;
+        }
+
+        .type_job {
+            display: block !important;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40FFFFFF', endColorstr='#00FFFFFF', GradientType=0);
+            background-color: #fff;
+            border-radius: 6px;
+            border: solid 1px #eee;
+            box-shadow: 0px 2px 5px 0px rgb(155 155 155 / 50%);
+            box-sizing: border-box;
+            cursor: pointer;
+            display: block;
+            float: left;
+            font-size: 14px;
+            font-weight: normal;
+            height: 42px;
+            line-height: 40px;
+            outline: none;
+            padding-left: 18px;
+            padding-right: 30px;
+            position: relative;
+            text-align: left !important;
+            transition: all 0.2s ease-in-out;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            white-space: nowrap;
+            width: auto;
+            display: block !important;
+            width: 100%;
+        }
+
+        .dropdown-select {
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40FFFFFF', endColorstr='#00FFFFFF', GradientType=0);
+            background-color: #fff;
+            border-radius: 6px;
+            border: solid 1px #eee;
+            box-shadow: 0px 2px 5px 0px rgba(155, 155, 155, 0.5);
+            box-sizing: border-box;
+            cursor: pointer;
+            display: block;
+            float: left;
+            font-size: 14px;
+            font-weight: normal;
+            height: 42px;
+            line-height: 40px;
+            outline: none;
+            padding-left: 18px;
+            padding-right: 30px;
+            position: relative;
+            text-align: left !important;
+            transition: all 0.2s ease-in-out;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            white-space: nowrap;
+            width: auto;
+
+        }
+
+        .dropdown-select:focus {
+            background-color: #fff;
+        }
+
+        .dropdown-select:hover {
+            background-color: #fff;
+        }
+
+        .dropdown-select:active,
+        .dropdown-select.open {
+            background-color: #fff !important;
+            border-color: #bbb;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) inset;
+        }
+
+        .dropdown-select:after {
+            height: 0;
+            width: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid #777;
+            -webkit-transform: origin(50% 20%);
+            transform: origin(50% 20%);
+            transition: all 0.125s ease-in-out;
+            content: '';
+            display: block;
+            margin-top: -2px;
+            pointer-events: none;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+        }
+
+        .dropdown-select.open:after {
+            -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+        }
+
+        .dropdown-select.open .list {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .dropdown-select.open .option {
+            cursor: pointer;
+        }
+
+        .dropdown-select.wide {
+            width: 100%;
+        }
+
+        .dropdown-select.wide .list {
+            left: 0 !important;
+            right: 0 !important;
+        }
+
+        .dropdown-select .list {
+            box-sizing: border-box;
+            transition: all 0.15s cubic-bezier(0.25, 0, 0.25, 1.75), opacity 0.1s linear;
+            -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+            -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.09);
+            background-color: #fff;
+            border-radius: 6px;
+            padding: 3px 0;
+            opacity: 0;
+            overflow: hidden;
+            pointer-events: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 999;
+            max-height: 450px;
+            overflow: auto;
+            border: 1px solid #ddd;
+        }
+
+        .dropdown-select .list:hover .option:not(:hover) {
+            background-color: transparent !important;
+        }
+
+        .dropdown-select .dd-search {
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0.5rem;
+        }
+
+        .dropdown-select .dd-searchbox {
+            width: 90%;
+            height: 50px;
+            padding: 0.5rem;
+            border: 1px solid #999;
+            border-color: #999;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .dropdown-select .dd-searchbox:focus {
+            border-color: #12CBC4;
+        }
+
+        .dropdown-select .list ul {
+            padding: 0;
+        }
+
+        .dropdown-select .option {
+            cursor: default;
+            font-weight: 400;
+            line-height: 40px;
+            outline: none;
+            padding-left: 18px;
+            padding-right: 29px;
+            text-align: left;
+            transition: all 0.2s;
+            list-style: none;
+        }
+
+        .dropdown-select .option:hover,
+        .dropdown-select .option:focus {
+            background-color: #f6f6f6 !important;
+        }
+
+        .dropdown-select .option.selected {
+            font-weight: 600;
+            color: #12cbc4;
+        }
+
+        .dropdown-select .option.selected:focus {
+            background: #f6f6f6;
+        }
+
+        .dropdown-select a {
+            color: #aaa;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .dropdown-select a:hover {
+            color: #666;
+        }
+    </style>
+    <script src="https://admin.tuyendung.me/vendor/global/global.min.js"></script>
+    <script src="https://admin.tuyendung.me/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://admin.tuyendung.me/vendor/peity/jquery.peity.min.js"></script>
+    <script src="https://admin.tuyendung.me/js/dashboard/dashboard-1.js"></script>
+    <script src="https://admin.tuyendung.me/vendor/owl-carousel/owl.carousel.js"></script>
+    <script src="https://admin.tuyendung.me/js/custom.min.js"></script>
+    <script src="https://admin.tuyendung.me/js/deznav-init.js"></script>
+    <script src="https://admin.tuyendung.me/js/demo.js"></script>
+    <script>
+        var host = "https://tuyendung.me"
+        jQuery(document).ready(function () {
+            setTimeout(function () {
+                dezSettingsOptions.version = 'dark';
+                new dezSettings(dezSettingsOptions);
+            }, 100)
+
+        });
+        function getval_title(sel) {
+            var chosse = sel.value
+            $("#value_title").val(chosse)
+        }
+        function getval_area(sel) {
+            var chosse = sel.value
+            $("#value_area").val(chosse)
+        }
+        $("#tim_kiem").click(async function () {
+            $("#pagination").hide()
+            $("#render_data").html(``)
+            var value_title = $("#value_title").val()
+            var value_area = $("#value_area").val()
+            if (value_title == 0 && value_area == 0) {
+                $("#pagination").show()
+            }
+            const response = await fetch(`${host}/search-cv-type=${value_title}&area=${value_area}`)
+            const data = await response.json();
+            var arrdata = []
+            data.forEach(element => {
+                var str = element.DetailCV
+                var matches = str.match(/\b(\w)/g);
+                var acronym = matches.join('').slice(-2)
+                var item = ` <div id="item_${element._id}" class="col-xl-4">
+                                <div class="card user-card">
+                                    <div class="card-body pb-0">
+                                        <div style="text-align: center;">
+                                            <h3 style="    line-height: 60px;
+                                                                                    border-radius: 15px;
+                                                                                    font-size: 18px;
+                                                                                    height: 60px;
+                                                                                    background-image: linear-gradient( to right bottom,#FFA414, #735BA1 );
+                                                                                    vertical-align: middle;"
+                                                class="title"><a style="color:#fff;" href="./${element.url_short}">
+                                                    ${element.TilteCV}
+                                                </a></h3>
+                                        </div>
+                                        <div class="d-flex mb-3 align-items-center">
+                                            <div class="dz-media mr-3">
+                                                <span class="icon-placeholder bg-primary text-white">
+                                                    ${acronym}
+                                                </span>
+                                            </div>
+                                            <a href="./${element.url_short}">
+                                                <div>
+                                                    <h4 class="text-primary">
+                                                        ${element.DetailCV}
+                                                    </h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <h6 class="title">
+                                                Lĩnh Vực : ${element.TypeCV}
+                                            </h6>
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <span class="mb-0 title"><img style="width: 10%;"
+                                                        src="https://img.icons8.com/bubbles/512/gmail-new.png" alt="">Email</span> :
+                                                <span class="text-black desc-text ml-2">
+                                                    ${element.EmailUngVien}
+                                                </span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="mb-0 title"><img style="width: 10%;"
+                                                        src="https://img.icons8.com/bubbles/2x/marker.png" alt=""> Khu
+                                                    vực</span> :
+                                                <span class="text-black desc-text ml-2">
+                                                    ${element.Area}
+                                                </span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="mb-0 title"><img style="width: 10%;"
+                                                        src="https://img.icons8.com/bubbles/2x/calendar.png" alt="">
+                                                    Ngày</span> :
+                                                <span class="text-black desc-text ml-2">
+                                                    ${element.DateUpload}
+                                                </span>
+                                            </li>
+                                        </ul>
+                                        <p class="fs-12"><i class="fa fa-eye" aria-hidden="true"></i> Lượt xem:
+                                            ${element.clicks}
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="row">
+                                            <div style="width:100%;padding-right: 5px; padding-left: 5px;"
+                                                class="col-xl-12">
+                                                <button onclick="window.open('./${element.url_short}','_blank')"
+                                                    style="width:100%;background-color: var(--primary) !important;border-color: var(--primary) !important;"
+                                                    class="btn btn-success"><i class="fa fa-file-pdf-o"
+                                                        aria-hidden="true"></i> Xem CV Ứng Viên</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            `
+                let text = item.toString();
+                var previewlist = text.replaceAll(",", "<br>")
+                arrdata.push(item)
+            });
+            $("#render_data").html(arrdata)
+        })
+    </script>
+</body>
+
+</html>

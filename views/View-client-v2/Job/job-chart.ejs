@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Việc Làm -OfficeJob </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="https://tuyendung.me/css_search.css" />
+	<link rel="icon" type="image/png" sizes="16x16" href="https://admin.tuyendung.me/images/Office_job/logo_new.jpg">
+	<link href="https://admin.tuyendung.me/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="https://admin.tuyendung.me/css/style.css" rel="stylesheet">
+	<link href="https://admin.tuyendung.me/vendor/lightgallery/css/lightgallery.min.css" rel="stylesheet">
+	<link rel="shortcut icon" type="image/png" href="https://tuyendung.me/new_office/share_cv_new.png" />
+	<script src='https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js?ver=6.0.2'
+		id='cspt-lottiefiles-script-js'></script>
+	<meta property="fb:app_id" content="1902832553257404" />
+	<meta property="og:image" content="https://tuyendung.me/icon_officejob/1.png" />
+	<meta property="og:image:alt" content="Chia sẻ việc làm" />
+	<meta property="og:description" content="Liên Hệ: 093.18.666.98 Đức Anh">
+	<meta property="og:url" content="https://tuyendung.me/job">
+	<meta property="og:title" content="Danh Sách Việc Làm" />
+	<meta property="og:type" content="website" />
+	<script src="https://tuyendung.me/jquery.js"></script>
+
+</head>
+
+<body>
+	<div id="preloader">
+		<div class="sk-three-bounce">
+			<div class="sk-child sk-bounce1"></div>
+			<div class="sk-child sk-bounce2"></div>
+			<div class="sk-child sk-bounce3"></div>
+		</div>
+	</div>
+	<div id="main-wrapper">
+		<div class="nav-header">
+			<a href="/" class="brand-logo">
+				<img style="width: 100%;" src="https://admin.tuyendung.me/images/Office_job/logo_vlvp_new_2022.png"
+					alt="">
+			</a>
+		</div>
+		<div class="header">
+			<div class="header-content">
+				<nav class="navbar navbar-expand">
+					<div class="collapse navbar-collapse justify-content-between">
+						<div class="header-left">
+							<div style="width: 100%;" class="input-group search-area right d-lg-inline-flex d-none">
+								<!-- <input type="text" class="form-control" placeholder="Find something here...">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">
+                                        <a href="javascript:void(0)">
+                                            <i class="flaticon-381-search-2"></i>
+                                        </a>
+                                    </span>
+                                </div> -->
+							</div>
+						</div>
+						<ul class="navbar-nav header-right main-notification">
+							<li class="nav-item dropdown notification_dropdown">
+								<a class="nav-link bell dz-theme-mode" href="#">
+									<i id="icon-light" class="fa fa-sun-o"></i>
+									<i id="icon-dark" class="fa fa-moon-o"></i>
+								</a>
+							</li>
+							<li class="nav-item dropdown notification_dropdown">
+								<a class="nav-link bell dz-fullscreen" href="#">
+									<svg id="icon-full" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+										stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+										class="css-i6dzq1">
+										<path
+											d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"
+											style="stroke-dasharray: 37, 57; stroke-dashoffset: 0;"></path>
+									</svg>
+									<svg id="icon-minimize" width="20" height="20" viewBox="0 0 24 24" fill="none"
+										stroke="currentColor" stroke-width="2" stroke-linecap="round"
+										stroke-linejoin="round" class="feather feather-minimize">
+										<path
+											d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"
+											style="stroke-dasharray: 37, 57; stroke-dashoffset: 0;"></path>
+									</svg>
+								</a>
+							</li>
+							<li class="nav-item dropdown header-profile">
+								<a class="nav-link" href="#" role="button" data-toggle="dropdown">
+									<img src="https://admin.tuyendung.me/images/Office_job/logo_new.jpg" width="20"
+										alt="" />
+									<div class="header-info">
+										<span>Nhà Tuyển Dụng</span>
+										<small>User Nhà Tuyển Dụng</small>
+									</div>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a href="/profile" class="dropdown-item ai-icon">
+										<svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary"
+											width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+											stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+											<circle cx="12" cy="7" r="4"></circle>
+										</svg>
+										<span class="ml-2">Trang Cá Nhân</span>
+
+										<a href="/logout" class="dropdown-item ai-icon">
+											<svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger"
+												width="18" height="18" viewBox="0 0 24 24" fill="none"
+												stroke="currentColor" stroke-width="2" stroke-linecap="round"
+												stroke-linejoin="round">
+												<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+												<polyline points="16 17 21 12 16 7"></polyline>
+												<line x1="21" y1="12" x2="9" y2="12"></line>
+											</svg>
+											<span class="ml-2">Đăng Xuất </span>
+										</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div style="height: 80px;" class="sub-header">
+					<div style="width: 100%;" class="d-flex  align-items-center flex-wrap mr-auto">
+						<!-- <button style="margin: 1%;" data-toggle="modal" data-target=".bd-example-modal-lg-create-job" class="btn btn-info">+Đăng Tin</button>
+                        <button style="margin: 1%;" data-toggle="modal" data-target=".bd-example-modal-lg-job-manager" class="btn btn-primary"> Quản Lý Tin</button> -->
+					</div>
+					<div class="d-flex align-items-center">
+						<button data-toggle="modal" data-target=".bd-example-modal-lg-helper"
+							class="btn btn-danger">Helper</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="deznav">
+			<div class="deznav-scroll">
+				<div style="display: flex; flex-wrap: wrap;margin-right: 0px; margin-left: 0px;" class="row">
+					<div style="text-align: center;" class="col-lg-12">
+						<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_zdmxnvo8.json"
+							background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay>
+						</lottie-player>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content-body">
+			<div style="padding: 10px;margin-top: 1%;" class="container-fluid">
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="card">
+							<div class="card-header pb-2 d-block d-sm-flex flex-wrap border-0">
+								<div class="mb-3">
+									<h4 class="fs-20 text-black">URL Analyst</h4>
+									<p class="mb-0 fs-12">Thống kê lưu lượng truy cập tin tuyển dụng</p>
+								</div>
+							</div>
+							<div class="card-body tab-content p-0">
+								<div class="tab-pane active show fade" id="monthly">
+									<div class="table-responsive">
+										<table class="table shadow-hover card-table border-no tbl-btn short-one">
+											<tr>
+												<th>STT</th>
+												<th>URL</th>
+												<th>Short</th>
+												<th>Lượt Xem</th>
+												<th>Chi Tiết</th>
+											</tr>
+											<tbody>
+												<%Url_analyst.forEach(function(item,index){%>
+													<tr>
+														<td>
+															<%=index+1%>
+														</td>
+														<td class="wspace-no">
+															<span class="font-w600 text-black">
+																<%=item.Titel%>
+															</span>
+														</td>
+														<td>
+															<span class="text-black">
+																https://tuyendung.me/<%=item.short%>
+															</span>
+														</td>
+														<td>
+															<span class="font-w600 text-black">
+																<%=item.clicks%>
+															</span>
+														</td>
+														<td>
+															<button type="button"
+															style="width: 100%;padding:1%;margin:1%"
+																class="btn btn-outline-success float-right"
+																data-toggle="modal"
+																data-target="#exampleModalpopover<%=item._id%>"><i
+																	class="la la-cogs"></i>
+																Xem Báo Cáo</button>
+															<!-- <a style="padding:1%;margin:1% ;width: 100%"
+																class="btn btn-outline-danger float-right"
+																href="/deleteShortUrl=<%=item._id%>"><i
+																	class="la la-delete"></i>Xóa
+															</a>
+															 -->
+
+														</td>
+													</tr>
+
+													<%})%>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<%Url_analyst.forEach(function(item,index){%>
+		<div class="modal fade" id="exampleModalpopover<%=item._id%>">
+			<div class="modal-dialog modal-xl" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">
+							<%=item.Titel%>
+						</h5>
+						<button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="card-body">
+							<!-- Nav tabs -->
+							<div class="default-tab">
+								<ul class="nav nav-tabs" role="tablist">
+									<li class="nav-item">
+										<a class="nav-link active" data-toggle="tab" href="#Report<%=item._id%>"><i
+												class="la la-home mr-2"></i>Báo
+											Cáo</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" data-toggle="tab" href="#meta_tag<%=item._id%>"><i
+												class="la la-tag"></i>
+											Meta
+											Tag</a>
+									</li>
+
+								</ul>
+								<div class="tab-content">
+									<div class="tab-pane fade show active" id="Report<%=item._id%>" role="tabpanel">
+										<div class="pt-4">
+											<h4>URL
+												Analyst
+											</h4>
+											<div class="row">
+												<div id="report-social-<%=item._id%>" class="col-xl-6">
+
+												</div>
+												<div id="report-social-chart-<%=item._id%>" class="col-xl-6">
+
+												</div>
+											</div>
+											<div class="card-body pb-2 px-3">
+												<div id="marketChart<%=item._id%>" class="market-line">
+												</div>
+											</div>
+											<script>
+												$(document).ready(function () {
+													marketCharts(`<%=item._id%>`)
+												});
+												async function marketCharts(url_id) {
+													var result = await fetch(`https://admin.tuyendung.me/url_analyst_id=${url_id}`).then(response => response.json()).then(data => data)
+													console.log(result)
+													const url = result.Title
+													var new_arrayDate = []
+													var new_arrayClicks = []
+													const url_Day = result.Day
+													const url_clicks = result.clicks
+													if (url_Day) {
+														url_Day.forEach(function (item) {
+															new_arrayDate.push(item)
+														})
+													}
+													if (url_clicks) {
+														url_clicks.forEach(function (item) {
+															new_arrayClicks.push(item)
+														})
+													}
+													var options = {
+														series: [{
+															name: `${url}`,
+															data: new_arrayClicks
+														}],
+														chart: {
+															height: 300,
+															type: 'area',
+															toolbar: {
+																show: false
+															}
+														},
+														colors: ["#FFAB2D", "#00ADA3", "#00ADA9"],
+														dataLabels: {
+															enabled: false
+														},
+														stroke: {
+															curve: 'smooth',
+															width: 3
+														},
+														legend: {
+															show: false
+														},
+														grid: {
+															show: true,
+															strokeDashArray: 6,
+															borderColor: '#dadada',
+														},
+														yaxis: {
+															labels: {
+																style: {
+																	colors: '#B5B5C3',
+																	fontSize: '12px',
+																	fontFamily: 'Poppins',
+																	fontWeight: 400
+
+																},
+																formatter: function (value) {
+																	return value + " clicks";
+																}
+															},
+														},
+														xaxis: {
+															categories: new_arrayDate,
+															labels: {
+																style: {
+																	colors: '#B5B5C3',
+																	fontSize: '12px',
+																	fontFamily: 'Poppins',
+																	fontWeight: 400
+
+																},
+															}
+														},
+														fill: {
+															type: 'solid',
+															opacity: 0.05
+														},
+														tooltip: {
+															x: {
+																format: 'dd/MM/yy HH:mm'
+															},
+														},
+													};
+
+													var chart = new ApexCharts(document.querySelector(`#marketChart${url_id}`), options);
+													chart.render();
+												}
+											</script>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="meta_tag<%=item._id%>">
+										<div class="pt-4">
+											<h4>Meta
+												Tag
+											</h4>
+											<div class="input-group mb-3  input-success">
+												<div class="input-group-prepend">
+													<span class="input-group-text">Code
+														Center</span>
+												</div>
+												<input readonly type="text" class="form-control"
+													value="<%=item.meta_tag.code_center%>">
+											</div>
+											<div class="input-group mb-3  input-success">
+												<div class="input-group-prepend">
+													<span class="input-group-text">Code
+														Url</span>
+												</div>
+												<input readonly type="text" class="form-control"
+													value="<%=item.meta_tag.code_url%>">
+											</div>
+											<div class="input-group mb-3  input-success">
+												<div class="input-group-prepend">
+													<span class="input-group-text">Title</span>
+												</div>
+												<input readonly type="text" class="form-control"
+													value="<%=item.meta_tag.Title%>">
+											</div>
+											<div class="input-group mb-3  input-success">
+												<div class="input-group-prepend">
+													<span class="input-group-text">Description</span>
+												</div>
+												<input readonly type="text" class="form-control"
+													value="<%=item.meta_tag.Description%>">
+											</div>
+											<div class="input-group mb-3  input-success">
+												<div class="input-group-prepend">
+													<span class="input-group-text">Keywords</span>
+												</div>
+												<input readonly type="text" class="form-control"
+													value="<%=item.meta_tag.Keywords%>">
+											</div>
+											<div class="input-group mb-3  input-success">
+												<div class="input-group-prepend">
+													<span class="input-group-text">Url
+														Image</span>
+												</div>
+												<input readonly type="text" class="form-control"
+													value="<%=item.meta_tag.url_image%>">
+											</div>
+											<div class="input-group mb-3  input-success">
+												<div class="input-group-prepend">
+													<span class="input-group-text">Image
+														Alt</span>
+												</div>
+												<input readonly type="text" class="form-control"
+													value="<%=item.meta_tag.image_alt%>">
+											</div>
+											<div class="input-group mb-3  input-success">
+												<img style="width: 100%;border-radius:15px;"
+													src="<%=item.meta_tag.url_image%>">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger light" data-dismiss="modal">Đóng</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<%})%>
+			<%result_social.forEach(function(item){%>
+				<script>
+					jQuery(document).ready(function () {
+						var id = '<%=item.URL%>'
+						var total = parseInt('<%=item.count_fbs%>') + parseInt('<%=item.count_zalos%>') + parseInt('<%=item.redirects%>')
+						var per_facebook = Math.round((parseInt('<%=item.count_fbs%>') / total) * 100);
+						var per_zalo = Math.round((parseInt('<%=item.count_zalos%>') / total) * 100);
+						var per_redirect = Math.round((parseInt('<%=item.redirects%>') / total) * 100);
+						$(`#report-social-${id}`).html(`
+			<div class="card">
+				<div class="card-header">
+					<h4 class="card-title">URL Link Social</h4>
+						</div>
+						<div class="card-body">
+							<div class="basic-list-group">
+							<ul class="list-group">
+							<li class="list-group-item d-flex justify-content-between align-items-center">
+								Facebook<span class="badge badge-primary badge-pill"><%=item.count_fbs%></span>
+							</li>
+							<li class="list-group-item d-flex justify-content-between align-items-center">
+								Zalo<span class="badge badge-primary badge-pill"><%=item.count_zalos%></span>
+								</li>
+							<li class="list-group-item d-flex justify-content-between align-items-center">
+								Direct<span class="badge badge-primary badge-pill"><%=item.redirects%></span>
+							</li>
+							<li style="background: antiquewhite;" class="list-group-item d-flex justify-content-between align-items-center">
+								Total <span class="badge badge-primary badge-pill">${total}</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			`)
+						$(`#report-social-chart-${id}`).html(`
+				<div class="card">
+				<div class="card-header">
+					<h4 class="card-title">_id URL: ${id}</h4>
+				</div>
+				<div class="chart-point">
+					<div class="card-body">
+                                <h6>Facebook
+                                    <span class="pull-right">${per_facebook}%</span>
+                                </h6>
+                                <div class="progress ">
+                                    <div class="progress-bar bg-danger progress-animated" style="width: ${per_facebook}%; height:6px;" role="progressbar">
+                                        <span class="sr-only">50% Complete</span>
+                                    </div>
+                                </div>
+                                <h6 class="mt-4">Zalo
+                                    <span class="pull-right">${per_zalo}%</span>
+                                </h6>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info progress-animated" style="width: ${per_zalo}%; height:6px;" role="progressbar">
+                                        <span class="sr-only">50% Complete</span>
+                                    </div>
+                                </div>
+                                <h6 class="mt-4">Redirect
+                                    <span class="pull-right">${per_redirect}%</span>
+                                </h6>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success progress-animated" style="width:${per_redirect}%; height:6px;" role="progressbar">
+                                        <span class="sr-only">50% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+					</div>
+				</div>`)
+					});
+				</script>
+				<%})%>
+					<script src="https://admin.tuyendung.me/vendor/chart.js/Chart.bundle.min.js"></script>
+					<script src="https://admin.tuyendung.me/js/plugins-init/chartjs-init.js"></script>
+					<script src="https://admin.tuyendung.me/vendor/apexchart/apexchart.js"></script>
+					<script src="https://admin.tuyendung.me/vendor/global/global.min.js"></script>
+					<script
+						src="https://admin.tuyendung.me/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+					<script src="https://admin.tuyendung.me/vendor/peity/jquery.peity.min.js"></script>
+					<script src="https://admin.tuyendung.me/js/dashboard/dashboard-1.js"></script>
+					<script src="https://admin.tuyendung.me/vendor/owl-carousel/owl.carousel.js"></script>
+					<script src="https://admin.tuyendung.me/js/custom.min.js"></script>
+					<script src="https://admin.tuyendung.me/js/deznav-init.js"></script>
+					<script src="https://admin.tuyendung.me/js/demo.js"></script>
+					<script>
+						var host = "https://tuyendung.me"
+						jQuery(document).ready(function () {
+							setTimeout(function () {
+								dezSettingsOptions.version = 'light';
+								new dezSettings(dezSettingsOptions);
+							}, 10)
+
+						});
+					</script>
+					<script src="https://admin.tuyendung.me/vendor/lightgallery/js/lightgallery-all.min.js"></script>
+</body>
+
+</html>

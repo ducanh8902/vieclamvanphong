@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="VIỆC LÀM VĂN PHÒNG">
+    <meta name="keywords" content="au theme template">
+    <!-- Title Page-->
+    <title>GALAXYDR ISO 9001:2015</title>
+    <!-- Fontfaces CSS-->
+    <link rel="shortcut icon" type="image/x-icon" href="https://tuyendung.me/galaxydr-logo.jpg">
+    <link rel="apple-touch-icon" href="https://tuyendung.me/galaxydr-logo.jpg">
+    <link href="https://admin.tuyendung.me/Admin/css/font-face.css" rel="stylesheet" media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet"
+        media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet"
+        media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/mdi-font/css/material-design-iconic-font.min.css"
+        rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Bootstrap CSS-->
+    <link href="https://admin.tuyendung.me/Admin/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="https://admin.tuyendung.me/Admin/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css"
+        rel="stylesheet" media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet"
+        media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet"
+        media="all">
+    <link rel="stylesheet" href="https://admin.tuyendung.me/css/flaticon.css">
+    <link href="https://admin.tuyendung.me/Admin/css/theme.css" rel="stylesheet" media="all">
+    <link href="/iso/iso.css" rel="stylesheet" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body style="width: 95%;">
+    <div id="loader-wrapper">
+        <div id="page">
+            <div id="phrase_box">
+                <svg width="100%" height="100%">
+                    <defs>
+                        <style type="text/css">
+                            @font-face {
+                                font-family: "Proxima";
+                                src: url('');
+                            }
+                        </style>
+                        <mask id="mask" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
+                            <linearGradient id="linearGradient" gradientUnits="objectBoundingBox" x2="0" y2="1">
+                                <stop stop-color="white" stop-opacity="0" offset="0%" />
+                                <stop stop-color="white" stop-opacity="1" offset="30%" />
+                                <stop stop-color="white" stop-opacity="1" offset="70%" />
+                                <stop stop-color="white" stop-opacity="0" offset="100%" />
+                            </linearGradient>
+                            <rect width="100%" height="100%" fill="url(#linearGradient)" />
+                        </mask>
+                    </defs>
+                    <g width="100%" height="100%" style="mask: url(#mask);">
+                        <g id="phrases"></g>
+                    </g>
+                </svg>
+            </div>
+            <div id="ighex">
+                <div class="preloader loading">
+                    <span class="slice"></span>
+                    <span class="slice"></span>
+                    <span class="slice"></span>
+                    <span class="slice"></span>
+                    <span class="slice"></span>
+                    <span class="slice"></span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="row">
+        <div style="background-color:#fff ;text-align: center;" class="col-md-12">
+        <div class="row">
+            <div style="margin-top: 10px;padding:5%" class="col-md-12">
+                <input id="search" type="text" class="form-control" placeholder="Tìm Kiếm...">
+              </div>
+            <div class="col-md-12">
+                <div class="table-responsive table-data">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <td>STT</td>
+                                    <td>Bộ Phận</td>
+                                    <td>Ngày Yêu Cầu</td>
+                                    <td>Scan</td>
+                                </tr>
+                            </thead>
+                            <%List_form_Scan.forEach(function(item,index){%>
+                                        <tbody
+                                            id="table">
+                                            <tr>
+                                                <td>
+                                                    <div
+                                                        class="table-data__info">
+    
+                                                        <%=index+1%>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div
+                                                        class="table-data__info">
+                                                        <%=item.Info_head.Center_send_request%>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div
+                                                        class="table-data__info">
+                                                        <%=item.Info_head.Date_request%>
+                                                    </div>
+                                                </td>
+                                                <%if(!item.Scan.url){%>
+                                                    <td><img style="vertical-align: middle;width:15%" data-toggle="modal" data-target="#Review_interview_letter"
+                                                        onclick="get_thanks_letter('<%=item._id%>')" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/100/000000/external-cover-letter-job-search-flaticons-lineal-color-flat-icons-3.png"/></td>
+                                                <%}else{%>
+                                                    <td> <div class="row">
+                                                        <div class="col-md-12">
+                                                            <img style="vertical-align: middle;width:15%" data-toggle="modal" data-target="#Review_interview_letter"
+                                                            onclick="get_review_scan('<%=item.Scan.url%>')" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/100/000000/external-employment-job-search-flaticons-lineal-color-flat-icons-3.png"/>
+                                                            <img style="vertical-align: middle;width:15%" data-toggle="modal" data-target="#Review_interview_letter"
+                                                             onclick="get_thanks_letter('<%=item._id%>')" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/100/000000/external-cover-letter-job-search-flaticons-lineal-color-flat-icons-3.png"/></td>
+                                                        </div>
+                                                    </div>
+                                                        
+                                                        
+                                                
+                                                <%}%>
+                                              
+                                            </tr>
+                                        </tbody>
+                            <%})%>
+                        </table>
+
+                        <script>
+                            $("#search").on("keyup", function() {
+                             var value = $(this).val().toLowerCase();
+                             $("#table tr").filter(function() {
+                                 $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                             });
+                             });
+                         </script>
+                    </div>
+              
+            </div>
+        </div>
+       </div>
+    </div>
+    <div id="Review_interview_letter" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body text-center" id="bodyCV">
+                
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Đóng</button>
+            </div>
+            <div id="footer" class="modal-footer">
+                
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    <script>
+      
+        function Reload(){
+            window.location.reload();
+        }
+        function get_review_scan(result){
+            $("#bodyCV").html(`<iframe style="background-size: contain;background-image: url('https://tuyendung.me/loading2.gif')" width="100%" height="600" src="${result}"></iframe>`)
+            $("#footer").html(`<button type="button" class="btn btn-primary" data-dismiss="modal">Đóng</button>`)
+        }
+        function get_thanks_letter(result) {
+              $("#bodyCV").html(`<iframe style="background-size: contain;background-image: url('https://tuyendung.me/loading2.gif')" width="100%" height="600" src="/iso/Scan_request_form_id=${result}"></iframe>`)
+              $("#footer").html(`<button onclick="Reload()" type="button" class="btn btn-primary" data-dismiss="modal">Đóng</button>`)
+            }
+        var checkmarkIdPrefix = "loadingCheckSVG-";
+        var checkmarkCircleIdPrefix = "loadingCheckCircleSVG-";
+        var verticalSpacing = 50;
+
+        function shuffleArray(array) {
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+            return array;
+        }
+        $(document).ready(function () {
+
+            setTimeout(function () {
+                $('body').addClass('loaded');
+
+            }, 2000);
+
+        });
+        function createSVG(tag, properties, opt_children) {
+            var newElement = document.createElementNS("http://www.w3.org/2000/svg", tag);
+            for (prop in properties) {
+                newElement.setAttribute(prop, properties[prop]);
+            }
+            if (opt_children) {
+                opt_children.forEach(function (child) {
+                    newElement.appendChild(child);
+                })
+            }
+            return newElement;
+        }
+
+        function createPhraseSvg(phrase, yOffset) {
+            var text = createSVG("text", {
+                fill: "white",
+                x: 50,
+                y: yOffset,
+                "font-size": 18,
+                "font-family": "Arial"
+            });
+            text.appendChild(document.createTextNode(phrase + "..."));
+            return text;
+        }
+        function createCheckSvg(yOffset, index) {
+            var check = createSVG("polygon", {
+                points: "21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 ",
+                fill: "rgba(255,255,255,1)",
+                id: checkmarkIdPrefix + index
+            });
+            var circle_outline = createSVG("path", {
+                d: "M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z",
+                fill: "white"
+            })
+            var circle = createSVG("circle", {
+                id: checkmarkCircleIdPrefix + index,
+                fill: "rgba(255,255,255,0)",
+                cx: 16,
+                cy: 16,
+                r: 15
+            })
+            var group = createSVG("g", {
+                transform: "translate(10 " + (yOffset - 20) + ") scale(.9)"
+            }, [circle, check, circle_outline]);
+            return group;
+        }
+
+        function addPhrasesToDocument(phrases) {
+            phrases.forEach(function (phrase, index) {
+                var yOffset = 30 + verticalSpacing * index;
+                document.getElementById("phrases").appendChild(createPhraseSvg(phrase, yOffset));
+                document.getElementById("phrases").appendChild(createCheckSvg(yOffset, index));
+            });
+        }
+
+        function easeInOut(t) {
+            var period = 100;
+            return (Math.sin(t / period + 100) + 1) / 2;
+        }
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var phrases = shuffleArray(["Khởi tạo API", "Xác minh danh tính", "Xác minh dữ liệu", "Trích xuất dữ liệu"]);
+            addPhrasesToDocument(phrases);
+            var start_time = new Date().getTime();
+            var upward_moving_group = document.getElementById("phrases");
+            upward_moving_group.currentY = 0;
+            var checks = phrases.map(function (_, i) {
+                return { check: document.getElementById(checkmarkIdPrefix + i), circle: document.getElementById(checkmarkCircleIdPrefix + i) };
+            });
+            function animateLoading() {
+                var now = new Date().getTime();
+                upward_moving_group.setAttribute("transform", "translate(0 " + upward_moving_group.currentY + ")");
+                upward_moving_group.currentY -= 1.35 * easeInOut(now);
+                checks.forEach(function (check, i) {
+                    var color_change_boundary = - i * verticalSpacing + verticalSpacing + 15;
+                    if (upward_moving_group.currentY < color_change_boundary) {
+                        var alpha = Math.max(Math.min(1 - (upward_moving_group.currentY - color_change_boundary + 15) / 30, 1), 0);
+                        check.circle.setAttribute("fill", "rgba(255, 255, 255, " + alpha + ")");
+                        var check_color = [Math.round(255 * (1 - alpha) + 120 * alpha), Math.round(255 * (1 - alpha) + 154 * alpha)];
+                        check.check.setAttribute("fill", "rgba(255, " + check_color[0] + "," + check_color[1] + ", 1)");
+                    }
+                })
+                if (now - start_time < 30000 && upward_moving_group.currentY > -710) {
+                    requestAnimationFrame(animateLoading);
+                }
+            }
+            //animateLoading();
+        });
+
+
+        $(document).ready(function () {
+            $('.delete-confirm').each(function () {
+                var $this = $(this);
+
+                $('button.delete', $this).click(function () {
+                    $(this).addClass('confirm');
+                });
+
+                $('button.no', $this).click(function () {
+                    $('button.delete', $this).removeClass('confirm');
+                });
+            });
+        });
+    </script>
+
+    <script>
+
+        function create_custom_dropdowns() {
+            $('select').each(function (i, select) {
+                if (!$(this).next().hasClass('dropdown-select')) {
+                    $(this).after('<div class="dropdown-select wide ' + ($(this).attr('class') || '') + '" tabindex="0"><span class="current"></span><div class="list"><ul></ul></div></div>');
+                    var dropdown = $(this).next();
+                    var options = $(select).find('option');
+                    var selected = $(this).find('option:selected');
+                    dropdown.find('.current').html(selected.data('display-text') || selected.text());
+                    options.each(function (j, o) {
+                        var display = $(o).data('display-text') || '';
+                        dropdown.find('ul').append('<li class="option ' + ($(o).is(':selected') ? 'selected' : '') + '" data-value="' + $(o).val() + '" data-display-text="' + display + '">' + $(o).text() + '</li>');
+                    });
+                }
+            });
+
+            $('.dropdown-select ul').before('<div class="dd-search"><input id="txtSearchValue" autocomplete="off" onkeyup="filter()" class="dd-searchbox" type="text"/></div>');
+        }
+
+        // Event listeners
+
+        // Open/close
+        $(document).on('click', '.dropdown-select', function (event) {
+            if ($(event.target).hasClass('dd-searchbox')) {
+                return;
+            }
+            $('.dropdown-select').not($(this)).removeClass('open');
+            $(this).toggleClass('open');
+            if ($(this).hasClass('open')) {
+                $(this).find('.option').attr('tabindex', 0);
+                $(this).find('.selected').focus();
+            } else {
+                $(this).find('.option').removeAttr('tabindex');
+                $(this).focus();
+            }
+        });
+
+        // Close when clicking outside
+        $(document).on('click', function (event) {
+            if ($(event.target).closest('.dropdown-select').length === 0) {
+                $('.dropdown-select').removeClass('open');
+                $('.dropdown-select .option').removeAttr('tabindex');
+            }
+            event.stopPropagation();
+        });
+
+        function filter() {
+            var valThis = $('#txtSearchValue').val();
+            $('.dropdown-select ul > li').each(function () {
+                var text = $(this).text();
+                (text.toLowerCase().indexOf(valThis.toLowerCase()) > -1) ? $(this).show() : $(this).hide();
+            });
+        };
+        // Search
+
+        // Option click
+        $(document).on('click', '.dropdown-select .option', function (event) {
+            $(this).closest('.list').find('.selected').removeClass('selected');
+            $(this).addClass('selected');
+            var text = $(this).data('display-text') || $(this).text();
+            $(this).closest('.dropdown-select').find('.current').text(text);
+            $(this).closest('.dropdown-select').prev('select').val($(this).data('value')).trigger('change');
+        });
+
+        // Keyboard events
+        $(document).on('keydown', '.dropdown-select', function (event) {
+            var focused_option = $($(this).find('.list .option:focus')[0] || $(this).find('.list .option.selected')[0]);
+            // Space or Enter
+            //if (event.keyCode == 32 || event.keyCode == 13) {
+            if (event.keyCode == 13) {
+                if ($(this).hasClass('open')) {
+                    focused_option.trigger('click');
+                } else {
+                    $(this).trigger('click');
+                }
+                return false;
+                // Down
+            } else if (event.keyCode == 40) {
+                if (!$(this).hasClass('open')) {
+                    $(this).trigger('click');
+                } else {
+                    focused_option.next().focus();
+                }
+                return false;
+                // Up
+            } else if (event.keyCode == 38) {
+                if (!$(this).hasClass('open')) {
+                    $(this).trigger('click');
+                } else {
+                    var focused_option = $($(this).find('.list .option:focus')[0] || $(this).find('.list .option.selected')[0]);
+                    focused_option.prev().focus();
+                }
+                return false;
+                // Esc
+            } else if (event.keyCode == 27) {
+                if ($(this).hasClass('open')) {
+                    $(this).trigger('click');
+                }
+                return false;
+            }
+        });
+
+        $(document).ready(function () {
+            create_custom_dropdowns();
+        });
+    </script>
+    <!-- Jquery JS-->
+    <script src="https://admin.tuyendung.me/Admin/vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="https://admin.tuyendung.me/Admin/vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="https://admin.tuyendung.me/Admin/vendor/slick/slick.min.js">
+    </script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/wow/wow.min.js"></script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/animsition/animsition.min.js"></script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="https://admin.tuyendung.me/Admin/vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="https://admin.tuyendung.me/Admin/js/main.js"></script>
+</body>
+
+</html>

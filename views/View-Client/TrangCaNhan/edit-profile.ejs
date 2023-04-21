@@ -1,0 +1,601 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <%- include ../partials/header.ejs%>
+<body>
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
+
+    
+  
+    <%- include ../partials/header-top-none-profile.ejs%>
+  
+    <div class="jp_listing_sidebar_main_wrapper">
+        <%if(user.local.Type=="1"){%>
+       
+            <section class="recruiters-area section4">
+                <div class="container">
+                    <div style="text-align: center;" class="row">
+                      
+                        <div class="col-lg-8 col-md-12 col-sm-12">
+                            
+                            <button style="margin: 5px;width: 100%;border-radius: 10px;border:1px black solid;background-color: #ff8707;color:#fff" type="button" title="Đổi Logo Doanh Nghiệp" class="dnr" data-toggle="modal" data-target="#exampleModalCenter-NTD">Đổi Ảnh Đại Diện</button>
+                            <div class="alert alert-success" role="alert" id="loginAlert">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true"> <div class="icon"><i class="fa fa-times-circle"></i></div></button>
+                               <h6> <p style="text-align: center;border-radius: 15px;">Nhà Tuyển Dụng vui lòng cập nhật thông tin cần thiết : Tên Doanh Nghiệp , Email , Số Điện Thoại, Logo Doanh Nghiệp. Thanks!!!</p></h6>
+                            </div>
+                            <script>
+                                $("#loginAlert").hide()
+                              
+                                const urlParams = new URLSearchParams(window.location.search);
+                                const myParam23 = urlParams.get('message');
+                                if(myParam23 == "profileCompanyIsEmpty") {
+                                    $('#loginAlert').show();
+                                }
+                            </script>
+                                        
+                            <div class="modal fade" id="exampleModalCenter-NTD" tabHome="-1" role="dialog"  aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm pd-0">
+                                                        <div class="tab-content">
+                                                            <div id="login">
+                                                                <div class="logins">
+                                                                    <form action="/change-avata-NTD/<%=user._id%>" method="post" enctype="multipart/form-data">
+                                                                        <div class="picture-container">
+                                                                            <div class="picture">
+                                                                              <input type="file" name="fileUT" id="fileUT2" class="valid"/>
+                                                                              <img src="https://img.icons8.com/bubbles/10000/000000/user-male.png" class="picture-src" name="AvataUT" id="wizardPicturePreview"/>
+                                  
+                                                                            </div>
+                                                                            <h6>Chọn Ảnh Đại Diện</h6>
+                                                                          </div>
+                                                                          <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <button style="margin: 5px;width: 100%;border-radius: 10px;border:1px black solid;background-color: #ff8707;color:#fff"class="dnr">Đổi Ảnh Đại Diện</button>
+                                                                            </div> 
+                                                                          </div>
+                                                                    </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                       
+                    </div>   
+                <form action="edit-profile-NTD&id/<%=user._id%>" method="POST" >
+                    <div class="row">
+                        <div class="col-lg-8 col-md-12 col-sm-12">
+                            <div class="recruiters-details">
+                                <div class="items2">
+                                    <div class="right-con">
+                                        <img style="width: 100px;height: 100px;" class="image_ungvien" src="image/<%=user.local.NTD.ImageLogo%>" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <div class="input-container">
+                                        <input class="inputtest" id="namecompany" name="namecompany" type="text" value="<%=user.local.NTD.NameCompany%>" />
+                                        <label for="namecompany"> Tên Công Ty </label>
+                                        </div>                          
+                                        <div class="input-container">
+                                            <input class="inputtest" id="Establish" name="Establish" type="text" value="<%=user.local.NTD.Establish%>" />
+                                            <label for="Establish"> Quy mô nhân sự </label>
+                                        </div>
+                                            <div class="input-container">
+                                            <input class="inputtest" id="Scale" name="Scale" type="text" value="<%=user.local.NTD.Scale%>" /> <label for="Scale"> Thành lập</label>
+                                        </div>
+                                      
+                                     
+                                            <div class="input-container">
+                                          
+                                          <input class="inputtest"  id="AddressCompany" name="AddressCompany" type="text" value="<%=user.local.NTD.AddressCompany%>" /> 
+                                           <label for="AddressCompany"> Địa chỉ </label>
+                                            </div>
+                                     
+                                    
+                                    </div>
+                                </div>
+                                <div class="contents">
+                                    <h3>Giới thiệu</h3>
+                                    <textarea style="white-space : pre-wrap;" id="edit" name="DetailCompany" cols="10" rows="10">
+                                        <%-user.local.NTD.DetailCompany%>
+                                    </textarea>
+                                    <script>
+                                        new FroalaEditor('#edit', {
+                                          
+                                          imagePaste: true,
+                                          imagePasteProcess: true,
+                                          
+                                          imageUploadURL: 'image_upload',
+                                          imageUploadParams: {
+                                            id: 'my_editor'
+                                          },
+                                          fileUploadURL: 'saveimage',
+                                            fileUploadParams: {
+                                              id: 'my_editor'
+                                            }
+      
+                                        })
+                                        
+                                        
+                                      </script>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="sideber2 mr-r">
+                                <div class="widghet">
+                                    <h3>Thông tin liên hệ</h3>
+                                    <div class="contact-form">
+                                        <div class="input-container">
+                                        <input class="inputtest" id="nameuser" name="nameuser" type="text" value="<%=user.local.NTD.NameUser%>">
+                                        <label for="Nameuser"> Người đại diện</label>    
+                                    </div>
+                                        <div class="input-container">
+                                       <input class="inputtest" id="EmailNTD" name="EmailNTD" type="email" value="<%=user.local.NTD.Email%>">
+                                        <label for="EmailNTD"> Email </label>
+                                    </div>
+                                        
+                                        <div class="input-container">
+                                        <input class="inputtest" id="PhoneNTD" name="PhoneNTD" type="text" value="<%=user.local.NTD.Phone%>">
+                                        <label for="PhoneNTD"> Số điện thoại </label>
+                                    </div> 
+                                        <div class="input-container">
+                                        <input class="inputtest" id="LinkFBNTD" name="LinkFBNTD" type="text" value="<%=user.local.NTD.LinkFB%>" />
+                                        <label for="LinkFBNTD"> Link FaceBook </label>
+                                    </div>
+                                        <div class="input-container">
+                                        <input class="inputtest" id="LinkTiwtterNTD" name="LinkTiwtterNTD" type="text" value="<%=user.local.NTD.LinkTiwtter%>" />
+                                        <label for="LinkTiwtterNTD">Link Tiwtter </label>
+                                    </div>
+                                        <div class="input-container">
+                                        <input class="inputtest" id="LinkLinkedInNTD" name ="LinkLinkedInNTD"type="text" value="<%=user.local.NTD.LinkLinkedIn%>" />
+                                        <label for="LinkLinkedInNTD"> Link LinkLinkedIn </label>
+                                    </div>
+                                        
+                                           
+                                    </div>
+                                </div>
+                                <div class="widghet clearw">
+                                    <div class="maps">
+                                        <div id="map" class="map-full">
+                                            <div class="input-container">
+                                            <input class="inputtest" id="map" name="map" type="text" value="<%=user.local.NTD.map%>">
+                                            <label for="map">Nhúng mã HTML của bản đồ </label>
+                                            </div>
+                                            <%-user.local.NTD.map%>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    </br>
+
+                    <div style="margin-top: 50px;">
+                    <input  type="submit" class="btn1" value="Cập nhật chỉnh sửa"/>
+                     </div>
+                    </form>
+                </div>
+            </section>
+        <%}%>
+        <%if(user.local.Type=="0"){%>
+         
+        <section class="candidates-details section4">
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                         
+                            <div class="sideber2">
+                           
+                                <div style="margin-bottom: 2%;" class="widghet">
+                                    <div class="user_profle">
+                                        <h6>Ảnh Đại Diện</h6>
+                                <div class="picture-container">
+                                <div class="picture">
+                                   <%if(!user.local.NTV.ImageAvata){%>
+                                  <img type="button" title="Đổi ảnh đại diện" class="dnr" data-toggle="modal" data-target="#exampleModalCenters" src="https://img.icons8.com/bubbles/10000/000000/user-male.png" class="picture-src" name="AvataUT"/>
+                                    <%}else{%>
+                                        <img type="button" title="Đổi ảnh đại diện" class="dnr" data-toggle="modal" data-target="#exampleModalCenters" src="image/<%=user.local.NTV.ImageAvata%>" class="picture-src" name="AvataUT"/>
+                                    <%}%>
+                                </div>
+                           
+                              </div>
+
+                    </div>
+                </div>
+                           
+            </div>
+
+                        </div>
+                        <div class="col-lg-8 col-md-12 col-sm-12">
+                       
+                        <div class="alert alert-success" role="alert" id="loginAlert1">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"> <div class="icon"><i class="fa fa-times-circle"></i></div></button>
+                           <h6> <p style="text-align: center;border-radius: 15px;">Ứng Viên vui lòng cập nhật thông tin cần thiết : Họ và Tên, Email , Số Điện Thoại. Thanks!!!</p></h6>
+                        </div>
+                        <script>
+                           
+                           $("#loginAlert1").hide()
+                            const urlParams = new URLSearchParams(window.location.search);
+                            const myParam23 = urlParams.get('message');
+                            if(myParam23 == "profileIsEmpty") {
+                                $('#loginAlert1').show();
+                            }
+                        </script>
+                        </div>
+                    </div>
+                </div>                
+                <div class="modal fade" id="exampleModalCenters" tabHome="-1" role="dialog"  aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm pd-0">
+                                            <div class="tab-content">
+                                                <div id="login">
+                                                    <div class="logins">
+                                                        <form action="/change-avata/<%=user._id%>" method="post" enctype="multipart/form-data">
+                                                            <div class="picture-container">
+                                                                <div class="picture">
+                                                                  <input type="file" name="fileUT" id="fileUT" class="valid"/>
+                                                                  <img src="https://img.icons8.com/bubbles/10000/000000/user-male.png" class="picture-src" name="AvataUT" id="wizardPicturePreview"/>
+                      
+                                                                </div>
+                                                                <h6>Chọn Ảnh Đại Diện</h6>
+                                                              </div>
+                                                              <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <button style="margin: 5px;width: 100%;border-radius: 10px;border:1px black solid;background-color: #ff8707;color:#fff"class="dnr">Đổi Ảnh Đại Diện</button>
+                                                                </div> 
+                                                              </div>
+                                                          
+                                                        </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="container">
+                <form action="/edit-profile-NTV&id/<%=user._id%>" method="post">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="sideber2">
+                            <div class="widghet">
+                                <div class="user_profle">
+                                    <div class="contents">
+                                        <div class="input-container">
+                                            <input  class="inputtest" id="usernameNTV" name="usernameNTV" type="text" value="<%=user.local.NTV.NameUser%>" />
+                                            <label for="usernameNTV">Họ và Tên </label>
+                                        </div>  
+                                        <div class="input-container">
+                                            <input class="inputtest" id="Position" name="Position" type="text" value="<%=user.local.NTV.Position%>" />
+                                            <label for="Position">Công việc mong muốn</label>
+                                        </div>
+                                        <div class="input-container">
+                                            <input class="inputtest" id="Address" name="Address" type="text" value="<%=user.local.NTV.Address%>" />
+                                            <label for="Address">Địa chỉ</label>
+                                        </div> 
+                                        <div class="input-container">
+                                            <input class="inputtest" id="fb" name="LinkFB" type="text" value="<%=user.local.NTV.LinkFB%>" />
+                                            <label for="fb">Link Facebook</label>
+                                        </div> 
+                                          <div class="input-container">
+                                            <input class="inputtest" id="tw" name="LinkTiwtter" type="text" value="<%=user.local.NTV.LinkTiwtter%>" />
+                                            <label for="tw">Link Twitter</label>
+                                        </div> 
+                                          <div class="input-container">
+                                            <input class="inputtest" id="link" name ="LinkLinkedIn"type="text" value="<%=user.local.NTV.LinkLinkedIn%>" />
+                                            <label for="link">Link LinkedIn</label>
+                                        </div> 
+                                        
+                                      
+                                    </div>
+                                    </div>
+                            </div>
+                            <div class="widghet">
+                                <h3>Liên Hệ</h3>
+                                <div class="contact-form">
+                                    <div class="input-container">
+                                        <fieldset><input class="inputtest" id="EmailNTV" name="EmailNTV" type="email" value="<%=user.local.NTV.Email%>"></fieldset>
+                                        <label for="EmailNTV">Email</label>
+                                    </div> 
+                                        <div class="input-container">
+                                            <fieldset><input class="inputtest" id="PhoneNTV" name="PhoneNTV" type="text" value="<%=user.local.NTV.Phone%>"></fieldset>
+                                            <label for="PhoneNTV">Số điện thoại</label>
+                                        </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-12 col-sm-12">
+                        
+                        <div class="candidates-about">
+                            <h3>Giới thiệu bản thân</h3>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="label-list">
+                                        <div class="ico"><i class="fa fa-graduation-cap"></i></div>
+                                        <div class="con">
+                                            <h4>Học vấn</h4>
+                                            <p>
+                                                <div class="input-container">
+                                                    <fieldset> <input class="inputtest" id="Academic" name="Academic" type="text" value="<%=user.local.NTV.Academic%>" /></fieldset>
+                                                    <label for="Academic">Trình Độ</label>
+                                                </div> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="col-sm">
+                                    <div class="label-list">
+                                        <div class="ico mr-t10"><i class="flaticon-money-bag-with-dollar-symbol"></i></div>
+                                        <div class="con">
+                                            <h4>Mức lương</h4>
+                                            <p>
+                                                <div class="input-container">
+                                                    <fieldset><input class="inputtest" id="Salary" name="Salary" type="text" value="<%=user.local.NTV.Salary%>" /></fieldset>
+                                                    <label for="Salary">Mức lương mong muốn</label>
+                                                </div> </p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <h3>Giới thiệu</h3>
+                            <div class="content">
+                                <textarea style="white-space : pre-wrap;" id="edit" name="Detail" cols="10" rows="10"><%-user.local.NTV.Detail%></textarea>
+                              
+                                <script>
+                                  new FroalaEditor('#edit', {
+                                    imagePaste: true,
+                                    imagePasteProcess: true,
+                                    imageUploadURL: 'image_upload',
+                                    imageUploadParams: {
+                                      id: 'my_editor'
+                                    },
+                                    fileUploadURL: 'saveimage',
+                                      fileUploadParams: {
+                                        id: 'my_editor'
+                                      }
+
+                                  })
+                                  
+                                  
+                                </script>
+                            
+                            </div>
+                            <br>
+                            <h3>Học Vấn</h3>
+                            <div class="educations">
+                                <div class="edulists">
+                                    <div class="top-con">
+                                        <figure><img src="https://img.icons8.com/dotty/80/000000/student-center.png"/></figure>
+                                        <div class="con">                                            
+                                            <h3><div class="input-container">
+                                                <input name="NameSchool" id="NameSchool" class="inputtest" type="text" value="<%=user.local.NTV.NameSchool%>" />
+                                                <label for="NameSchool">Tên Trường</label>
+                                            </div>
+                                            
+                                        </h3>
+                                            <p><div class="input-container">
+                                                <input name="TitleEducation" id="TitleEducation" class="inputtest" type="text" value="<%=user.local.NTV.TitleEducation%>" />
+                                                <label for="TitleEducation">Chuyên ngành</label>
+                                            </div>
+                                        </p>
+                                            <span><div class="input-container">
+                                                <input id="TimeEducation" name="TimeEducation" class="inputtest" type="text" value="<%=user.local.NTV.TimeEducation%>" />
+                                                <label for="TimeEducation">Thời gian</label>
+                                            </div>
+                                        </span>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="width: 700px;">
+                                        <p><div class="input-container">
+                                            <input id="DetailEducation" class="inputtest" style="width: 700px;" name="DetailEducation" type="text" value="<%=user.local.NTV.DetailEducation%>" />
+                                            <label for="DetailEducation">Thành tích, chứng chỉ , bằng cấp</label>
+                                        </div>
+                                    </p>
+                                    </div>
+                                </div>
+                                <div class="edulists">
+                                    <div class="top-con">
+                                        <figure><img src="https://img.icons8.com/plasticine/100/000000/graduation-cap.png"/></figure>
+                                        <div class="con">                                            
+                                            <h3><div class="input-container">
+                                                <input name="NameSchool2" id="NameSchool2" class="inputtest" type="text" value="<%=user.local.NTV.NameSchool2%>" />
+                                                <label for="NameSchool2">Tên Trường</label>
+                                            </div>
+                                            
+                                        </h3>
+                                            <p><div class="input-container">
+                                                <input name="TitleEducation2" id="TitleEducation2" class="inputtest" type="text" value="<%=user.local.NTV.TitleEducation2%>" />
+                                                <label for="TitleEducation2">Chuyên ngành</label>
+                                            </div>
+                                        </p>
+                                            <span><div class="input-container">
+                                                <input id="TimeEducation2" name="TimeEducation2" class="inputtest" type="text" value="<%=user.local.NTV.TimeEducation2%>" />
+                                                <label for="TimeEducation2">Thời gian</label>
+                                            </div>
+                                        </span>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="width: 700px;">
+                                        <p><div class="input-container">
+                                            <input id="DetailEducation2" class="inputtest" style="width: 700px;" name="DetailEducation2" type="text" value="<%=user.local.NTV.DetailEducation2%>" />
+                                            <label for="DetailEducation2">Thành tích, chứng chỉ , bằng cấp</label>
+                                        </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Kinh nghiệm làm việc</h3>
+                            <div class="educations">
+                                <div class="edulists">
+                                    <div class="top-con">
+                                        <figure><img src="https://img.icons8.com/plasticine/100/000000/work.png"/></figure>
+                                        <div class="con">                                            
+                                            <h3><input name="TitleWork" class="inputtest" type="text" value="<%=user.local.NTV.TitleWork%>" /></h3>
+                                            <p><input name="NameCompany" class="inputtest" type="text" value="<%=user.local.NTV.NameCompany%>" /></p>
+                                            <span><input name="TimeWork" class="inputtest" type="text" value="<%=user.local.NTV.TimeWork%>" /></span>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="width: 700px;">
+                                        <input class="inputtest" style="width: 700px;" name="DetailWork" type="text" value="<%=user.local.NTV.DetailWork%>" />
+                                    </div>
+                                </div>
+                                <div class="edulists">
+                                    <div class="top-con">
+                                        <figure><img src="https://img.icons8.com/plasticine/100/000000/work.png"/></figure>
+                                        <div class="con">                                            
+                                            <h3><input name="TitleWork2" class="inputtest" type="text" value="<%=user.local.NTV.TitleWork2%>" /></h3>
+                                            <p><input name="NameCompany2" class="inputtest" type="text" value="<%=user.local.NTV.NameCompany2%>" /></p>
+                                            <span><input name="TimeWork2" class="inputtest" type="text" value="<%=user.local.NTV.TimeWork2%>" /></span> 
+                                        </div>
+                                    </div>
+                                    <div class="content" style="width: 700px;">
+                                        <input class="inputtest" style="width: 700px;"  name="DetailWork2" type="text" value="<%=user.local.NTV.DetailWork2%>"/>                             
+                                           </div>
+                                </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn1" value="Cập nhật"> 
+                                </div>
+                            </div>  
+                            </div>
+                    </div>
+                    
+                </div>
+              
+            </form>
+            </div>
+           
+            
+        </section>
+        <%}%>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+    <%- include ../partials/menu.ejs%>
+    <%- include ../partials/footer.ejs%>
+    <script>
+        // Prepare the preview for profile picture
+        function readURL(input) {
+          if (input.files && input.files[0]) {
+              var reader = new FileReader();
+              
+              reader.onload = function(e) {
+              $('#wizardPicturePreview').attr('src', e.target.result);
+              }
+           
+              reader.readAsDataURL(input.files[0]); // convert to base64 string
+          }
+          }
+
+          $("#fileUT").change(function() {
+          readURL(this);
+          });
+          $("#fileUT2").change(function() {
+          readURL(this);
+          });
+    </script>
+    <style>
+        .picture-container {
+position: relative;
+cursor: pointer;
+text-align: center;
+}
+.picture {
+width: 106px;
+height: 106px;
+background-color: #999999;
+border: 4px solid #CCCCCC;
+color: #FFFFFF;
+border-radius: 50%;
+margin: 5px auto;
+overflow: hidden;
+transition: all 0.2s;
+-webkit-transition: all 0.2s;
+}
+.picture-src {
+width: 100%;
+height: 100%;
+}
+
+.picture:hover {
+border-color: #4caf50;
+}
+
+.picture input[type="file"] {
+cursor: pointer;
+display: block;
+height: 100%;
+left: 0;
+opacity: 0 !important;
+position: absolute;
+top: 0;
+width: 100%;
+}
+
+
+
+
+.choice {
+text-align: center;
+cursor: pointer;
+}
+
+.choice input[type="radio"], .choice input[type="checkbox"] {
+position: absolute;
+left: -10000px;
+z-index: -1;
+}
+
+.choice .icon {
+text-align: center;
+vertical-align: middle;
+height: 106px;
+width: 106px;
+border-radius: 50%;
+color: #999999;
+margin: 5px auto;
+border: 4px solid #CCCCCC;
+transition: all 0.2s;
+-webkit-transition: all 0.2s;
+overflow: hidden;
+}
+
+.choice .icon:hover {
+border-color: #4caf50;
+}
+
+.choice.active .icon {
+border-color: #2ca8ff;
+}
+    </style>
+</body>
+
+</html>

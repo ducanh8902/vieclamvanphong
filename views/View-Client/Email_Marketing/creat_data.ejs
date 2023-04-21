@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<%- include ../partials/header.ejs%>
+
+    <body>
+        <link rel="stylesheet" type="text/css" href="css/style_II.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive2.css" />
+        <!-- preloader Start -->
+        <style>
+            .selectMultiple {
+                width: 100%;
+                position: relative;
+            }
+
+            .selectMultiple select {
+                display: none;
+            }
+
+            .selectMultiple>div {
+                position: relative;
+                z-index: 2;
+                padding: 8px 12px 2px 12px;
+                border-radius: 8px;
+                background: #fff;
+                font-size: 14px;
+                min-height: 44px;
+                box-shadow: 0 4px 16px 0 rgba(22, 42, 90, .12);
+                transition: box-shadow 0.3s ease;
+            }
+
+            .selectMultiple>div:hover {
+                box-shadow: 0 4px 24px -1px rgba(22, 42, 90, .16);
+            }
+
+            .selectMultiple>div .arrow {
+                right: 1px;
+                top: 0;
+                bottom: 0;
+                cursor: pointer;
+                width: 28px;
+                position: absolute;
+            }
+
+            .selectMultiple>div .arrow:before,
+            .selectMultiple>div .arrow:after {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 2px;
+                height: 8px;
+                border-bottom: 8px solid #99a3ba;
+                top: 43%;
+                transition: all 0.3s ease;
+            }
+
+            .selectMultiple>div .arrow:before {
+                right: 12px;
+                transform: rotate(-130deg);
+            }
+
+            .selectMultiple>div .arrow:after {
+                left: 9px;
+                transform: rotate(130deg);
+            }
+
+            .selectMultiple>div span {
+                color: #99a3ba;
+                display: block;
+                position: absolute;
+                left: 12px;
+                cursor: pointer;
+                top: 8px;
+                line-height: 28px;
+                transition: all 0.3s ease;
+            }
+
+            .selectMultiple>div span.hide {
+                opacity: 0;
+                visibility: hidden;
+                transform: translate(-4px, 0);
+            }
+
+            .selectMultiple>div a {
+                position: relative;
+                padding: 0 24px 6px 8px;
+                line-height: 28px;
+                color: #1e2330;
+                display: inline-block;
+                vertical-align: top;
+                margin: 0 6px 0 0;
+            }
+
+            .selectMultiple>div a em {
+                font-style: normal;
+                display: block;
+                white-space: nowrap;
+            }
+
+            .selectMultiple>div a:before {
+                content: '';
+                left: 0;
+                top: 0;
+                bottom: 6px;
+                width: 100%;
+                position: absolute;
+                display: block;
+                background: rgba(228, 236, 250, .7);
+                z-index: -1;
+                border-radius: 4px;
+            }
+
+            .selectMultiple>div a i {
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 24px;
+                height: 28px;
+                display: block;
+            }
+
+            .selectMultiple>div a i:before,
+            .selectMultiple>div a i:after {
+                content: '';
+                display: block;
+                width: 2px;
+                height: 10px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                background: #4d18ff;
+                border-radius: 1px;
+            }
+
+            .selectMultiple>div a i:before {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            .selectMultiple>div a i:after {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+
+            .selectMultiple>div a.notShown {
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            .selectMultiple>div a.notShown:before {
+                width: 28px;
+                transition: width 0.45s cubic-bezier(0.87, -0.41, 0.19, 1.44) 0.2s;
+            }
+
+            .selectMultiple>div a.notShown i {
+                opacity: 0;
+                transition: all 0.3s ease 0.3s;
+            }
+
+            .selectMultiple>div a.notShown em {
+                opacity: 0;
+                transform: translate(-6px, 0);
+                transition: all 0.4s ease 0.3s;
+            }
+
+            .selectMultiple>div a.notShown.shown {
+                opacity: 1;
+            }
+
+            .selectMultiple>div a.notShown.shown:before {
+                width: 100%;
+            }
+
+            .selectMultiple>div a.notShown.shown i {
+                opacity: 1;
+            }
+
+            .selectMultiple>div a.notShown.shown em {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+
+            .selectMultiple>div a.remove:before {
+                width: 28px;
+                transition: width 0.4s cubic-bezier(0.87, -0.41, 0.19, 1.44) 0s;
+            }
+
+            .selectMultiple>div a.remove i {
+                opacity: 0;
+                transition: all 0.3s ease 0s;
+            }
+
+            .selectMultiple>div a.remove em {
+                opacity: 0;
+                transform: translate(-12px, 0);
+                transition: all 0.4s ease 0s;
+            }
+
+            .selectMultiple>div a.remove.disappear {
+                opacity: 0;
+                transition: opacity 0.5s ease 0s;
+            }
+
+            .selectMultiple>ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                font-size: 16px;
+                z-index: 1;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                visibility: hidden;
+                opacity: 0;
+                border-radius: 8px;
+                transform: translate(0, 20px) scale(0.8);
+                transform-origin: 0 0;
+                filter: drop-shadow(0 12px 20px rgba(22, 42, 90, .08));
+                transition: all 0.4s ease, transform 0.4s cubic-bezier(0.87, -0.41, 0.19, 1.44), filter 0.3s ease 0.2s;
+            }
+
+            .selectMultiple>ul li {
+                color: #1e2330;
+                background: #fff;
+                padding: 12px 16px;
+                cursor: pointer;
+                overflow: hidden;
+                position: relative;
+                transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease 0.3s, opacity 0.5s ease 0.3s, border-radius 0.3s ease 0.3s;
+            }
+
+            .selectMultiple>ul li:first-child {
+                border-radius: 8px 8px 0 0;
+            }
+
+            .selectMultiple>ul li:first-child:last-child {
+                border-radius: 8px;
+            }
+
+            .selectMultiple>ul li:last-child {
+                border-radius: 0 0 8px 8px;
+            }
+
+            .selectMultiple>ul li:last-child:first-child {
+                border-radius: 8px;
+            }
+
+            .selectMultiple>ul li:hover {
+                background: #4d18ff;
+                color: #fff;
+            }
+
+            .selectMultiple>ul li:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 6px;
+                height: 6px;
+                background: rgba(0, 0, 0, .4);
+                opacity: 0;
+                border-radius: 100%;
+                transform: scale(1, 1) translate(-50%, -50%);
+                transform-origin: 50% 50%;
+            }
+
+            .selectMultiple>ul li.beforeRemove {
+                border-radius: 0 0 8px 8px;
+            }
+
+            .selectMultiple>ul li.beforeRemove:first-child {
+                border-radius: 8px;
+            }
+
+            .selectMultiple>ul li.afterRemove {
+                border-radius: 8px 8px 0 0;
+            }
+
+            .selectMultiple>ul li.afterRemove:last-child {
+                border-radius: 8px;
+            }
+
+            .selectMultiple>ul li.remove {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            .selectMultiple>ul li.remove:after {
+                animation: ripple 0.4s ease-out;
+            }
+
+            .selectMultiple>ul li.notShown {
+                display: none;
+                transform: scale(0);
+                opacity: 0;
+                transition: transform 0.35s ease, opacity 0.4s ease;
+            }
+
+            .selectMultiple>ul li.notShown.show {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            .selectMultiple.open>div {
+                box-shadow: 0 4px 20px -1px rgba(22, 42, 90, .12);
+            }
+
+            .selectMultiple.open>div .arrow:before {
+                transform: rotate(-50deg);
+            }
+
+            .selectMultiple.open>div .arrow:after {
+                transform: rotate(50deg);
+            }
+
+            .selectMultiple.open>ul {
+                transform: translate(0, 12px) scale(1);
+                opacity: 1;
+                visibility: visible;
+                filter: drop-shadow(0 16px 24px rgba(22, 42, 90, .16));
+            }
+
+            @keyframes ripple {
+                0% {
+                    transform: scale(0, 0);
+                    opacity: 1;
+                }
+
+                25% {
+                    transform: scale(30, 30);
+                    opacity: 1;
+                }
+
+                100% {
+                    opacity: 0;
+                    transform: scale(50, 50);
+                }
+            }
+
+            .table td {
+                padding: 3px;
+            }
+
+
+            .table tbody tr td .btn-success {
+                padding: 2px 10px;
+                margin: 5px;
+                font-size: 0.8em;
+            }
+
+            th {
+                background: linear-gradient(to right bottom, #FFA3F8, #00AEE1);
+                color: white;
+                font-weight: bold;
+            }
+
+            .table tbody tr td .btn-danger {
+                padding: 2px 10px;
+                margin: 5px;
+                font-size: 0.8em;
+            }
+        </style>
+         <style>
+            .wrapper {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      }
+      
+      .screen {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-color: #F5F5F5;
+      box-shadow: 2px 8px 32px rgba(0,0,0,0.50);
+      }
+      .clouds{
+      position: relative;
+      bottom: -155px;
+      width: 243px;
+      height: 172px;
+      opacity: 0;
+      animation: clouds 1s .8s ease-in forwards;
+      }
+      
+      .plane {
+      position: relative;
+      width: 139px;
+      height: 139px;
+      opacity: 0;
+      animation: plane-start .8s .8s ease-out, plane-loop 1.6s 1.6s linear infinite;
+      
+      }
+      
+      .message {
+      margin-top: 72px;
+      font-family: Rubik, sans-serif;
+      font-size: 16px;
+      color: #292929;
+      letter-spacing: 1px;
+      animation: message .3s 1.6s ease-in-out backwards;
+      }
+      
+      .button{
+      margin: 80px;
+      padding: 16px 80px;
+      background: #FFFFFF;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.16);
+      border-radius: 24px;
+      font-family: Rubik, sans-serif;
+      font-size: 16px;
+      color: #7A7A7A;
+      letter-spacing: -0.05px;
+      text-align: center;
+      }
+      
+      @keyframes plane-start{ 
+      0% { transform: translate(-80px, 130px) ; }
+      50% { opacity:1 }
+      100% { transform: translate(0px, 0); opacity:1  }
+      }
+      
+      @keyframes plane-loop {
+      0% { transform: translate(0px, 0); opacity:1  }
+      50% { transform: translate(-20px, 30px); opacity:1  }
+      100% { transform: translate(0px, 0); opacity:1  }
+      }
+      
+      @keyframes clouds{
+      from { opacity: 0 }
+      to { opacity: 1 }
+      }
+      
+      @keyframes message{ 
+      from { opacity: 0 }
+      to { opacity: 1 }
+      }
+          </style>
+        <%- include ../partials/header-top-none-profile.ejs%>
+            <div class="jp_listing_sidebar_main_wrapper">
+                <section class="candidates-area section4">
+                    <div class="container">
+                        <div class="row">
+                            <body style='padding: 25px;'>
+                                <div class="sideber2">
+                                    <div class="widghet">
+                                <form style="text-align: center;margin-top: 20px;" enctype="multipart/form-data">
+                                    <h3  id="newFont">Upload File Email</h3>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <div class="btn btn-default browse-button">
+                                                    <span class="browse-button-text">
+                                                        <i class="fa fa-folder-open"></i>Attach File</span>
+                                                    <input style="position: absolute;
+                                                  top: 0;
+                                                  right: 0;
+                                                  margin: 0;
+                                                  padding: 0;
+                                                  font-size: 20px;
+                                                  cursor: pointer;
+                                                  opacity: 0;
+                                                  filter: alpha(opacity=0);" id="upload" type="file" accept=".xlsx"
+                                                        name="files[]" />
+                                                </div>
+                                                <button type="button" class="btn btn-default clear-button"
+                                                    style="display:none;">
+                                                    <span class="fa fa-times"></span> Xoá
+                                                </button>
+                                            </span>
+                                            <input type="text" class="form-control filename" disabled="disabled"
+                                                placeholder="Chọn file dạng Excel">
+
+                                        </div>
+                                    </div>
+                                </form>
+                                </div>
+                                </div>
+                                <div class="sideber2">
+                                    <div class="widghet">
+                                <form style="margin-bottom: 20px;" action="/Create-data-Marketing" method="POST">
+                                    <div class="row">
+                                      <div style="text-align: center;" class="col-md-12">  <h3  id="newFont"> Thông tin Data</h3></div>
+                                      <div class="col-md-12">
+                                          <input type="text" name="name_data" class="form-control" placeholder="Tên Tệp Data"/>
+                                        </div>
+                                      <div hidden class="col-md-12">
+                                        <select name="selectmultiple" multiple data-placeholder="Data_Email" id="chooseEmail">
+                                            
+                                        </select>
+
+                                    </div>
+                                        <div style="text-align: center;" class="col-md-12" id="imageloading"></div>
+                                        <div class="col-md-12">
+                                            <input type="submit" id="btnSubmitSpam"  class="btn1" value="Tạo Tệp Đối Tượng">
+                                        </div>
+                                        
+                                    </div>
+
+                                </form>
+                                </div>
+                                </div>
+                                <table class="table table-bordered">
+                                    <thead class="headerTable">
+
+                                    </thead>
+                                    <tbody class="bodyTable">
+
+                                    </tbody>
+                                </table>
+
+                            </body>
+
+
+
+
+                        </div>
+                </section>
+            </div>
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-body text-center">
+                      <div class="wrapper">
+                        <div class="screen">
+                          <svg class="clouds" viewBox="0 0 243 172">
+                            <defs>
+                              <linearGradient id="a" x1="0%" y1="21.631%" y2="78.369%">
+                                <stop offset="0%" stop-color="#FCCF31"/>
+                                <stop offset="100%" stop-color="#F55555"/>
+                              </linearGradient>
+                              <linearGradient id="b" x1="0%" y1="21.875%" y2="78.125%"><stop offset="0%" stop-color="#FCCF31"/>
+                                <stop offset="100%" stop-color="#F55555"/>
+                              </linearGradient>
+                              <linearGradient id="c" x1="0%" y1="22.565%" y2="77.435%">
+                                <stop offset="0%" stop-color="#FCCF31"/>
+                                <stop offset="100%" stop-color="#F55555"/>
+                              </linearGradient>
+                            </defs>
+                            <g fill="none">
+                              <path fill="url(#a)" d="M222.088 121.3384a28.8588 28.8588 0 0 0-4.1438-7.771c-2.3029-3.0704-5.1734-5.622-8.413-7.5423-3.2394-1.9202-6.8508-3.2057-10.642-3.7437-3.65-.5156-7.457-.335-11.2353.6443-3.7782.9794-7.1973 2.674-10.1416 4.9036-3.0566 2.31-5.5968 5.1936-7.5085 8.4476a29.0671 29.0671 0 0 0-3.7237 10.69c-.5132 3.6664-.3335 7.4906.6414 11.2859.882 3.4312 2.3446 6.5692 4.2594 9.3271a28.7704 28.7704 0 0 0 7.2325 7.2265c4.7405 3.2927 10.4592 5.1614 16.4602 5.1936h28.8822c2.6012 0 5.09-.5187 7.3609-1.4659 2.3574-.9795 4.4742-2.4164 6.248-4.198a19.3854 19.3854 0 0 0 4.1791-6.2761c.9398-2.2778 1.4562-4.778 1.4562-7.3908 0-2.6129-.5164-5.113-1.4593-7.394-.975-2.3681-2.4055-4.4945-4.1792-6.2762-1.7737-1.7817-3.8906-3.2153-6.248-4.198-2.2676-.944-4.7565-1.4628-7.3576-1.4628l-1.6678.0002z"/>
+                              <path fill="url(#b)" d="M106.4963 29.0076a43.2273 43.2273 0 0 0-6.2427-11.6565c-3.4693-4.6055-7.7937-8.433-12.674-11.3134A43.5245 43.5245 0 0 0 71.5475.422c-5.4987-.7732-11.234-.5025-16.926.9665-5.6919 1.4691-10.8427 4.0111-15.2783 7.3555-4.6048 3.465-8.4316 7.7903-11.3115 12.6713-2.8798 4.881-4.8076 10.3276-5.6097 16.035-.7732 5.4996-.5025 11.236.9663 16.929 1.3287 5.1467 3.532 9.8538 6.4167 13.9906a43.2499 43.2499 0 0 0 10.8958 10.8397c7.1414 4.939 15.7567 7.742 24.797 7.7904h43.511c3.9186 0 7.668-.778 11.089-2.1988 3.5515-1.4692 6.7405-3.6246 9.4125-6.2971a29.0696 29.0696 0 0 0 6.296-9.4142C137.222 65.6732 138 61.923 138 58.0037s-.7779-7.6695-2.1985-11.091c-1.4689-3.552-3.6239-6.7417-6.296-9.4142a29.0639 29.0639 0 0 0-9.4124-6.297c-3.4161-1.416-7.1657-2.1941-11.0843-2.1941l-2.5125.0002z" transform="matrix(-1 0 0 1 160 0)"/>
+                            <path fill="url(#c)" d="M39.3345 145.3368c-.6995-1.9642-1.6892-3.7617-2.906-5.3593-1.6151-2.1175-3.6282-3.8772-5.9-5.2016a20.4283 20.4283 0 0 0-7.4633-2.5819c-2.5597-.3555-5.2296-.231-7.8793.4444s-5.0475 1.8442-7.1124 3.3818a20.1076 20.1076 0 0 0-5.2656 5.826c-1.3406 2.244-2.238 4.7482-2.6115 7.3723-.3599 2.5286-.2339 5.166.4499 7.7834.6185 2.3664 1.6442 4.5305 2.987 6.4325 1.3879 1.9642 3.1108 3.6462 5.0722 4.9838 3.3245 2.2708 7.335 3.5596 11.5435 3.5818h20.255c1.8243 0 3.5697-.3577 5.1622-1.011a13.5058 13.5058 0 0 0 4.3817-2.8952c1.244-1.2287 2.2448-2.6952 2.9309-4.3283.659-1.5709 1.0212-3.2952 1.0212-5.0971 0-1.802-.3621-3.5262-1.0234-5.0994-.6838-1.633-1.687-3.0996-2.9309-4.3283a13.5419 13.5419 0 0 0-4.3817-2.8952c-1.5902-.651-3.3357-1.0088-5.1599-1.0088l-1.1696.0001z" transform="matrix(-1 0 0 1 54 0)"/>
+                            </g>
+                          </svg>
+                            <svg class="plane" viewBox="0 0 139 139">
+                              <defs>
+                                <linearGradient id="a" x1="147.152%" x2="0%" y1="-47.397%" y2="100%">
+                                  <stop offset="0%" stop-color="#FCCF31"/><stop offset="100%" stop-color="#F55555"/>
+                                </linearGradient>
+                              </defs>
+                              <path fill="#FFF" stroke="url(#a)" stroke-width="2" d="M171.1455 37.3577l-131.69 71.251a2.7136 2.7136 0 0 0-1.4535 2.5092 2.7138 2.7138 0 0 0 1.6436 2.3892l22.4823 8.4671a5.2937 5.2937 0 0 1 2.9597 2.7138l17.4183 35.9715c.3259 1.5876 3.2583 2.0083 3.299.3935l-2.7152-29.7026c.157-2.2004.997-4.297 2.403-5.9975L153.795 58.471a1.6162 1.6162 0 0 1 1.4798-.4207c.526.1172.9531.4993 1.1277 1.0088a1.5462 1.5462 0 0 1-.2724 1.488l-58.8803 71.9973a13.1443 13.1443 0 0 0-2.308 5.9297l-3.5298 25.659c.2986 2.239 2.05 3.0938 3.462 1.0855l12.6802-14.926c.8703-1.1836 2.525-1.4602 3.7334-.624l32.6917 23.8136a2.635 2.635 0 0 0 2.5231.3387 2.6328 2.6328 0 0 0 1.6313-1.9534l26.8131-131.6197a2.713 2.713 0 0 0-1.004-2.6831 2.7164 2.7164 0 0 0-2.8516-.2886l.0543.0815z" transform="translate(-37 -36)"/>
+                            </svg>
+                          <p id="newFont" class="message">Gửi Mail Thành Công</p>
+                          <div class="modal-footer">
+                          <button type="button" class="btn btn-primary"
+                          data-dismiss="modal">Đóng</button>
+                        </div>
+                        </div>
+                      </div>
+                   
+                    </div>
+                  </div>
+              
+                </div>
+              </div>
+            <script src="https://code.jquery.com/jquery-3.6.0.js"
+                integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
+            <script>
+                $("#btnSubmitSpam").click(function(){
+                    $("#imageloading").html(`<img style="width:150px;height:150px;border-radius:15px" src="https://assets.materialup.com/uploads/5a7f5512-1dd4-40c0-82bc-f56a740fd86c/preview.gif">`)
+                })
+                $(document).on('click', '.table tbody tr td .btn-success', function () {
+                    var html = '';
+                    html += "<tr><td class='txtcode'> </td>"
+                    html += "<td class='txtdesc'></td>"
+                    html += "<td class='txtprice'></td>"
+                    html += "<td class='txtqty' ></td>"
+                    html += "<td><button class='btn btn-danger' type='button'>Remove</button> </td>"
+                    html += "</tr>"
+
+                    $(this).parent().parent().after(html)
+                })
+
+                $(document).on('click', '.table tbody tr td .btn-danger', function () {
+
+                    $(this).parent().parent().remove()
+                })
+
+                var ExcelToJSON = function () {
+
+                    this.parseExcel = function (file) {
+                        var reader = new FileReader();
+
+                        reader.onload = function (e) {
+                            var data = e.target.result;
+                            var workbook = XLSX.read(data, {
+                                type: 'binary'
+                            });
+                            workbook.SheetNames.forEach(function (sheetName) {
+                                // Here is your object
+                                var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
+                                var json_object = JSON.stringify(XL_row_object);
+                                productList = JSON.parse(json_object);
+                                var rows = $('.table tbody tr',);
+                                $(".headerTable").html("")
+                                $(".bodyTable").html("")
+                                $("#chooseEmail").html("")
+                                $(".headerTable").append(`
+                                        <tr>
+                                            <th scope="col">STT</th>
+                                            <th scope="col">Họ và Tên</th>
+                                            <th scope="col">Phone</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Cài đặt</th>
+                                        </tr>
+                                        `)
+                                async function asyncCall() {
+
+                                    productList.forEach(function (item, index) {
+                                        console.log(index + 1)
+                                        var columns = Object.values(productList[index])
+                                        $(".bodyTable").append(`
+                                      <tr>
+                                            <td class='txtcode'>${columns[0]}</td>
+                                            <td class='txtdesc'>${columns[1]}</td>
+                                            <td class='txtprice'>${columns[2]}</td>
+                                            <td class='txtqty'>${columns[3]}</td>
+                                            <td><button class='btn btn-danger' type='button'>Xoá</button> </td>
+                                        </tr>                        
+                                  `)
+                                        $("#chooseEmail").append(` <option selected
+                                                    value="${columns[3]}">
+                                                    ${columns[3]}
+                                                </option>`)
+                                    })
+
+                                }
+                                asyncCall();
+                            })
+                        };
+                        reader.onerror = function (ex) {
+                            console.log(ex);
+                        };
+                        reader.readAsBinaryString(file);
+                    };
+                };
+
+                function handleFileSelect(evt) {
+
+                    var files = evt.target.files; // FileList object
+                    var xl2json = new ExcelToJSON();
+                    xl2json.parseExcel(files[0]);
+                }
+
+                document.getElementById('upload').addEventListener('change', handleFileSelect, false);
+            </script>
+            <script>
+                $(".browse-button input:file").change(function () {
+                    $("input[name='files[]']").each(function () {
+                        var fileName = $(this).val().split('/').pop().split('\\').pop();
+                        $(".filename").val(fileName);
+                        $(".browse-button-text").html('<i class="fa fa-refresh"></i> Change');
+                        $(".clear-button").show();
+                    });
+                });
+                $('.clear-button').click(function () {
+                    $('.filename').val("");
+                    $('.clear-button').hide();
+                    $('.browse-button input:file').val("");
+                    $(".browse-button-text").html('<i class="fa fa-folder-open"></i> Browse');
+                });
+                $(".browse-button-Attach input:file").change(function () {
+                    $("input[name='filesAttach']").each(function () {
+                        var fileName = $(this).val().split('/').pop().split('\\').pop();
+                        $(".filenameAttach").val(fileName);
+                        $(".browse-button-text-Attach").html('<i class="fa fa-refresh"></i> Change');
+                        $(".clear-button-Attach").show();
+                    });
+                });
+                $('.clear-button-Attach').click(function () {
+                    $('.filenameAttach').val("");
+                    $('.clear-button-Attach').hide();
+                    $('.browse-button input:file').val("");
+                    $(".browse-button-text-Attach").html('<i class="fa fa-folder-open"></i> Browse');
+                });
+               
+            </script>
+            <script>
+
+
+                $(document).ready(function () {
+
+                    var select = $('select[multiple]');
+                    var options = select.find('option');
+
+                    var div = $('<div />').addClass('selectMultiple');
+                    var active = $('<div />');
+                    var list = $('<ul />');
+                    var placeholder = select.data('placeholder');
+
+                    var span = $('<span />').text(placeholder).appendTo(active);
+
+                    options.each(function () {
+                        var text = $(this).text();
+                        if ($(this).is(':selected')) {
+                            active.append($('<a />').html('<em>' + text + '</em><i></i>'));
+                            span.addClass('hide');
+                        } else {
+                            list.append($('<li />').html(text));
+                        }
+                    });
+
+                    active.append($('<div />').addClass('arrow'));
+                    div.append(active).append(list);
+
+                    select.wrap(div);
+
+                    $(document).on('click', '.selectMultiple ul li', function (e) {
+                        var select = $(this).parent().parent();
+                        var li = $(this);
+                        if (!select.hasClass('clicked')) {
+                            select.addClass('clicked');
+                            li.prev().addClass('beforeRemove');
+                            li.next().addClass('afterRemove');
+                            li.addClass('remove');
+                            var a = $('<a />').addClass('notShown').html('<em>' + li.text() + '</em><i></i>').hide().appendTo(select.children('div'));
+                            a.slideDown(400, function () {
+                                setTimeout(function () {
+                                    a.addClass('shown');
+                                    select.children('div').children('span').addClass('hide');
+                                    select.find('option:contains(' + li.text() + ')').prop('selected', true);
+                                }, 500);
+                            });
+                            setTimeout(function () {
+                                if (li.prev().is(':last-child')) {
+                                    li.prev().removeClass('beforeRemove');
+                                }
+                                if (li.next().is(':first-child')) {
+                                    li.next().removeClass('afterRemove');
+                                }
+                                setTimeout(function () {
+                                    li.prev().removeClass('beforeRemove');
+                                    li.next().removeClass('afterRemove');
+                                }, 200);
+
+                                li.slideUp(400, function () {
+                                    li.remove();
+                                    select.removeClass('clicked');
+                                });
+                            }, 600);
+                        }
+                    });
+
+                    $(document).on('click', '.selectMultiple > div a', function (e) {
+                        var select = $(this).parent().parent();
+                        var self = $(this);
+                        self.removeClass().addClass('remove');
+                        select.addClass('open');
+                        setTimeout(function () {
+                            self.addClass('disappear');
+                            setTimeout(function () {
+                                self.animate({
+                                    width: 0,
+                                    height: 0,
+                                    padding: 0,
+                                    margin: 0
+                                }, 300, function () {
+                                    var li = $('<li />').text(self.children('em').text()).addClass('notShown').appendTo(select.find('ul'));
+                                    li.slideDown(400, function () {
+                                        li.addClass('show');
+                                        setTimeout(function () {
+                                            select.find('option:contains(' + self.children('em').text() + ')').prop('selected', false);
+                                            if (!select.find('option:selected').length) {
+                                                select.children('div').children('span').removeClass('hide');
+                                            }
+                                            li.removeClass();
+                                        }, 400);
+                                    });
+                                    self.remove();
+                                })
+                            }, 300);
+                        }, 400);
+                    });
+
+                    $(document).on('click', '.selectMultiple > div .arrow, .selectMultiple > div span', function (e) {
+                        $(this).parent().parent().toggleClass('open');
+                    });
+
+                });
+
+            </script>
+            <%- include ../partials/menu.ejs%>
+                <%- include ../partials/footer.ejs%>
+
+    </body>
+
+</html>

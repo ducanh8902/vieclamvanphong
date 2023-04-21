@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<%- include ../partials/header.ejs%>
+
+    <body>
+        <link rel="stylesheet" type="text/css" href="css/style_II.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive2.css" />
+       
+        <%- include ../partials/header-top-none-profile.ejs%>
+        <div class="jp_listing_sidebar_main_wrapper">
+            <section class="candidates-area section4">
+            <div class="container">
+                <div class="row">
+                    <div style="margin-bottom: 20px;" class="col-md-12">
+                        <center>
+                        <div class="srch_wrpr">
+                            <input type="checkbox" name="" class="checkbox">
+                            <div class="srch_sb_cnt">
+                                <input  type="text" name="text_bar" id="search" class="sech_txt_inpt" placeholder="Tìm Kiếm Ứng Viên">
+                                <button class="srch_btn">
+                                    <i style="color: #ff8707;" class="fa fa-search" aria-hidden="true" id="search-btn"></i>
+                                </button>
+                            </div>
+                            <center>
+                        </div>
+                    </div>
+                    <%if(result){%>
+                        <%result.forEach(function(item){%>
+                        <div class="col-md-6 col-md-6">
+                            <div class="candidates" style="text-align: left;">
+                                <div class="contents">
+                                   <div class="row">
+                                       <div class="col-md-3">
+                                        <%if(item.Avata=="https://img.icons8.com/bubbles/10000/000000/user-male.png" || item.Avata == "https://img.icons8.com/bubbles/10000/000000/brown-curly-hair-lady-with-red-glasses.png"){%>
+                                            <%if(item.Avata =="https://img.icons8.com/bubbles/10000/000000/user-male.png" ){%>
+                                              
+                                                <figure style="margin-left: 25px;
+                                                margin-top: 20px;background-image: url(https://img.icons8.com/bubbles/10000/000000/user-male.png);background-size: 100%;"></figure>
+                                               
+                                                <%}else{%>
+                                                  
+                                                    <figure style="margin-left: 25px;
+                                                    margin-top: 20px;background-image: url(https://img.icons8.com/bubbles/10000/000000/brown-curly-hair-lady-with-red-glasses.png);background-size: 100%;"></figure>
+                                                 
+                                                    <%}%>
+                                                    <%}else{%>
+                                                    
+                                                        <figure style="margin-left: 25px;
+                                                        margin-top: 20px;background-image: url(image/<%=item.Avata%>);background-size: 100%;"></figure>
+                                                   
+                                                        <%}%>
+                                      
+                                       </div>
+                                       <div class="col-md-9">
+                                        <div style="padding: 20px;" class="sideber2">
+                                            <div id="formshowungvien" class="widghet">
+                                        <%if(item.NameUT==""){%>
+                                        <h4 style="text-align: center;"><a href="/thong-tin-ung-vien=<%=item._id%>">Người tìm việc</a></h4>
+
+                                    <%}else{%>
+                                        <%if(user.local.NTD.SeenApplicant=="Active"){%>
+                                          
+                                                     <h4 style="text-align: center;"><a href="/thong-tin-ung-vien=<%=item._id%>"><strong><%=item.NameUT%></strong></a></h4>
+                                               
+                                        <% }%>
+                                        <%if(user.local.NTD.SeenApplicant=="NoActive" ||user.local.NTD.SeenApplicant!="Active" ){%>
+                                           
+                                                    <h4 style="text-align: center;"><a><strong><%=item.NameUT%></strong></a></h4>   
+                                                                          
+                                        <% }%>
+                                    <%}%>
+                                    <h6 style="height:40px "> <p ><img style="width: 10%;" src="https://img.icons8.com/clouds/100/000000/address.png"/>Làm việc tại: <%=item.BMLV%></p></h6>
+                                    <h6 style="height:40px;"> <p ><img style="width: 10%;" src="https://img.icons8.com/clouds/100/000000/maintenance-date.png"/>Nộp đơn : <%=item.DateTime%></p></h6>
+                                    <h6 style="height:40px;"> <p> <img style="width: 10%;" src="https://img.icons8.com/office/80/000000/birthday.png"/>Ngày sinh : <%=item.Ngaysinh%></p></h6>
+                                    <div class="col-md-12">
+                                    <%if(user.local.NTD.SeenApplicant=="Active"){%>
+                                        <div style="margin-top: 30px;" class="sideber2">
+                                        <div class="widghet">
+                                        <div class="row">
+                                            <h6><strong>Liên Hệ</strong></h6>
+                                                <div class="sideber2">
+                                                    <div style="font-size: 12px;" class="col-md-12">
+                                                        <img style="width: 10%;" src="https://img.icons8.com/clouds/100/000000/company.png"/><strong>Ứng Tuyển :</strong><%=item.vitriungtuyen%>
+                                                    </div>
+                                            <div style="font-size: 12px;" class="col-md-12">
+                                               <img style="width: 10%;" src="https://img.icons8.com/bubbles/100/000000/email.png"/><strong>Email :</strong> <strong> <%=item.EmailUT%></strong>
+                                            </div>
+                                            <div style="font-size: 12px;" class="col-md-12">
+                                                <img style="width: 10%;" src="https://img.icons8.com/clouds/100/000000/apple-phone.png"/> <strong>Điện Thoại :</strong><strong> <%=item.PhoneUT%></strong>
+                                            </div>
+                                          </div>
+                                        </div>
+                                          </div>
+                                        </div>
+                                        <% }%>
+                                    </div>
+                                       
+                                        <%if(user.local.NTD.SeenApplicant=="NoActive" || user.local.NTD.SeenApplicant=="" ||!user.local.NTD.SeenApplicant){%>
+                                            <div style="margin-top: 30px;margin: 10px;" class="sideber2">
+                                                <div  class="widghet">
+                                                  
+                                            <div class="row">
+                                                <h6><strong>Liên Hệ:</strong></h6></br>
+                                                <div class="sideber2">
+                                            <div class="col-md-12">
+                                                <li>Bạn vui lòng liên hệ Admin kích hoạt tài khoản</li>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <li>Để xem thông tin Ứng viên</li>
+                                                <p>Phone/Zalo: 0933.412.867 Admin</p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        </div>
+                                    <%  }%></div>
+                                   
+                                   </div>
+                                   
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <%})%>
+                    <%}%>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="pager_wrapper gc_blog_pagination">
+                            <ul class="pagination">
+                                <li><a style="width: 60px;" type="button" id="previous">.Prew</a></li>
+                            </ul>
+                            <ul style="text-align: center;" id="list" class="pagination">
+                            </ul>
+                            <ul class="pagination">
+                                <li ><a style="width: 60px;" type="button" id="next">Next</a></li>
+                            </ul>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+        </div>
+                    <script src="https://code.jquery.com/jquery-3.6.0.js"
+                        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+                        crossorigin="anonymous"></script>
+                    <%- include ../partials/menu.ejs%>
+                        <%- include ../partials/footer.ejs%>
+                            <script>
+                                var rows = jQuery('.card');
+                                jQuery('#search-btn').click(function () {
+                                    var val = jQuery.trim(jQuery('#search').val()).replace(/ +/g, ' ').toLowerCase();
+                                    rows.each(function () {
+                                        var itemtxt = jQuery(this).text().replace(/\s+/g, ' ').toLowerCase();
+                                        if (itemtxt.indexOf(val) > -1) {
+                                            jQuery(this).show();
+                                        } else {
+                                            jQuery(this).hide();
+                                        }
+                                    });
+                                });
+                                var cars ="<%=sltht%>" ;
+                    var pagesize ="<%=pagesize%>";
+                    var animals = [];
+                    for (i = 1; i <= cars; i++) {
+                             $("#itemss").append(`<li><a  class="active" href="/candidates?page=${i}&pagesize=${pagesize}">${i}</a></li>`)
+                             var newLength = animals.push(i);  }
+                    animals.forEach(function(item) {
+                    console.log(item); });
+                    var pageSize = pagesize;
+                    var currentPage = 1;
+                    var pagedResults = [];
+                    var totalResults = animals.length;
+                    $(function(){
+                    function updateList() {
+                     var end = (currentPage * pageSize);
+                    var start = (end - pageSize);
+                    pagedResults = animals.slice(start, end);
+                    $('#list').empty(); 
+                    if (currentPage <= 1) {
+                    $('.previous').prop("disabled", true); }   
+                    else {
+                    $('.previous').prop("disabled", false); }
+                    if ((currentPage * pageSize) >= totalResults) {
+                    $('.next').prop("disabled", true); }
+                    else { $('.next').prop("disabled", false); }
+                    $.each(pagedResults, function(index, obj){
+                    $('#list').append(`<li ><a href="/candidates?page=${obj}&pagesize=${pagesize}">${obj}</a></li>`);});}
+                    updateList();
+                    $('#next').click(function(){
+                     if ((currentPage * pageSize) <= totalResults) currentPage++;
+                    updateList();
+                    });
+                    $('#previous').click(function(){
+                    if (currentPage > 1) currentPage--;
+                    updateList();});});
+                            </script>
+    </body>
+</html>

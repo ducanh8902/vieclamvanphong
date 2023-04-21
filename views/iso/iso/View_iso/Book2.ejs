@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="generator" content="PhpSpreadsheet, https://github.com/PHPOffice/PhpSpreadsheet">
+      <meta name="author" content="Microsoft Office User" />
+      <link href="/iso/iso.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ 
+  </head>
+  <body>
+    <div style="margin-top: 10px;font-size: 20px;height:100%;" id="thongtin" class="sideber2">
+      <style type="text/css">
+    @page { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
+    body { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
+        html { font-family:Times New Roman,Calibri, Arial, Helvetica, sans-serif; font-size:11pt; background-color:white }
+        a.comment-indicator:hover + div.comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em }
+        a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em }
+        div.comment { display:none }
+        table { border-collapse:collapse; page-break-after:always }
+        .gridlines td { border:1px dotted black }
+        .gridlines th { border:1px dotted black }
+        .b { text-align:center }
+        .e { text-align:center }
+        .f { text-align:right }
+        .inlineStr { text-align:left }
+        .n { text-align:right }
+        .s { text-align:left }
+        td.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
+        th.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
+        td.style1 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style1 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style2 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style2 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style3 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style3 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style4 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style4 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style5 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style5 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style6 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style6 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style7 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:#FFFF00 }
+        th.style7 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:#FFFF00 }
+        td.style8 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:12pt; background-color:white }
+        th.style8 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:12pt; background-color:white }
+        td.style9 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:12pt; background-color:white }
+        th.style9 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:12pt; background-color:white }
+        td.style10 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style10 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style11 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style11 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style12 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:12pt; background-color:white }
+        th.style12 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:12pt; background-color:white }
+        td.style13 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style13 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style14 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        th.style14 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white }
+        td.style15 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:#FFFF00 }
+        th.style15 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:#FFFF00 }
+        table.sheet0 col.col0 { width:500px }
+        table.sheet0 col.col1 { width:100px }
+        table.sheet0 col.col2 { width:200px }
+        table.sheet0 col.col3 { width:300px }
+        table.sheet0 col.col4 { width:400px }
+        table.sheet0 col.col5 { width:500px }
+        table.sheet0 col.col6 { width:570px }
+        table.sheet0 col.col7 { width:71.84444362pt }
+        table.sheet0 col.col8 { width:57.61111045pt }
+        table.sheet0 col.col9 { width:77.94444355pt }
+        table.sheet0 tr { height:16.363636363636pt }
+        table.sheet0 tr.row0 { height:18pt }
+        table.sheet0 tr.row1 { height:18pt }
+        table.sheet0 tr.row2 { height:18pt }
+        table.sheet0 tr.row3 { height:16pt }
+        table.sheet0 tr.row4 { height:16pt }
+        table.sheet0 tr.row7 { height:16pt }
+        table.sheet0 tr.row8 { height:16pt }
+        table.sheet0 tr.row9 { height:16pt }
+        table.sheet0 tr.row10 { height:16pt }
+        table.sheet0 tr.row11 { height:16pt }
+        table.sheet0 tr.row12 { height:16pt }
+        table.sheet0 tr.row13 { height:16pt }
+        table.sheet0 tr.row14 { height:16pt }
+      </style>
+      <div id='DivIdToPrint' class="widghet">
+          <table
+              style="width: 95%; margin-left: calc(2%); border-collapse: collapse; border: none; margin-right: calc(3%);">
+             
+              <tbody>
+                  <tr>
+                      <td rowspan="4"
+                          style="width:103.5pt;border:double windowtext 1.5pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt;">
+                          <p
+                              style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <img width="93"
+                                  src="https://galaxydr.com.vn/storage/logo/logo.png"
+                                  alt="Description: logo"></p>
+                      </td>
+                      <td rowspan="4"
+                          style="width: 46.9095%; border-top: 1.5pt double windowtext; border-left: none; border-bottom: 1.5pt double windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 19pt;">
+                          <p
+                              style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <strong><span style='font-family:"Cambria",serif;'>C&Ocirc;NG TY TNHH DV GALAXY
+                                      DR&nbsp;</span></strong></p>
+                          <p
+                              style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <span style='font-size:13px;font-family:"Cambria",serif;'>TM01, PVL Linh T&acirc;y,
+                                  Số 5, Đường D1, Phường Linh T&acirc;y, Th&agrave;nh phố Thủ Đức, TPHCM</span>
+                          </p>
+                          <p
+                              style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <span style='font-size:13px;font-family:"Cambria",serif;'>Điện thoại: &nbsp;028
+                                  73055 995</span></p>
+                          <p
+                              style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <span style='font-size:13px;font-family:"Cambria",serif;'>Website:</span><span
+                                  style="font-size:15px;">&nbsp;</span><span
+                                  style='font-size:13px;font-family:"Cambria",serif;'>www.galaxydr.com.vn</span>
+                          </p>
+                      </td>
+                      <td
+                          style="width:86.4pt;border-top:double windowtext 1.5pt;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt;">
+                          <p
+                              style='margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;'>
+                              Trang</p>
+                      </td>
+                      <td
+                          style="width: 19.7026%; border-top: 1.5pt double windowtext; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1.5pt double windowtext; padding: 0cm 5.4pt; height: 19pt;">
+                          <p
+                              style='margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;'>
+                              1/2</p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td
+                          style="width:86.4pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt;">
+                          <p
+                              style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <span style="font-size:13px;">Lần ban h&agrave;nh</span></p>
+                      </td>
+                      <td
+                          style="width: 19.7026%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1.5pt double windowtext; padding: 0cm 5.4pt; height: 19pt;">
+                          <p
+                              style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <span style="font-size:15px;">01</span></p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td
+                          style="width:86.4pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt;">
+                          <p
+                              style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <span style="font-size:13px;">Ng&agrave;y ban h&agrave;nh</span></p>
+                      </td>
+                      <td
+                          style="width: 19.7026%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1.5pt double windowtext; padding: 0cm 5.4pt; height: 19pt;">
+                          <p
+                              style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <span style="font-size:15px;">20/01/2021</span></p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td
+                          style="width:86.4pt;border-top:none;border-left:none;border-bottom:double windowtext 1.5pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.0pt;">
+                          <p
+                              style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                              <span style="font-size:13px;">Số hiệu</span></p>
+                      </td>
+                      <td
+                          style="width: 19.7026%; border-top: none; border-left: none; border-bottom: 1.5pt double windowtext; border-right: 1.5pt double windowtext; padding: 0cm 5.4pt; height: 19pt;">
+                          <p
+                              style='margin:0cm;font-size:12px;font-family:"Times New Roman",serif;text-align:center;'>
+                              BM - QT08-02</p>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+          <p style="margin:0cm;font-size:16px;font-family: Times New Roman;">
+            <span style='font-family: "Times New Roman", Times, serif;'>&nbsp;</span>
+        </p>
+        <p style="margin:0cm;font-size:16px;font-family: Times New Roman;">
+          <span style='font-family: "Times New Roman", Times, serif;'>&nbsp;</span>
+      </p>
+          <p style='margin:0cm;font-size:16px;font-family:"Times New Roman",serif;text-align:center;line-height:150%;'>
+              <strong><span style="font-size:24px;line-height:150%;">BÁO CÁO TÌNH HÌNH TUYỂN DỤNG</span></strong></p>
+              <table
+              style="width: 95%; margin-left: calc(2%); border-collapse: collapse; border: none; margin-right: calc(3%);">
+              <tbody>
+                <tr class="row13">
+                  <% var Plan = report.Report.Plan%>
+                  <%Plan.forEach(function(item_plan){%>
+                  <td style="text-align: left;" class="column0 style1 s style1" colspan="10"><li>Ngày gửi yêu cầu: <%=item_plan.Date_Request%></li></td>
+                  <%})%>
+                </tr>
+                <tr class="row3">
+                  <td style="text-align: left;" class="column0 style1 s style1" colspan="10"><li>Bộ phận gửi yêu cầu: <%=report.Report.Title%></li></td>
+                  <div class="table-responsive table-data">
+                    <table
+                    style="width: 95%; margin-left: calc(2%); border-collapse: collapse; border: none; margin-right: calc(3%);">
+                    <thead>
+                      <tr style="text-align: center;">
+                        <th class="column1 style1 s style1">Ngày gửi</th>
+                        <th class="column2 style1 s style1">Kế hoạch</th>
+                        <th class="column3 style1 s style1">Nhóm</th>
+                        <th class="column4 style1 s style1">Số Lượng</th>
+                        <th class="column5 style1 s style1">Thực Hiện</th>
+                        <th class="column6 style1 s style1">Số Lượng</th>
+                        <th class="column7 style1 s style1">% Hoàn Thành</th>
+                        <th class="column8 style1 s style1">HC Dư/Thiếu</th>
+                        <th style="width:450px" class="column9 style10 s style10">Ghi chú</th>
+                      </tr>
+                    </thead>
+                    <% var Plan = report.Report.Plan%>
+                    <%Plan.forEach(function(item_plan,index){%>
+                      <% var Plan_request = item_plan.Plan_request%>
+                      <% var Plan_Action = item_plan.Plan_Action%>
+                      <% var lengthPlan_request = Plan_request.length%>
+                      <% var lengthPlan_Action = Plan_Action.length%>
+                      <input id="Plan_request" hidden value="<%=Plan_request%>">
+                      <input id="Plan_Action" hidden value="<%=Plan_Action%>">
+                      <%if(lengthPlan_request == lengthPlan_Action){%>
+                          <% var row = lengthPlan_request%>
+                      <%}else{%>
+                        <%if(lengthPlan_request < lengthPlan_Action){%>
+                          <% var row = lengthPlan_Action%>
+                          <%}else{%>
+                            <% var row = lengthPlan_request%>
+                            <%}%>
+                      <%}%>
+                      <%var i = 0%>
+                      <%for(i;i < row;i++){%>
+                        <tbody id="table">
+                          <tr style="text-align: center;">
+                            <td class="column1 style4 s style4"><%=item_plan.Date_Request%></td>
+                            <td id="req_plantraining<%=i%>" class="column1 style4 s style4"></td>
+                            <td id="req_group<%=i%>" class="column1 style4 s style4"></td>
+                            <td id="req_hc<%=i%>" class="column1 style4 s style4"></td>
+                            <td id="act_plan_training<%=i%>"class="column1 style4 s style4"></td>
+                            <td id="act_hc<%=i%>"class="column1 style4 s style4"></td>
+                            <td id="act_hc_complete<%=i%>"class="column1 style4 s style4"></td>
+                            <td id="act_hc_drop<%=i%>"class="column1 style4 s style4"></td>     
+                            <td  style="width:450px" id="act_not<%=i%>"class="column1 style4 s style4"></td>
+                          </tr>
+                        </tbody> 
+                        <%}%>
+                        <tbody>
+                          <tr class="row13">
+                            <td class="column0 style1 s style1" colspan="10">Báo Cáo</td>
+                          </tr>
+                          <tr class="row15">
+                            <td class="column0 style4 s style4" colspan="3">Tổng Hợp</td>
+                            <td id="total_request" class="column4 style13 f style13"></td>
+                            <td  class="column5 style4 null style4"></td>
+                            <td id="total_action" class="column6 style4 f style4"></td>
+                            <td id="total_complete" class="column7 style5 f style5"></td>
+                            <td id="total_drop"class="column8 style12 f style12"></td>
+                            <td id="total_not"class="column9 style12 f style12"></td>
+                          </tr>
+                        </tbody>
+                      
+                        <table style="border: none;width:100%;right:0;border-collapse:collapse;">
+                          <p style="margin:0cm;font-size:16px;font-family: Times New Roman;">
+                            <span style='font-family: "Times New Roman", Times, serif;'>&nbsp;</span>
+                        </p>
+                        <p style="margin:0cm;font-size:16px;font-family: Times New Roman;">
+                          <span style='font-family: "Times New Roman", Times, serif;'>&nbsp;</span>
+                      </p>
+                      <p style="margin:0cm;font-size:16px;font-family: Times New Roman;">
+                        <span style='font-family: "Times New Roman", Times, serif;'>&nbsp;</span>
+                    </p>
+                    <p style="margin:0cm;font-size:16px;font-family: Times New Roman;">
+                      <span style='font-family: "Times New Roman", Times, serif;'>&nbsp;</span>
+                  </p>
+                  <div style="padding-left: 3%;padding-right: 3%;"
+                  class="col-md-12">
+                  <table
+                      style="width: 100%;border-collapse:collapse;border:none;">
+                      <tbody>
+                          <tr>
+                              <td
+                                  style="width: 150px;padding: 0cm 5.4pt;height: 119.25pt;vertical-align: top;text-align: right">
+                                  <p
+                                      style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:right;">
+                                      <strong><span
+                                              style='font-family:"Calibria",serif;color:black;margin-right: 222px;'>BP.Tuyển Dụng</span></strong>
+                                  </p>
+                                  <p
+                                      style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:right;">
+                                      <strong><span
+                                              style='font-family:"Calibria",serif;color:black;margin-right: 150px;'>TP.HCM, Ngày: 30 tháng: <%=item_plan.Report_month%> năm: <%=item_plan.Report_year%></span></strong>
+                                  </p>
+                                  <p
+                                      style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:right;">
+                                      <strong><span
+                                              style='font-family:"Calibria",serif;color:black;margin-right: 150px;'>&nbsp;</span></strong>
+                                  </p>
+                                  <p
+                                      style="margin:0cm;font-size:16px;font-family:VNI-Times;text-align:right;">
+                                      <strong><span
+                                              style='font-family:"Calibria",serif;margin-right: 150px;'>&nbsp;</span></strong>
+                                  </p>
+                                  <p
+                                      style="margin:0cm;font-size:16px;font-family:VNI-Times;">
+                                      <span
+                                          style='font-family:"Calibria",serif;'>
+                                          <h6 style="margin-right: 230px;font-size: 18px;"><b>
+                                                  Lê Đức Anh
+                                              </b>
+                                          </h6>
+                                      </span>
+                                  </p>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+                      </table>
+                      
+                        <script>
+                          
+                          var arr_total_request =[]
+                          var arr_total_action =[]
+                          
+                          const Plan_request = <%- JSON.stringify(item_plan.Plan_request)%>;
+                          const Plan_Action =  <%- JSON.stringify(item_plan.Plan_Action)%>
+                          Plan_request.forEach(function(item,index){
+                            $(`#req_plantraining${index}`).html(`<input hidden id="input_req_plantraining${index}" value="${item.Training_Day}"/>${item.Training_Day}`)
+                            $(`#req_group${index}`).html(`<input hidden id="input_req_group${index}" value="${item.Group_request}"/>${item.Group_request}`)
+                            $(`#req_hc${index}`).html(`<input hidden id="input_req_hc${index}"  value="${item.Headcount_approve}"/>${item.Headcount_approve}`)
+                            arr_total_request.push($(`#input_req_hc${index}`).val())
+                              
+                          })
+                          Plan_Action.forEach(function(item,index){
+                            $(`#act_plan_training${index}`).html(item.Training_Day)
+                            $(`#act_hc${index}`).html(`<input hidden id="input_act_hc${index}"  value="${item.Headcount}"/>${item.Headcount}`)
+                            $(`#act_not${index}`).html(item.Note_Status)
+                            $(`#total_not`).html(item.Note_Status)
+                            arr_total_action.push($(`#input_act_hc${index}`).val())
+                          })
+                          var sum_total_request = 0;
+                          var sum_total_action = 0;
+                          for(var i=0; i < arr_total_request.length; i++){
+                            sum_total_request += parseInt(arr_total_request[i]);
+                          }
+                          for(var i=0; i < arr_total_action.length; i++){
+                            sum_total_action += parseInt(arr_total_action[i]);
+                          }
+                          $("#total_action").html(`<input hidden id="input_total_act_hc"  value="${sum_total_action}"/>${sum_total_action}`)
+                          $("#total_request").html(`<input hidden id="input_total_req_hc"  value="${sum_total_request}"/>${sum_total_request}`)
+                          var row = <%=row%>
+                          for(var i= 0 ; i < row;i++){
+                            var complete = 100*(parseInt($(`#input_act_hc${i}`).val())/parseInt($(`#input_req_hc${i}`).val()))
+                            var result = parseInt(complete)
+                            var drop = parseInt($(`#input_act_hc${i}`).val()) - parseInt($(`#input_req_hc${i}`).val())
+                            var result_drop = parseInt(drop)
+                            $(`#act_hc_complete${i}`).html(`${result} %`)
+                            $(`#act_hc_drop${i}`).html(`${result_drop}`)
+                            if(result_drop > 0){
+                              $(`#act_not${i}`).append(` - Dư ${result_drop} HC `)
+                            }else{
+                              var fin_nal = parseInt(drop)*-1
+                              $(`#act_not${i}`).append(` - Thiếu ${fin_nal} HC `)
+                            }    
+                          }
+                          var total_complete = 100*(parseInt($(`#input_total_act_hc`).val())/parseInt($(`#input_total_req_hc`).val()))
+                          var conplete_result = parseInt(total_complete)
+                          var drop_total = parseInt($(`#input_total_act_hc`).val()) - parseInt($(`#input_total_req_hc`).val())
+                            var result_drop_total = parseInt(drop_total)
+                          $(`#total_complete`).html(`${conplete_result} %`)
+                          $(`#total_drop`).html(`${result_drop_total}`)
+                          if(result_drop_total > 0){
+                              $(`#total_not`).append(`- Dư ${result_drop_total} HC `)
+                            }else{
+                              var fin_nal_total = parseInt(drop_total)*-1
+                              $(`#total_not`).append(`- Thiếu ${fin_nal_total} HC `)
+                            }  
+                         </script>
+                    <%})%>
+                 
+                      
+                  </table>
+                  </div>
+                </tr>
+                  
+              </tbody>
+              </table>
+            
+      </div>
+  </div>
+   
+   
+  </body>
+</html>

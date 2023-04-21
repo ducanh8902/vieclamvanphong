@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Share CV -OfficeJob </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://admin.tuyendung.me/images/Office_job/logo_new.jpg">
+    <link href="https://admin.tuyendung.me/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="https://admin.tuyendung.me/css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="https://tuyendung.me/new_office/share_cv_new.png" />
+    <link rel="stylesheet" type="text/css" href="./css_search.css" />
+    <meta property="fb:app_id" content="1902832553257404" />
+    <meta property="og:image" content="https://tuyendung.me/icon_officejob/1.png" />
+    <meta property="og:image:alt" content="Chia sẻ ứng viên tìm việc" />
+    <meta property="og:description" content="Liên Hệ: 093.18.666.98 Đức Anh">
+    <meta property="og:url" content="https://tuyendung.me/share-cv">
+    <meta property="og:title" content="Danh Sách Ứng Viên Tìm Việc" />
+    <meta property="og:type" content="website" />
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="col-lg-12">
+            <form style="padding: 20px;" action="./upload-sharecv" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label  class="control-label mb-1">Nguồn từ Nhà Tuyển Dụng</label>
+                    <input  name="nguon" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Có thể Tên ,Biệt Danh,... để nhận biết report">
+                </div>
+              <div class="form-group">
+                <label  class="control-label mb-1">Tên Ứng Viên</label>
+                <input  name="Note" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Tên Ứng viên">
+            </div>
+            <div class="form-group">
+              <label  class="control-label mb-1">Email Ứng Viên</label>
+              <input  name="EmailUngVien" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Email Ứng Viên">
+          </div>
+          <div class="form-group">
+            <label  class="control-label mb-1">Số Điện Thoại Ứng Viên</label>
+            <input  name="PhoneUngVien" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Số Điện Thoại Ứng Viên">
+        </div>
+                <div class="form-group">
+                    <label  class="control-label mb-1">Vị Trí Ứng Tuyển</label>
+                    <input  name="Title" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Vị Trí Ứng Tuyển">
+                </div>
+                 <div class="form-group">
+                    <label  class="control-label mb-1">Khu vực</label>
+                    <select class="select_location_s" name="Area">
+                            <option value="Tp.Hà Nội">Tp.Hà Nội
+                            <option value="TP.HCM">TP HCM
+                            <option value="Bình Dương">Bình Dương
+                            <option value="Tp.Cần Thơ">Tp.Cần Thơ
+                            <option value="Tp.Đà Nẵng">Tp.Đà Nẵng
+                            <option value="Tp.Hải Phòng">Tp.Hải Phòng
+                            <option value="An Giang">An Giang
+                            <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu
+                            <option value="Bắc Giang">Bắc Giang
+                            <option value="Bắc Kạn">Bắc Kạn
+                            <option value="Bạc Liêu">Bạc Liêu
+                            <option value="Bắc Ninh">Bắc Ninh
+                            <option value="Bến Tre">Bến Tre
+                            <option value="Bình Định">Bình Định
+                            <option value="Bình Phước">Bình Phước
+                            <option value="Bình Thuận">Bình Thuận
+                            <option value="Bình Thuận">Bình Thuận
+                            <option value="Cà Mau">Cà Mau
+                            <option value="Cao Bằng">Cao Bằng
+                            <option value="Đắk Lắk">Đắk Lắk
+                            <option value="Đắk Nông">Đắk Nông
+                            <option value="Điện Biên">Điện Biên
+                            <option value="Đồng Nai">Đồng Nai
+                            <option value="Đồng Tháp">Đồng Tháp
+                            <option value="Đồng Tháp">Đồng Tháp
+                            <option value="Gia Lai">Gia Lai
+                            <option value="Hà Giang">Hà Giang
+                            <option value="Hà Nam">Hà Nam
+                            <option value="Hà Tĩnh">Hà Tĩnh
+                            <option value="Hải Dương">Hải Dương
+                            <option value="Hậu Giang">Hậu Giang
+                            <option value="Hòa Bình">Hòa Bình
+                            <option value="Hưng Yên">Hưng Yên
+                            <option value="Khánh Hòa">Khánh Hòa
+                            <option value="Kiên Giang">Kiên Giang
+                            <option value="Kon Tum">Kon Tum
+                            <option value="Lai Châu">Lai Châu
+                            <option value="Lâm Đồng">Lâm Đồng
+                            <option value="Lạng Sơn">Lạng Sơn
+                            <option value="Lào Cai">Lào Cai
+                            <option value="Long An">Long An
+                            <option value="Nam Định">Nam Định
+                            <option value="Nghệ An">Nghệ An
+                            <option value="Ninh Bình">Ninh Bình
+                            <option value="Ninh Thuận">Ninh Thuận
+                            <option value="Phú Thọ">Phú Thọ
+                            <option value="Quảng Bình">Quảng Bình
+                            <option value="Quảng Bình">Quảng Bình
+                            <option value="Quảng Ngãi">Quảng Ngãi
+                            <option value="Quảng Ninh">Quảng Ninh
+                            <option value="Quảng Trị">Quảng Trị
+                            <option value="Sóc Trăng">Sóc Trăng
+                            <option value="Sơn La">Sơn La
+                            <option value="Tây Ninh">Tây Ninh
+                            <option value="Thái Bình">Thái Bình
+                            <option value="Thái Nguyên">Thái Nguyên
+                            <option value="Thanh Hóa">Thanh Hóa
+                            <option value="Thừa Thiên Huế">Thừa Thiên Huế
+                            <option value="Tiền Giang">Tiền Giang
+                            <option value="Trà Vinh">Trà Vinh
+                            <option value="Tuyên Quang">Tuyên Quang
+                            <option value="Vĩnh Long">Vĩnh Long
+                            <option value="Vĩnh Phúc">Vĩnh Phúc
+                            <option value="Yên Bái">Yên Bái
+                            <option value="Phú Yên">Phú Yên
+                        <option value="Khác">Khác</option>
+                    </select>        
+                 </div>
+                 <div class="form-group">
+                    <label  class="control-label mb-1">Chuyên Ngành</label>
+                    <select class="type_job_s" name="TypeCV" >
+                        <option value="CSKH">Chăm Sóc Khách Hàng</option>
+                        <option value="Telesele-Sale">Telesele-Sale</option>
+                        <option value="Kế Toán">Kế Toán</option>
+                        <option value="Kiểm Toán">Kiểm Toán</option>
+                        <option value="Marketing&Media">Marketing & Media</option>
+                        <option value="Kinh Doanh">Kinh Doanh</option>
+                        <option value="Bán Hàng">Bán Hàng</option>
+                        <option value="Design">Design 2D & 3D - Video</option>
+                        <option value="Ngân Hàng - Tài Chính">Ngân Hàng - Tài Chính</option>
+                        <option value="Nhân Sự">Nhân Sự (HR)</option>
+                        <option value="Công Nghệ Thông Tin">Công Nghệ Thông Tin</option>
+                        <option value="Thực Phẩm">Thực Phẩm</option>
+                        <option value="Xây Dựng">Xây Dựng</option>
+                        <option value="Giáo Dục">Giáo Dục</option>
+                        <option value="Sức Khỏe">Sức Khỏe</option>
+                        <option value="PG|PB|PR">PG | PB | PR</option>
+                        <option value="Kiểm Soát Chất Lượng">Kiểm Soát Chất Lượng</option>
+                        <option value="Bất Động Sản">Bất Động Sản</option>
+                        <option value="Luật-Pháp Lý">Luật-Pháp Lý</option>
+                        <option value="Sản Xuất- Vận Hành">Sản Xuất- Vận Hành Máy</option>
+                        <option value="Quản Lý Kho - Khu Công Nghiệp">Quản Lý Kho - Khu Công Nghiệp</option>
+                        <option value="Xuất Nhập Khẩu-Ngoại Thương">Xuất Nhập Khẩu-Ngoại Thương</option>
+                        <option value="Dịch Vụ- Bảo Hiểm">Dịch Vụ- Bảo Hiểm</option>
+                        <option value="Lao Động Phổ Thông">Lao Động Phổ Thông</option>
+                        <option value="Báo Chí - Khoa Học Xã Hội">Báo Chí - Khoa Học Xã Hội</option>
+                        <option value="Khoa Học Nghiêng Cứu">Khoa Học Nghiêng Cứu</option>
+                        <option value="Kinh Tế">Kinh Tế</option>
+                        <option value="Event">Sự Kiện- Event</option>
+                        <option value="Dược Phẩm">Dược Phẩm</option>
+                        <option value="Du lịch">Du lịch</option>
+                        <option value="Thương Mại Điện Tử">Thương Mại Điện Tử</option>
+                        <option value="Thời Trang">Thời Trang</option>
+                        <option value="Biên Dịch - Phiên Dịch">Biên Dịch - Phiên Dịch</option>
+                        <option value="Research & Development">Research & Development</option>
+                        <option value="Khác">Khác</option>
+                      </select>
+                 </div>
+                <div class="form-group">          
+                    <div style="margin-top: 5%;" class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Upload</span>
+                        </div>
+                        <div class="custom-file">
+                            <input hidden type="text" id="text-file-sharecv"  name="text-file-sharecv">
+                            <input type="file" class="custom-file-input" id="fileUpload"  name="file-sharecv">
+                            <label class="custom-file-label">Attach File</label>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" value="Upload Curriculum Vitae" class="btn btn-primary btn-block">
+
+                  </div>
+              </form>
+        </div>
+    </div>
+    <script>
+
+  function create_custom_dropdowns() {
+    $('select').each(function (i, select) {
+        if (!$(this).next().hasClass('dropdown-select')) {
+            $(this).after('<div class="dropdown-select wide ' + ($(this).attr('class') || '') + '" tabindex="0"><span class="current"></span><div class="list"><ul></ul></div></div>');
+            var dropdown = $(this).next();
+            var options = $(select).find('option');
+            var selected = $(this).find('option:selected');
+            dropdown.find('.current').html(selected.data('display-text') || selected.text());
+            options.each(function (j, o) {
+                var display = $(o).data('display-text') || '';
+                dropdown.find('ul').append('<li class="option ' + ($(o).is(':selected') ? 'selected' : '') + '" data-value="' + $(o).val() + '" data-display-text="' + display + '">' + $(o).text() + '</li>');
+            });
+        }
+    });
+  
+    $('.dropdown-select ul').before('<div class="dd-search"></div>');
+  }
+  
+  // Event listeners
+  
+  // Open/close
+  $(document).on('click', '.dropdown-select', function (event) {
+    if($(event.target).hasClass('dd-searchbox')){
+        return;
+    }
+    $('.dropdown-select').not($(this)).removeClass('open');
+    $(this).toggleClass('open');
+    if ($(this).hasClass('open')) {
+        $(this).find('.option').attr('tabindex', 0);
+        $(this).find('.selected').focus();
+    } else {
+        $(this).find('.option').removeAttr('tabindex');
+        $(this).focus();
+    }
+  });
+  
+  // Close when clicking outside
+  $(document).on('click', function (event) {
+    if ($(event.target).closest('.dropdown-select').length === 0) {
+        $('.dropdown-select').removeClass('open');
+        $('.dropdown-select .option').removeAttr('tabindex');
+    }
+    event.stopPropagation();
+  });
+  
+  function filter(){
+    var valThis = $('#txtSearchValue').val();
+    $('.dropdown-select ul > li').each(function(){
+     var text = $(this).text();
+        (text.toLowerCase().indexOf(valThis.toLowerCase()) > -1) ? $(this).show() : $(this).hide();         
+   });
+  };
+  // Search
+  
+  // Option click
+  $(document).on('click', '.dropdown-select .option', function (event) {
+    $(this).closest('.list').find('.selected').removeClass('selected');
+    $(this).addClass('selected');
+    var text = $(this).data('display-text') || $(this).text();
+    $(this).closest('.dropdown-select').find('.current').text(text);
+    $(this).closest('.dropdown-select').prev('select').val($(this).data('value')).trigger('change');
+  });
+  
+  // Keyboard events
+  $(document).on('keydown', '.dropdown-select', function (event) {
+    var focused_option = $($(this).find('.list .option:focus')[0] || $(this).find('.list .option.selected')[0]);
+    // Space or Enter
+    //if (event.keyCode == 32 || event.keyCode == 13) {
+    if (event.keyCode == 13) {
+        if ($(this).hasClass('open')) {
+            focused_option.trigger('click');
+        } else {
+            $(this).trigger('click');
+        }
+        return false;
+        // Down
+    } else if (event.keyCode == 40) {
+        if (!$(this).hasClass('open')) {
+            $(this).trigger('click');
+        } else {
+            focused_option.next().focus();
+        }
+        return false;
+        // Up
+    } else if (event.keyCode == 38) {
+        if (!$(this).hasClass('open')) {
+            $(this).trigger('click');
+        } else {
+            var focused_option = $($(this).find('.list .option:focus')[0] || $(this).find('.list .option.selected')[0]);
+            focused_option.prev().focus();
+        }
+        return false;
+        // Esc
+    } else if (event.keyCode == 27) {
+        if ($(this).hasClass('open')) {
+            $(this).trigger('click');
+        }
+        return false;
+    }
+  });
+  
+  $(document).ready(function () {
+    create_custom_dropdowns();
+  });
+  
+    </script>
+    <style>
+        #newFont {
+            color: transparent;
+            font-size: 25px;
+            background-image: linear-gradient(to right bottom,
+                    #ffa400,
+                    #00aefd);
+            background-clip: text;
+            -webkit-background-clip: text;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        #SelExample {
+            width: 200px;
+        }
+
+        select {
+            display: none !important;
+        }
+
+        .type_job {
+            display: block !important;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40FFFFFF', endColorstr='#00FFFFFF', GradientType=0);
+            background-color: #fff;
+            border-radius: 6px;
+            border: solid 1px #eee;
+            box-shadow: 0px 2px 5px 0px rgb(155 155 155 / 50%);
+            box-sizing: border-box;
+            cursor: pointer;
+            display: block;
+            float: left;
+            font-size: 14px;
+            font-weight: normal;
+            height: 42px;
+            line-height: 40px;
+            outline: none;
+            padding-left: 18px;
+            padding-right: 30px;
+            position: relative;
+            text-align: left !important;
+            transition: all 0.2s ease-in-out;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            white-space: nowrap;
+            width: auto;
+            display: block !important;
+            width: 100%;
+        }
+
+        .dropdown-select {
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40FFFFFF', endColorstr='#00FFFFFF', GradientType=0);
+            background-color: #fff;
+            border-radius: 6px;
+            border: solid 1px #eee;
+            box-shadow: 0px 2px 5px 0px rgba(155, 155, 155, 0.5);
+            box-sizing: border-box;
+            cursor: pointer;
+            display: block;
+            float: left;
+            font-size: 14px;
+            font-weight: normal;
+            height: 42px;
+            line-height: 40px;
+            outline: none;
+            padding-left: 18px;
+            padding-right: 30px;
+            position: relative;
+            text-align: left !important;
+            transition: all 0.2s ease-in-out;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            white-space: nowrap;
+            width: auto;
+
+        }
+
+        .dropdown-select:focus {
+            background-color: #fff;
+        }
+
+        .dropdown-select:hover {
+            background-color: #fff;
+        }
+
+        .dropdown-select:active,
+        .dropdown-select.open {
+            background-color: #fff !important;
+            border-color: #bbb;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) inset;
+        }
+
+        .dropdown-select:after {
+            height: 0;
+            width: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid #777;
+            -webkit-transform: origin(50% 20%);
+            transform: origin(50% 20%);
+            transition: all 0.125s ease-in-out;
+            content: '';
+            display: block;
+            margin-top: -2px;
+            pointer-events: none;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+        }
+
+        .dropdown-select.open:after {
+            -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+        }
+
+        .dropdown-select.open .list {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .dropdown-select.open .option {
+            cursor: pointer;
+        }
+
+        .dropdown-select.wide {
+            width: 100%;
+        }
+
+        .dropdown-select.wide .list {
+            left: 0 !important;
+            right: 0 !important;
+        }
+
+        .dropdown-select .list {
+            box-sizing: border-box;
+            transition: all 0.15s cubic-bezier(0.25, 0, 0.25, 1.75), opacity 0.1s linear;
+            -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+            -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.09);
+            background-color: #fff;
+            border-radius: 6px;
+            padding: 3px 0;
+            opacity: 0;
+            overflow: hidden;
+            pointer-events: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 999;
+            max-height: 450px;
+            overflow: auto;
+            border: 1px solid #ddd;
+        }
+
+        .dropdown-select .list:hover .option:not(:hover) {
+            background-color: transparent !important;
+        }
+
+        .dropdown-select .dd-search {
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0.5rem;
+        }
+
+        .dropdown-select .dd-searchbox {
+            width: 90%;
+            height: 50px;
+            padding: 0.5rem;
+            border: 1px solid #999;
+            border-color: #999;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .dropdown-select .dd-searchbox:focus {
+            border-color: #12CBC4;
+        }
+
+        .dropdown-select .list ul {
+            padding: 0;
+        }
+
+        .dropdown-select .option {
+            cursor: default;
+            font-weight: 400;
+            line-height: 40px;
+            outline: none;
+            padding-left: 18px;
+            padding-right: 29px;
+            text-align: left;
+            transition: all 0.2s;
+            list-style: none;
+        }
+
+        .dropdown-select .option:hover,
+        .dropdown-select .option:focus {
+            background-color: #f6f6f6 !important;
+        }
+
+        .dropdown-select .option.selected {
+            font-weight: 600;
+            color: #12cbc4;
+        }
+
+        .dropdown-select .option.selected:focus {
+            background: #f6f6f6;
+        }
+
+        .dropdown-select a {
+            color: #aaa;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .dropdown-select a:hover {
+            color: #666;
+        }
+    </style>
+    <script src="https://admin.tuyendung.me/vendor/global/global.min.js"></script>
+    <script src="https://admin.tuyendung.me/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://admin.tuyendung.me/vendor/peity/jquery.peity.min.js"></script>
+    <script src="https://admin.tuyendung.me/js/dashboard/dashboard-1.js"></script>
+    <script src="https://admin.tuyendung.me/vendor/owl-carousel/owl.carousel.js"></script>
+    <script src="https://admin.tuyendung.me/js/custom.min.js"></script>
+    <script src="https://admin.tuyendung.me/js/deznav-init.js"></script>
+    <script src="https://admin.tuyendung.me/js/demo.js"></script>
+</body>
+</html>

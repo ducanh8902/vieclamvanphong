@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+    <%- include ../partials/header.ejs%>
+
+<body>
+
+    <%- include ../partials/header-top-none-profile.ejs%>
+
+        <div class="jp_first_sidebar_main_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5973369736597865"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-5973369736597865"
+     data-ad-slot="2731794257"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="jp_hiring_slider_main_wrapper">
+                                    <div class="jp_hiring_heading_wrapper">
+                                        <h2 id="newFont">Doanh Nghiệp</h2>
+                                    </div>
+                                    <div class="jp_hiring_slider_wrapper">
+                                        <div class="owl-carousel owl-theme">
+                                            <%dataHotNTD.forEach(function(item){%>
+                                                <div class="item">
+                                                    <div class="jp_hiring_content_main_wrapper">
+                                                        <div class="jp_hiring_content_wrapper2">
+                                                            <img style="width: 60px;height: 60px;border-radius: 10px;background: #F5F5F5;"
+                                                                src="https://tuyendung.me/image/<%=item.AvataJobNTD%>"
+                                                                alt="logo_company" />
+                                                            <h4 style="height: 100px;font-size: 16px;"id="newFont" >
+                                                                <%=item.NameCompany%>
+                                                            </h4>
+                                                            <ul>
+                                                                <li><a href="#">4 Việc Làm</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <%})%>
+                                        </div>
+                                    </div>
+                                    <div class="jp_hiring_slider_wrapper">
+                                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@vieclamvanphong" data-unique-id="vieclamvanphong"  data-embed-type="creator" style="max-width: 720px; min-width: 288px;" > <section> <a target="_blank" href="https://www.tiktok.com/@vieclamvanphong?refer=creator_embed">@vieclamvanphong</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-top: 10px;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="jp_hiring_slider_main_wrapper">
+                                    <div class="jp_hiring_heading_wrapper">
+                                        <h2 id="newFont">Nhân Viên Tìm Việc</h2>
+                                    </div>
+                                    <div class="jp_hiring_slider_wrapper">
+                                        <div class="owl-carousel owl-theme">
+                                            <%newArrShareCv.forEach(function(item){%>
+                                                <div class="item">
+                                                    <div class="jp_hiring_content_main_wrapper">
+                                                        <div class="jp_hiring_content_wrapper2">
+                                                            <%if(item.avatashare==0){%>
+                                                                <img style="width: 60px;height: 60px;border-radius: 50%;background-color: white;background-size: cover;background-image: url(loading.gif)"
+                                                                    src="https://img.icons8.com/bubbles/100/000000/user.png"
+                                                                    alt="logo_company" />
+
+                                                                <%}%>
+                                                                    <%if(item.avatashare==1){%>
+                                                                        <img style="width: 60px;height: 60px;border-radius: 50%;background: white;background-size: cover;background-image: url(loading.gif)"
+                                                                            src="https://img.icons8.com/bubbles/100/000000/administrator-male.png"
+                                                                            alt="logo_company" />
+
+                                                                        <%}%>
+                                                                            <%if(item.avatashare==2){%>
+                                                                                <img style="width: 60px;height: 60px;border-radius: 50%;background: white;background-size: cover;background-image: url(loading.gif)"
+                                                                                    src="https://img.icons8.com/bubbles/100/000000/brown-long-hair-lady-with-red-glasses.png"
+                                                                                    alt="logo_company" />
+
+                                                                                <%}%><br>
+                                                                                    <h4 style="font-size:25px;height: 150px;" id="newFont">
+                                                                                        <%=item.name%>
+                                                                                    </h4>
+                                                                                    <ul>
+                                                                                        <li style="margin-top: 10px;"><a><%=item.type%></a></li>
+                                                                                        <li ><button style="margin-top: 10px;width: 100%;" data-toggle="modal"
+                                                                                            data-target="#ReviewShareCV" onclick="getFileShare('<%=item.file%>')" class="contact-me">Xem Hồ Sơ</button>
+                                                                                         </li>
+                                                                                    </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <%})%>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="cc_featured_product_main_wrapper">
+                                    <div style="margin-left: 20px;"
+                                        class="jp_hiring_heading_wrapper jp_job_post_heading_wrapper">
+                                        <h2 id="newFont">Việc Làm</h2>
+                                    </div>
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li role="presentation"><a href="#best" aria-controls="best" role="tab"
+                                                data-toggle="tab">Full Time </a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="best">
+                                        <div class="ss_featured_products">
+                                            <div class="owl-carousel owl-theme">
+                                                <div class="item" data-hash="zero">
+                                                    <%dataJobAll.forEach(function(item){%>
+                                                        <div class="jp_job_post_main_wrapper_cont">
+                                                            <div class="jp_job_post_main_wrapper">
+                                                                <div class="row">
+
+                                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                                                        <div class="jp_job_post_side_img">
+                                                                            <img style="border-radius: 10px;background: white;width: 100px;height: 100px;background-size: cover;background-image: url(loading.gif)"
+                                                                                src="image/<%=item.AvataJobNTD%>"
+                                                                                alt="logo-company_job" />
+                                                                        </div>
+                                                                        <div class="jp_job_post_right_cont">
+                                                                            <h4><a class="btn2" style="font-size: 18px;"
+                                                                                    href="/detail-job&idjob=<%=item.IdJobNTD%>"><b
+                                                                                    id="newFont">
+                                                                                        <%=item.NameJobNTD%>
+                                                                                    </b></a></h4>
+
+                                                                            <p><span class="ico"><img
+                                                                                        src="https://img.icons8.com/bubbles/100/000000/company.png" /></span><span
+                                                                                    class="con">
+                                                                                    <%=item.NameCompany%>
+                                                                                </span></p><br>
+
+                                                                            <p><span class="ico"><img
+                                                                                        src="https://img.icons8.com/bubbles/100/000000/money-bag.png" /></span><span
+                                                                                    class="con">
+                                                                                    <%=item.SalaryJobNTD%>
+                                                                                </span></p><br>
+                                                                            <p><span class="ico"><img
+                                                                                        src="https://img.icons8.com/bubbles/100/000000/order-delivered.png" /></span><span
+                                                                                    class="con">
+                                                                                    <%=item.Adrees%>
+                                                                                </span></p><br>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                        <div class="jp_job_post_right_btn_wrapper">
+                                                                            <ul>
+                                                                                <li>
+                                                                                </li>
+                                                                                <li><a href="#">
+                                                                                        <%=item.TypeJobNTD%>
+                                                                                    </a></li>
+                                                                                <li><a href="#">
+                                                                                        <%=item.DateJobNTD%>
+                                                                                    </a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <%})%>
+                                                </div>
+                                                <div class="item" data-hash="one">
+                                                    <%dataJobAllPage2.forEach(function(item){%>
+                                                        <div class="jp_job_post_main_wrapper_cont">
+                                                            <div class="jp_job_post_main_wrapper">
+                                                                <div class="row">
+
+                                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                                                        <div class="jp_job_post_side_img">
+                                                                            <img style="border-radius: 10px;background: white;width: 100px;height: 100px;"
+                                                                                src="image/<%=item.AvataJobNTD%>"
+                                                                                alt="logo-company_job" />
+                                                                        </div>
+                                                                        <div class="jp_job_post_right_cont">
+                                                                            <h4><a class="btn2" style="font-size: 18px;"
+                                                                                    href="detail-job&idjob=<%=item.IdJobNTD%>"><b
+                                                                                    id="newFont">
+                                                                                        <%=item.NameJobNTD%>
+                                                                                    </b></a></h4>
+
+                                                                            <p><span class="ico"><img
+                                                                                        src="https://img.icons8.com/bubbles/100/000000/company.png" /></span><span
+                                                                                    class="con">
+                                                                                    <%=item.NameCompany%>
+                                                                                </span></p><br>
+
+                                                                            <p><span class="ico"><img
+                                                                                        src="https://img.icons8.com/bubbles/100/000000/money-bag.png" /></span><span
+                                                                                    class="con">
+                                                                                    <%=item.SalaryJobNTD%>
+                                                                                </span></p><br>
+                                                                            <p><span class="ico"><img
+                                                                                        src="https://img.icons8.com/bubbles/100/000000/order-delivered.png" /></span><span
+                                                                                    class="con">
+                                                                                    <%=item.Adrees%>
+                                                                                </span></p><br>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                        <div class="jp_job_post_right_btn_wrapper">
+                                                                            <ul>
+                                                                                <li>
+                                                                                </li>
+                                                                                <li><a href="#">
+                                                                                        <%=item.TypeJobNTD%>
+                                                                                    </a></li>
+                                                                                <li><a href="#">
+                                                                                        <%=item.DateJobNTD%>
+                                                                                    </a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <%})%>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                             
+                                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5973369736597865"
+                                    crossorigin="anonymous"></script>
+                               <!-- Phu-3-thang-2 -->
+                               <ins class="adsbygoogle"
+                                    style="display:block"
+                                    data-ad-client="ca-pub-5973369736597865"
+                                    data-ad-slot="9775529030"
+                                    data-ad-format="auto"
+                                    data-full-width-responsive="true"></ins>
+                               <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                               </script>
+                              
+                            </div>
+                            <div style="margin-top:10px" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                               
+                                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5973369736597865"
+                                    crossorigin="anonymous"></script>
+                               <!-- Phu-3-thang-2 -->
+                               <ins class="adsbygoogle"
+                                    style="display:block"
+                                    data-ad-client="ca-pub-5973369736597865"
+                                    data-ad-slot="9775529030"
+                                    data-ad-format="auto"
+                                    data-full-width-responsive="true"></ins>
+                               <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                               </script>
+                                              
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div style="width: 100%;padding:2%" class="jp_first_right_sidebar_main_wrapper">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="jp_add_resume_wrapper">
+                                        <div class="jp_add_resume_img_overlay"></div>
+                                        <div class="jp_add_resume_cont">
+                                            <img style="width: 120px;height: 120px;;border-radius: 10px;background-size: cover;background-image: url(loading.gif)" src="galaxydr-logo.jpg" alt="logo" />
+                                            <h4 >Quản Lý Hồ Sơ Trả Góp</h4>
+                                            <ul>
+                                                <li><a href="/nop-don-ung-tuyen"><i class="fa fa-plus-circle"></i>
+                                                        &nbsp;Ứng Tuyển</a></li>
+                                                <li><button style="margin-top: 10px;
+                                                    border: none;" class="btnLoginForm" type="button"
+                                                        data-toggle="modal" data-target="#More_detail_infomation"><img
+                                                            class="icon_image"
+                                                            src="https://img.icons8.com/bubbles/1000/000000/pdf-2.png" />Chi
+                                                        tiết</button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="jp_spotlight_main_wrapper">
+                                        <div class="spotlight_header_wrapper">
+                                            <h4  >Việc Làm <span style="color: red;">Hot</span></h4>
+                                        </div>
+                                        <div class="jp_spotlight_slider_wrapper">
+                                            <div class="owl-carousel owl-theme">
+                                                <%Spotlight.forEach(function(item){%>
+                                                    <div class="item">
+                                                        <div  class="jp_spotlight_slider_img_Wrapper">
+                                                            <img id="hotJob"
+                                                                style="margin-left: 50px;border-radius: 10px;background: white;width: 100px;height: 100px;background-size: cover;background-image: url(loading.gif)"
+                                                                src="https://tuyendung.me/image/<%=item.AvataJobNTD%>"
+                                                                alt="spotlight_img" />
+                                                        </div>
+                                                        <div class="jp_spotlight_slider_cont_Wrapper">
+                                                            <h4 style="font-size: 18px;text-align: center;"  id="newFont">
+                                                                <%=item.NameJobNTD%>
+                                                            </h4>
+                                                            <p><span class="ico"><img
+                                                                        src="https://img.icons8.com/bubbles/100/000000/company.png" /></span><span
+                                                                    class="con">
+                                                                    <%=item.NameCompany%>
+                                                                </span></p>
+                                                            <ul style="text-align: left;">
+                                                                <p style="font-size: 14px;"><span class="ico"><img
+                                                                            src="https://img.icons8.com/bubbles/100/000000/money-bag.png" /></span><span
+                                                                        class="con">
+                                                                        <%=item.SalaryJobNTD%>
+                                                                    </span></p><br>
+                                                                <p style="font-size: 14px;"><span class="ico"><img
+                                                                            src="https://img.icons8.com/bubbles/100/000000/order-delivered.png" /></span><span
+                                                                        class="con">
+                                                                        <%=item.Adrees%>
+                                                                    </span></p><br>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="jp_spotlight_slider_btn_wrapper">
+                                                            <div class="jp_spotlight_slider_btn">
+                                                                <ul>
+                                                                    <li><a href="/detail-job&idjob=<%=item.IdJobNTD%>"><i
+                                                                                class="fa fa-plus-circle"></i>
+                                                                            &nbsp;Ứng Tuyển</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <%})%>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="jp_rightside_job_categories_wrapper">
+                                        <div class="jp_rightside_job_categories_heading">
+                                            <h4 >File CV Ứng Viên</h4>
+                                        </div>
+                                        <div class="jp_rightside_job_categories_content">
+                                            <ul>
+                                                <%newArrShareCv.forEach(function(item){%>
+                                                    <li><i class="fa fa-caret-right"></i> <a id="newFont" style="
+                                                        font-weight: bold;
+                                                        font-size: 15px;" target="_blank"
+                                                            href="https://tuyendung.me/files/<%=item.file%>">
+                                                            <%=item.name%></br>
+                                                                <span>Lĩnh vực: <b>
+                                                                        <%=item.type%>
+                                                                    </b></span><br>
+                                                                <span>(Xem chi tiết)</span>
+                                                        </a></li>
+                                                    <%})%>
+                                            </ul>
+
+                                            <div class="jp_spotlight_slider_btn">
+                                                <a style="width: 90%;margin: 10px;" class="btnLoginForm"
+                                                    href="/share-cv"><i class="fa fa-plus-circle"></i> Xem thêm</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5973369736597865"
+                            crossorigin="anonymous"></script>
+                       <!-- Phu-3-thang-2 -->
+                       <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-5973369736597865"
+                            data-ad-slot="9775529030"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
+                       <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                       </script>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <div class="wrapper">
+                            <div class="screen">
+                                <svg class="clouds" viewBox="0 0 243 172">
+                                    <defs>
+                                        <linearGradient id="a" x1="0%" y1="21.631%" y2="78.369%">
+                                            <stop offset="0%" stop-color="#FCCF31" />
+                                            <stop offset="100%" stop-color="#F55555" />
+                                        </linearGradient>
+                                        <linearGradient id="b" x1="0%" y1="21.875%" y2="78.125%">
+                                            <stop offset="0%" stop-color="#FCCF31" />
+                                            <stop offset="100%" stop-color="#F55555" />
+                                        </linearGradient>
+                                        <linearGradient id="c" x1="0%" y1="22.565%" y2="77.435%">
+                                            <stop offset="0%" stop-color="#FCCF31" />
+                                            <stop offset="100%" stop-color="#F55555" />
+                                        </linearGradient>
+                                    </defs>
+                                    <g fill="none">
+                                        <path fill="url(#a)"
+                                            d="M222.088 121.3384a28.8588 28.8588 0 0 0-4.1438-7.771c-2.3029-3.0704-5.1734-5.622-8.413-7.5423-3.2394-1.9202-6.8508-3.2057-10.642-3.7437-3.65-.5156-7.457-.335-11.2353.6443-3.7782.9794-7.1973 2.674-10.1416 4.9036-3.0566 2.31-5.5968 5.1936-7.5085 8.4476a29.0671 29.0671 0 0 0-3.7237 10.69c-.5132 3.6664-.3335 7.4906.6414 11.2859.882 3.4312 2.3446 6.5692 4.2594 9.3271a28.7704 28.7704 0 0 0 7.2325 7.2265c4.7405 3.2927 10.4592 5.1614 16.4602 5.1936h28.8822c2.6012 0 5.09-.5187 7.3609-1.4659 2.3574-.9795 4.4742-2.4164 6.248-4.198a19.3854 19.3854 0 0 0 4.1791-6.2761c.9398-2.2778 1.4562-4.778 1.4562-7.3908 0-2.6129-.5164-5.113-1.4593-7.394-.975-2.3681-2.4055-4.4945-4.1792-6.2762-1.7737-1.7817-3.8906-3.2153-6.248-4.198-2.2676-.944-4.7565-1.4628-7.3576-1.4628l-1.6678.0002z" />
+                                        <path fill="url(#b)"
+                                            d="M106.4963 29.0076a43.2273 43.2273 0 0 0-6.2427-11.6565c-3.4693-4.6055-7.7937-8.433-12.674-11.3134A43.5245 43.5245 0 0 0 71.5475.422c-5.4987-.7732-11.234-.5025-16.926.9665-5.6919 1.4691-10.8427 4.0111-15.2783 7.3555-4.6048 3.465-8.4316 7.7903-11.3115 12.6713-2.8798 4.881-4.8076 10.3276-5.6097 16.035-.7732 5.4996-.5025 11.236.9663 16.929 1.3287 5.1467 3.532 9.8538 6.4167 13.9906a43.2499 43.2499 0 0 0 10.8958 10.8397c7.1414 4.939 15.7567 7.742 24.797 7.7904h43.511c3.9186 0 7.668-.778 11.089-2.1988 3.5515-1.4692 6.7405-3.6246 9.4125-6.2971a29.0696 29.0696 0 0 0 6.296-9.4142C137.222 65.6732 138 61.923 138 58.0037s-.7779-7.6695-2.1985-11.091c-1.4689-3.552-3.6239-6.7417-6.296-9.4142a29.0639 29.0639 0 0 0-9.4124-6.297c-3.4161-1.416-7.1657-2.1941-11.0843-2.1941l-2.5125.0002z"
+                                            transform="matrix(-1 0 0 1 160 0)" />
+                                        <path fill="url(#c)"
+                                            d="M39.3345 145.3368c-.6995-1.9642-1.6892-3.7617-2.906-5.3593-1.6151-2.1175-3.6282-3.8772-5.9-5.2016a20.4283 20.4283 0 0 0-7.4633-2.5819c-2.5597-.3555-5.2296-.231-7.8793.4444s-5.0475 1.8442-7.1124 3.3818a20.1076 20.1076 0 0 0-5.2656 5.826c-1.3406 2.244-2.238 4.7482-2.6115 7.3723-.3599 2.5286-.2339 5.166.4499 7.7834.6185 2.3664 1.6442 4.5305 2.987 6.4325 1.3879 1.9642 3.1108 3.6462 5.0722 4.9838 3.3245 2.2708 7.335 3.5596 11.5435 3.5818h20.255c1.8243 0 3.5697-.3577 5.1622-1.011a13.5058 13.5058 0 0 0 4.3817-2.8952c1.244-1.2287 2.2448-2.6952 2.9309-4.3283.659-1.5709 1.0212-3.2952 1.0212-5.0971 0-1.802-.3621-3.5262-1.0234-5.0994-.6838-1.633-1.687-3.0996-2.9309-4.3283a13.5419 13.5419 0 0 0-4.3817-2.8952c-1.5902-.651-3.3357-1.0088-5.1599-1.0088l-1.1696.0001z"
+                                            transform="matrix(-1 0 0 1 54 0)" />
+                                    </g>
+                                </svg>
+                                <svg class="plane" viewBox="0 0 139 139">
+                                    <defs>
+                                        <linearGradient id="a" x1="147.152%" x2="0%" y1="-47.397%" y2="100%">
+                                            <stop offset="0%" stop-color="#FCCF31" />
+                                            <stop offset="100%" stop-color="#F55555" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path fill="#FFF" stroke="url(#a)" stroke-width="2"
+                                        d="M171.1455 37.3577l-131.69 71.251a2.7136 2.7136 0 0 0-1.4535 2.5092 2.7138 2.7138 0 0 0 1.6436 2.3892l22.4823 8.4671a5.2937 5.2937 0 0 1 2.9597 2.7138l17.4183 35.9715c.3259 1.5876 3.2583 2.0083 3.299.3935l-2.7152-29.7026c.157-2.2004.997-4.297 2.403-5.9975L153.795 58.471a1.6162 1.6162 0 0 1 1.4798-.4207c.526.1172.9531.4993 1.1277 1.0088a1.5462 1.5462 0 0 1-.2724 1.488l-58.8803 71.9973a13.1443 13.1443 0 0 0-2.308 5.9297l-3.5298 25.659c.2986 2.239 2.05 3.0938 3.462 1.0855l12.6802-14.926c.8703-1.1836 2.525-1.4602 3.7334-.624l32.6917 23.8136a2.635 2.635 0 0 0 2.5231.3387 2.6328 2.6328 0 0 0 1.6313-1.9534l26.8131-131.6197a2.713 2.713 0 0 0-1.004-2.6831 2.7164 2.7164 0 0 0-2.8516-.2886l.0543.0815z"
+                                        transform="translate(-37 -36)" />
+                                </svg>
+                                <p class="message"></p>
+                                <button id="tieptuc2" type="button" class="button" data-toggle="modal"
+                                    data-target="#exampleModalCenter">Đăng nhập</button>
+                            </div>
+                        </div>
+                        <style>
+                                 
+                            .wrapper {
+                                display: flex;
+                                width: 100%;
+                                height: 100%;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                            .screen {
+                                display: flex;
+                                flex-flow: column nowrap;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                background-color: #F5F5F5;
+                                box-shadow: 2px 8px 32px rgba(0, 0, 0, 0.50);
+                            }
+
+                            .clouds {
+                                position: relative;
+                                bottom: -155px;
+                                width: 243px;
+                                height: 172px;
+                                opacity: 0;
+                                animation: clouds 1s .8s ease-in forwards;
+                            }
+
+                            .plane {
+                                position: relative;
+                                width: 139px;
+                                height: 139px;
+                                opacity: 0;
+                                animation: plane-start .8s .8s ease-out, plane-loop 1.6s 1.6s linear infinite;
+
+                            }
+
+                            .message {
+                                margin-top: 72px;
+                                font-family: Rubik, sans-serif;
+                                font-size: 16px;
+                                color: #292929;
+                                letter-spacing: 1px;
+                                animation: message .3s 1.6s ease-in-out backwards;
+                            }
+
+                            .button {
+                                display: inline-block;
+                                position: relative;
+                                line-height: 46px;
+                                text-transform: capitalize;
+                                font-weight: 400;
+                                cursor: pointer;
+                                height: 50px;
+                                margin: 80px;
+                                padding: 0px 100px;
+                                background: #f36969;
+                                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+                                border-radius: 15px;
+                                font-size: 18px;
+                                color: whitesmoke;
+                                letter-spacing: -0.05px;
+                                text-align: center;
+                            }
+
+                            @keyframes plane-start {
+                                0% {
+                                    transform: translate(-80px, 130px);
+                                }
+
+                                50% {
+                                    opacity: 1
+                                }
+
+                                100% {
+                                    transform: translate(0px, 0);
+                                    opacity: 1
+                                }
+                            }
+
+                            @keyframes plane-loop {
+                                0% {
+                                    transform: translate(0px, 0);
+                                    opacity: 1
+                                }
+
+                                50% {
+                                    transform: translate(-20px, 30px);
+                                    opacity: 1
+                                }
+
+                                100% {
+                                    transform: translate(0px, 0);
+                                    opacity: 1
+                                }
+                            }
+
+                            @keyframes clouds {
+                                from {
+                                    opacity: 0
+                                }
+
+                                to {
+                                    opacity: 1
+                                }
+                            }
+
+                            @keyframes message {
+                                from {
+                                    opacity: 0
+                                }
+
+                                to {
+                                    opacity: 1
+                                }
+                            }
+                        </style>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="ReviewShareCV" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body text-center" id="bodyShareCV">
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary"
+                            data-dismiss="modal">Đóng</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <script>
+            function getFileShare(filename){
+                $("#bodyShareCV").html(`<iframe style="background-size: contain;background-image: url(loading2.gif)" width="100%" height="700" src="https://tuyendung.me/files/${filename}"></iframe>`)
+            }
+        </script>
+        <div id="fb-root"></div>
+        <div id="fb-customer-chat" class="fb-customerchat">
+        </div>
+
+        <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "131207191010480");
+        chatbox.setAttribute("attribution", "biz_inbox");
+        </script>
+        <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+            xfbml            : true,
+            version          : 'v14.0'
+            });
+        };
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <%- include ../partials/menu.ejs%>
+     
+        <%- include ../partials/footer.ejs%>
+</body>
+
+</html>

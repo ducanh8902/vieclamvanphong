@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="VIỆC LÀM VĂN PHÒNG">
+    <meta name="keywords" content="au theme template">
+    <!-- Title Page-->
+    <title>GALAXYDR ISO 9001:2015</title>
+    <!-- Fontfaces CSS-->
+    <link rel="shortcut icon" type="image/x-icon" href="https://tuyendung.me/galaxydr-logo.jpg">
+    <link rel="apple-touch-icon" href="https://tuyendung.me/galaxydr-logo.jpg">
+    <link href="https://admin.tuyendung.me/Admin/css/font-face.css" rel="stylesheet" media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet"
+        media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet"
+        media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/mdi-font/css/material-design-iconic-font.min.css"
+        rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Bootstrap CSS-->
+    <link href="https://admin.tuyendung.me/Admin/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Vendor CSS-->
+    <link href="https://admin.tuyendung.me/Admin/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css"
+        rel="stylesheet" media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet"
+        media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="https://admin.tuyendung.me/Admin/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet"
+        media="all">
+    <link rel="stylesheet" href="https://admin.tuyendung.me/css/flaticon.css">
+    <link href="https://admin.tuyendung.me/Admin/css/theme.css" rel="stylesheet" media="all">
+   
+</head>
+
+<body style="overflow: hidden;" class="animsition">
+    <div class="page-wrapper">
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="/iso/home">
+                            <%if(!user.Image.url){%>
+                                <img style="width: 25%;border-radius: 50%;" src="/galaxydr-logo.jpg" alt="VLVP" />
+                                <br>
+                                <b><%=user.local.NameAdmin%></b> 
+                            <%}else{%>
+                                <img style="width: 25%;border-radius: 50%;" src="<%=user.Image.url%>" alt="avata" />
+                                <br>
+                                <b><%=user.local.NameAdmin%></b> 
+                            <%}%>
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li>
+                            <a class="js-arrow" href="#">
+                                <img style="width: 15%;" src="https://img.icons8.com/bubbles/100/000000/box.png" />Yêu
+                                Cầu Tuyển Dụng</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                
+                                <li>
+                                    <a  href="#btn_request_form"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/list.png" />Yêu Cầu Tuyển
+                                        Dụng</a>
+                                </li>
+                                <li>
+                                    <a  href="#btn__create_request_form"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/50/000000/add-file.png" />Yêu Cầu Mới</a>
+                                </li>
+                                <li>
+                                    <a  href="#btn_Scan_request_form"><img style="width: 15%;"
+                                            src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/100/000000/external-advertisement-job-search-flaticons-lineal-color-flat-icons-3.png" />Scan</a>
+                                </li>
+                                <li>
+                                    <a href="#btn_request_form_BM"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/200/000000/video-conference.png" />Biểu
+                                        Mẫu</a>
+                                </li>
+                                <li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="js-arrow" href="#">
+                                <img style="width: 15%;"
+                                    src="https://img.icons8.com/bubbles/100/000000/list.png" />Thư Mời Phỏng
+                                Vấn</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="#interview_letter"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/form.png"/>Thư Mời Phỏng
+                                        Vấn</a>
+                                </li>
+                                <li>
+                                    <a href="#interview_letter_template"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/document.png"/>Biểu Mẫu</a>
+                                </li>
+                                <li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="js-arrow" href="#">
+                                <img style="width: 15%;"
+                                    src="https://img.icons8.com/color/48/000000/invitation--v1.png" />Thư Cám Ơn</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="#interview_thanks_letter"><img style="width: 15%;"
+                                            src="https://img.icons8.com/color/96/000000/love-letter--v1.png" />Thư Cám
+                                        Ơn</a>
+                                </li>
+                                <li>
+                                    <a href="#interview_thanks_letter_template"><img style="width: 15%;"
+                                            src="https://img.icons8.com/color/96/000000/inscription.png" />Biểu Mẫu</a>
+                                </li>
+                                <li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="js-arrow" href="#">
+                                <img style="width: 15%;"
+                                    src="https://img.icons8.com/stickers/100/000000/conference-background-selected.png" />Ứng Viên Ứng
+                                Tuyển</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="#list_interview"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/group.png" />Ứng Viên</a>
+                                </li>
+                                <li>
+                                    <a href="#list_result_interview"><img style="width: 15%;"
+                                            src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/100/000000/external-staff-picks-web-store-flaticons-lineal-color-flat-icons.png" />Kết Quả Phỏng
+                                        Vấn</a>
+                                </li>
+                                <li>
+                                    <a href="#cv_manager"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/id-man-in-red-glasses.png" />Quản Lý Ứng Viên</a>
+                                </li>
+                                <li><a id="bieumauungvien" class="js-arrow" href="#">
+                                        <img style="width: 15%;"
+                                            src="https://img.icons8.com/plasticine/100/000000/training.png" />Biểu
+                                        Mẫu</a>
+                                    <ul id="Bieumau" class="list-unstyled navbar__sub-list">
+                                        <li>
+                                            <a href="/interview_thanks_letter_template"><img style="width: 15%;"
+                                                    src="https://img.icons8.com/bubbles/100/000000/classroom.png" />Ứng
+                                                viên</a>
+                                        </li>
+                                       
+                                        <li>
+                                            <a href="/interview_thanks_letter_template"><img style="width: 15%;"
+                                                    src="https://img.icons8.com/bubbles/100/000000/classroom.png" />Phỏng
+                                                vấn</a>
+                                        </li>
+                                        <li>
+                                            <a href="/interview_thanks_letter_template"><img style="width: 15%;"
+                                                    src="https://img.icons8.com/bubbles/100/000000/classroom.png" />Kết
+                                                quả phỏng vấn</a>
+                                        </li>
+                                    </ul>
+                                    <script>
+                                        const element = document.getElementById("bieumauungvien");
+                                        element.addEventListener("click", function () {
+                                            document.getElementById("Bieumau").classList.add("js-sub-list");
+                                        });
+                                    </script>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="js-arrow" href="#">
+                                <img style="width: 15%;"
+                                    src="https://img.icons8.com/bubbles/100/000000/book-reading.png" />Report</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="#report"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/reminders.png" />Báo Cáo Tuyển Dụng</a>
+                                </li>
+                                <li>
+                                    <a href="#report_form"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/training.png" />Biểu Mẫu</a>
+                                </li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a class="js-arrow" href="#">
+                                <img style="width: 15%;"
+                                    src="https://img.icons8.com/bubbles/100/000000/book-reading.png" />Bàn Giao Nhân Sự</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="#list_transfer"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/reminders.png" />Training</a>
+                                </li>
+                                <li>
+                                    <a  href="#btn_Scan_list_transfer"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/list.png" />Scan</a>
+                                </li>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div style="text-align: center" class="logo">
+                <a href="/iso/home">
+                    <%if(!user.Image.url){%>
+                        <img style="width: 25%;border-radius: 50%;" src="/galaxydr-logo.jpg" alt="VLVP" />
+                        <b><%=user.local.NameAdmin%></b> 
+                    <%}else{%>
+                        <img style="width: 25%;border-radius: 50%;" src="<%=user.Image.url%>" alt="avata" />
+                        <b><%=user.local.NameAdmin%></b> 
+                    <%}%>
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li>
+                            <a class="js-arrow" href="#">
+                                <img style="width: 15%;" src="https://img.icons8.com/bubbles/100/000000/box.png" />Yêu
+                                Cầu Tuyển Dụng</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                               
+                                <li>
+                                    <a  href="#btn_request_form"><img style="width: 20%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/list.png" />Yêu Cầu Tuyển
+                                        Dụng</a>
+                                </li>
+                                <li>
+                                    <a  href="#btn__create_request_form"  data-toggle="modal" data-target="#Create_form" ><img style="width:20%;"
+                                            src="https://img.icons8.com/bubbles/50/000000/add-file.png" />Yêu Cầu Mới</a>
+                                </li>
+                                <li>
+                                    <a  href="#btn_Scan_request_form"><img style="width: 20%;"
+                                            src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/100/000000/external-advertisement-job-search-flaticons-lineal-color-flat-icons-3.png" />Scan</a>
+                                </li>
+
+                                <li>
+                                    <a href="#btn_request_form_BM"><img style="width: 20%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/video-conference.png" />Biểu
+                                        Mẫu</a>
+                                </li>
+                                <li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="js-arrow" href="#">
+                                <img style="width: 15%;"
+                                    src="https://img.icons8.com/bubbles/100/000000/list.png" />Thư Mời Phỏng
+                                Vấn</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="#interview_letter"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/form.png"/>Thư Mời Phỏng
+                                        Vấn</a>
+                                </li>
+                                <li>
+                                    <a href="#interview_letter_template"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/document.png"/>Biểu Mẫu</a>
+                                </li>
+                                <li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="js-arrow" href="#">
+                                <img style="width: 15%;"
+                                    src="https://img.icons8.com/color/48/000000/invitation--v1.png" />Thư Cám Ơn</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="#interview_thanks_letter"><img style="width: 15%;"
+                                            src="https://img.icons8.com/color/96/000000/love-letter--v1.png" />Thư Cám
+                                        Ơn</a>
+                                </li>
+                                <li>
+                                    <a href="#interview_thanks_letter_template"><img style="width: 15%;"
+                                            src="https://img.icons8.com/color/96/000000/inscription.png" />Biểu Mẫu</a>
+                                </li>
+                                <li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="js-arrow" href="#">
+                                <img style="width: 15%;"
+                                    src="https://img.icons8.com/stickers/100/000000/conference-background-selected.png" />Ứng Viên Ứng
+                                Tuyển</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="#list_interview"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/group.png" />Ứng Viên</a>
+                                </li>
+                                <li>
+                                    <a href="#list_result_interview"><img style="width: 15%;"
+                                            src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/100/000000/external-staff-picks-web-store-flaticons-lineal-color-flat-icons.png" />Kết Quả Phỏng
+                                        Vấn</a>
+                                </li>
+                                <li>
+                                    <a href="#cv_manager"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/id-man-in-red-glasses.png" />Quản Lý Ứng Viên</a>
+                                </li>
+                                <li><a id="bieumauungvien" class="js-arrow" href="#">
+                                        <img style="width: 15%;"
+                                            src="https://img.icons8.com/plasticine/100/000000/training.png" />Biểu
+                                        Mẫu</a>
+                                    <ul id="Bieumau" class="list-unstyled navbar__sub-list">
+                                        <li>
+                                            <a href="/interview_thanks_letter_template"><img style="width: 15%;"
+                                                    src="https://img.icons8.com/bubbles/100/000000/classroom.png" />Ứng
+                                                viên</a>
+                                        </li>
+                                       
+                                        <li>
+                                            <a href="/interview_thanks_letter_template"><img style="width: 15%;"
+                                                    src="https://img.icons8.com/bubbles/100/000000/classroom.png" />Phỏng
+                                                vấn</a>
+                                        </li>
+                                        <li>
+                                            <a href="/interview_thanks_letter_template"><img style="width: 15%;"
+                                                    src="https://img.icons8.com/bubbles/100/000000/classroom.png" />Kết
+                                                quả phỏng vấn</a>
+                                        </li>
+                                    </ul>
+                                    <script>
+                                        const element = document.getElementById("bieumauungvien");
+                                        element.addEventListener("click", function () {
+                                            document.getElementById("Bieumau").classList.add("js-sub-list");
+                                        });
+                                    </script>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="js-arrow" href="#">
+                                <img style="width: 15%;"
+                                    src="https://img.icons8.com/bubbles/100/000000/book-reading.png" />Report</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="#report"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/reminders.png" />Báo Cáo Tuyển Dụng</a>
+                                </li>
+                                <li>
+                                    <a href="#report_form"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/training.png" />Biểu Mẫu</a>
+                                </li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a class="js-arrow" href="#">
+                                <img style="width: 15%;"
+                                    src="https://img.icons8.com/bubbles/100/000000/book-reading.png" />Bàn Giao Nhân Sự</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="#list_transfer"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/reminders.png" />Training</a>
+                                </li>
+                                <li>
+                                    <a  href="#btn_Scan_list_transfer"><img style="width: 15%;"
+                                            src="https://img.icons8.com/bubbles/100/000000/list.png" />Scan</a>
+                                </li>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <div class="page-container">
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div  class="container-fluid">
+                        <div id="loading" style="width:100%;height: 700px;border-radius: 15px;border:1.5px solid gray;" class="sideber2">
+                            <div id="body" class="widghet">
+                                
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            @media (min-width: 768px) {
+                .modal-xl {
+                    width: 90%;
+                    max-width:1200px;
+                }
+            }
+        </style>
+        <div id="Create_form" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-body text-center" id="create_body_form">
+                    
+                </div>
+                <div  id="footer" class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Đóng</button>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+        <style>
+            .loading{
+                background-image: url('https://tuyendung.me/Thong-tin-tuyen-dung.jpeg');
+                background-size: cover;
+            }
+            .section__content--p30 {
+            padding: 0 5px;
+            }.main-content {
+            padding-top: 50px;
+            min-height: 200vh;
+            }
+        </style>
+        <script>
+            
+            $(document).ready(function() {
+                $("#loading").addClass('loading')
+            });
+            $('a[href="#btn_request_form"]').click(function(){
+                $("#loading").removeClass('loading')
+                $("#body").html(`<iframe style="width:100%;height: 700px;border:1.5px solid gray;border-radius: 15px;" src="/iso/Show_List_Request"></iframe>`)
+            });
+            $('a[href="#btn__create_request_form"]').click(function(){
+               $("#create_body_form").html(`<iframe style="width:100%;height:600px" src="/iso/create_request"></iframe>`)
+            }); 
+           
+            $('a[href="#cv_manager"]').click(function(){
+                $("#loading").removeClass('loading')
+                $("#body").html(`<iframe style="width:100%;height: 700px;border:1.5px solid gray;border-radius: 15px;" src="/cv_manager"></iframe>`)
+            });
+            $('a[href="#btn_Scan_request_form"]').click(function(){
+                $("#loading").removeClass('loading')
+                $("#body").html(`<iframe style="width:100%;height: 700px;border:1.5px solid gray;border-radius: 15px;" src="/iso/btn_Scan_request_form"></iframe>`)
+            });
+            $('a[href="#btn_request_form_BM"]').click(function(){
+                $("#loading").removeClass('loading')
+                $("#body").html(`<iframe style="width:100%;height: 700px;border:1.5px solid gray;border-radius: 15px;" src="/iso/request_BM"></iframe>`)
+            });
+            $('a[href="#interview_letter"]').click(function(){
+                $("#loading").removeClass('loading')
+                $("#body").html(`<iframe style="width:100%;height: 700px;border:1.5px solid gray;border-radius: 15px;" src="/iso/Show_Interview_Letter"></iframe>`)
+            });
+            $('a[href="#interview_letter_template"]').click(function(){
+                $("#loading").removeClass('loading')
+                $("#body").html(`<iframe style="width:100%;height: 700px;border:1.5px solid gray;border-radius: 15px;" src="/iso/interview_letter_template"></iframe>`)
+            }); 
+            $('a[href="#interview_thanks_letter"]').click(function(){
+                $("#loading").removeClass('loading')
+                $("#body").html(`<iframe style="width:100%;height: 700px;border:1.5px solid gray;border-radius: 15px;" src="/iso/Show_Thanks_Letter"></iframe>`)
+            });
+            $('a[href="#interview_thanks_letter_template"]').click(function(){
+                $("#loading").removeClass('loading')
+                $("#body").html(`<iframe style="width:100%;height: 700px;border:1.5px solid gray;border-radius: 15px;" src="/iso/Thanks_letter_template"></iframe>`)
+            });
+            
+            $('a[href="#list_interview"]').click(function(){
+                $("#loading").removeClass('loading')
+                $("#body").html(`<iframe style="width:100%;height: 700px;border:1.5px solid gray;border-radius: 15px;" src="/iso/Show_List_Interview"></iframe>`)
+            });
+            $('a[href="#list_result_interview"]').click(function(){
+                $("#loading").removeClass('loading')
+                $("#body").html(`<iframe style="width:100%;height: 700px;border:1.5px solid gray;border-radius: 15px;" src="/iso/result_interview_list"></iframe>`)
+            });
+            $('a[href="#list_transfer"]').click(function(){
+                $("#loading").removeClass('loading')
+                $("#body").html(`<iframe style="width:100%;height: 700px;border:1.5px solid gray;border-radius: 15px;" src="/iso/Form_transfer"></iframe>`)
+            });
+            $('a[href="#btn_Scan_list_transfer"]').click(function(){
+                $("#loading").removeClass('loading')
+                $("#body").html(`<iframe style="width:100%;height: 700px;border:1.5px solid gray;border-radius: 15px;" src="/iso/Scan_list_transfer"></iframe>`)
+            });
+            
+            $('a[href="#report"]').click(function(){
+                $("#loading").removeClass('loading')
+                $("#body").html(`<iframe style="width:100%;height: 700px;border:1.5px solid gray;border-radius: 15px;" src="/iso/report"></iframe>`)
+            });
+            
+        </script>
+        <!-- Jquery JS-->
+        <script src="https://admin.tuyendung.me/Admin/vendor/jquery-3.2.1.min.js"></script>
+        <!-- Bootstrap JS-->
+        <script src="https://admin.tuyendung.me/Admin/vendor/bootstrap-4.1/popper.min.js"></script>
+        <script src="https://admin.tuyendung.me/Admin/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+        <!-- Vendor JS       -->
+        <script src="https://admin.tuyendung.me/Admin/vendor/slick/slick.min.js">
+        </script>
+        <script src="https://admin.tuyendung.me/Admin/vendor/wow/wow.min.js"></script>
+        <script src="https://admin.tuyendung.me/Admin/vendor/animsition/animsition.min.js"></script>
+        <script src="https://admin.tuyendung.me/Admin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+        </script>
+        <script src="https://admin.tuyendung.me/Admin/vendor/counter-up/jquery.waypoints.min.js"></script>
+        <script src="https://admin.tuyendung.me/Admin/vendor/counter-up/jquery.counterup.min.js">
+        </script>
+        <script src="https://admin.tuyendung.me/Admin/vendor/circle-progress/circle-progress.min.js"></script>
+        <script src="https://admin.tuyendung.me/Admin/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+        <script src="https://admin.tuyendung.me/Admin/vendor/chartjs/Chart.bundle.min.js"></script>
+        <script src="https://admin.tuyendung.me/Admin/vendor/select2/select2.min.js">
+        </script>
+
+        <!-- Main JS-->
+        <script src="https://admin.tuyendung.me/Admin/js/main.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->

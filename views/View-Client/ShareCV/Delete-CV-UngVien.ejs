@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="Việc Làm Văn Phòng" />
+    <meta name="keywords" content="Việc Làm Văn Phòng" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" type="image/png" href="logo.ico" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Chi Tiết Hồ Sơ Ứng Viên</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5973369736597865"
+        crossorigin="anonymous"></script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-N3Q2KXM');</script>
+</head>
+
+<body>
+    <center>
+        <div style="width:90%" class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="container">
+                    <div class="recruiters-details">
+                        <div style="background-image: linear-gradient( to right bottom, #ffa400, #00aefd );padding: 15px 15px;"
+                            class="items2">
+
+                            <div style="overflow-y: hidden;height: 520px;" class="card" data-state="#about">
+                                <div class="card-header">
+                                    <div class="card-cover"
+                                        style="background-color: yellowgreen;;background-image: url('https://img.icons8.com/bubbles/10000/000000/user-male.png')">
+                                    </div>
+                                    <h1 class="card-fullname">
+                                        <%=result.DetailCV%>
+                                    </h1>
+                                </div>
+
+                                <div class="card-main">
+                                    <div class="card-section is-active" id="about">
+                                        <div class="row">
+                                            <div style="width: 100%;text-align: left;" class="sideber2">
+                                                <div class="widghet">
+                                                    <div style="
+                                            justify-content: center;
+align-items: center;
+display: flex;
+                                            background-color: aliceblue;
+                                            font-size: 13px;
+                                            height: 80px;
+                                            box-shadow: 3px 5px #888888;
+                                            text-align: center;
+                                            margin-bottom: 10px;
+                                            border: 1px;
+                                            border-radius: 10px;" class="col-md-12">
+                                                        <%if(result.TilteCV){%>
+
+                                                            <h3 style="background-image: linear-gradient( to right bottom, #ffa400, #735ce7 );"
+                                                                id="newFont">
+                                                                <%=result.TilteCV%>
+                                                            </h3>
+
+
+                                                            <%}else{%>
+                                                                <img style="width: 10%;"
+                                                                    src="https://img.icons8.com/clouds/100/000000/add-bookmark.png" />
+                                                                <strong>Ứng viên đang cập
+                                                                    nhật ...</strong>
+
+                                                                <%}%>
+                                                    </div>
+                                                    <div style="font-size: 14px;" class="col-md-12">
+                                                        <%if(!result.TypeCV){%>
+                                                            <img style="width: 10%;"
+                                                                src="https://img.icons8.com/dusk/64/000000/sorting-answers.png" />
+                                                            Chuyên ngành:
+                                                            <strong>Khác</strong>
+                                                            <%}else{%>
+                                                                <img style="width: 10%;"
+                                                                    src="https://img.icons8.com/dusk/64/000000/sorting-answers.png" />
+                                                                Chuyên ngành: <strong>
+                                                                    <%=result.TypeCV%>
+                                                                </strong>
+                                                                <%}%>
+                                                    </div>
+                                                    <div style="font-size: 14px;" class="col-md-12">
+                                                        <img style="width: 10%;"
+                                                            src="https://img.icons8.com/bubbles/100/000000/map.png" />Địa
+                                                        chỉ: <strong>
+                                                            <%=result.Area%>
+                                                        </strong>
+                                                    </div>
+                                                    <div style="font-size: 14px;" class="col-md-12">
+                                                        <img style="width: 10%;"
+                                                            src="https://img.icons8.com/dusk/64/000000/date-to.png" />
+                                                        Ngày: <strong>
+                                                            <%=result.DateUpload%>
+                                                        </strong>
+                                                    </div>
+                                                    <div style="font-size: 14px;" class="col-md-12">
+                                                        <form action="/UngVien-DeleteCV=<%=result._id%>" method="POST">
+                                                             <div class="row">
+                                                                 <div class="col-md-12">
+                                                                    <input type="password" placeholder="Mã xóa" name="passDelete"/>
+                                                                 </div>
+                                                                 <div class="col-md-12">
+                                                                    <button type="submit" class="contact-me" >
+                                                                        Xóa Thông Tin
+                                                                        </button>
+                                                                </div>
+                                                                 </div>       
+                                                         
+                                                      </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        </br>
+                                    </div>
+                                </div>
+                            </div>
+                            </br>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="container">
+                    <div class="recruiters-details">
+                        <div style="background-image: linear-gradient( to right bottom, #ffa400, #00aefd );padding: 15px 15px;"
+                            class="items2">
+                            <div class="row">
+                                <div class="col-md-12">
+                            <iframe style="border:1px solid gray;border-radius: 10px;" scrolling="auto" display: block width="100%"
+                                height="800px" src="https://tuyendung.me/files/<%=result.FileCV%>"></iframe>
+                            </div>
+                           
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="container">
+                    <div class="recruiters-details">
+                        <div id="infoCPN" class="items2">
+                            <h2 class="modal-title">Ủng hộ đội ngũ Việc Làm Văn Phòng bằng lượt click quảng cáo</h2>
+                                <h3>Đó là động lực cũng như kinh phí để duy trì Website </h3>
+                                <h3 class="modal-title">Hãy chia sẽ kho thông tin này đến
+                                    với các nhà tuyển dụng khác</h3>
+                                    <h4>Xin Trân Thành Cám Ơn</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <script async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5973369736597865"
+            crossorigin="anonymous"></script>
+        </div>
+        <!-- Share-CV -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5973369736597865"
+            data-ad-slot="6007349118" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="container">
+                    <div class="recruiters-details">
+                        <div id="infoCPN" class="items2">
+                            <div class="right-con">
+                                <img style="width: 120px;height: 120px;border-radius: 10px;" src="/images/Leducanh.jpeg"
+                                    alt="">
+                            </div>
+                            <div class="content">
+                                <a style="text-align: center;" href="https://www.galaxydr.com.vn">
+                                    <h3><b style="font-size: 25px;font-weight:900" id="newFont">Chia Sẻ
+                                            Hồ Sơ Ứng Viên Tìm Việc</b></h3>
+                                </a>
+                                <ul class="tlist">
+                                    <li><img style="width:30px;height: 30px;"
+                                            src="https://img.icons8.com/color/100/000000/domain--v1.png" /><a
+                                            href="https://tuyendung.me/share-cv"><b>https://tuyendung.me</b></a>
+                                    </li>
+                                    <li><img style="width:30px;height: 30px;"
+                                            src="https://img.icons8.com/office/100/000000/conference-call.png" /><b>Hơn
+                                            500 hồ sơ Ứng Viên</b>
+                                    </li>
+                                    <li><img style="width:30px;height: 30px;"
+                                            src="https://img.icons8.com/plasticine/100/000000/new-job.png" /><b>Đa
+                                            dạng lĩnh vực tuyển dụng</b></li>
+                                </ul>
+                                <ul class="blist">
+                                    <li><img style="width:50px;height: 50px;"
+                                            src="https://img.icons8.com/bubbles/100/000000/iphone-x.png" /><b>Lê
+                                            Đức
+                                            Anh : 0938.344.798 - 093.18.666.98 (Admin)
+                                        </b></li>
+                                    <li><img style="width:50px;height: 50px;"
+                                            src="https://img.icons8.com/bubbles/100/000000/email--v1.png" />
+                                        <b>Email : anh.le@galaxydr.com.vn</b>
+                                    </li>
+                                    <li><img style="width:50px;height: 50px;"
+                                            src="https://img.icons8.com/bubbles/100/000000/order-delivered.png" /><b>Địa
+                                            chỉ : Số 5 Đường D1 ,Tầng 1&2
+                                            Toà nhà PVL Linh Tây Tower Phường Linh Tây , Thành Phố
+                                            Thủ Đức</b></li>
+                                    <li><img style="width:50px;height: 50px;"
+                                            src="https://img.icons8.com/bubbles/100/000000/facebook.png" /><a
+                                            href="https://www.facebook.com/vieclamvanphongTPHCM"><b>Fanpage
+                                                :
+                                                https://www.facebook.com/vieclamvanphongTPHCM</b></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </center>
+
+</body>
+
+</html>

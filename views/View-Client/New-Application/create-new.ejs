@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<%- include ../partials/header.ejs%>
+
+    <body>
+        <link rel="stylesheet" type="text/css" href="css/style_II.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive2.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <%- include ../partials/header-top-none-profile.ejs%>
+            <div class="jp_listing_sidebar_main_wrapper">
+                <section class="candidates-area section4">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <form action="create-new-vitrituyendung" method="POST" enctype="multipart/form-data">
+                                    <div class="recruiters-details">
+                                        <div id="infoCPN" class="items2">
+                                            <div>
+                                                <strong>Tin Đăng</strong>Ứng Tuyển
+                                            </div>
+                                            <div style="padding: 5%;">
+                                                <form action="" method="post" class="form-horizontal">
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3">
+                                                            <label for="hf-email"
+                                                                class=" form-control-label">Title</label>
+                                                        </div>
+                                                        <div class="col-12 col-md-9">
+                                                            <input type="text" name="Title"
+                                                                placeholder="Vd: Nhân viên tuyển dụng"
+                                                                class="form-control">
+                                                            <span class="help-block">Tiêu đề tin đăng</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3">
+                                                            <label for="hf-password" class=" form-control-label">Tên
+                                                                Công Ty</label>
+                                                        </div>
+                                                        <div class="col-12 col-md-9">
+                                                            <select name="NameCompany" id="" class="form-control">
+                                                                <%resultCompany.forEach(function(item){%>
+                                                                    <%if(item.local.NTD.NameCompany !="" ){%>
+                                                                        <option value="<%=item.local.NTD.NameCompany%>">
+                                                                            <%=item.local.NTD.NameCompany%>
+                                                                        </option>
+                                                                        <%}%>
+                                                                <%})%>
+                                                            </select>
+                                                            <script>
+                                                                $('select option')
+                                                                    .filter(function () {
+                                                                        return !this.value || $.trim(this.value).length == 0 || $.trim(this.text).length == 0;
+                                                                    }) .remove();
+                                                            </script>
+                                                            <span class="help-block">Nhập Tên Công Ty</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3">
+                                                            <label for="hf-password" class=" form-control-label">Mô Tả
+                                                                Công Việc</label>
+                                                        </div>
+                                                        <div class="col-12 col-md-9">
+                                                            <textarea
+                                                                style="white-space : pre-wrap;height: 150px;max-height: 150px;"
+                                                                type="text" name="Detail"
+                                                                placeholder="VD : Mô Tả Công Việc"
+                                                                class="form-control"></textarea>
+                                                            <span class="help-block">Mô Tả Công Việc</span>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3">
+                                                            <label for="hf-password" class=" form-control-label">Thông
+                                                                Tin Phỏng Vấn</label>
+                                                        </div>
+                                                        <div class="col-12 col-md-9">
+                                                            <textarea
+                                                                style="white-space : pre-wrap;height: 150px;max-height: 150px;"
+                                                                type="text" name="DetailInterview"
+                                                                placeholder="VD : Thông tin phỏng vấn"
+                                                                class="form-control"></textarea>
+                                                            <span class="help-block">Thông Tin Phỏng Vấn</span>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3">
+                                                            <label for="hf-password" class=" form-control-label">File
+                                                                đính kèm</label>
+                                                        </div>
+                                                        <div class="col-12 col-md-9">
+                                                            <input style="content: 'Chọn File';" type="file"
+                                                                name="FileJD" class="form-control">
+                                                            <span class="help-block">File đính kèm</span>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                         
+                                                <button type="submit" class="btn1">
+                                                     Tạo Tin Tuyển Dụng
+                                                </button>
+                                        
+                                        </div>
+                                    </div>
+                            </div>
+                            </form>
+                        </div>
+                        <div class="col-md-12">
+                            <input id="search" type="text" class="form-control"  placeholder="Search ......">
+<br>
+                      
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Company</th>
+                                            <th>Jobs</th>
+
+                                            <th>File Attach</th>
+                                            <th>Info Interiew</th>
+                                            <th>Setting</th>
+                                        </tr>
+                                    </thead>
+                                    <%result.forEach(function(item){%>
+                                        <tbody id="table">
+                                            <tr>
+                                                <td>
+                                                    <%=item.FiffterNgay%>/<%=item.FiffterThang%>/<%=item.FillterNam%>
+                                                </td>
+                                                <td>
+                                                    <%=item.NameCompany%>
+                                                </td>
+                                                <td>
+                                                    <%=item.Title%>
+                                                </td>
+                                                <td class="process"><a href="files/<%=item.FileJD%>">
+                                                        <%=item.FileJD%>
+                                                    </a></td>
+                                                <td>
+                                                    <%=item.DetailInterview%>
+                                                </td>
+                                                <td>
+                                                    <div style="margin:2%" class="row">
+                                                        <div class="delete-confirm small">
+                                                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+                                                            <button class="delete">
+                                                                <i class="far fa-trash-alt"></i>
+                                                            </button>
+                                                            <button class="yes">
+                                                                <a style="color: white;"
+                                                                    href="/delete-tin-dang-Admin&idpost=<%=item._id%>"><i
+                                                                        class="fa fa-check"></i></a>
+                                                            </button>
+                                                            <button class="no">
+                                                                <i class="fa fa-close"></i>
+
+                                                            </button>
+
+                                                        </div>
+                                                    </div>
+                                                    <style>
+                                                        .help-block {
+                                                            text-align: left;
+                                                        }
+
+                                                        .delete-confirm {
+                                                            position: relative;
+                                                            display: inline-block;
+                                                            background: #ddd;
+                                                        }
+
+                                                        .delete-confirm button {
+                                                            position: relative;
+                                                            font-size: 10pt;
+                                                            white-space: nowrap;
+                                                            padding: 0.5em 2em;
+                                                            background-color: #cc0000;
+                                                            color: #ffffff;
+                                                            border: none;
+                                                        }
+
+                                                        .delete-confirm button .fa+.text {
+                                                            margin-left: 0.2em;
+                                                        }
+
+                                                        .delete-confirm button.delete {
+                                                            z-index: 3;
+                                                            -webkit-transition: all 0.2s ease 0.1s;
+                                                            transition: all 0.2s ease 0.1s;
+                                                        }
+
+                                                        .delete-confirm button.delete.confirm {
+                                                            background-color: transparent;
+                                                            color: #444;
+
+                                                            z-index: 0;
+                                                        }
+
+                                                        .delete-confirm button.delete.confirm~button.yes,
+                                                        .delete-confirm button.delete.confirm~button.no {
+                                                            visibility: visible;
+                                                            color: #ffffff;
+                                                            -webkit-transition: all 0.5s ease, visibility 0, background-color 0.3s ease 0.2s;
+                                                            transition: all 0.5s ease, visibility 0, background-color 0.3s ease 0.2s;
+                                                        }
+
+                                                        .delete-confirm button.delete.confirm~button.yes {
+                                                            -webkit-transform: translate(-100%, 0);
+                                                            transform: translate(-100%, 0);
+                                                            background-color: #cc0000;
+                                                        }
+
+                                                        .delete-confirm button.delete.confirm~button.no {
+                                                            -webkit-transform: translate(100%, 0);
+                                                            transform: translate(100%, 0);
+                                                            background-color: #00aa00;
+                                                        }
+
+                                                        .delete-confirm button.yes,
+                                                        .delete-confirm button.no {
+                                                            position: absolute;
+                                                            top: 0;
+                                                            color: #cc0000;
+                                                            visibility: hidden;
+                                                            z-index: 1;
+                                                            -webkit-transition: all 0.5s ease, visibility 0.5s, background-color 0.3s ease;
+                                                            transition: all 0.5s ease, visibility 0.5s, background-color 0.3s ease;
+                                                        }
+
+                                                        .delete-confirm button.yes {
+                                                            left: 0;
+                                                        }
+
+                                                        .delete-confirm button.no {
+                                                            right: 0;
+                                                        }
+
+                                                        .delete-confirm button:focus {
+                                                            outline: none;
+                                                        }
+
+                                                        .delete-confirm.small button,
+                                                        .delete-confirm button.small {
+                                                            padding: 0.5em 0.75em;
+                                                            text-align: center;
+                                                        }
+                                                    </style>
+                                                    <script>
+                                                        $(document).ready(function () {
+                                                            $('.delete-confirm').each(function () {
+                                                                var $this = $(this);
+
+                                                                $('button.delete', $this).click(function () {
+                                                                    $(this).addClass('confirm');
+                                                                });
+
+                                                                $('button.no', $this).click(function () {
+                                                                    $('button.delete', $this).removeClass('confirm');
+                                                                });
+                                                            });
+                                                        });
+                                                    </script>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <%})%>
+                                </table>
+                            </div>
+                            <!-- END DATA TABLE-->
+                        </div>
+
+
+                        <script>
+                            var rows = jQuery('.items');
+                            jQuery('#search-btn').click(function () {
+                                var val = jQuery.trim(jQuery('#search').val()).replace(/ +/g, ' ').toLowerCase();
+
+                                rows.each(function () {
+                                    var itemtxt = jQuery(this).text().replace(/\s+/g, ' ').toLowerCase();
+                                    if (itemtxt.indexOf(val) > -1) {
+                                        jQuery(this).show();
+                                    } else {
+                                        jQuery(this).hide();
+                                    }
+                                });
+                            });
+                            $('#loginAlert').hide();
+
+                            const urlParams = new URLSearchParams(window.location.search);
+                            const myParam = urlParams.get('message');
+                            if (myParam == "applysussces") {
+                                $('#loginAlert').show();
+
+                            }
+                        </script>
+                    </div>
+            </div>
+            </div>
+            </section>
+
+
+            </div>
+          
+            <%- include ../partials/menu.ejs%>
+                <%- include ../partials/footer.ejs%>
+
+    </body>
+
+</html>

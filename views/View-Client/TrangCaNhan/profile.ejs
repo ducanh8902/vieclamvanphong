@@ -1,0 +1,2344 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<%- include ../partials/header.ejs%>
+
+    <body>
+        <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet"
+            type="text/css" />
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
+        <script src="jquery.js"></script>
+       
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3Q2KXM" height="0" width="0"
+    style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="jp_top_header_img_wrapper">
+<div class="jp_slide_img_overlay"></div>
+<div class="gc_main_menu_wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 hidden-xs hidden-sm full_width">
+                <div class="gc_header_wrapper">
+                    <div class="gc_logo">
+                        <a href="/"><img src="logo_vlvp_new_2022.png" style="width: 100%;height: 100%;" alt="Logo" title="VLVP"
+                                class="img-responsive"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12 center_responsive">
+                <div class="header-area hidden-menu-bar stick" id="sticker">
+            
+                    <div class="mainmenu">
+
+                        <ul class="float_left">
+                            <%if(user || user !="" ){ %>
+                                <li class="has-mega gc_main_navigation"><a href="/Home"
+                                        class="gc_main_navigation">Trang
+                                        Chủ</a>
+                                </li>
+                                <%}else{%>
+                                    <li class="has-mega gc_main_navigation"><a href="/"
+                                            class="gc_main_navigation">Trang
+                                            Chủ</a>
+                                    </li>
+                                    <%}%>
+                                        <li class="has-mega gc_main_navigation"><a href="/danh-sach-viec-lam-all"
+                                                class="gc_main_navigation">Việc
+                                                Làm</a>
+                                        </li>
+
+                                        <li class="has-mega gc_main_navigation"><a href="#"
+                                                class="gc_main_navigation">Ứng
+                                                Viên&nbsp;<i class="fa fa-angle-down"></i></a>
+
+                                            <ul>
+                                                <li class="parent"><a href="/share-cv">Chia sẻ hồ sơ</a></li>
+                                                <!-- <li><a class="parent" href="/email-marketing">Email Marking</a></li> -->
+                                                <li class="parent"><a href="/candidates">Ứng viên mới</a></li>
+                                                <li class="parent"><a href="/khodata">Thông Tin Ứng Viên</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="parent gc_main_navigation"><a href="/contact"
+                                                class="gc_main_navigation">Liên
+                                                Hệ</a></li>
+                                        <li class="parent gc_main_navigation"><a href="/nop-don-ung-tuyen"
+                                                class="gc_main_navigation">Ứng Tuyển</li>
+
+                        </ul>
+                    </div>
+                    <header class="mobail_menu">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6">
+                                    <div class="gc_logo">
+                                        <a href="/"><img src="logo_vlvp_new_2022.png" style="width: 220px;height: 100%;" alt="Logo"
+                                                title="Grace Church"></a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6">
+                                    <div class="cd-dropdown-wrapper">
+                                        <a class="house_toggle" href="#0">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                                                x="0px" y="0px" viewBox="0 0 31.177 31.177"
+                                                style="enable-background:new 0 0 31.177 31.177;"
+                                                xml:space="preserve" width="25px" height="25px">
+                                                <g>
+                                                    <g>
+                                                        <path class="menubar"
+                                                            d="M30.23,1.775H0.946c-0.489,0-0.887-0.398-0.887-0.888S0.457,0,0.946,0H30.23    c0.49,0,0.888,0.398,0.888,0.888S30.72,1.775,30.23,1.775z"
+                                                            fill="#ffffff" />
+                                                    </g>
+                                                    <g>
+                                                        <path class="menubar"
+                                                            d="M30.23,9.126H12.069c-0.49,0-0.888-0.398-0.888-0.888c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,8.729,30.72,9.126,30.23,9.126z"
+                                                            fill="#ffffff" />
+                                                    </g>
+                                                    <g>
+                                                        <path class="menubar"
+                                                            d="M30.23,16.477H0.946c-0.489,0-0.887-0.398-0.887-0.888c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,16.079,30.72,16.477,30.23,16.477z"
+                                                            fill="#ffffff" />
+                                                    </g>
+                                                    <g>
+                                                        <path class="menubar"
+                                                            d="M30.23,23.826H12.069c-0.49,0-0.888-0.396-0.888-0.887c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,23.43,30.72,23.826,30.23,23.826z"
+                                                            fill="#ffffff" />
+                                                    </g>
+                                                    <g>
+                                                        <path class="menubar"
+                                                            d="M30.23,31.177H0.946c-0.489,0-0.887-0.396-0.887-0.887c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.398,0.888,0.888C31.118,30.78,30.72,31.177,30.23,31.177z"
+                                                            fill="#ffffff" />
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                        <nav class="cd-dropdown">
+                                            <div style="text-align: center;" class="gc_logo">
+                                                <h2 style="font-size:20px;margin-top: 4%;"><a href="/">Việc Làm<span>Văn Phòng</span></a></h2>
+                                                <a href="/"><img src="logo_vlvp_new_2022.png" style="width: 220px;height: 100%;" alt="Logo"
+                                                        title="Grace Church"></a>
+                                            </div>
+                                            
+                                            <a href="#0" class="cd-close">Đóng</a>
+                                            <ul style="margin-top:20%" class="cd-dropdown-content">
+
+                                                <%if(user || user !="" ){ %>
+                                                    <li>
+                                                        <a href="/Home">Trang Chủ</a>
+                                                    </li>
+                                                    <%}else{%>
+                                                        <li>
+                                                            <a href="/">Trang Chủ</a>
+                                                        </li>
+                                                        <%}%>
+
+                                                            <li class="has-children">
+                                                                <a href="candidates">Ứng Viên</a>
+
+                                                                <ul class="cd-secondary-dropdown is-hidden">
+                                                                    <li class="go-back"><a href="#0">Ứng Viên</a>
+                                                                    </li>
+
+                                                                    <li>
+                                                                        <a href="/share-cv">Ứng Viên Tìm Việc</a>
+                                                                    </li>
+                                                                    <!-- <li><a href="/email-marketing">Email Marking</a></li> -->
+                                                                    <li>
+                                                                        <a href="/candidates">Ứng viên mới</a>
+                                                                    </li>
+                                                                    <li class="parent"><a href="/khodata">Thông Tin
+                                                                            Ứng Viên</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <a href="contact">Liên Hệ</a>
+                                                            </li>
+                                                            <li><a href="/nop-don-ung-tuyen">Ứng Tuyển</a></li>
+                                                            <%if(user || user !="" ){ %>
+                                                                <li><a class="btnLogin" href="/logout"><img
+                                                                            style="width: 50px;height: 50px;"
+                                                                            src="https://img.icons8.com/bubbles/1000/000000/exit.png" />&nbsp;
+                                                                    </a></li>
+                                                                <%}else{%>
+                                                                    <li><button id="btnLogin" type="button"
+                                                                            data-toggle="modal"
+                                                                            data-target="#exampleModalCenter"><img
+                                                                                style="width: 50px;height: 50px;"
+                                                                                src="https://img.icons8.com/bubbles/100/000000/groups.png" />&nbsp;
+                                                                            Đăng Nhập | Đăng Ký</button></li>
+                                                                    <%}%>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                <div class="jp_navi_right_btn_wrapper">
+                    <ul style="padding: 10px;">
+                        <%if(user || user !="" ){ %>
+                            <li><a href="/logout"><img style="width: 50px;height: 50px;"
+                                        src="https://img.icons8.com/bubbles/1000/000000/shutdown.png" /></a></li>
+                            <li><button id="test"><img style="width: 50px;height: 50px;border-radius: 10px;"
+                                        src="https://img.icons8.com/bubbles/100/000000/admin-settings-male.png" />
+                                </button></li>
+                            <%}else{%>
+                                <li><button id="btnLogin" type="button" data-toggle="modal"
+                                        data-target="#exampleModalCenter"><img style="width: 50px;height: 50px;"
+                                            src="https://img.icons8.com/bubbles/100/000000/admin-settings-male.png" />&nbsp;
+                                        Đăng
+                                        Nhập | Đăng Ký</button></li>
+                                <%}%>
+                    </ul>
+                </div>
+            </div>
+            <div class="jp_banner_heading_cont_wrapper">
+                <div class="container">
+                    <div class="row">
+                        <% if (message.length> 0) { %>
+                            <div style="margin-top: 20px;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="container">
+
+                                    <div class="alert alert-danger alert-white rounded">
+                                        <button type="button" class="close" data-dismiss="alert"
+                                            aria-hidden="true">×</button>
+                                        <div class="icon"><i class="fa fa-times-circle"></i></div>
+                                        <strong>Lỗi!</strong>
+                                        <%= message %>
+                                    </div>
+                                </div>
+                            </div>
+                            <%}%>
+                                <% if (messagee.length> 0) { %>
+                                    <div style="margin-top: 20px;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="container">
+                                            <div class="alert alert-danger alert-white rounded">
+                                                <button type="button" class="close" data-dismiss="alert"
+                                                    aria-hidden="true">×</button>
+                                                <div class="icon"><i class="fa fa-times-circle"></i></div>
+                                                <strong>Lỗi!</strong>
+                                                <%= messagee %>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <%}%>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</div>
+            <div class="jp_listing_sidebar_main_wrapper">
+                <%if(user.local.Type=="1" || user.local.Type=="Nhà Tuyển Dụng" ){%>
+                    <section class="recruiters-area section4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-12 col-sm-12">
+                                    <div class="recruiters-details">
+                                        <div class="items2">
+                                            <div class="right-con">
+                                                <img style="width: 100px;height: 100px;" class="image_ungvien"
+                                                    src="image/<%= user.local.NTD.ImageLogo%>" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h3
+                                                    style="    font-size: 25px;text-decoration: none;font-weight: 700;color: black;">
+                                                    <strong><b><a>
+                                                                <%= user.local.NTD.NameCompany%>
+                                                            </a><b></strong></h3>
+                                                <ul class="tlist">
+                                                    <li><span class="ico"><img class="icon_image"
+                                                                src="https://img.icons8.com/bubbles/100/000000/omnichannel.png" /></span><span
+                                                            class="con">
+                                                            <%= user.local.NTD.Establish%>
+                                                        </span></li>
+                                                    <li><span class="ico"><img class="icon_image"
+                                                                src="https://img.icons8.com/bubbles/100/000000/group.png" /></span><span
+                                                            class="con">
+                                                            <%= user.local.NTD.Scale%>
+                                                        </span></li>
+                                                </ul>
+                                                <ul class="blist">
+                                                    <li><span class="ico"><img class="icon_image"
+                                                                src="https://img.icons8.com/bubbles/100/000000/marker.png" /></span><span
+                                                            class="con">
+                                                            <%= user.local.NTD.AddressCompany%>
+                                                        </span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <br>
+                                        <div class="recruiters-details">
+                                            <div class="items2">
+                                                <div class="contents">
+                                                    <h3>Giới thiệu</h3>
+                                                    <%-user.local.NTD.DetailCompany%>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-12 col-sm-12">
+                                    <div class="sideber2 mr-r">
+                                        <div class="widghet">
+                                            <h3>Thông tin liên hệ</h3>
+                                            <div class="contact-form">
+                                                <div class="contents">
+                                                    <em><img style="width: 10%;"
+                                                            src="https://img.icons8.com/bubbles/100/000000/administrator-male.png" />
+                                                        Đại diện :<%=user.local.NTD.NameUser%></em>
+                                                    <br>
+                                                    <em><img style="width: 10%;"
+                                                            src="https://img.icons8.com/bubbles/100/000000/iphone-x.png" />Điện
+                                                        thoại: <%=user.local.NTD.Phone%></em>
+                                                    <br>
+                                                    <em><img style="width: 10%;"
+                                                            src="https://img.icons8.com/bubbles/100/000000/mobile-email.png" />Email
+                                                        :<%=user.local.NTD.Email%></em>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="widghet">
+                                            <h3>Tuỳ chọn</h3>
+                                            <div class="row">
+                                                <div class="col-md-12"> <button type="button"
+                                                        title="Danh sách ứng tuyển" data-toggle="modal"
+                                                        data-target="#exampleModalCenterNTD" class="btns btn1">Tạo
+                                                        Tin Tuyển Dụng</button>
+                                                </div>
+                                                <div class="col-md-12"> <button type="button"
+                                                        title="Danh sách ứng tuyển" data-toggle="modal"
+                                                        data-target="#exampleModalCenterlist" class="btns btn1">Tin
+                                                        Tuyển Dụng</button>
+                                                </div>
+                                                <%if(user.local.email == "galaxydr@galaxydr.com.vn"){%>
+                                                <div class="col-md-12">
+                                                    <a href="/tindang-tuyendung"> <button
+                                                            class="btns btn1">Cài đặt tin đăng</button></a>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <a href="/ung-vien-ung-tuyen-ctv"> <button
+                                                            class="btns btn1">CTV Tuyển Dụng</button></a>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <a href="/utilities"> <button
+                                                            class="btns btn1">Tiện Ích</button></a>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <a href="/cv_manager"> <button
+                                                            class="btns btn1">CV Ứng Viên</button></a>
+                                                </div>
+                                                <%}%>
+                                                <div class="col-md-12">
+                                                    <button type="button" title="Form Ứng Tuyển" data-toggle="modal"
+                                                        data-target="#ModalFormUngTuyen" class="btns btn1">
+                                                        Form Ứng Tuyển
+                                                    </button>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <%if(user.local.email == "thao.huynhdiep@gmail.com"){%>
+                                                    <a href="/ung-vien-ung-tuyen-mcredit"> <button class="btns btn1">Ứng
+                                                            viên ứng tuyển MCredit</button></a>
+                                                            <%}else{%>
+                                                    <a href="/ung-vien-ung-tuyen"> <button class="btns btn1">Ứng
+                                                                    viên ứng tuyển</button></a>
+                                                                <%}%>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <a href="/candidates"> <button class="btns btn1">Ứng
+                                                            viên tìm việc</button></a>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <a href="/edit-profile&id=<%=user._id%>"> <button
+                                                            class="btns btn1">Cập
+                                                            nhật thông tin</button></a>
+                                                </div>
+                                                <!-- <div class="col-md-12">    
+                                            <a href="/connect/facebook">  <button     style="margin: 5px;border-radius: 10px;border: 1px solid black;background-color: #ff8707;width:  100%;" >Liên kết Facebook</button></a>
+                                        </div> -->
+
+                                            </div>
+                                        </div>
+                                        <div class="modal fade" id="ModalFormUngTuyen" tabHome="-1" role="dialog"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        <div class="tab-wrap">
+                                                            <ul class="tab-list">
+                                                                <li id="titleStep1" class="in"><a href="javascript:;"><span>Tạo Form ứng
+                                                                            tuyển</span></a></li>
+                                                                <li id="titleStep2"><a href="javascript:;"><span>Tạo vị trí ứng
+                                                                            tuyển</span></a></li>
+                                                                <li id="titleStep3"><a href="javascript:;"><span>Danh sách</span></a>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="tab-items">
+                                                                <div id="step1" class="tab-item in">
+                                                                    <form action="/create-form-applicant" method="POST"
+                                                                        enctype="multipart/form-data">
+                                                                        <div class="row">
+                                                                            <div class="col-md-3">
+                                                                                <div class="picture-container">
+                                                                                    <h4><b>Chọn Logo</b></h4>
+                                                                                    <div style="border-radius: 10%;background-color: wheat;"
+                                                                                        class="picture">
+                                                                                        <input type="file" name="fileUT"
+                                                                                            id="fileUT"
+                                                                                            accept="*.jpg,*.png"
+                                                                                            class="valid" />
+                                                                                        <img src="https://img.icons8.com/bubbles/100/000000/linkedin.png"
+                                                                                            class="picture-src"
+                                                                                            name="AvataUT"
+                                                                                            id="wizardPicturePreview" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-9">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <input type="text" required
+                                                                                            class="form-controls"
+                                                                                            placeholder="Tiêu Đề Đơn Ứng Tuyển"
+                                                                                            name="titleForm" />
+                                                                                    </div>
+
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-6">
+                                                                                                <div class="plans">
+                                                                                                    <label
+                                                                                                        class="plan basic-plan"
+                                                                                                        for="basic">
+                                                                                                        <input checked
+                                                                                                            type="radio"
+                                                                                                            name="plan"
+                                                                                                            value="Form1"
+                                                                                                            id="basic" />
+                                                                                                        <div
+                                                                                                            class="plan-content">
+                                                                                                            <img loading="lazy"
+                                                                                                                src="https://img.icons8.com/bubbles/100/000000/form.png"
+                                                                                                                alt="" />
+                                                                                                            <div
+                                                                                                                class="plan-details">
+                                                                                                                <span>Mẫu 1</span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <!-- <div class="col-md-6">
+                                                                                                <div class="plans">
+                                                                                                <label class="plan complete-plan" for="complete">
+                                                                                                    <input type="radio" id="complete" value="Form2" name="plan" />
+                                                                                                    <div class="plan-content">
+                                                                                                      <img loading="lazy" src="https://raw.githubusercontent.com/ismailvtl/ismailvtl.github.io/master/images/potted-plant-img.svg" alt="" />
+                                                                                                      <div class="plan-details">
+                                                                                                        <span>Form 2</span>
+                                                                                                      </div>
+                                                                                                    </div>
+                                                                                              </label>
+                                                                                              </div>
+                                                                                            </div> -->
+
+                                                                                        </div>
+
+
+
+                                                                                    </div>
+                                                                                    <div class="col-md-12">
+                                                                                        <button
+                                                                                            style="margin-top: 10px ;"
+                                                                                            type="submit"
+                                                                                            class="btn1">Tạo
+                                                                                            Form</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </form>
+                                                                </div>
+                                                                <div id="step2" class="tab-item">
+                                                                    <form action="/create-vitrituyendung" method="POST"
+                                                                        enctype="multipart/form-data">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <label style="height: 30px;"
+                                                                                    for="chooseForm">Chọn Form</label>
+                                                                                <select class="form-control"
+                                                                                    name="chooseForm">
+                                                                                    <%sCreateForm.forEach(function(item){%>
+                                                                                        <option value="<%=item._id%>">
+                                                                                            <%=item.TitleForm%>
+                                                                                        </option>
+                                                                                        <%})%>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-md-12">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <label style="height: 30px;"
+                                                                                            for="titleVitrituyendung">Việc
+                                                                                            Làm</label>
+                                                                                        <input class="form-control"
+                                                                                            type="text"
+                                                                                            placeholder="Tin tuyển dụng"
+                                                                                            name="titleVitrituyendung">
+                                                                                    </div>
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-6">
+                                                                                                <label
+                                                                                                    style="height: 30px;"
+                                                                                                    for="FileJD">File
+                                                                                                    PDF</label>
+                                                                                                <input
+                                                                                                    class="form-control"
+                                                                                                    type="file"
+                                                                                                    placeholder="JD công việc"
+                                                                                                    accept="application/pdf"
+                                                                                                    name="FileJD">
+                                                                                            </div>
+                                                                                            <div class="col-md-6">
+                                                                                                <label
+                                                                                                    style="height: 30px;"
+                                                                                                    for="TypeJob">Loại
+                                                                                                    hình</label>
+                                                                                                <select
+                                                                                                    name="selectmultiple"
+                                                                                                    multiple
+                                                                                                    data-placeholder="Nhóm">
+                                                                                                    <option
+                                                                                                        value="FullTime">
+                                                                                                        FullTime
+                                                                                                    </option>
+                                                                                                    <option
+                                                                                                        value="PartTime">
+                                                                                                        PartTime
+                                                                                                    </option>
+                                                                                                    <option
+                                                                                                        value="Thời vụ">
+                                                                                                        Thời vụ</option>
+                                                                                                    <option
+                                                                                                        value="Thực tập">
+                                                                                                        Thực tập
+                                                                                                    </option>
+                                                                                                    <option value="CTV">
+                                                                                                        Cộng tác viên
+                                                                                                    </option>
+                                                                                                </select>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-12">
+                                                                                        <label style="height: 30px;"
+                                                                                            for="Form">Thông tin phỏng
+                                                                                            vấn</label>
+                                                                                        <textarea style="height: 120px;"
+                                                                                            class="form-control"
+                                                                                            type="text"
+                                                                                            placeholder="Thông tin phỏng vấn"
+                                                                                            name="Form"></textarea>
+                                                                                    </div>
+
+
+                                                                                </div>
+
+                                                                            </div>
+                                                                            <div class="col-md-12">
+                                                                                <button class="btn1">Tạo mới</button>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </form>
+                                                                </div>
+                                                                <div id="step3" class="tab-item">
+                                                                    <div class="container alert alert-light">
+                                                                        <h2>Rút gọn Link</h2>
+                                                                        <br>
+                                                                        <input id="search" type="text"
+                                                                            class="form-control"
+                                                                            placeholder="Tìm Form.">
+                                                                        <br>
+
+                                                                        <table class="table">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>Form</th>
+                                                                                    <th>Link Form</th>
+                                                                                    <th>Link Rút Gọn</th>
+                                                                                    <th></th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <%sCreateForm.forEach(function(item){%>
+                                                                                <tbody id="table">
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <%=item.TitleForm%>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <a
+                                                                                                href="https://tuyendung.me/nop-don-ung-tuyen-nhatuyendung=<%=item.UrlForm%>">
+                                                                                                <%=item.UrlForm%>
+                                                                                            </a>
+                                                                                      </td>
+                                                                                      <td >
+                                                                                          <%if(item.UrlShort){%>
+                                                                                            <form class="form-group" data-copy=true>
+                                                                                                <div class="input-group col-m-12 mb-3">
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-12">
+                                                                                                            <a  href="https://tuyendung.me/=<%=item.UrlShort%>"> <input type="text" class="form-control" value="https://tuyendung.me/=<%=item.UrlShort%>"></a>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-12">
+                                                                                                            <div class="input-group-append">
+                                                                                                                <span class="input-group-text buttons">
+                                                                                                                    <button style="width: 100%;margin-top: 5px;background: #f36969;color: #fff;"  type="submit" class="btn btn-primary-sm">Sao chép</button>
+                                                                                                                </span>
+                                                                                                              </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                 
+                                                                                                </div>
+                                                                                              </form>
+                                                                                            <%}%>
+                                                                                    </td>
+                                                                                    <%if(!item.UrlShort){%>
+                                                                                      <td>
+                                                                                          <div class="row">
+                                                                                              <div class="col-md-12">
+                                                                                                <form action="/shortURL" method="POST">
+                                                                                                    <input hidden value="<%=item.UrlForm%>" name="UrlForm" type="text"/>
+                                                                                                    <input hidden value="<%=item.TitleForm%>" name="TitleForm" type="text"/>
+                                                                                                    <input hidden value="<%=item._id%>" name="_id"type="text"/>
+                                                                                                    <button  style="width: 70px;height: 73px;background: #f36969;color: #fff;" type="submit" class="btn btn-primary-sm">Rút gọn</button>
+                                                                                              </form>
+                                                                                              </div>
+                                                                                            
+                                                                                          </div>
+                                                                                      </td>
+                                                                                      <%}else{%>
+                                                                                       <td>
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12">
+                                                                                              <form action="/delete-form-and-url=<%=item.UrlShort%>&id=<%=item._id%>" method="POST">
+                                                                                                  <button  style="width: 70px;height: 73px;background: #f36969;color: #fff;" type="submit" class="btn btn-primary-sm">Xoá</button>
+                                                                                            </form>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </td>
+
+                                                                                        <%}%>
+                                                                                    </tr>
+                                                                                    <%})%>
+                                                                                </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-primary"
+                                                                data-dismiss="modal">Đóng</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal fade" id="exampleModalCenterNTD" tabHome="-1" role="dialog"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog modal-xl">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h6>Tạo tin tuyển dụng</h6>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="tab-content">
+                                                                        <div id="login">
+                                                                            <div class="logins">
+                                                                                <form
+                                                                                    action="/new-job-NTD/<%=user._id%>"
+                                                                                    method="post"
+                                                                                    enctype="multipart/form-data">
+                                                                                    <fieldset>
+                                                                                        <label>Tên công việc</label>
+                                                                                        <input type="text"
+                                                                                            placeholder="Tên công việc"
+                                                                                            name="Namejob">
+                                                                                        <span><i
+                                                                                                class="fa fa-user"></i></span>
+                                                                                    </fieldset>
+                                                                                    <fieldset>
+                                                                                        <label>Tên Công Ty</label>
+                                                                                        <input type="text"
+                                                                                            value="<%=user.local.NTD.NameCompany%>"
+                                                                                            placeholder="Tên Công Ty"
+                                                                                            name="Nameuser">
+                                                                                        <span><i
+                                                                                                class="fa fa-user"></i></span>
+                                                                                    </fieldset>
+                                                                                    <fieldset>
+                                                                                        <label>Mức lương</label>
+                                                                                        <input type="text"
+                                                                                            placeholder="Mức lương"
+                                                                                            name="Salary">
+                                                                                        <span><i
+                                                                                                class="fa flaticon-money-bag-with-dollar-symbol"></i></span>
+                                                                                    </fieldset>
+                                                                                    <fieldset>
+                                                                                        <label>Hình thức làm
+                                                                                            việc</label>
+                                                                                        <select class="form-control"
+                                                                                            name="typejob">
+                                                                                            <option value="0">Chọn
+                                                                                            </option>
+                                                                                            <option value="FullTime">
+                                                                                                FullTime</option>
+                                                                                            <option value="PartTime">
+                                                                                                PartTime</option>
+                                                                                            <option value="Thời Vụ">Thời
+                                                                                                Vụ</option>
+                                                                                            <option value="Thực Tập">
+                                                                                                Thực Tập</option>
+                                                                                            <option value="Khác">Khác
+                                                                                            </option>
+                                                                                        </select>
+
+                                                                                    </fieldset>
+                                                                                    <fieldset>
+                                                                                        <label>Chuyên ngành</label>
+                                                                                        <select class="form-control"
+                                                                                            name="chuyennganh">
+                                                                                            <option value="0">Chọn
+                                                                                            </option>
+                                                                                            <option value="Y Tế">Y Tế
+                                                                                            </option>
+                                                                                            <option value="Giáo dục">
+                                                                                                Giáo dục</option>
+                                                                                            <option value="Thiết kế">
+                                                                                                Thiết kế</option>
+                                                                                            <option value="Xây Dựng">Xây
+                                                                                                Dựng</option>
+                                                                                            <option value="Tài Chính">
+                                                                                                Tài Chính</option>
+                                                                                            <option value="Ngân Hàng">
+                                                                                                Ngân Hàng</option>
+                                                                                            <option value="Dịch Vụ">Dịch
+                                                                                                Vụ</option>
+                                                                                            <option value="Khác">Khác
+                                                                                            </option>
+                                                                                        </select>
+
+                                                                                    </fieldset>
+                                                                                    <fieldset>
+                                                                                        <label>Nơi làm việc</label>
+                                                                                        <input type="text"
+                                                                                            placeholder="Địa chỉ"
+                                                                                            name="Address">
+                                                                                        <span><i
+                                                                                                class="fa fa-star"></i></span>
+                                                                                    </fieldset>
+                                                                                    <label>Chi tiết công việc</label>
+                                                                                    <div class="row">
+                                                                                        <div class="col-lg-12">
+                                                                                            <textarea
+                                                                                                style="white-space : pre-wrap;word-wrap: break-word;"
+                                                                                                id="Detailjob"
+                                                                                                name="Detailjob"></textarea>
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <style>
+                                                                                        #insertImage-1 {
+                                                                                            display: none;
+                                                                                        }
+
+                                                                                        #insertLink-1 {
+                                                                                            display: none;
+                                                                                        }
+
+                                                                                        #insertFiles-1 {
+                                                                                            display: none;
+                                                                                        }
+
+                                                                                        #moreRich-1 {
+                                                                                            display: none;
+                                                                                        }
+
+                                                                                        #moreMisc-1 {
+                                                                                            display: none;
+                                                                                        }
+                                                                                    </style>
+                                                                                    <script>
+                                                                                        new FroalaEditor('#Detailjob', {
+
+                                                                                            imageUploadURL: 'image_upload',
+                                                                                            imageUploadParams: {
+                                                                                                id: 'my_editor'
+                                                                                            },
+                                                                                            fileUploadURL: 'saveimage',
+                                                                                            fileUploadParams: {
+                                                                                                id: 'my_editor'
+                                                                                            }
+
+                                                                                        })
+                                                                                    </script>
+                                                                                    </br>
+
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="input-group">
+                                                                                            <span
+                                                                                                class="input-group-btn">
+                                                                                                <div
+                                                                                                    class="btns btn-default browse-button">
+                                                                                                    <span
+                                                                                                        class="browse-button-text">
+                                                                                                        <i
+                                                                                                            class="fa fa-folder-open"></i>Chọn
+                                                                                                        JD Mô tả công
+                                                                                                        việc</span>
+                                                                                                    <input style="position: absolute;
+                                                                                            top: 0;
+                                                                                            right: 0;
+                                                                                            margin: 0;
+                                                                                            padding: 0;
+                                                                                            font-size: 20px;
+                                                                                            cursor: pointer;
+                                                                                            opacity: 0;
+                                                                                            filter: alpha(opacity=0);"
+                                                                                                        type="file"
+                                                                                                        name="attachment" />
+                                                                                                </div>
+                                                                                                <button type="button"
+                                                                                                    class="btns btn-default clear-button"
+                                                                                                    style="display:none;">
+                                                                                                    <span
+                                                                                                        class="fa fa-times"></span>
+                                                                                                    Xoá
+                                                                                                </button>
+                                                                                            </span>
+                                                                                            <input type="text"
+                                                                                                class="form-control filename"
+                                                                                                disabled="disabled"
+                                                                                                placeholder="File mô tả công việc">
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    </br>
+                                                                                    <button class="btns btn1">Tạo tin
+                                                                                        tuyển
+                                                                                        dụng</button>
+
+                                                                                </form>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btns btn-secondary"
+                                                            data-dismiss="modal">Đóng</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal fade" id="exampleModalCenterlist" tabHome="-1" role="dialog"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h6>Tin Tuyển Dụng của bạn</h6>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="container-fluid">
+                                                            <section class="jobs-area">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+
+                                                                        <div class="clearfix"></div>
+                                                                        <div class="jobslist section4">
+                                                                            <%resulfjoblistNTD.forEach(function(item){%>
+                                                                                <input hidden 
+                                                                                    value="<%=item%>">
+                                                                                <div class="items">
+                                                                                    <div class="right-con">
+                                                                                        <%if(item.ImageJob=="admin.png"
+                                                                                            ){%>
+                                                                                            <figure
+                                                                                                style="background-image: url(https://img.icons8.com/bubbles/50/000000/system-administrator-female.png);background-size: 100%; height: 130px;">
+                                                                                            </figure>
+                                                                                            <%}else{%>
+                                                                                                <figure
+                                                                                                    style="background-image: url(image/<%=item.ImageJob%>);background-size: 100%; height: 120px;">
+                                                                                                </figure>
+                                                                                                <%}%>
+                                                                                                    <span
+                                                                                                        class="color1">
+                                                                                                        <%=item.typejob%>
+                                                                                                    </span>
+                                                                                    </div>
+                                                                                    <div class="content">
+                                                                                        <h3><a
+                                                                                                href="/jobs-NTD-details&idjob=<%=item._id%>">
+                                                                                                <%=item.Namejob%>
+                                                                                            </a></h3>
+                                                                                        <p>
+                                                                                            <%=item.Daypost%>
+                                                                                        </p>
+                                                                                        <ul class="tlist">
+                                                                                            <li><span class="ico"><i
+                                                                                                        class="flaticon-briefcase-frontal-view"></i></span><span
+                                                                                                    class="con">
+                                                                                                    <%=item.NameUser%>
+                                                                                                </span></li>
+                                                                                            <li><span class="ico"><i
+                                                                                                        class="flaticon-money-bag-with-dollar-symbol"></i></span><span
+                                                                                                    class="con">
+                                                                                                    <%=item.Salary%>
+                                                                                                </span></li>
+                                                                                        </ul>
+                                                                                        <ul class="blist">
+                                                                                            <li><span class="ico"><i
+                                                                                                        class="flaticon-maps-and-flags"></i></span><span
+                                                                                                    class="con">
+                                                                                                    <%=item.Address%>
+                                                                                                </span></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <%})%>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </section>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btns btn-secondary"
+                                                            data-dismiss="modal">Đóng</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="myModal" class="modal fade" role="dialog">
+                                            <div class="modal-dialog">
+                                              <!-- Modal content-->
+                                              <div class="modal-content">
+                                                <div class="modal-body text-center">
+                                                  <div class="wrapper">
+                                                    <div class="screen">
+                                                      <svg class="clouds" viewBox="0 0 243 172">
+                                                        <defs>
+                                                          <linearGradient id="a" x1="0%" y1="21.631%" y2="78.369%">
+                                                            <stop offset="0%" stop-color="#FCCF31"/>
+                                                            <stop offset="100%" stop-color="#F55555"/>
+                                                          </linearGradient>
+                                                          <linearGradient id="b" x1="0%" y1="21.875%" y2="78.125%"><stop offset="0%" stop-color="#FCCF31"/>
+                                                            <stop offset="100%" stop-color="#F55555"/>
+                                                          </linearGradient>
+                                                          <linearGradient id="c" x1="0%" y1="22.565%" y2="77.435%">
+                                                            <stop offset="0%" stop-color="#FCCF31"/>
+                                                            <stop offset="100%" stop-color="#F55555"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                        <g fill="none">
+                                                          <path fill="url(#a)" d="M222.088 121.3384a28.8588 28.8588 0 0 0-4.1438-7.771c-2.3029-3.0704-5.1734-5.622-8.413-7.5423-3.2394-1.9202-6.8508-3.2057-10.642-3.7437-3.65-.5156-7.457-.335-11.2353.6443-3.7782.9794-7.1973 2.674-10.1416 4.9036-3.0566 2.31-5.5968 5.1936-7.5085 8.4476a29.0671 29.0671 0 0 0-3.7237 10.69c-.5132 3.6664-.3335 7.4906.6414 11.2859.882 3.4312 2.3446 6.5692 4.2594 9.3271a28.7704 28.7704 0 0 0 7.2325 7.2265c4.7405 3.2927 10.4592 5.1614 16.4602 5.1936h28.8822c2.6012 0 5.09-.5187 7.3609-1.4659 2.3574-.9795 4.4742-2.4164 6.248-4.198a19.3854 19.3854 0 0 0 4.1791-6.2761c.9398-2.2778 1.4562-4.778 1.4562-7.3908 0-2.6129-.5164-5.113-1.4593-7.394-.975-2.3681-2.4055-4.4945-4.1792-6.2762-1.7737-1.7817-3.8906-3.2153-6.248-4.198-2.2676-.944-4.7565-1.4628-7.3576-1.4628l-1.6678.0002z"/>
+                                                          <path fill="url(#b)" d="M106.4963 29.0076a43.2273 43.2273 0 0 0-6.2427-11.6565c-3.4693-4.6055-7.7937-8.433-12.674-11.3134A43.5245 43.5245 0 0 0 71.5475.422c-5.4987-.7732-11.234-.5025-16.926.9665-5.6919 1.4691-10.8427 4.0111-15.2783 7.3555-4.6048 3.465-8.4316 7.7903-11.3115 12.6713-2.8798 4.881-4.8076 10.3276-5.6097 16.035-.7732 5.4996-.5025 11.236.9663 16.929 1.3287 5.1467 3.532 9.8538 6.4167 13.9906a43.2499 43.2499 0 0 0 10.8958 10.8397c7.1414 4.939 15.7567 7.742 24.797 7.7904h43.511c3.9186 0 7.668-.778 11.089-2.1988 3.5515-1.4692 6.7405-3.6246 9.4125-6.2971a29.0696 29.0696 0 0 0 6.296-9.4142C137.222 65.6732 138 61.923 138 58.0037s-.7779-7.6695-2.1985-11.091c-1.4689-3.552-3.6239-6.7417-6.296-9.4142a29.0639 29.0639 0 0 0-9.4124-6.297c-3.4161-1.416-7.1657-2.1941-11.0843-2.1941l-2.5125.0002z" transform="matrix(-1 0 0 1 160 0)"/>
+                                                        <path fill="url(#c)" d="M39.3345 145.3368c-.6995-1.9642-1.6892-3.7617-2.906-5.3593-1.6151-2.1175-3.6282-3.8772-5.9-5.2016a20.4283 20.4283 0 0 0-7.4633-2.5819c-2.5597-.3555-5.2296-.231-7.8793.4444s-5.0475 1.8442-7.1124 3.3818a20.1076 20.1076 0 0 0-5.2656 5.826c-1.3406 2.244-2.238 4.7482-2.6115 7.3723-.3599 2.5286-.2339 5.166.4499 7.7834.6185 2.3664 1.6442 4.5305 2.987 6.4325 1.3879 1.9642 3.1108 3.6462 5.0722 4.9838 3.3245 2.2708 7.335 3.5596 11.5435 3.5818h20.255c1.8243 0 3.5697-.3577 5.1622-1.011a13.5058 13.5058 0 0 0 4.3817-2.8952c1.244-1.2287 2.2448-2.6952 2.9309-4.3283.659-1.5709 1.0212-3.2952 1.0212-5.0971 0-1.802-.3621-3.5262-1.0234-5.0994-.6838-1.633-1.687-3.0996-2.9309-4.3283a13.5419 13.5419 0 0 0-4.3817-2.8952c-1.5902-.651-3.3357-1.0088-5.1599-1.0088l-1.1696.0001z" transform="matrix(-1 0 0 1 54 0)"/>
+                                                        </g>
+                                                      </svg>
+                                                        <svg class="plane" viewBox="0 0 139 139">
+                                                          <defs>
+                                                            <linearGradient id="a" x1="147.152%" x2="0%" y1="-47.397%" y2="100%">
+                                                              <stop offset="0%" stop-color="#FCCF31"/><stop offset="100%" stop-color="#F55555"/>
+                                                            </linearGradient>
+                                                          </defs>
+                                                          <path fill="#FFF" stroke="url(#a)" stroke-width="2" d="M171.1455 37.3577l-131.69 71.251a2.7136 2.7136 0 0 0-1.4535 2.5092 2.7138 2.7138 0 0 0 1.6436 2.3892l22.4823 8.4671a5.2937 5.2937 0 0 1 2.9597 2.7138l17.4183 35.9715c.3259 1.5876 3.2583 2.0083 3.299.3935l-2.7152-29.7026c.157-2.2004.997-4.297 2.403-5.9975L153.795 58.471a1.6162 1.6162 0 0 1 1.4798-.4207c.526.1172.9531.4993 1.1277 1.0088a1.5462 1.5462 0 0 1-.2724 1.488l-58.8803 71.9973a13.1443 13.1443 0 0 0-2.308 5.9297l-3.5298 25.659c.2986 2.239 2.05 3.0938 3.462 1.0855l12.6802-14.926c.8703-1.1836 2.525-1.4602 3.7334-.624l32.6917 23.8136a2.635 2.635 0 0 0 2.5231.3387 2.6328 2.6328 0 0 0 1.6313-1.9534l26.8131-131.6197a2.713 2.713 0 0 0-1.004-2.6831 2.7164 2.7164 0 0 0-2.8516-.2886l.0543.0815z" transform="translate(-37 -36)"/>
+                                                        </svg>
+                                                      <p class="message"></p>
+                                                      <button id="tieptuc2" type="button" class="button"data-toggle="modal"data-target="#ModalFormUngTuyen">Tiếp Tục</button>
+                                                    </div>
+                                                  </div>
+                                                  <style>
+                                                    .wrapper {
+                                display: flex;
+                                width: 100%;
+                                height: 100%;
+                                justify-content: center;
+                                align-items: center;
+                              }
+                              
+                              .screen {
+                                display: flex;
+                                flex-flow: column nowrap;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                background-color: #F5F5F5;
+                                box-shadow: 2px 8px 32px rgba(0,0,0,0.50);
+                              }
+                              .clouds{
+                                  position: relative;
+                                bottom: -155px;
+                                  width: 243px;
+                                  height: 172px;
+                                  opacity: 0;
+                                  animation: clouds 1s .8s ease-in forwards;
+                              }
+                              
+                              .plane {
+                                  position: relative;
+                                  width: 139px;
+                                  height: 139px;
+                                  opacity: 0;
+                                  animation: plane-start .8s .8s ease-out, plane-loop 1.6s 1.6s linear infinite;
+                              
+                              }
+                              
+                              .message {
+                                  margin-top: 72px;
+                                font-family: Rubik, sans-serif;
+                                font-size: 16px;
+                                color: #292929;
+                                  letter-spacing: 1px;
+                                animation: message .3s 1.6s ease-in-out backwards;
+                              }
+                              
+                              .button{
+                                margin: 80px;
+                                padding: 16px 80px;
+                                background: #FFFFFF;
+                                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.16);
+                                border-radius: 24px;
+                                font-family: Rubik, sans-serif;
+                                font-size: 16px;
+                                color: #7A7A7A;
+                                letter-spacing: -0.05px;
+                                text-align: center;
+                              }
+                              
+                              @keyframes plane-start{ 
+                                  0% { transform: translate(-80px, 130px) ; }
+                                  50% { opacity:1 }
+                                  100% { transform: translate(0px, 0); opacity:1  }
+                              }
+                              
+                              @keyframes plane-loop {
+                                  0% { transform: translate(0px, 0); opacity:1  }
+                                  50% { transform: translate(-20px, 30px); opacity:1  }
+                                  100% { transform: translate(0px, 0); opacity:1  }
+                              }
+                              
+                               @keyframes clouds{
+                                 from { opacity: 0 }
+                                 to { opacity: 1 }
+                              }
+                              
+                              @keyframes message{ 
+                                  from { opacity: 0 }
+                                  to { opacity: 1 }
+                              }
+                                                  </style>
+                                                </div>
+                                              </div>
+                                          
+                                            </div>
+                                          </div>
+                                        <div class="widghet clearw">
+                                            <div class="maps">
+                                                <div id="map" class="map-full">
+                                                    <%-user.local.NTD.map%>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <%}%>
+                        <%if(user.local.Type=="0"|| user.local.Type=="Người Tìm Việc" ){%>
+                            <section class="candidates-details section4">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-12 col-sm-12">
+                                            <div class="sideber2">
+                                                <div class="widghet">
+                                                    <div class="user_profle">
+                                                        <img class="image_ungvien"
+                                                            src="image/<%=user.local.NTV.ImageAvata%>" alt="" />
+                                                        <div class="contents">
+                                                            <h4><a href="#">
+                                                                    <%=user.local.NTV.NameUser%>
+                                                                </a></h4>
+                                                            <em>
+                                                                <%=user.local.NTV.Position%>
+                                                            </em>
+                                                            <p>
+                                                                <%=user.local.NTV.Address%>
+                                                            </p>
+                                                            <ul>
+                                                                <li><a href="<%=user.local.NTV.LinkFB%>"><i
+                                                                            class="fa fa-facebook"></i></a></li>
+                                                                <li><a href="<%=user.local.NTV.LinkTiwtter%>"><i
+                                                                            class="fa fa-twitter"></i></a></li>
+                                                                <li><a href="<%=user.local.NTV.LinkLinkedIn%>"><i
+                                                                            class="fa fa-linkedin"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="widghet">
+                                                        <h6>Tuỳ chỉnh</h6>
+                                                        <div style="text-align: center" class="row">
+                                                            <div class="col-md-12">
+                                                                <button
+                                                                    style="margin: 5px;width: 100%;border-radius: 10px;border:1px black solid;background-color: #ff8707;color:#fff"
+                                                                    type="button" title="Tạo tin tìm việc"
+                                                                    data-toggle="modal"
+                                                                    data-target="#exampleModalCenterNTV">Tạo Tìm
+                                                                    Việc</button>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <button
+                                                                    style="margin: 5px;width: 100%;border-radius: 10px;border:1px black solid;background-color: #ff8707;color:#fff"
+                                                                    type="button" title="Danh sách việc làm"
+                                                                    data-toggle="modal"
+                                                                    data-target="#exampleModalCenterlist">Việc làm của
+                                                                    bạn</button>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <a href="/edit-profile&id=<%=user._id%>" type="button"
+                                                                    title="Sửa thông tin"
+                                                                    style="width: 100%;border-radius: 10px;margin: 5px;border:1px black solid;background-color: #ff8707;color:#fff">Cập
+                                                                    nhật thông tin</a>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <button
+                                                                    style="margin: 5px;width: 100%;border-radius: 10px;border:1px black solid;background-color: #ff8707;color:#fff"
+                                                                    type="button" title="Việc làm đã ứng tuyển"
+                                                                    data-toggle="modal"
+                                                                    data-target="#exampleModalCenterlistApply">Việc làm
+                                                                    ứng tuyển</button>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class="modal fade" id="exampleModalCenterlist" tabHome="-1"
+                                                        role="dialog" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-body">
+                                                                    <div class="container-fluid">
+                                                                        <section class="jobs-area">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="jobs-filter">
+
+                                                                                        <a href="#" class="btns btn1"><i
+                                                                                                class="fa fa-envelope-o"
+                                                                                                aria-hidden="true"></i>Việc
+                                                                                            làm của bạn</a>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                    <div class="jobslist section4">
+
+                                                                                        <%resulfjoblist.forEach(function(item){%>
+                                                                                            <div class="items">
+                                                                                                <div class="right-con">
+                                                                                                    <%if(item.ImageJob=="admin.png"
+                                                                                                        ){%>
+                                                                                                        <figure
+                                                                                                            style="background-image: url(https://img.icons8.com/bubbles/50/000000/system-administrator-female.png);background-size: 100%; height: 130px;">
+                                                                                                        </figure>
+                                                                                                        <%}else{%>
+                                                                                                            <figure
+                                                                                                                style="background-image: url(image/<%=item.ImageJob%>);background-size: 100%; height: 140px;">
+                                                                                                            </figure>
+                                                                                                            <%}%>
+                                                                                                                <span
+                                                                                                                    class="color1">
+                                                                                                                    <%=item.typejob%>
+                                                                                                                </span>
+                                                                                                </div>
+                                                                                                <div class="content">
+                                                                                                    <h3><a
+                                                                                                            href="/jobs-details&idjob=<%=item.idjobpost%>">
+                                                                                                            <%=item.Namejob%>
+                                                                                                        </a></h3>
+                                                                                                    <p>
+                                                                                                        <%=item.Daypost%>
+                                                                                                    </p>
+                                                                                                    <ul class="tlist">
+                                                                                                        <li><span
+                                                                                                                class="ico"><i
+                                                                                                                    class="flaticon-briefcase-frontal-view"></i></span><span
+                                                                                                                class="con">
+                                                                                                                <%=item.NameUser%>
+                                                                                                            </span></li>
+                                                                                                        <li><span
+                                                                                                                class="ico"><i
+                                                                                                                    class="flaticon-money-bag-with-dollar-symbol"></i></span><span
+                                                                                                                class="con">
+                                                                                                                <%=item.Salary%>
+                                                                                                            </span></li>
+                                                                                                    </ul>
+                                                                                                    <ul class="blist">
+                                                                                                        <li><span
+                                                                                                                class="ico"><i
+                                                                                                                    class="flaticon-maps-and-flags"></i></span><span
+                                                                                                                class="con">
+                                                                                                                <%=item.Address%>
+                                                                                                            </span></li>
+                                                                                                    </ul>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <%})%>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </section>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal fade" id="exampleModalCenterlistApply"
+                                                        tabHome="-1" role="dialog" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-body">
+                                                                    <div class="container-fluid">
+                                                                        <section class="jobs-area">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="jobs-filter">
+
+                                                                                        <a href="#" class="btns btn1"><i
+                                                                                                class="fa fa-envelope-o"
+                                                                                                aria-hidden="true"></i>Việc
+                                                                                            làm của bạn</a>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                    <div class="jobslist section4">
+
+                                                                                        <%resultt.forEach(function(item){%>
+
+                                                                                            <div class="items">
+                                                                                                <div class="right-con">
+                                                                                                    <%if(item.infoNTD.ImageJobNTD=="admin.png"
+                                                                                                        ){%>
+                                                                                                        <figure
+                                                                                                            style="background-image: url(https://img.icons8.com/bubbles/50/000000/system-administrator-female.png);background-size: 100%; height: 130px;">
+                                                                                                        </figure>
+                                                                                                        <%}else{%>
+                                                                                                            <figure
+                                                                                                                style="background-image: url(image/<%=item.infoNTD.ImageJobNTD%>);background-size: 100%; height: 140px;">
+                                                                                                            </figure>
+                                                                                                            <%}%>
+                                                                                                                <span
+                                                                                                                    class="color1">
+                                                                                                                    <%=item.infoNTD.typejobNTD%>
+                                                                                                                </span>
+                                                                                                </div>
+                                                                                                <div class="content">
+                                                                                                    <h3><a
+                                                                                                            href="/jobs-ntd-details&idjob=<%=item.infoNTD.idjobpostNTD%>">
+                                                                                                            <%=item.infoNTD.NamejobNTD%>
+                                                                                                        </a></h3>
+                                                                                                    <p>
+                                                                                                        <%=item.infoNTD.DaypostNTD%>
+                                                                                                    </p>
+                                                                                                    <ul class="tlist">
+                                                                                                        <li><span
+                                                                                                                class="ico"><i
+                                                                                                                    class="flaticon-briefcase-frontal-view"></i></span><span
+                                                                                                                class="con">
+                                                                                                                <%=item.infoNTD.NameUserNTD%>
+                                                                                                            </span></li>
+                                                                                                        <li><span
+                                                                                                                class="ico"><i
+                                                                                                                    class="flaticon-money-bag-with-dollar-symbol"></i></span><span
+                                                                                                                class="con">
+                                                                                                                <%=item.infoNTD.SalaryNTD%>
+                                                                                                            </span></li>
+                                                                                                    </ul>
+                                                                                                    <ul class="blist">
+                                                                                                        <li><span
+                                                                                                                class="ico"><i
+                                                                                                                    class="flaticon-maps-and-flags"></i></span><span
+                                                                                                                class="con">
+                                                                                                                <%=item.infoNTD.AddressNTD%>
+                                                                                                            </span></li>
+                                                                                                    </ul>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <%})%>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </section>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal fade" id="exampleModalCenterlistNTD" tabHome="-1"
+                                                        role="dialog" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-body">
+                                                                    <div class="container-fluid">
+                                                                        <section class="jobs-area">
+                                                                            <div class="row">
+                                                                                <div class="col-md-6">
+                                                                                    <h6>Nhà tuyển dụng yêu thích</h6>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <h6>Việc làm đã lưu</h6>
+                                                                                </div>
+                                                                            </div>
+                                                                        </section>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal fade" id="exampleModalCenterNTV" tabHome="-1"
+                                                        role="dialog" aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg">
+                                                            <div class="modal-content">
+                                                                <div class="modal-body">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row">
+                                                                            <div class="col-sm pd-0">
+                                                                                <div class="tab-content">
+                                                                                    <div id="login">
+                                                                                        <div class="logins">
+                                                                                            <form
+                                                                                                action="/new-job-NTV/<%=user._id%>"
+                                                                                                method="post">
+                                                                                                <fieldset>
+                                                                                                    <label>Tên công
+                                                                                                        việc</label>
+                                                                                                    <input type="text"
+                                                                                                        placeholder="Tên công việc"
+                                                                                                        name="Namejob">
+                                                                                                    <span><i
+                                                                                                            class="fa fa-user"></i></span>
+                                                                                                </fieldset>
+                                                                                                <fieldset>
+                                                                                                    <label>Họ và
+                                                                                                        Tên</label>
+                                                                                                    <input type="text"
+                                                                                                        placeholder="Họ và Tên của bạn"
+                                                                                                        name="Nameuser">
+                                                                                                    <span><i
+                                                                                                            class="fa fa-user"></i></span>
+                                                                                                </fieldset>
+                                                                                                <fieldset>
+                                                                                                    <label>Mức lương
+                                                                                                        mong
+                                                                                                        muốn</label>
+                                                                                                    <input type="text"
+                                                                                                        placeholder="Mức lương mong muốn"
+                                                                                                        name="Salary">
+                                                                                                    <span><i
+                                                                                                            class="fa flaticon-money-bag-with-dollar-symbol"></i></span>
+                                                                                                </fieldset>
+                                                                                                <fieldset>
+                                                                                                    <label>Hình thức làm
+                                                                                                        việc</label>
+                                                                                                    <select
+                                                                                                        name="typejob">
+                                                                                                        <option
+                                                                                                            value="0">
+                                                                                                            Chọn
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="FullTime">
+                                                                                                            FullTime
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="PartTime">
+                                                                                                            PartTime
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="Thời Vụ">
+                                                                                                            Thời Vụ
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="Thực Tập">
+                                                                                                            Thực Tập
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="Khác">
+                                                                                                            Khác
+                                                                                                        </option>
+                                                                                                    </select>
+                                                                                                </fieldset>
+                                                                                                <fieldset>
+                                                                                                    <label>Chuyên
+                                                                                                        ngành</label>
+                                                                                                    <select
+                                                                                                        name="chuyennganh">
+                                                                                                        <option
+                                                                                                            value="0">
+                                                                                                            Chọn
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="1">Y
+                                                                                                            Tế</option>
+                                                                                                        <option
+                                                                                                            value="2">
+                                                                                                            Giáo dục
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="3">
+                                                                                                            Thiết kế
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="4">
+                                                                                                            Xây Dựng
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="5">
+                                                                                                            Tài Chính
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="6">
+                                                                                                            Ngân Hàng
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="7">
+                                                                                                            Dịch Vụ
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="8">
+                                                                                                            Khác
+                                                                                                        </option>
+                                                                                                    </select>
+
+                                                                                                </fieldset>
+                                                                                                <fieldset>
+                                                                                                    <label>Nơi làm
+                                                                                                        việc</label>
+                                                                                                    <input type="text"
+                                                                                                        placeholder="Địa chỉ"
+                                                                                                        name="Address">
+                                                                                                    <span><i
+                                                                                                            class="fa fa-star"></i></span>
+                                                                                                </fieldset>
+                                                                                                <label>Chi tiết công
+                                                                                                    việc</label>
+                                                                                                <textarea
+                                                                                                    style="white-space : pre-wrap;"
+                                                                                                    id="Detailjob"
+                                                                                                    name="Detailjob"></textarea>
+                                                                                                <script>
+                                                                                                    new FroalaEditor('#Detailjob', {
+                                                                                                        imageUploadURL: 'image_upload',
+                                                                                                        imageUploadParams: {
+                                                                                                            id: 'my_editor'
+                                                                                                        },
+                                                                                                        fileUploadURL: 'saveimage',
+                                                                                                        fileUploadParams: {
+                                                                                                            id: 'my_editor'
+                                                                                                        }
+                                                                                                    })
+                                                                                                </script>
+                                                                                                </br>
+                                                                                                <button
+                                                                                                    class="btns btn1">Tạo
+                                                                                                    tin tìm
+                                                                                                    việc</button>
+                                                                                                <div class="agree"><a
+                                                                                                        href="#">Quên
+                                                                                                        mật khẩu?</a>
+                                                                                                </div>
+                                                                                            </form>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="widghet">
+                                                    <h3>Liên Hệ</h3>
+                                                    <div class="contact-form">
+                                                        <form>
+                                                            <div class="contents">
+                                                                <em>Số điện thoại: <%=user.local.NTV.Phone%></em>
+                                                                <br>
+                                                                <em>Email :<%=user.local.NTV.Email%></em>
+                                                            </div>
+                                                        </form>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 col-md-12 col-sm-12">
+                                            <div class="candidates-about">
+                                                <h3>Tổng Quan</h3>
+                                                <div class="row">
+                                                    <div class="col-sm">
+                                                        <div class="label-list">
+                                                            <div class="ico"><i class="fa fa-graduation-cap"></i></div>
+                                                            <div class="con">
+                                                                <h4>Học Vấn</h4>
+                                                                <p>
+                                                                    <%=user.local.NTV.Academic%>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm">
+                                                        <div class="label-list">
+                                                            <div class="ico mr-t10"><i
+                                                                    class="flaticon-money-bag-with-dollar-symbol"></i>
+                                                            </div>
+                                                            <div class="con">
+                                                                <h4>Mức lương</h4>
+                                                                <p>
+                                                                    <%=user.local.NTV.Salary%>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <h3>Học Vấn</h3>
+                                                <div class="educations">
+                                                    <div class="edulists">
+                                                        <div class="top-con">
+                                                            <figure><img
+                                                                    src="https://img.icons8.com/bubbles/50/000000/graduation-cap.png" />
+                                                            </figure>
+                                                            <div class="con">
+                                                                <h3>
+                                                                    <%=user.local.NTV.NameSchool%>
+                                                                </h3>
+                                                                <p>
+                                                                    <%=user.local.NTV.TitleEducation%>
+                                                                </p>
+                                                                <span>
+                                                                    <%=user.local.NTV.TimeEducation%>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="content" style="width: 700px;">
+                                                            <p>
+                                                                <%=user.local.NTV.DetailEducation%>
+                                                            </p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="edulists">
+                                                        <div class="top-con">
+                                                            <figure><img
+                                                                    src="https://img.icons8.com/officel/16/000000/graduation-cap.png" />
+                                                            </figure>
+                                                            <div class="con">
+                                                                <h3>
+                                                                    <%=user.local.NTV.NameSchool2%>
+                                                                </h3>
+                                                                <p>
+                                                                    <%=user.local.NTV.TitleEducation2%>
+                                                                </p>
+                                                                <span>
+                                                                    <%=user.local.NTV.TimeEducation2%>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="content" style="width: 700px;">
+                                                            <p>
+                                                                <%=user.local.NTV.DetailEducation2%>
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h3>Kinh Nghiệm Làm Việc</h3>
+                                                <div class="educations">
+                                                    <div class="edulists">
+                                                        <div class="top-con">
+                                                            <figure><img
+                                                                    src="https://img.icons8.com/plasticine/100/000000/work.png" />
+                                                            </figure>
+                                                            <div class="con">
+                                                                <h3>
+                                                                    <%=user.local.NTV.TitleWork%>
+                                                                </h3>
+                                                                <p>
+                                                                    <%=user.local.NTV.NameCompany%>
+                                                                </p>
+                                                                <span>
+                                                                    <%=user.local.NTV.TimeWork%>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="content" style="width: 700px;">
+                                                            <p>
+                                                                <%=user.local.NTV.DetailWork%>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="edulists">
+                                                        <div class="top-con">
+                                                            <figure><img
+                                                                    src="https://img.icons8.com/plasticine/100/000000/work.png" />
+                                                            </figure>
+                                                            <div class="con">
+                                                                <h3>
+                                                                    <%=user.local.NTV.TitleWork2%>
+                                                                </h3>
+                                                                <p>
+                                                                    <%=user.local.NTV.NameCompany2%>
+                                                                </p>
+                                                                <span>
+                                                                    <%=user.local.NTV.TimeWork2%>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="content" style="width: 700px;">
+                                                            <p>
+                                                                <%=user.local.NTV.DetailWork2%>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h3>Giới thiệu bản thân</h3>
+                                                <div class="content">
+                                                    <p>
+                                                        <%-user.local.NTV.Detail%>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <%}%>
+                     
+            </div>
+            <script src="https://code.jquery.com/jquery-3.6.0.js"
+                integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>   
+<script>
+     $(document).on('click', '.tab-list li a', function () {
+                    var $this = $(this),
+                        $tabList = $this.parents('ul'),
+                        _idx = $this.closest('li').index();
+
+                    $tabList.children().eq(_idx).addClass('in').siblings().removeClass('in');
+                    $tabList.next().children().eq(_idx).addClass('in').siblings().removeClass('in');
+                });
+</script>
+<style>
+    .tab-wrap {
+  margin: 10px;
+  padding: 15px;
+}
+.tab-list {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.tab-list:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.tab-list li {
+  float: left;
+  border: 1px solid #d0d0d0;
+  margin-left: -1px;
+}
+.tab-list li a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-decoration: none;
+}
+.tab-list li a span {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 40px;
+  color: #333;
+}
+.tab-list li a:hover span {
+  color: #fff;
+  background-color: #333;
+}
+.tab-list li.in span {
+  color: #fff;
+  background-color: #333;
+}
+.tab-item {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #d0d0d0;
+}
+.tab-item.in {
+  display: block;
+}
+.plans {
+   height: 200px;
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-pack: justify;
+ -ms-flex-pack: justify;
+ justify-content: space-between;
+ max-width: 970px;
+ padding: 100px 50px;
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+ background: #fff;
+ border-radius: 20px;
+ -webkit-box-shadow: 0px 8px 10px 0px #d8dfeb;
+ box-shadow: 0px 8px 10px 0px #d8dfeb;
+ -webkit-box-align: center;
+ -ms-flex-align: center;
+ align-items: center;
+ -ms-flex-wrap: wrap;
+ flex-wrap: wrap;
+}
+
+.plans .plan input[type="radio"] {
+ position: absolute;
+ opacity: 0;
+}
+
+.plans .plan {
+ cursor: pointer;
+ width: 48.5%;
+}
+.plans .plan .plan-content {
+   width: 225px;
+   margin-top: -80px;
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ padding: 30px;
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+ border: 2px solid #e1e2e7;
+ border-radius: 10px;
+ -webkit-transition: -webkit-box-shadow 0.4s;
+ transition: -webkit-box-shadow 0.4s;
+ -o-transition: box-shadow 0.4s;
+ transition: box-shadow 0.4s;
+ transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
+ position: relative;
+}
+
+.plans .plan .plan-content img {
+ margin-right: 30px;
+ height: 72px;
+}
+
+.plans .plan .plan-details span {
+ margin-bottom: 10px;
+ display: block;
+ font-size: 20px;
+ line-height: 24px;
+ color: #252f42;
+}
+
+.container .title {
+ font-size: 16px;
+ font-weight: 500;
+ -ms-flex-preferred-size: 100%;
+ flex-basis: 100%;
+ color: #252f42;
+ margin-bottom: 20px;
+}
+
+.plans .plan .plan-details p {
+ color: #646a79;
+ font-size: 14px;
+ line-height: 18px;
+}
+
+.plans .plan .plan-content:hover {
+ -webkit-box-shadow: 0px 3px 5px 0px #e8e8e8;
+ box-shadow: 0px 3px 5px 0px #e8e8e8;
+}
+
+.plans .plan input[type="radio"]:checked + .plan-content:after {
+ content: "";
+ position: absolute;
+ height: 8px;
+ width: 8px;
+ background: #216fe0;
+ right: 20px;
+ top: 20px;
+ border-radius: 100%;
+ border: 3px solid #fff;
+ -webkit-box-shadow: 0px 0px 0px 2px #0066ff;
+ box-shadow: 0px 0px 0px 2px #0066ff;
+}
+
+.plans .plan input[type="radio"]:checked + .plan-content {
+ border: 2px solid #216ee0;
+ background: #eaf1fe;
+ -webkit-transition: ease-in 0.3s;
+ -o-transition: ease-in 0.3s;
+ transition: ease-in 0.3s;
+}
+
+@media screen and (max-width: 991px) {
+ .plans {
+     margin: 10px;
+   height: 200px;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   -webkit-box-align: start;
+   -ms-flex-align: start;
+   align-items: flex-start;
+   padding: 40px;
+ }
+
+ .plans .plan {
+   width: 100%;
+ }
+
+ .plan.complete-plan {
+   margin-top: 20px;
+ }
+
+ .plans .plan .plan-content .plan-details {
+   width: 100%;
+   display: inline-block;
+ }
+
+ .plans .plan input[type="radio"]:checked + .plan-content:after {
+   top: 45%;
+   -webkit-transform: translate(-50%);
+   -ms-transform: translate(-50%);
+   transform: translate(-50%);
+ }
+}
+
+@media screen and (max-width: 767px) {
+   .plans .plan input[type="radio"]:checked + .plan-content {
+       margin-top: -15px;
+   height: 130px;
+   width: 100%;
+   border: 2px solid #216ee0;
+   background: #eaf1fe;
+   -webkit-transition: ease-in 0.3s;
+   -o-transition: ease-in 0.3s;
+   transition: ease-in 0.3s;
+   }
+ .plans .plan .plan-content .plan-details {
+   width: 60%;
+   display: inline-block;
+ }
+}
+
+@media screen and (max-width: 540px) {
+ .plans .plan .plan-content img {
+   margin-bottom: 20px;
+   height: 56px;
+   -webkit-transition: height 0.4s;
+   -o-transition: height 0.4s;
+   transition: height 0.4s;
+ }
+
+ .plans .plan input[type="radio"]:checked + .plan-content:after {
+   top: 20px;
+   right: 10px;
+ }
+
+ .plans .plan .plan-content .plan-details {
+   width: 100%;
+ }
+
+ .plans .plan .plan-content {
+   height: 130px;
+   padding: 20px;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   -webkit-box-align: baseline;
+   -ms-flex-align: baseline;
+   align-items: baseline;
+   margin-top: -20px;
+ }
+}
+
+/* inspiration */
+.inspiration {
+ font-size: 12px;
+ margin-top: 50px;
+ position: absolute;
+ bottom: 10px;
+ font-weight: 300;
+}
+
+.inspiration a {
+ color: #666;
+}
+@media screen and (max-width: 767px) {
+ /* inspiration */
+ .inspiration {
+   display: none;
+ }
+}
+
+
+.selectMultiple {
+  width: 100%;
+  position: relative;
+  }
+  .selectMultiple select {
+  display: none;
+  }
+  .selectMultiple > div {
+  position: relative;
+  z-index: 2;
+  padding: 8px 12px 2px 12px;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  min-height: 44px;
+  box-shadow: 0 4px 16px 0 rgba(22, 42, 90, .12);
+  transition: box-shadow 0.3s ease;
+  }
+  .selectMultiple > div:hover {
+  box-shadow: 0 4px 24px -1px rgba(22, 42, 90, .16);
+  }
+  .selectMultiple > div .arrow {
+  right: 1px;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  width: 28px;
+  position: absolute;
+  }
+  .selectMultiple > div .arrow:before, .selectMultiple > div .arrow:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 8px;
+  border-bottom: 8px solid #99a3ba;
+  top: 43%;
+  transition: all 0.3s ease;
+  }
+  .selectMultiple > div .arrow:before {
+  right: 12px;
+  transform: rotate(-130deg);
+  }
+  .selectMultiple > div .arrow:after {
+  left: 9px;
+  transform: rotate(130deg);
+  }
+  .selectMultiple > div span {
+  color: #99a3ba;
+  display: block;
+  position: absolute;
+  left: 12px;
+  cursor: pointer;
+  top: 8px;
+  line-height: 28px;
+  transition: all 0.3s ease;
+  }
+  .selectMultiple > div span.hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-4px, 0);
+  }
+  .selectMultiple > div a {
+  position: relative;
+  padding: 0 24px 6px 8px;
+  line-height: 28px;
+  color: #1e2330;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 6px 0 0;
+  }
+  .selectMultiple > div a em {
+  font-style: normal;
+  display: block;
+  white-space: nowrap;
+  }
+  .selectMultiple > div a:before {
+  content: '';
+  left: 0;
+  top: 0;
+  bottom: 6px;
+  width: 100%;
+  position: absolute;
+  display: block;
+  background: rgba(228, 236, 250, .7);
+  z-index: -1;
+  border-radius: 4px;
+  }
+  .selectMultiple > div a i {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 28px;
+  display: block;
+  }
+  .selectMultiple > div a i:before, .selectMultiple > div a i:after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: #4d18ff;
+  border-radius: 1px;
+  }
+  .selectMultiple > div a i:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .selectMultiple > div a i:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  .selectMultiple > div a.notShown {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  }
+  .selectMultiple > div a.notShown:before {
+  width: 28px;
+  transition: width 0.45s cubic-bezier(0.87, -0.41, 0.19, 1.44) 0.2s;
+  }
+  .selectMultiple > div a.notShown i {
+  opacity: 0;
+  transition: all 0.3s ease 0.3s;
+  }
+  .selectMultiple > div a.notShown em {
+  opacity: 0;
+  transform: translate(-6px, 0);
+  transition: all 0.4s ease 0.3s;
+  }
+  .selectMultiple > div a.notShown.shown {
+  opacity: 1;
+  }
+  .selectMultiple > div a.notShown.shown:before {
+  width: 100%;
+  }
+  .selectMultiple > div a.notShown.shown i {
+  opacity: 1;
+  }
+  .selectMultiple > div a.notShown.shown em {
+  opacity: 1;
+  transform: translate(0, 0);
+  }
+  .selectMultiple > div a.remove:before {
+  width: 28px;
+  transition: width 0.4s cubic-bezier(0.87, -0.41, 0.19, 1.44) 0s;
+  }
+  .selectMultiple > div a.remove i {
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+  }
+  .selectMultiple > div a.remove em {
+  opacity: 0;
+  transform: translate(-12px, 0);
+  transition: all 0.4s ease 0s;
+  }
+  .selectMultiple > div a.remove.disappear {
+  opacity: 0;
+  transition: opacity 0.5s ease 0s;
+  }
+  .selectMultiple > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  z-index: 1;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 8px;
+  transform: translate(0, 20px) scale(0.8);
+  transform-origin: 0 0;
+  filter: drop-shadow(0 12px 20px rgba(22, 42, 90, .08));
+  transition: all 0.4s ease, transform 0.4s cubic-bezier(0.87, -0.41, 0.19, 1.44), filter 0.3s ease 0.2s;
+  }
+  .selectMultiple > ul li {
+  color: #1e2330;
+  background: #fff;
+  padding: 12px 16px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease 0.3s, opacity 0.5s ease 0.3s, border-radius 0.3s ease 0.3s;
+  }
+  .selectMultiple > ul li:first-child {
+  border-radius: 8px 8px 0 0;
+  }
+  .selectMultiple > ul li:first-child:last-child {
+  border-radius: 8px;
+  }
+  .selectMultiple > ul li:last-child {
+  border-radius: 0 0 8px 8px;
+  }
+  .selectMultiple > ul li:last-child:first-child {
+  border-radius: 8px;
+  }
+  .selectMultiple > ul li:hover {
+  background: #4d18ff;
+  color: #fff;
+  }
+  .selectMultiple > ul li:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: rgba(0, 0, 0, .4);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%, -50%);
+  transform-origin: 50% 50%;
+  }
+  .selectMultiple > ul li.beforeRemove {
+  border-radius: 0 0 8px 8px;
+  }
+  .selectMultiple > ul li.beforeRemove:first-child {
+  border-radius: 8px;
+  }
+  .selectMultiple > ul li.afterRemove {
+  border-radius: 8px 8px 0 0;
+  }
+  .selectMultiple > ul li.afterRemove:last-child {
+  border-radius: 8px;
+  }
+  .selectMultiple > ul li.remove {
+  transform: scale(0);
+  opacity: 0;
+  }
+  .selectMultiple > ul li.remove:after {
+  animation: ripple 0.4s ease-out;
+  }
+  .selectMultiple > ul li.notShown {
+  display: none;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.4s ease;
+  }
+  .selectMultiple > ul li.notShown.show {
+  transform: scale(1);
+  opacity: 1;
+  }
+  .selectMultiple.open > div {
+  box-shadow: 0 4px 20px -1px rgba(22, 42, 90, .12);
+  }
+  .selectMultiple.open > div .arrow:before {
+  transform: rotate(-50deg);
+  }
+  .selectMultiple.open > div .arrow:after {
+  transform: rotate(50deg);
+  }
+  .selectMultiple.open > ul {
+  transform: translate(0, 12px) scale(1);
+  opacity: 1;
+  visibility: visible;
+  filter: drop-shadow(0 16px 24px rgba(22, 42, 90, .16));
+  }
+  @keyframes ripple {
+  0% {
+  transform: scale(0, 0);
+  opacity: 1;
+  }
+  25% {
+  transform: scale(30, 30);
+  opacity: 1;
+  }
+  100% {
+  opacity: 0;
+  transform: scale(50, 50);
+  }
+  }
+  
+</style>
+            <script>
+                
+               
+                $(document).ready(function () {
+
+                    var select = $('select[multiple]');
+                    var options = select.find('option');
+
+                    var div = $('<div />').addClass('selectMultiple');
+                    var active = $('<div />');
+                    var list = $('<ul />');
+                    var placeholder = select.data('placeholder');
+
+                    var span = $('<span />').text(placeholder).appendTo(active);
+
+                    options.each(function () {
+                        var text = $(this).text();
+                        if ($(this).is(':selected')) {
+                            active.append($('<a />').html('<em>' + text + '</em><i></i>'));
+                            span.addClass('hide');
+                        } else {
+                            list.append($('<li />').html(text));
+                        }
+                    });
+
+                    active.append($('<div />').addClass('arrow'));
+                    div.append(active).append(list);
+
+                    select.wrap(div);
+
+                    $(document).on('click', '.selectMultiple ul li', function (e) {
+                        var select = $(this).parent().parent();
+                        var li = $(this);
+                        if (!select.hasClass('clicked')) {
+                            select.addClass('clicked');
+                            li.prev().addClass('beforeRemove');
+                            li.next().addClass('afterRemove');
+                            li.addClass('remove');
+                            var a = $('<a />').addClass('notShown').html('<em>' + li.text() + '</em><i></i>').hide().appendTo(select.children('div'));
+                            a.slideDown(400, function () {
+                                setTimeout(function () {
+                                    a.addClass('shown');
+                                    select.children('div').children('span').addClass('hide');
+                                    select.find('option:contains(' + li.text() + ')').prop('selected', true);
+                                }, 500);
+                            });
+                            setTimeout(function () {
+                                if (li.prev().is(':last-child')) {
+                                    li.prev().removeClass('beforeRemove');
+                                }
+                                if (li.next().is(':first-child')) {
+                                    li.next().removeClass('afterRemove');
+                                }
+                                setTimeout(function () {
+                                    li.prev().removeClass('beforeRemove');
+                                    li.next().removeClass('afterRemove');
+                                }, 200);
+
+                                li.slideUp(400, function () {
+                                    li.remove();
+                                    select.removeClass('clicked');
+                                });
+                            }, 600);
+                        }
+                    });
+
+                    $(document).on('click', '.selectMultiple > div a', function (e) {
+                        var select = $(this).parent().parent();
+                        var self = $(this);
+                        self.removeClass().addClass('remove');
+                        select.addClass('open');
+                        setTimeout(function () {
+                            self.addClass('disappear');
+                            setTimeout(function () {
+                                self.animate({
+                                    width: 0,
+                                    height: 0,
+                                    padding: 0,
+                                    margin: 0
+                                }, 300, function () {
+                                    var li = $('<li />').text(self.children('em').text()).addClass('notShown').appendTo(select.find('ul'));
+                                    li.slideDown(400, function () {
+                                        li.addClass('show');
+                                        setTimeout(function () {
+                                            select.find('option:contains(' + self.children('em').text() + ')').prop('selected', false);
+                                            if (!select.find('option:selected').length) {
+                                                select.children('div').children('span').removeClass('hide');
+                                            }
+                                            li.removeClass();
+                                        }, 400);
+                                    });
+                                    self.remove();
+                                })
+                            }, 300);
+                        }, 400);
+                    });
+
+                    $(document).on('click', '.selectMultiple > div .arrow, .selectMultiple > div span', function (e) {
+                        $(this).parent().parent().toggleClass('open');
+                    });
+
+                });
+
+            </script>
+            <script>
+                $("#search").on("keyup", function () {
+                    var value = $(this).val().toLowerCase();
+                    $("#table tr").filter(function () {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+                var copybutton = document.querySelectorAll("[data-copy]");
+                for (var i = 0; i < copybutton.length; i++) {
+                var el = copybutton[i];
+                el.addEventListener("submit", function(e) {
+                    e.preventDefault();
+                    var text = e.target.querySelector('input[type="text"]').select();
+                    document.execCommand("copy");
+                });
+                }
+                var els_selectAll = document.querySelectorAll("[data-click-select-all]");
+                for (var i = 0; i < els_selectAll.length; i++) {
+                var el = els_selectAll[i];
+                el.addEventListener("click", function(e) {
+                    e.target.select();
+                });
+                }
+
+                </script>
+            
+            <%- include ../partials/menu.ejs%>
+              
+
+
+    </body>
+
+</html>

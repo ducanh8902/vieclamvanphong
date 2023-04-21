@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>OFFICE JOB</title>
+    <%- include ../partials/icon.ejs%>
+        <%- include ../partials/meta_tag.ejs%>
+            <%- include ../partials/css.ejs%>
+                <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+               <style>
+                   html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+               </style> 
+</head>
+<body>
+    
+    <main style="padding-top: 0px;" class="main">
+   
+        <section class="section-box mt-50">
+                <div style="text-align: center;" class="container">
+                    <h3><%=Job_detail.head.Title_job%></h3>
+                </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12 col-sm-12 col-12">
+                        <div class="single-image-feature">
+                            <figure><img style="    object-fit: cover;
+                                object-position: 50% 50%;
+                                height: 370px;
+                                width: 870px;" alt="jobhub" src="https://vieclamvp.com/image/<%=Job_detail.body.Image.url%>" class="img-rd-15" />
+                            </figure>
+                        </div>
+                        <div class="col-lg-12 col-sm-12 col-12">
+                            <h6 class="card-job-top--info-heading">Lĩnh Vực</h6>
+                            <% const Specialized= Job_detail.head.Specialized %>
+                                <%Specialized.forEach(function(item_Specialized){%>
+                                    <a href="job-grid"
+                                        class="btn btn-small background-blue-light mr-5">
+                                        <%=item_Specialized.Specialize%>
+                                    </a>
+                                    <%})%>
+                        </div>
+                        <div class="content-single">
+                            <h5>Thông Tin Phỏng Vấn</h5>
+                            <textarea contenteditable="true"  readonly>
+                                <%-Job_detail.body.Info_Interview%>
+                            </textarea>
+                            <h5>Thông Tin Tuyển Dụng</h5>
+                           <textarea contenteditable="true" readonly>
+                            <%-Job_detail.body.Info_job%>
+                           </textarea>
+                        </div>
+                        <div class="author-single">
+                            <span><%=Job_detail.head.Name_company%></span>
+                        </div>
+                        <div class="single-apply-jobs">
+                            <div class="row align-items-center">
+                              
+                                <!-- <div class="col-md-7 text-lg-end social-share">
+                                    <a href="#" class="btn btn-border btn-sm mr-10"><img alt="jobhub" src="assets/imgs/theme/icons/share-fb.svg" /> Share</a>
+                                    <a href="#" class="btn btn-border btn-sm mr-10"><img alt="jobhub" src="assets/imgs/theme/icons/share-tw.svg" /> Tweet</a>
+                                    <a href="#" class="btn btn-border btn-sm"><img alt="jobhub" src="assets/imgs/theme/icons/share-pinterest.svg" /> Pin</a>
+                                </div> -->
+                            </div>
+                        </div>
+                        <!-- <div class="single-recent-jobs">
+                            <h4 class="heading-border"><span>Recent jobs</span></h4>
+                            <div class="list-recent-jobs">
+                                <div class="card-job hover-up wow animate__animated animate__fadeInUp">
+                                    <div class="card-job-top">
+                                        <div class="card-job-top--image">
+                                            <figure><img alt="jobhub" src="assets/imgs/page/job/digital.png" /></figure>
+                                        </div>
+                                        <div class="card-job-top--info">
+                                            <h6 class="card-job-top--info-heading"><a href="job-single.html">Digital Experience Designer</a></h6>
+                                            <div class="row">
+                                                <div class="col-lg-7">
+                                                    <a href="employers-grid.html"><span class="card-job-top--company">AliStudio, Inc</span></a>
+                                                    <span class="card-job-top--location text-sm"><i class="fi-rr-marker"></i>
+                                                        New York, NY</span>
+                                                    <span class="card-job-top--type-job text-sm"><i class="fi-rr-briefcase"></i>
+                                                        Full time</span>
+                                                    <span class="card-job-top--post-time text-sm"><i class="fi-rr-clock"></i> 3
+                                                        mins ago</span>
+                                                </div>
+                                                <div class="col-lg-5 text-lg-end">
+                                                    <span class="card-job-top--price">$500<span>/Hour</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-job-description mt-20">
+                                        We want someone who has been doing this for a solid 2-3 years. We want someone
+                                        who can
+                                        demonstrate an extremely strong portfolio. Create deliverables for your product
+                                        area
+                                        (for example competitive analyses, user flows.
+                                    </div>
+                                    <div class="card-job-bottom mt-25">
+                                        <div class="row">
+                                            <div class="col-lg-9 col-sm-8 col-12">
+                                                <a href="job-grid.html" class="btn btn-small background-urgent btn-pink mr-5">Urgent</a>
+                                                <a href="job-grid-2.html" class="btn btn-small background-blue-light mr-5">Senior</a>
+                                                <a href="job-grid.html" class="btn btn-small background-6 disc-btn">Full time</a>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-4 col-12 text-end">
+                                                <span><img src="assets/imgs/theme/icons/shield-check.svg" alt="jobhub" /></span>
+                                                <span class="ml-5"><img src="assets/imgs/theme/icons/bookmark.svg" alt="jobhub" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-job hover-up wow animate__animated animate__fadeInUp">
+                                    <div class="card-job-top">
+                                        <div class="card-job-top--image">
+                                            <figure><img alt="jobhub" src="assets/imgs/page/job/n-digital.png" /></figure>
+                                        </div>
+                                        <div class="card-job-top--info">
+                                            <h6 class="card-job-top--info-heading"><a href="job-single.html">Digital Experience Designer</a></h6>
+                                            <div class="row">
+                                                <div class="col-lg-7">
+                                                    <a href="employers-grid.html"><span class="card-job-top--company">AliStudio, Inc</span></a>
+                                                    <span class="card-job-top--location text-sm"><i class="fi-rr-marker"></i>
+                                                        New York, NY</span>
+                                                    <span class="card-job-top--type-job text-sm"><i class="fi-rr-briefcase"></i>
+                                                        Full time</span>
+                                                    <span class="card-job-top--post-time text-sm"><i class="fi-rr-clock"></i> 3
+                                                        mins ago</span>
+                                                </div>
+                                                <div class="col-lg-5  text-lg-end">
+                                                    <span class="card-job-top--price">$500<span>/Hour</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-job-description mt-20">
+                                        We want someone who has been doing this for a solid 2-3 years. We want someone
+                                        who can
+                                        demonstrate an extremely strong portfolio. Create deliverables for your product
+                                        area
+                                        (for example competitive analyses, user flows.
+                                    </div>
+                                    <div class="card-job-bottom mt-25">
+                                        <div class="row">
+                                            <div class="col-lg-9 col-sm-8 col-12">
+                                                <a href="job-grid.html" class="btn btn-small background-urgent btn-pink mr-5">Urgent</a>
+                                                <a href="job-grid-2.html" class="btn btn-small background-blue-light mr-5">Senior</a>
+                                                <a href="job-grid.html" class="btn btn-small background-6 disc-btn">Full time</a>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-4 col-12 text-end">
+                                                <span><img src="assets/imgs/theme/icons/shield-check.svg" alt="jobhub" /></span>
+                                                <span class="ml-5"><img src="assets/imgs/theme/icons/bookmark.svg" alt="jobhub" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-job hover-up wow animate__animated animate__fadeInUp">
+                                    <div class="card-job-top">
+                                        <div class="card-job-top--image">
+                                            <figure><img alt="jobhub" src="assets/imgs/page/job/n-digital2.png" /></figure>
+                                        </div>
+                                        <div class="card-job-top--info">
+                                            <h6 class="card-job-top--info-heading"><a href="job-single.html">Digital Experience Designer</a></h6>
+                                            <div class="row">
+                                                <div class="col-lg-7">
+                                                    <a href="employers-grid.html"><span class="card-job-top--company">AliStudio, Inc</span></a>
+                                                    <span class="card-job-top--location text-sm"><i class="fi-rr-marker"></i>
+                                                        New York, NY</span>
+                                                    <span class="card-job-top--type-job text-sm"><i class="fi-rr-briefcase"></i>
+                                                        Full time</span>
+                                                    <span class="card-job-top--post-time text-sm"><i class="fi-rr-clock"></i> 3
+                                                        mins ago</span>
+                                                </div>
+                                                <div class="col-lg-5 text-lg-end">
+                                                    <span class="card-job-top--price">$500<span>/Hour</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-job-description mt-20">
+                                        We want someone who has been doing this for a solid 2-3 years. We want someone
+                                        who can
+                                        demonstrate an extremely strong portfolio. Create deliverables for your product
+                                        area
+                                        (for example competitive analyses, user flows.
+                                    </div>
+                                    <div class="card-job-bottom mt-25">
+                                        <div class="row">
+                                            <div class="col-lg-9 col-sm-8 col-12">
+                                                <a href="job-grid.html" class="btn btn-small background-urgent btn-pink mr-5">Urgent</a>
+                                                <a href="job-grid-2.html" class="btn btn-small background-blue-light mr-5">Senior</a>
+                                                <a href="job-grid.html" class="btn btn-small background-6 disc-btn">Full time</a>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-4 col-12 text-end">
+                                                <span><img src="assets/imgs/theme/icons/shield-check.svg" alt="jobhub" /></span>
+                                                <span class="ml-5"><img src="assets/imgs/theme/icons/bookmark.svg" alt="jobhub" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-job hover-up wow animate__animated animate__fadeInUp">
+                                    <div class="card-job-top">
+                                        <div class="card-job-top--image">
+                                            <figure><img alt="jobhub" src="assets/imgs/page/job/digital.png" /></figure>
+                                        </div>
+                                        <div class="card-job-top--info">
+                                            <h6 class="card-job-top--info-heading"><a href="job-single.html">Digital Experience Designer</a></h6>
+                                            <div class="row">
+                                                <div class="col-lg-7">
+                                                    <a href="employers-grid.html"><span class="card-job-top--company">AliStudio, Inc</span></a>
+                                                    <span class="card-job-top--location text-sm"><i class="fi-rr-marker"></i>
+                                                        New York, NY</span>
+                                                    <span class="card-job-top--type-job text-sm"><i class="fi-rr-briefcase"></i>
+                                                        Full time</span>
+                                                    <span class="card-job-top--post-time text-sm"><i class="fi-rr-clock"></i> 3
+                                                        mins ago</span>
+                                                </div>
+                                                <div class="col-lg-5 text-lg-end">
+                                                    <span class="card-job-top--price">$500<span>/Hour</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-job-description mt-20">
+                                        We want someone who has been doing this for a solid 2-3 years. We want someone
+                                        who can
+                                        demonstrate an extremely strong portfolio. Create deliverables for your product
+                                        area
+                                        (for example competitive analyses, user flows.
+                                    </div>
+                                    <div class="card-job-bottom mt-25">
+                                        <div class="row">
+                                            <div class="col-lg-9 col-sm-8 col-12">
+                                                <a href="job-grid.html" class="btn btn-small background-urgent btn-pink mr-5">Urgent</a>
+                                                <a href="job-grid-2.html" class="btn btn-small background-blue-light mr-5">Senior</a>
+                                                <a href="job-grid.html" class="btn btn-small background-6 disc-btn">Full time</a>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-4 col-12 text-end">
+                                                <span><img src="assets/imgs/theme/icons/shield-check.svg" alt="jobhub" /></span>
+                                                <span class="ml-5"><img src="assets/imgs/theme/icons/bookmark.svg" alt="jobhub" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-20">
+                                    <a href="job-grid.html" class="btn btn-default">Explore more</a>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-12 pl-40 pl-lg-15 mt-lg-30">
+                        <div class="sidebar-shadow">
+                            <div class="sidebar-heading">
+                                <div class="avatar-sidebar">
+                                    <figure><img alt="jobhub" src="<%=Job_detail.head.logo_company.url%>" /></figure>
+                                    <div class="sidebar-info">
+                                        <span class="sidebar-company"><%=Job_detail.head.Name_company%></span>
+                                        <span class="sidebar-website-text"><%=Job_detail.head.website_company%></span>
+                                        <!-- <div class="dropdowm">
+                                            <button class="btn btn-dots btn-dots-abs-right dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                            <ul class="dropdown-menu dropdown-menu-light">
+                                                <li><a class="dropdown-item" href="#">Contact</a></li>
+                                                <li><a class="dropdown-item" href="#">Bookmark</a></li>
+                                            </ul>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-description mt-15">
+                                <%=Job_detail.head.website_company%>
+                            </div>
+                            
+                            <div class="sidebar-list-job">
+                                <ul>
+                                    <li>
+                                        <div class="sidebar-icon-item"><i class="fi-rr-briefcase"></i></div>
+                                        <div class="sidebar-text-info">
+                                            <span class="text-description">Hợp Đồng</span>
+                                            <strong class="small-heading"> <%=Job_detail.head.Type_job%></strong>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sidebar-icon-item"><i class="fi-rr-marker"></i></div>
+                                        <div class="sidebar-text-info">
+                                            <span class="text-description">Khu Vực</span>
+                                            <strong class="small-heading"> <%=Job_detail.contact.Area%></strong>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sidebar-icon-item"><i class="fi-rr-dollar"></i></div>
+                                        <div class="sidebar-text-info">
+                                            <span class="text-description">Thu Nhập</span>
+                                            <strong class="small-heading"> <%=Job_detail.head.Salary%></strong>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sidebar-icon-item"><i class="fi-rr-clock"></i></div>
+                                        <div class="sidebar-text-info">
+                                            <span class="text-description">Ngày Đăng</span>
+                                            <strong class="small-heading"> <%=Job_detail.fillter.Date_create%></strong>
+                                        </div>
+                                    </li>
+                                    <!-- <li>
+                                        <div class="sidebar-icon-item"><i class="fi-rr-time-fast"></i></div>
+                                        <div class="sidebar-text-info">
+                                            <span class="text-description">Expiration date</span>
+                                            <strong class="small-heading">April 06, 2022</strong>
+                                        </div>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <!-- <div class="sidebar-team-member pt-40">
+                                <h6 class="small-heading">Team member</h6>
+                                <div class="sidebar-list-member">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <figure><img alt="jobhub" src="assets/imgs/page/job-single/avatar1.png" />
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <figure><img alt="jobhub" src="assets/imgs/page/job-single/avatar2.png" />
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <figure><img alt="jobhub" src="assets/imgs/page/job-single/avatar3.png" />
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <figure><img alt="jobhub" src="assets/imgs/page/job-single/avatar4.png" />
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <figure><img alt="jobhub" src="assets/imgs/page/job-single/avatar5.png" />
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <figure><img alt="jobhub" src="assets/imgs/page/job-single/avatar6.png" />
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <figure><img alt="jobhub" src="assets/imgs/page/job-single/avatar7.png" />
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <figure><img alt="jobhub" src="assets/imgs/page/job-single/avatar8.png" />
+                                                </figure>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                            <div class="sidebar-team-member pt-40">
+                                <h6 class="small-heading">Liên Hệ</h6>
+                                <div class="info-address">
+                                    <span><i class="fi-rr-marker"></i> <span> <%=Job_detail.contact.address%></span></span>
+                                    <span><i class="fi-rr-headset"></i> <span> <%=Job_detail.contact.phone%></span></span>
+                                    <span><i class="fi-rr-paper-plane"></i> <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="73101c1d07121007331d1600071e1201075d101c1e"> <%=Job_detail.contact.email%></a></span></span>
+                                    <span><i class="fi-rr-time-fast"></i> <span>9:00 - 16:00, Thứ 2 Đến Thứ 6 </span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="sidebar-normal">
+                            <div>
+                                <h6 class="small-heading">Are you also hiring?</h6>
+                                <ul class="ul-lists">
+                                    <li><a href="#">Writing & Translation</a></li>
+                                    <li><a href="#">Video & Animation</a></li>
+                                    <li><a href="#">Music & Audio</a></li>
+                                    <li><a href="#">Digital Marketing</a></li>
+                                    <li><a href="#">Business</a></li>
+                                    <li><a href="#">Programming & Tech</a></li>
+                                </ul>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <style>
+        textarea{
+           
+            border: none;
+            resize: none;
+        }
+    </style>
+    
+    <%- include ../partials/script.ejs%>
+</body>
+
+</html>

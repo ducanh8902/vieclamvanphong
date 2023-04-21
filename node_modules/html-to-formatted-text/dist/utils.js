@@ -1,0 +1,1 @@
+"use strict";var compose=function(){for(var a=arguments.length,b=Array(a),c=0;c<a;c++)b[c]=arguments[c];return b.reduce(function(a,b){return function(){return a(b.apply(void 0,arguments))}})};module.exports={compose:compose};

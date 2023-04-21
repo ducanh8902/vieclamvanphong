@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<%- include ../partials/header.ejs%>
+
+    <body >
+
+                    <div  class="sideber2">
+                      <div style="margin-top: 100px;margin-left: 10%;margin-right: 10%;margin-bottom: 10%;" class="widghet">
+                        <div class="row">
+                            <div class="col-lg-12">
+                              <form action="/update-scan-TTUV&idUser=<%=infoUser.id%>&CMND=<%=infoUser.CMND%>" method="post" novalidate="novalidate"
+                                enctype="multipart/form-data">
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <input type="file" name="TTUV" multiple id="gallery-photo-add-dxv" />
+                                  </div>
+                                  <div style="text-align: center;" class="col-md-12">
+                                    <div style="width:50px;height: 150px;display: contents;" class="gallery-dxv"></div>
+                                  </div>
+                                </div>
+                                <div>
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                        <center>
+                                          <div id="uploading"></div>
+                                        </center>
+                                      </div>
+                                      <div class="col-md-12">
+                                       <input  type="submit" class="btn1" value="Lưu thông tin"/>
+                                      </div>
+                                  
+                                    </div>
+                                </div>
+                              
+                              </form>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+              <script>
+                $(function () {
+                  // Multiple images preview in browser
+                  var imagesPreview = function (input, placeToInsertImagePreview) {
+            
+                    if (input.files) {
+                      var filesAmount = input.files.length;
+            
+                      for (i = 0; i < filesAmount; i++) {
+                        var reader = new FileReader();
+            
+                        reader.onload = function (event) {
+                          $($.parseHTML('<img style="width:30%;border-radius: 10px;margin: 5px;padding: 5px;"/>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
+                        }
+            
+                        reader.readAsDataURL(input.files[i]);
+                      }
+                    }
+            
+                  };
+                  $('#gallery-photo-add-dxv').on('change', function () {
+                    imagesPreview(this, 'div.gallery-dxv');
+                  });
+                 
+                });
+              </script>
+    </body>
+    <style>
+      #footerinfo {
+
+height: 320px;
+}
+      @media only screen and (max-width: 570px) {
+        textarea.notes{
+          width: 100%;
+        }
+#footerinfo {
+
+height: 850px;
+}
+#footerinfodiv{
+height:250px ;
+} ;
+
+}
+     @media only screen and (max-width: 992px) {
+.sideber2.mr-r {
+margin-top: 50px;
+}
+}
+.sideber2 .widghet {
+border: 1px solid #cbcbcb;
+margin: 0 0 30px;
+padding: 30px;
+-webkit-transition: 0 5px 10px rgba(0, 0, 0, 0.1);
+-moz-transition: 0 5px 10px rgba(0, 0, 0, 0.1);
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+border-radius: 5px;
+}
+.sideber2 .widghet.clearw {
+padding: 0;
+border: 0;
+box-shadow: none;
+}
+.sideber2 .widghet:last-child {
+margin: -5px;
+}
+.sideber2 .widghet h3 {
+font-size: 22px;
+text-transform: uppercase;
+color: #3c3c3c;
+font-weight: 500;
+}
+.sideber2 .widghet .contact-form form fieldset {
+display: block;
+margin: 0 0 20px;
+}
+.sideber2 .widghet .contact-form form fieldset input {
+width: 100%;
+line-height: 50px;
+height: 50px;
+border: 1px solid #cbcbcb;
+background: #fff;
+padding: 0 15px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+border-radius: 5px;
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+transition: all 0.5s ease;
+}
+.sideber2 .widghet .contact-form form fieldset input:focus {
+border: 1px solid #ff8707;
+}
+.sideber2 .widghet .contact-form form fieldset textarea {
+width: 100%;
+height: 100px;
+border: 1px solid #cbcbcb;
+background: #fff;
+padding: 10px 15px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+border-radius: 5px;
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+transition: all 0.5s ease;
+}
+.sideber2 .widghet .contact-form form fieldset textarea:focus {
+border: 1px solid #ff8707;
+}
+.sideber2 .widghet .contact-form form button {
+display: block;
+width: 100%;
+}
+.sideber2 .widghet .contact-form p {
+margin: 10px 0 0;
+color: #c3c3c3;
+}
+.sideber2 .widghet .contact-form p a {
+color: #ff8707;
+}
+.sideber2 .widghet .user_profle {
+text-align: center;
+display: block;
+}
+.sideber2 .widghet .user_profle figure {
+width: 128px;
+height: 128px;
+overflow: hidden;
+vertical-align: middle;
+margin: 0 auto 18px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+-ms-border-radius: 100%;
+border-radius: 100%;
+}
+.sideber2 .widghet .user_profle figure img {
+width: 100%;
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+transition: all 0.5s ease;
+}
+.sideber2 .widghet .user_profle .contents {
+display: block;
+}
+.sideber2 .widghet .user_profle .contents h4 {
+display: block;
+margin: 0 0 10px;
+font-weight: 500;
+text-transform:uppercase;
+}
+.sideber2 .widghet .user_profle .contents h4 a {
+color: #ff8707;
+}
+.sideber2 .widghet .user_profle .contents em {
+color: #3c3c3c;
+font-weight: 500;
+font-size: 15px;
+}
+.sideber2 .widghet .user_profle .contents p {
+margin: 0 0 15px;
+font-size: 13px;
+}
+.sideber2 .widghet .user_profle .contents ul {
+display: block;
+margin: 0 0 25px;
+}
+.sideber2 .widghet .user_profle .contents ul li {
+display: inline-block;
+padding: 0 4px;
+}
+.sideber2 .widghet .user_profle .contents ul li a {
+display: block;
+width: 40px;
+height: 40px;
+line-height: 38px;
+font-size: 24px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+-ms-border-radius: 100%;
+border-radius: 100%;
+}
+.sideber2 .widghet .user_profle .contents ul li:first-child {
+padding-left: 0;
+}
+.sideber2 .widghet .user_profle .contents ul li:last-child {
+padding-right: 0;
+}
+.sideber2 .widghet .user_profle .contents ul li:nth-child(1) a {
+border: 1px solid #375d93;
+color: #375d93;
+}
+.sideber2 .widghet .user_profle .contents ul li:nth-child(2) a {
+border: 1px solid #43afe9;
+color: #43afe9;
+}
+.sideber2 .widghet .user_profle .contents ul li:nth-child(3) a {
+border: 1px solid #007eb3;
+color: #007eb3;
+}
+.sideber2 .widghet .user_profle .contents .dnr {
+display: inline-block;
+padding: 0 15px;
+line-height: 44px;
+height: 46px;
+font-size: 16px;
+color: #82d808;
+border: 1px solid #82d808;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+border-radius: 5px;
+}
+.sideber2 .widghet .user_profle .contents .dnr:hover {
+background: #82d808;
+color: #fff;
+}
+.sideber2 .widghet.frd {
+box-shadow: none;
+background: #f1f1f1;
+}
+.sideber2 .widghet.frd .featureds {
+display: block;
+position: relative;
+}
+.sideber2 .widghet.frd .featureds .list-arc {
+overflow: hidden;
+vertical-align: middle;
+margin: 0 0 28px;
+}
+.sideber2 .widghet.frd .featureds .list-arc .ico {
+float: left;
+width: 36px;
+font-size: 18px;
+}
+.sideber2 .widghet.frd .featureds .list-arc .con {
+float: right;
+width: calc(100% - 36px);
+}
+.sideber2 .widghet.frd .featureds .list-arc .con h4 {
+font-size: 15px;
+color: #3c3c3c;
+margin: 0 0 5px;
+font-weight: 500;
+}
+.sideber2 .widghet.frd .featureds .list-arc .con p {
+margin: 0;
+color: #848484;
+font-size: 15px;
+}
+.sideber2 .widghet.frd .featureds .list-arc:nth-child(1) .ico {
+color: #237be7;
+}
+.sideber2 .widghet.frd .featureds .list-arc:nth-child(2) .ico {
+color: #08c478;
+}
+.sideber2 .widghet.frd .featureds .list-arc:nth-child(3) .ico {
+color: #ff8707;
+}
+.sideber2 .widghet.frd .featureds .list-arc:nth-child(4) .ico {
+color: #f9a718;
+}
+.sideber2 .widghet.frd .featureds .list-arc:nth-child(5) .ico {
+color: #6dd8ad;
+}
+.sideber2 .widghet.frd .featureds button {
+display: block;
+width: 100%;
+}
+   .btn1 {
+display: inline-block;
+position: relative;
+padding: 0 24px;
+line-height: 46px;
+height: 46px;
+background: black;
+text-transform: capitalize;
+font-weight: 400;
+color: #fff;
+cursor: pointer;
+font-size: 20px;
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+transition: all 0.5s ease;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+border-radius: 5px;
+}
+@media only screen and (max-width: 480px) {
+.btn1 {
+font-size: 17px;
+height: 42px;
+line-height: 42px;
+}
+}
+.btn1:hover {
+background: #ff8707;
+color: #fff;
+}
+
+ </style>
+ <style>
+   
+   .nice-select {
+     line-height: 30px;
+   }
+   .table td, .table th {
+ padding: .15rem;
+ vertical-align: top;
+ border-top: 1px solid #eceeef;
+}
+   @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+   .center {
+ height: 100%;
+ position: absolute;
+ transform: scale(0);
+ left: 0;
+ right: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ background: #fff;
+ padding: 2rem 2rem 0rem 2rem;
+ border-radius: 5px;
+ overflow: hidden;
+ box-shadow: 0px 6px 20px rgb(0 0 0 / 50%);
+ animation: show_modal 0.6s forwards;
+}
+.center.hide {
+animation: hide_modal 0.6s forwards;
+}
+@keyframes show_modal {
+0% {
+  transform: scale(0);
+}
+60% {
+  transform: scale(1.15);
+}
+80% {
+  transform: scale(0.95);
+}
+100% {
+  transform: scale(1);
+}
+}
+@keyframes hide_modal {
+0% {
+  transform: scale(1);
+}
+20% {
+  transform: scale(1.3);
+}
+100% {
+  transform: scale(0);
+}
+}
+.center p {
+text-align: center;
+line-height: 1.5rem;
+letter-spacing: 0.01rem;
+}
+.center big {
+display: inline-block;
+margin-bottom: 0.8rem;
+}
+.center button:hover {
+background-color: #ff8707;
+}
+.mb-1 {
+margin-bottom: 0.5rem;
+}
+.mb-4 {
+margin-bottom: 4rem;
+} 
+ </style>
+
+</html>

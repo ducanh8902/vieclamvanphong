@@ -1,0 +1,197 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<%- include ../partials/header.ejs%>
+<body>
+            <section style="margin: 5%;"   class="recruiters-area section4">
+                <div  class="container">
+                            <div  class="recruiters-details">
+                                 
+                                <div id="" style="text-align: center;" class="items2">
+                                    <div class="right-con">
+                                        <figure><img style="width: 100%;border-radius: 10px;"
+                                            src="https://vieclamvp.com/images/galaxydr-logo.jpg" alt=""></figure>
+                                    </div>
+                                    <div class="content">
+                                        <h1>Việc Làm Văn Phòng Xin gửi lời cám ơn đến Anh/Chị Ứng Viên đã quan tâm thông tin tuyển dụng </h1>
+                                        
+                                            
+                                </div>
+                            
+                               
+                                
+                                <style>
+
+
+
+        .container {
+        margin: 0 auto;
+        padding: 0 2rem 2rem;
+        }
+
+        .heading {
+
+        font-size: 4rem;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: center;
+        padding: 3.5rem 0;
+        color: #1a1a1a;
+        }
+
+        .heading span {
+        display: block;
+        }
+
+        .gallery {
+        border-radius:20px ;
+        display: flex;
+        flex-wrap: wrap;
+        /* Compensate for excess margin on outer gallery flex items */
+        margin: -2rem -2rem;
+        }
+
+        .gallery-item {
+        /* Minimum width of 24rem and grow to fit available space */
+        flex: 1 0 24rem;
+        /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+        margin: 1rem;
+        border-radius:20px ;
+        box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+        }
+
+        .gallery-image {
+        border-radius:20px ;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 400ms ease-out;
+        }
+
+        .gallery-image:hover {
+        transform: scale(1.15);
+        }
+
+
+
+        @supports (display: grid) {
+        .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+        grid-gap: 2rem;
+        }
+
+        .gallery,
+        .gallery-item {
+        margin: 0;
+        }
+        }
+
+                                </style>
+                            
+                            </div>
+                </div>
+            </section>
+    
+        
+        <%- include ../partials/footer.ejs%>
+        <%- include ../partials/menu.ejs%>
+        <!-- -->
+     
+        <script>
+            $('#loginAlert').hide();
+            $('#loginAlert2').hide();
+            const urlParams = new URLSearchParams(window.location.search);
+            const myParam = urlParams.get('message');
+            if(myParam == "applysussces") {
+                $("#btn-confirm").on("click", function(){
+                    $("#mi-modal").modal('show');
+                });
+            }
+            if(myParam == "applyFailgalaxydruploadcv") {
+                $('#loginAlert2').show();
+                $(".thongtinjd").hide()
+            }
+            
+        </script>
+        <style>
+            .input-container {
+position: relative;
+}
+
+input {
+border: 0;
+border-bottom: 2px solid #9e9e9e;
+outline: none;
+transition: .2s ease-in-out;
+box-sizing: border-box;
+}
+
+
+
+input,
+label {
+width: 100%;
+height: 70px;
+font-size: 1rem;
+}
+
+/* Interation */
+input:valid,
+input:focus {
+border-bottom: 2px solid #26a69a;  
+}
+
+input:valid + label,
+input:focus + label {
+color: #26a69a;
+font-size: .8rem;
+top: -25px;
+pointer-events: none;
+}
+
+        </style>
+        <script>
+            // Show filename, show clear button and change browse 
+//button text when a valid extension file is selected
+$(".browse-button input:file").change(function (){
+$("input[name='attachment']").each(function() {
+var fileName = $(this).val().split('/').pop().split('\\').pop();
+$(".filename").val(fileName);
+$(".browse-button-text").html('<i class="fa fa-refresh"></i> Change');
+$(".clear-button").show();
+});
+});
+
+//actions happening when the button is clicked
+$('.clear-button').click(function(){
+$('.filename').val("");
+$('.clear-button').hide();
+$('.browse-button input:file').val("");
+$(".browse-button-text").html('<i class="fa fa-folder-open"></i> Browse'); 
+}); 
+</script>
+           <script>
+            // Prepare the preview for profile picture
+            function readURL(input) {
+              if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+                  
+                  reader.onload = function(e) {
+                  $('#wizardPicturePreview').attr('src', e.target.result);
+                  }
+                  
+                  reader.readAsDataURL(input.files[0]); // convert to base64 string
+              }
+              }
+
+              $("#fileUT").change(function() {
+              readURL(this);
+              });
+        </script>
+    
+             
+</body>
+
+</html>

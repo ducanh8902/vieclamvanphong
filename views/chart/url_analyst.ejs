@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Việc Làm Văn Phòng</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="Việc Làm Văn Phòng" />
+    <meta name="keywords" content="Hỗ trợ việc làm,Hỗ trợ tuyển dụng chuyên nghiệp , hiệu quả Liên hệ : 0933.412.867" />
+    <meta name="author" content="" />
+    <meta name="MobileOptimized" content="320" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css" />
+    <link rel="stylesheet" type="text/css" href="css/flaticon.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta property="og:image" content="https://tuyendung.me/gif/Officesjob.gif" />
+    <meta property="og:image:alt" content="Hỗ trợ tuyển dụng" />
+    <meta property="og:video:type" content="application/x-shockwave-flash" />
+    <meta property="og:video:width" content="400" />
+    <meta property="og:video:height" content="300" />
+    <meta property="og:description" content="Liên Hệ: 0933.412.867 Đức Anh">
+    <meta property="og:url" content="https://tuyendung.me/gif/Officesjob.gif">
+    <meta property="og:title" content="Hỗ trợ tuyển dụng" />
+    <meta property="og:type" content="website" />
+    <link rel="shortcut icon" type="image/png" href="https://tuyendung.me/logo_new.jpg" />
+    <script src="jquery.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5973369736597865"
+        crossorigin="anonymous"></script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-N3Q2KXM');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFDGP1S33Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-TFDGP1S33Z');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-6">
+            <canvas id="weeklyHistory"></canvas>
+        </div>
+        <div class="col-md-6">
+            <canvas id="weeklyHistorys"></canvas>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var weeklyHistoryChartEl = document
+                .getElementById("weeklyHistory")
+                .getContext("2d");
+            var weeklyHistoryChart = new Chart(weeklyHistoryChartEl, {
+                type: "line",
+                options: {
+                    spanGaps: true,
+                    scales: {
+                        x: {
+                            type: "time",
+                            parsing: false
+                        }
+                    }
+                }
+            });
+            weeklyHistoryChart.data = JSON.parse(
+                '{"datasets":[{"data":[{"x":1625443200,"y":11.74},{"x":1626048000,"y":12.43},{"x":1626652800,"y":34.18}],"label":"Hike","hidden":true},{"data":[{"x":1624233600,"y":5.27},{"x":1630281600,"y":7.32}],"label":"Kayaking","hidden":true},{"data":[{"x":1626652800,"y":17.99}],"label":"NordicSki","hidden":true},{"data":[{"x":1623024000,"y":9.98},{"x":1623628800,"y":15.97},{"x":1624233600,"y":29.07},{"x":1624838400,"y":57.26},{"x":1625443200,"y":15.87},{"x":1627257600,"y":40.73},{"x":1627862400,"y":29.87},{"x":1628467200,"y":58.87},{"x":1629072000,"y":7.62},{"x":1629676800,"y":21.52},{"x":1630281600,"y":6.03}],"label":"Ride","hidden":true},{"data":[{"x":1628467200,"y":0}],"label":"RockClimbing","hidden":true},{"data":[{"x":1623628800,"y":92.45},{"x":1624233600,"y":31.24},{"x":1624838400,"y":23.81},{"x":1625443200,"y":9.39},{"x":1626048000,"y":40.94},{"x":1626652800,"y":12.84},{"x":1627257600,"y":33.59},{"x":1627862400,"y":30.97},{"x":1628467200,"y":31.88},{"x":1629072000,"y":27.88},{"x":1629676800,"y":47.23},{"x":1630281600,"y":48.1}],"label":"Run","hidden":false},{"data":[{"x":1627862400,"y":30.2},{"x":1628467200,"y":36.24},{"x":1629676800,"y":85.58},{"x":1630281600,"y":52.81}],"label":"VirtualRide","hidden":true},{"data":[{"x":1623024000,"y":6.78},{"x":1626048000,"y":5.92}],"label":"Walk","hidden":true},{"data":[{"x":1623628800,"y":0},{"x":1628467200,"y":0}],"label":"Yoga","hidden":true}]}'
+            );
+            weeklyHistoryChart.update();
+        });
+
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var weeklyHistoryChartEl = document
+                .getElementById("weeklyHistorys")
+                .getContext("2d");
+            var weeklyHistoryChart = new Chart(weeklyHistoryChartEl, {
+                type: "line",
+                options: {
+                    spanGaps: true,
+                    scales: {
+                        x: {
+                            type: "time",
+                            parsing: false
+                        }
+                    }
+                }
+            });
+            weeklyHistoryChart.data = JSON.parse(
+                '{"datasets":[{"data":[{"x":1625443200,"y":11.74},{"x":1626048000,"y":12.43},{"x":1626652800,"y":34.18}],"label":"Hike","hidden":true},{"data":[{"x":1624233600,"y":5.27},{"x":1630281600,"y":7.32}],"label":"Kayaking","hidden":true},{"data":[{"x":1626652800,"y":17.99}],"label":"NordicSki","hidden":true},{"data":[{"x":1623024000,"y":9.98},{"x":1623628800,"y":15.97},{"x":1624233600,"y":29.07},{"x":1624838400,"y":57.26},{"x":1625443200,"y":15.87},{"x":1627257600,"y":40.73},{"x":1627862400,"y":29.87},{"x":1628467200,"y":58.87},{"x":1629072000,"y":7.62},{"x":1629676800,"y":21.52},{"x":1630281600,"y":6.03}],"label":"Ride","hidden":true},{"data":[{"x":1628467200,"y":0}],"label":"RockClimbing","hidden":true},{"data":[{"x":1623628800,"y":92.45},{"x":1624233600,"y":31.24},{"x":1624838400,"y":23.81},{"x":1625443200,"y":9.39},{"x":1626048000,"y":40.94},{"x":1626652800,"y":12.84},{"x":1627257600,"y":33.59},{"x":1627862400,"y":30.97},{"x":1628467200,"y":31.88},{"x":1629072000,"y":27.88},{"x":1629676800,"y":47.23},{"x":1630281600,"y":48.1}],"label":"Run","hidden":false},{"data":[{"x":1627862400,"y":30.2},{"x":1628467200,"y":36.24},{"x":1629676800,"y":85.58},{"x":1630281600,"y":52.81}],"label":"VirtualRide","hidden":true},{"data":[{"x":1623024000,"y":6.78},{"x":1626048000,"y":5.92}],"label":"Walk","hidden":true},{"data":[{"x":1623628800,"y":0},{"x":1628467200,"y":0}],"label":"Yoga","hidden":true}]}'
+            );
+            weeklyHistoryChart.update();
+        });
+
+    </script>
+</body>
+
+</html>
